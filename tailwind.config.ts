@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,121 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'blur-in': {
+					'0%': {
+						opacity: '0',
+						filter: 'blur(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						filter: 'blur(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(0)'
+					}
+				},
+				'slide-from-right': {
+					'0%': {
+						transform: 'translateX(30px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
+				},
+				'slide-from-left': {
+					'0%': {
+						transform: 'translateX(-30px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
+				},
+				'rotate-in': {
+					'0%': {
+						transform: 'rotate(-5deg)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'rotate(0)',
+						opacity: '1'
+					}
+				},
+				'text-reveal': {
+					'0%': {
+						transform: 'translateY(40px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
+				},
+				float: {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'blur-in': 'blur-in 0.7s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'slide-from-right': 'slide-from-right 0.7s ease-out',
+				'slide-from-left': 'slide-from-left 0.7s ease-out',
+				'rotate-in': 'rotate-in 0.6s ease-out',
+				'text-reveal': 'text-reveal 0.8s ease-out forwards',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Manrope', 'sans-serif']
 			}
 		}
 	},
