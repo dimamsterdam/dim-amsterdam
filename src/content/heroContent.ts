@@ -5,7 +5,7 @@ export const heroContent = {
     "Leiderschaps- & Teamontwikkeling",
     "Executive coaching"
   ],
-  heading: "Cultivating purpose-driven cultures for exceptional results",
+  heading: "Samen creëren we meer maatschappelijke impact & werkplezier",
   description: "We partner with forward-thinking organizations to create thriving workplaces where people and performance flourish together.",
   cta: {
     primary: "Start Your Transformation",
