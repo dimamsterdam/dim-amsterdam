@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -31,7 +30,6 @@ const Navbar = () => {
     { label: "Werkwijze", href: "/werkwijze" },
     { label: "Klant cases", href: "/klant-cases" },
     { label: "Over ons", href: "/over-ons" },
-    { label: "Contact", href: "/contact", highlighted: true },
   ];
 
   return (
