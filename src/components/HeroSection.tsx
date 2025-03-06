@@ -30,7 +30,7 @@ const HeroSection = () => {
       }
     })
   };
-  return <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center pt-12 md:pt-12 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" style={{
       transform: `translate(${scrolled * 50}px, ${scrolled * -30}px)`,
       opacity: 1 - scrolled * 0.5
@@ -40,7 +40,7 @@ const HeroSection = () => {
       opacity: 1 - scrolled * 0.5
     }}></div>
 
-      <div className="container mx-auto px-4 md:px-6 z-10 py-20">
+      <div className="container mx-auto px-4 md:px-6 z-10 py-10 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-8">
             <div>
