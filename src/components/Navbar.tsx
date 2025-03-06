@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,11 +27,11 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: "Services", href: "/services" },
-    { label: "About", href: "/about" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Insights", href: "/insights" },
-    { label: "Contact", href: "/contact" },
+    { label: "Diensten", href: "/diensten" },
+    { label: "Werkwijze", href: "/werkwijze" },
+    { label: "Klant cases", href: "/klant-cases" },
+    { label: "Over ons", href: "/over-ons" },
+    { label: "Contact", href: "/contact", highlighted: true },
   ];
 
   return (
@@ -58,7 +58,9 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.href}
-                className="relative px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors duration-200 link-underline"
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline ${
+                  item.highlighted ? "text-primary" : "text-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
               </Link>
@@ -94,7 +96,9 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.href}
-                className="text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
+                className={`text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right ${
+                  item.highlighted ? "text-primary" : ""
+                }`}
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => setMobileMenuOpen(false)}
               >
