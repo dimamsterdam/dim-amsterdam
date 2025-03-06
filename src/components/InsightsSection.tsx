@@ -39,9 +39,7 @@ const InsightsSection = () => {
         <AnimatedSection className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
           <div>
             
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Thought leadership & insights
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Werkwijze in de praktijk</h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Explore our latest thinking on cultural transformation, leadership development, and organizational excellence.
             </p>
