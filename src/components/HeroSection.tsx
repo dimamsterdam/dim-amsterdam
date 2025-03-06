@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { heroContent } from "@/content/heroContent";
-
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(0);
   useEffect(() => {
@@ -15,7 +14,6 @@ const HeroSection = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const fadeVariants = {
     initial: {
       opacity: 0,
@@ -31,7 +29,6 @@ const HeroSection = () => {
       }
     })
   };
-
   return <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" style={{
       transform: `translate(${scrolled * 50}px, ${scrolled * -30}px)`,
@@ -83,9 +80,7 @@ const HeroSection = () => {
                 <img src="/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png" alt="Professional networking event" className="w-full h-full object-cover mix-blend-overlay opacity-80" />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-white text-xl md:text-2xl font-medium text-center max-w-xs">
-                  Elevate your organization's potential
-                </h3>
+                
               </div>
             </motion.div>
           </div>
@@ -93,5 +88,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
