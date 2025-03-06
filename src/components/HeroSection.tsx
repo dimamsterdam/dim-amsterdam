@@ -60,7 +60,7 @@ const HeroSection = () => {
                   className="text-highlight" 
                   style={{ 
                     color: 'transparent', 
-                    backgroundImage: 'linear-gradient(to right, #6BA8B9, #88c5d6)',
+                    backgroundImage: 'linear-gradient(to right, #0EA5E9, #38BDF8)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text' 
                   }}
