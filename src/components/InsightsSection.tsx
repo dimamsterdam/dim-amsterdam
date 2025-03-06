@@ -47,7 +47,7 @@ const InsightsSection = () => {
             </p>
           </div>
           <Link to="/insights" className="group hidden md:flex items-center text-primary font-medium mt-6 md:mt-0 hover:text-primary/80 transition-colors">
-            <span>View all insights</span>
+            <span>Meer klant cases</span>
             <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </AnimatedSection>
