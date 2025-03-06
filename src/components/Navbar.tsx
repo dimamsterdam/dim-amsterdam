@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -56,9 +57,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.href}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline ${
-                  item.highlighted ? "text-primary" : "text-foreground hover:text-primary"
-                }`}
+                className="relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary"
               >
                 {item.label}
               </Link>
@@ -94,9 +93,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.href}
-                className={`text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right ${
-                  item.highlighted ? "text-primary" : ""
-                }`}
+                className="text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => setMobileMenuOpen(false)}
               >
