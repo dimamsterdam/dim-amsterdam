@@ -17,17 +17,17 @@ const ApproachSection = () => {
     {
       title: "Positief",
       description: "We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.",
-      icon: <Heart className="text-white" />
+      icon: <Heart className="text-primary" />
     }, 
     {
       title: "Scherp",
       description: "We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.",
-      icon: <Target className="text-white" />
+      icon: <Target className="text-primary" />
     }, 
     {
       title: "Betrokken",
       description: "We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.",
-      icon: <Zap className="text-white" />
+      icon: <Zap className="text-primary" />
     }
   ];
 
@@ -57,7 +57,7 @@ const ApproachSection = () => {
 
         {/* Timeline */}
         <div className="mb-16">
-          <div ref={timelineRef} className="flex justify-center md:justify-center space-x-8 md:space-x-16 overflow-x-auto md:overflow-visible py-6 md:px-8 -mx-4 md:mx-0 scrollbar-hide max-w-2xl mx-auto">
+          <div ref={timelineRef} className="flex space-x-4 md:space-x-0 md:justify-between overflow-x-auto md:overflow-visible py-6 md:px-8 -mx-4 md:mx-0 scrollbar-hide max-w-2xl mx-auto">
             {values.map((value, index) => (
               <button 
                 key={index} 
@@ -65,7 +65,7 @@ const ApproachSection = () => {
                 className={`timeline-step flex flex-col items-center flex-shrink-0 w-28 md:w-auto px-2 transition-all duration-300 ${selectedIndex === index ? 'opacity-100' : 'opacity-70 hover:opacity-100'}`}
               >
                 <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-accent text-accent-foreground'}`}>
-                  {values[index].icon}
+                  {value.icon}
                 </div>
                 
                 <p className={`font-medium text-sm md:text-base transition-colors duration-300 ${selectedIndex === index ? 'text-primary' : 'text-muted-foreground'}`}>
