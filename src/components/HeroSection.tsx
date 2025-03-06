@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -34,7 +33,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-      {/* Background gradient circles */}
       <div 
         className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl"
         style={{ 
@@ -78,12 +76,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                {heroContent.heading.split(" ").map((word, i, arr) => 
-                  i === 0 ? word + " " : 
-                  i === 1 ? <span key={i} className="text-gradient">{word}</span> + " " : 
-                  i === arr.length - 1 ? word : 
-                  word + " "
-                )}
+                Cultivating <span className="text-gradient">purpose-driven</span> cultures for exceptional results
               </motion.h1>
               
               <motion.p
