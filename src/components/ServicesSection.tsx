@@ -16,28 +16,22 @@ const ServicesSection = () => {
 
   const services: Service[] = [
     {
-      title: "Cultural Transformation",
-      description: "Build a purpose-driven culture that aligns with your strategy and values to drive sustainable performance.",
+      title: "Organisatie-ontwikkeling",
+      description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
       icon: "🔄",
-      link: "/services/cultural-transformation",
+      link: "/diensten/organisatie-ontwikkeling",
     },
     {
-      title: "Leadership Development",
-      description: "Equip your leaders with the mindsets, skills, and behaviors needed to inspire and drive positive change.",
+      title: "Leiderschaps- & Teamontwikkeling",
+      description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
       icon: "🚀",
-      link: "/services/leadership-development",
+      link: "/diensten/leiderschaps-teamontwikkeling",
     },
     {
-      title: "Team Performance",
-      description: "Enhance collaboration, innovation, and execution through cohesive and high-performing teams.",
-      icon: "👥",
-      link: "/services/team-performance",
-    },
-    {
-      title: "Organizational Design",
-      description: "Create adaptive structures that enable agility, innovation, and efficiency in a complex world.",
-      icon: "🏗️",
-      link: "/services/organizational-design",
+      title: "Executive coaching",
+      description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
+      icon: "👤",
+      link: "/diensten/executive-coaching",
     },
   ];
 
@@ -46,17 +40,17 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm px-3 py-1 rounded-full bg-primary/10 text-primary font-medium mb-4">
-            Our Services
+            Onze Diensten
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Comprehensive solutions for cultural excellence
+            Uitgebreide oplossingen voor organisatorische excellentie
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our integrated approach addresses the full spectrum of cultural and leadership challenges facing modern organizations.
+            Onze geïntegreerde aanpak richt zich op het volledige spectrum van uitdagingen op het gebied van cultuur en leiderschap in moderne organisaties.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <AnimatedSection 
               key={index} 
@@ -96,8 +90,8 @@ const ServicesSection = () => {
         </div>
         
         <AnimatedSection className="text-center mt-12" delay={0.4}>
-          <Link to="/services" className="btn-primary">
-            Explore All Services
+          <Link to="/diensten" className="btn-primary">
+            Ontdek Al Onze Diensten
           </Link>
         </AnimatedSection>
       </div>
