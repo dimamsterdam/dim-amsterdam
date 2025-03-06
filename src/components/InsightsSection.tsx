@@ -20,7 +20,7 @@ const InsightsSection = () => {
     {
       title: "How purpose-driven cultures drive innovation and market growth",
       excerpt: "Discover how organizations with strong purpose-driven cultures outperform their competitors in innovation and market share.",
-      category: "Case Study",
+      category: "Klant case",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
       slug: "/insights/purpose-driven-cultures",
       date: "May 12, 2023"
@@ -28,7 +28,7 @@ const InsightsSection = () => {
     {
       title: "The leadership behaviors that transform organizational culture",
       excerpt: "Explore the key leadership behaviors that have the greatest impact on shaping culture and driving performance.",
-      category: "Research",
+      category: "Klant case",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
       slug: "/insights/leadership-behaviors",
       date: "July 23, 2023"
@@ -36,7 +36,7 @@ const InsightsSection = () => {
     {
       title: "Measuring cultural transformation: Key metrics and frameworks",
       excerpt: "Learn how to effectively measure and track cultural change using proven metrics and comprehensive frameworks.",
-      category: "Guide",
+      category: "Klant case",
       image: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
       slug: "/insights/measuring-cultural-transformation",
       date: "September 5, 2023"
