@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { heroContent } from "@/content/heroContent";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(0);
@@ -53,15 +54,22 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-8">
             <div>
-              <motion.span
-                className="inline-block text-sm px-3 py-1 rounded-full bg-accent text-accent-foreground font-medium mb-6"
+              <motion.div
+                className="flex flex-wrap gap-2 mb-6"
                 variants={fadeVariants}
                 custom={0}
                 initial="initial"
                 animate="animate"
               >
-                Strategic Cultural Transformation
-              </motion.span>
+                {heroContent.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="inline-block text-sm px-3 py-1 rounded-full bg-accent text-accent-foreground font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </motion.div>
               
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight mb-6"
@@ -70,7 +78,12 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                Cultivating <span className="text-gradient">purpose-driven</span> cultures for exceptional results
+                {heroContent.heading.split(" ").map((word, i, arr) => 
+                  i === 0 ? word + " " : 
+                  i === 1 ? <span key={i} className="text-gradient">{word}</span> + " " : 
+                  i === arr.length - 1 ? word : 
+                  word + " "
+                )}
               </motion.h1>
               
               <motion.p
@@ -80,7 +93,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                We partner with forward-thinking organizations to create thriving workplaces where people and performance flourish together.
+                {heroContent.description}
               </motion.p>
               
               <motion.div
@@ -91,10 +104,10 @@ const HeroSection = () => {
                 animate="animate"
               >
                 <Link to="/contact" className="btn-primary">
-                  Start Your Transformation
+                  {heroContent.cta.primary}
                 </Link>
                 <Link to="/case-studies" className="btn-secondary">
-                  Explore Our Case Studies
+                  {heroContent.cta.secondary}
                 </Link>
               </motion.div>
             </div>
