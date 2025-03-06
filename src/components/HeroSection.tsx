@@ -1,7 +1,7 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { heroContent } from "@/content/heroContent";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(0);
@@ -33,6 +33,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      {/* Background gradient circles */}
       <div 
         className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl"
         style={{ 
@@ -52,22 +53,15 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-8">
             <div>
-              <motion.div
-                className="flex flex-wrap gap-2 mb-6"
+              <motion.span
+                className="inline-block text-sm px-3 py-1 rounded-full bg-accent text-accent-foreground font-medium mb-6"
                 variants={fadeVariants}
                 custom={0}
                 initial="initial"
                 animate="animate"
               >
-                {heroContent.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="inline-block text-sm px-3 py-1 rounded-full bg-accent text-accent-foreground font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </motion.div>
+                Strategic Cultural Transformation
+              </motion.span>
               
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight mb-6"
@@ -86,7 +80,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                {heroContent.description}
+                We partner with forward-thinking organizations to create thriving workplaces where people and performance flourish together.
               </motion.p>
               
               <motion.div
@@ -97,10 +91,10 @@ const HeroSection = () => {
                 animate="animate"
               >
                 <Link to="/contact" className="btn-primary">
-                  {heroContent.cta.primary}
+                  Start Your Transformation
                 </Link>
                 <Link to="/case-studies" className="btn-secondary">
-                  {heroContent.cta.secondary}
+                  Explore Our Case Studies
                 </Link>
               </motion.div>
             </div>
