@@ -78,7 +78,7 @@ const HeroSection = () => {
             ease: [0.04, 0.62, 0.23, 0.98]
           }}>
               <div className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-gradient-to-tr from-primary/80 to-accent">
-                <img src="/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png" alt="Professional networking event" className="w-full h-full object-cover mix-blend-overlay opacity-80" />
+                <img src="/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png" alt="Professional networking event" className="w-full h-full object-cover mix-blend-overlay opacity-80" />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 
