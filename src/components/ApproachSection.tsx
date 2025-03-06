@@ -1,7 +1,6 @@
-
 import { useState, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
-import { Heart, Target, Zap } from "lucide-react";
+import { Heart, Zap, Smile } from "lucide-react";
 
 interface ValueItem {
   title: string;
@@ -17,17 +16,17 @@ const ApproachSection = () => {
     {
       title: "Positief",
       description: "We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.",
-      icon: <Heart className="text-white" />
+      icon: <Smile className="text-white" />
     }, 
     {
       title: "Scherp",
       description: "We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.",
-      icon: <Target className="text-white" />
+      icon: <Zap className="text-white" />
     }, 
     {
       title: "Betrokken",
       description: "We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.",
-      icon: <Zap className="text-white" />
+      icon: <Heart className="text-white" />
     }
   ];
 
@@ -43,9 +42,9 @@ const ApproachSection = () => {
     }
   };
 
-  return <section className="section-padding bg-background relative overflow-hidden">
+  return <section className="section-padding bg-blue-50 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-40 left-0 w-96 h-96 rounded-full bg-accent/20 blur-3xl -z-10"></div>
+      <div className="absolute top-40 left-0 w-96 h-96 rounded-full bg-blue-200/30 blur-3xl -z-10"></div>
       <div className="absolute bottom-20 right-0 w-96 h-96 rounded-full bg-primary/10 blur-3xl -z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6">
@@ -64,7 +63,7 @@ const ApproachSection = () => {
                 onClick={() => handleStepClick(index)} 
                 className={`timeline-step flex flex-col items-center flex-shrink-0 w-28 md:w-auto px-2 transition-all duration-300 ${selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}
               >
-                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-gray-200 text-gray-600'}`}>
+                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-gray-300 text-gray-600'}`}>
                   {value.icon}
                 </div>
                 
@@ -92,7 +91,7 @@ const ApproachSection = () => {
         {/* Selected value details */}
         <AnimatedSection key={selectedIndex} className="max-w-3xl mx-auto bg-accent/30 rounded-xl p-8 md:p-10 border border-accent" animation="scale-in">
           <div className="flex flex-col md:flex-row md:items-start gap-6">
-            <div className="w-16 h-16 flex-shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl">
+            <div className="w-16 h-16 flex-shrink-0 rounded-full bg-primary flex items-center justify-center text-white text-2xl">
               {values[selectedIndex].icon}
             </div>
             <div>
