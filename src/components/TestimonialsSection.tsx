@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 interface Testimonial {
@@ -60,41 +61,39 @@ const TestimonialsSection = () => {
       }, 8000);
     }
   };
-  return <section className="section-padding bg-secondary text-secondary-foreground overflow-hidden py-12 md:py-16">
+  return <section className="py-6 md:py-8 bg-secondary text-secondary-foreground overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative">
-        <div className="absolute top-0 left-0 w-40 h-40 rounded-full bg-primary/10 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full bg-accent/10 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-20 h-20 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-20 h-20 rounded-full bg-accent/10 blur-3xl"></div>
         
-        <AnimatedSection className="max-w-4xl mx-auto text-center mb-10" animation="blur-in">
-          <span className="inline-block text-sm px-3 py-1 rounded-full bg-primary/20 text-primary-foreground font-medium mb-4">Opdrachtgevers over DIM</span>
-          
-          
+        <AnimatedSection className="max-w-3xl mx-auto text-center mb-4" animation="blur-in">
+          <span className="inline-block text-xs px-2 py-1 rounded-full bg-primary/20 text-primary-foreground font-medium mb-2">Opdrachtgevers over DIM</span>
         </AnimatedSection>
 
-        <div className="relative max-w-4xl mx-auto" onMouseEnter={pauseAutoplay} onMouseLeave={resumeAutoplay}>
+        <div className="relative max-w-3xl mx-auto" onMouseEnter={pauseAutoplay} onMouseLeave={resumeAutoplay}>
           <div className="overflow-hidden">
             <div className="flex transition-transform duration-700 ease-in-out" style={{
             transform: `translateX(-${activeIndex * 100}%)`
           }}>
-              {testimonials.map((testimonial, index) => <div key={index} className="min-w-full px-4">
-                  <div className="bg-secondary-foreground/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/10">
-                    <div className="mb-4">
-                      <svg className="w-8 h-8 text-primary/60" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+              {testimonials.map((testimonial, index) => <div key={index} className="min-w-full px-2">
+                  <div className="bg-secondary-foreground/10 backdrop-blur-sm rounded-lg p-4 md:p-5 border border-white/10">
+                    <div className="mb-2">
+                      <svg className="w-6 h-6 text-primary/60" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                       </svg>
                     </div>
-                    <blockquote className="text-lg md:text-xl font-medium mb-4 leading-relaxed">
+                    <blockquote className="text-sm md:text-base font-medium mb-3 leading-relaxed">
                       "{testimonial.quote}"
                     </blockquote>
                     <div className="flex items-center">
-                      <div className="mr-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-white font-bold">
+                      <div className="mr-2">
+                        <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center text-white font-bold text-sm">
                           {testimonial.author.charAt(0)}
                         </div>
                       </div>
                       <div>
-                        <p className="font-semibold">{testimonial.author}</p>
-                        <p className="text-sm text-gray-300">{testimonial.role}, {testimonial.company}</p>
+                        <p className="font-semibold text-sm">{testimonial.author}</p>
+                        <p className="text-xs text-gray-300">{testimonial.role}, {testimonial.company}</p>
                       </div>
                     </div>
                   </div>
@@ -102,8 +101,8 @@ const TestimonialsSection = () => {
             </div>
           </div>
           
-          <div className="flex justify-center mt-6 space-x-2">
-            {testimonials.map((_, index) => <button key={index} onClick={() => goToTestimonial(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-primary w-8' : 'bg-gray-500 hover:bg-gray-400'}`} aria-label={`Go to testimonial ${index + 1}`}></button>)}
+          <div className="flex justify-center mt-3 space-x-1">
+            {testimonials.map((_, index) => <button key={index} onClick={() => goToTestimonial(index)} className={`w-2 h-2 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-primary w-6' : 'bg-gray-500 hover:bg-gray-400'}`} aria-label={`Go to testimonial ${index + 1}`}></button>)}
           </div>
         </div>
       </div>
