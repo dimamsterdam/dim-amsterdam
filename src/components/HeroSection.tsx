@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -49,7 +50,7 @@ const HeroSection = () => {
                   </span>)}
               </motion.div>
               
-              <motion.h1 variants={fadeVariants} custom={1} initial="initial" animate="animate" className="text-4xl lg:text-6xl font-display font-bold tracking-tight leading-tight mb-6 md:text-4xl">
+              <motion.h1 variants={fadeVariants} custom={1} initial="initial" animate="animate" className="text-4xl md:text-4xl font-display font-bold tracking-tight leading-tight mb-6">
                 Samen creëren we meer maatschappelijke <span className="text-highlight">impact & werkplezier</span>
               </motion.h1>
               
