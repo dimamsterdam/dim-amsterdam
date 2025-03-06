@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -76,7 +77,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                Cultivating <span className="text-gradient">purpose-driven</span> cultures for exceptional results
+                Cultivating <span className="text-highlight">purpose-driven</span> cultures for exceptional results
               </motion.h1>
               
               <motion.p
