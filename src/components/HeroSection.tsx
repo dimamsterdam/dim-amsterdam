@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { heroContent } from "@/content/heroContent";
+
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(0);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -12,9 +14,11 @@ const HeroSection = () => {
       const scrollFraction = Math.min(scrollTop / maxScroll, 1);
       setScrolled(scrollFraction);
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
   const fadeVariants = {
     initial: {
       opacity: 0,
@@ -30,6 +34,7 @@ const HeroSection = () => {
       }
     })
   };
+  
   return <section className="relative min-h-screen flex items-center pt-12 md:pt-12 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" style={{
       transform: `translate(${scrolled * 50}px, ${scrolled * -30}px)`,
@@ -60,7 +65,6 @@ const HeroSection = () => {
               
               <motion.div className="flex flex-col sm:flex-row gap-4" variants={fadeVariants} custom={3} initial="initial" animate="animate">
                 
-                
               </motion.div>
             </div>
           </div>
@@ -89,4 +93,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
