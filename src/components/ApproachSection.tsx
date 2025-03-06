@@ -17,17 +17,17 @@ const ApproachSection = () => {
     {
       title: "Positief",
       description: "We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.",
-      icon: <Heart className="text-primary" />
+      icon: <Heart className="text-white" />
     }, 
     {
       title: "Scherp",
       description: "We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.",
-      icon: <Target className="text-primary" />
+      icon: <Target className="text-white" />
     }, 
     {
       title: "Betrokken",
       description: "We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.",
-      icon: <Zap className="text-primary" />
+      icon: <Zap className="text-white" />
     }
   ];
 
@@ -56,25 +56,25 @@ const ApproachSection = () => {
         </AnimatedSection>
 
         {/* Timeline */}
-        <div className="mb-16">
-          <div ref={timelineRef} className="flex space-x-4 md:space-x-0 md:justify-between overflow-x-auto md:overflow-visible py-6 md:px-8 -mx-4 md:mx-0 scrollbar-hide max-w-2xl mx-auto">
+        <div className="mb-16 flex justify-center">
+          <div ref={timelineRef} className="flex space-x-12 md:space-x-24 overflow-x-auto md:overflow-visible py-6 px-8 scrollbar-hide max-w-3xl mx-auto">
             {values.map((value, index) => (
               <button 
                 key={index} 
                 onClick={() => handleStepClick(index)} 
-                className={`timeline-step flex flex-col items-center flex-shrink-0 w-28 md:w-auto px-2 transition-all duration-300 ${selectedIndex === index ? 'opacity-100' : 'opacity-70 hover:opacity-100'}`}
+                className={`timeline-step flex flex-col items-center flex-shrink-0 w-28 md:w-auto px-2 transition-all duration-300 ${selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}
               >
-                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-accent text-accent-foreground'}`}>
+                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-gray-200 text-gray-600'}`}>
                   {value.icon}
                 </div>
                 
-                <p className={`font-medium text-sm md:text-base transition-colors duration-300 ${selectedIndex === index ? 'text-primary' : 'text-muted-foreground'}`}>
+                <p className={`font-medium text-sm md:text-base transition-colors duration-300 ${selectedIndex === index ? 'text-primary' : 'text-gray-600'}`}>
                   {value.title}
                 </p>
                 
                 {/* Connection line - visible only on md screens and up */}
                 {index < values.length - 1 && (
-                  <div className="hidden md:block absolute h-[2px] bg-border top-6 left-[calc(50%+2rem)] right-[calc(50%+2rem)] -z-0">
+                  <div className="hidden md:block absolute h-[2px] bg-gray-200 top-6 left-[calc(50%+3rem)] right-[calc(50%+3rem)] -z-0">
                     <div 
                       className="absolute h-full bg-primary transition-all duration-500 ease-out" 
                       style={{
