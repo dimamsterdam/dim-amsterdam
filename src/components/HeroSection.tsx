@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -44,7 +45,7 @@ const HeroSection = () => {
           <div className="lg:col-span-7 space-y-8">
             <div>
               <motion.div className="flex flex-wrap gap-2 mb-6" variants={fadeVariants} custom={0} initial="initial" animate="animate">
-                {heroContent.tags.map((tag, index) => <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-accent text-accent-foreground font-medium">
+                {heroContent.tags.map((tag, index) => <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-medium shadow-sm">
                     {tag}
                   </span>)}
               </motion.div>
