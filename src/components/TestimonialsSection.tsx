@@ -68,51 +68,62 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-6 md:py-8 overflow-hidden relative bg-primary">
+    <section className="py-6 md:py-8 overflow-hidden relative bg-primary text-white">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-500/30 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gradient-to-t from-purple-800/20 to-transparent rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative">
-        <div className="absolute top-0 left-0 w-20 h-20 rounded-full bg-primary/10 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-20 h-20 rounded-full bg-accent/10 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-20 h-20 rounded-full bg-white/10 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-20 h-20 rounded-full bg-white/10 blur-3xl"></div>
         
         <AnimatedSection className="max-w-3xl mx-auto text-center mb-4" animation="blur-in">
-          <span className="inline-block text-xs px-2 py-1 rounded-full bg-primary/20 text-primary-foreground font-medium mb-2">Opdrachtgevers over DIM</span>
+          <span className="inline-block text-xs px-2 py-1 rounded-full bg-white/20 text-white font-medium mb-2">Opdrachtgevers over DIM</span>
         </AnimatedSection>
 
         <div className="relative max-w-3xl mx-auto" onMouseEnter={pauseAutoplay} onMouseLeave={resumeAutoplay}>
           <div className="overflow-hidden">
             <div className="flex transition-transform duration-700 ease-in-out" style={{
-            transform: `translateX(-${activeIndex * 100}%)`
-          }}>
-              {testimonials.map((testimonial, index) => <div key={index} className="min-w-full px-2">
-                  <div className="bg-secondary-foreground/10 backdrop-blur-sm rounded-lg p-4 md:p-5 border border-white/10">
+              transform: `translateX(-${activeIndex * 100}%)`
+            }}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="min-w-full px-2">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5 border border-white/20">
                     <div className="mb-2">
-                      <svg className="w-6 h-6 text-primary/60" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                      <svg className="w-6 h-6 text-white/60" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                       </svg>
                     </div>
-                    <blockquote className="text-sm md:text-base font-medium mb-3 leading-relaxed">
+                    <blockquote className="text-sm md:text-base font-medium mb-3 leading-relaxed text-white">
                       "{testimonial.quote}"
                     </blockquote>
                     <div className="flex items-center">
                       <div className="mr-2">
-                        <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center text-white font-bold text-sm">
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">
                           {testimonial.author.charAt(0)}
                         </div>
                       </div>
                       <div>
-                        <p className="font-semibold text-sm">{testimonial.author}</p>
-                        <p className="text-xs text-gray-300">{testimonial.role}, {testimonial.company}</p>
+                        <p className="font-semibold text-sm text-white">{testimonial.author}</p>
+                        <p className="text-xs text-white/80">{testimonial.role}, {testimonial.company}</p>
                       </div>
                     </div>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
           
           <div className="flex justify-center mt-3 space-x-1">
-            {testimonials.map((_, index) => <button key={index} onClick={() => goToTestimonial(index)} className={`w-2 h-2 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-primary w-6' : 'bg-gray-500 hover:bg-gray-400'}`} aria-label={`Go to testimonial ${index + 1}`}></button>)}
+            {testimonials.map((_, index) => (
+              <button 
+                key={index} 
+                onClick={() => goToTestimonial(index)} 
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/70'
+                }`} 
+                aria-label={`Go to testimonial ${index + 1}`}
+              ></button>
+            ))}
           </div>
         </div>
       </div>
