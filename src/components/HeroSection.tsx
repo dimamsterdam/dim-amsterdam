@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { heroContent } from "../content/heroContent";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(0);
@@ -60,7 +61,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                Strategic Cultural Transformation
+                {heroContent.tagline}
               </motion.span>
               
               <motion.h1
@@ -70,7 +71,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                Cultivating <span className="text-gradient">purpose-driven</span> cultures for exceptional results
+                Cultivating <span className="text-gradient">{heroContent.titleHighlight}</span> cultures for exceptional results
               </motion.h1>
               
               <motion.p
@@ -80,7 +81,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                We partner with forward-thinking organizations to create thriving workplaces where people and performance flourish together.
+                {heroContent.description}
               </motion.p>
               
               <motion.div
@@ -91,10 +92,10 @@ const HeroSection = () => {
                 animate="animate"
               >
                 <Link to="/contact" className="btn-primary">
-                  Start Your Transformation
+                  {heroContent.primaryButtonText}
                 </Link>
                 <Link to="/case-studies" className="btn-secondary">
-                  Explore Our Case Studies
+                  {heroContent.secondaryButtonText}
                 </Link>
               </motion.div>
             </div>
@@ -110,13 +111,13 @@ const HeroSection = () => {
               <div className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-gradient-to-tr from-primary/80 to-accent">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3"
-                  alt="Team collaboration"
+                  alt={heroContent.imageAlt}
                   className="w-full h-full object-cover mix-blend-overlay opacity-60"
                 />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <h3 className="text-white text-xl md:text-2xl font-medium text-center max-w-xs">
-                  Elevate your organization's potential
+                  {heroContent.imageOverlayText}
                 </h3>
               </div>
             </motion.div>
