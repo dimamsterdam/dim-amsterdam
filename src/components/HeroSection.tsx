@@ -56,7 +56,15 @@ const HeroSection = () => {
               </motion.div>
               
               <motion.h1 variants={fadeVariants} custom={1} initial="initial" animate="animate" className="text-4xl md:text-4xl font-display font-bold tracking-tight leading-tight mb-6">
-                Samen creëren we meer maatschappelijke <span className="text-highlight">impact & werkplezier</span>
+                Samen creëren we meer maatschappelijke <span 
+                  className="text-highlight" 
+                  style={{ 
+                    color: 'transparent', 
+                    backgroundImage: 'linear-gradient(to right, #6BA8B9, #88c5d6)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text' 
+                  }}
+                >impact & werkplezier</span>
               </motion.h1>
               
               <motion.p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8" variants={fadeVariants} custom={2} initial="initial" animate="animate">
