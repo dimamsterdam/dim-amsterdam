@@ -74,9 +74,7 @@ const TestimonialsSection = () => {
             Client Success Stories
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Opdrachtgevers over DIM</h2>
-          <p className="text-lg text-gray-300">
-            Hear directly from our clients about the impact of our work on their organizations.
-          </p>
+          
         </AnimatedSection>
 
         <div className="relative max-w-4xl mx-auto" onMouseEnter={pauseAutoplay} onMouseLeave={resumeAutoplay}>
