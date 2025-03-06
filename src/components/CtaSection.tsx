@@ -13,9 +13,7 @@ const CtaSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <AnimatedSection animation="slide-from-left">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">Meer weten over DIM?</h2>
-                <p className="text-lg text-primary-foreground/80 mb-8 max-w-md">
-                  Book a complimentary consultation with our team of experts to discuss your unique challenges and opportunities.
-                </p>
+                <p className="text-lg text-primary-foreground/80 mb-8 max-w-md">We versturen een nieuwsbrief met kennis en inzichten over verandering in moedige organisaties. </p>
                 <Link to="/contact" className="inline-flex items-center bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors group">
                   <span>Schedule a Consultation</span>
                   <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
