@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
         
         <AnimatedSection className="max-w-4xl mx-auto text-center mb-16" animation="blur-in">
           <span className="inline-block text-sm px-3 py-1 rounded-full bg-primary/20 text-primary-foreground font-medium mb-4">Opdrachtgevers over DIM</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Opdrachtgevers over DIM</h2>
+          
           
         </AnimatedSection>
 
