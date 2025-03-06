@@ -48,9 +48,7 @@ const ApproachSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm px-3 py-1 rounded-full bg-primary/10 text-primary font-medium mb-4">Waar we voor staan</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            A systematic journey to cultural excellence
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Positief. Scherp. Betrokken.</h2>
           <p className="text-lg text-muted-foreground">
             Our proven methodology adapts to your unique context while ensuring consistent, measurable results.
           </p>
