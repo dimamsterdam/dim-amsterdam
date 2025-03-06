@@ -69,7 +69,7 @@ const Navbar = () => {
               to="/contact"
               className="ml-4 btn-primary"
             >
-              Get Started
+              Contact
             </Link>
           </nav>
 
@@ -111,7 +111,7 @@ const Navbar = () => {
               style={{ animationDelay: "0.25s" }}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get Started
+              Contact
             </Link>
           </nav>
         </div>

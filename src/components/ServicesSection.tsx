@@ -1,13 +1,13 @@
 
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, BarChart2, Users, UserCog } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 
 interface Service {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   link: string;
 }
 
@@ -18,19 +18,19 @@ const ServicesSection = () => {
     {
       title: "Organisatie-ontwikkeling",
       description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
-      icon: "🔄",
+      icon: <BarChart2 className="w-6 h-6" />,
       link: "/diensten/organisatie-ontwikkeling",
     },
     {
       title: "Leiderschaps- & Teamontwikkeling",
       description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
-      icon: "🚀",
+      icon: <Users className="w-6 h-6" />,
       link: "/diensten/leiderschaps-teamontwikkeling",
     },
     {
       title: "Executive coaching",
       description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
-      icon: "👤",
+      icon: <UserCog className="w-6 h-6" />,
       link: "/diensten/executive-coaching",
     },
   ];
@@ -71,7 +71,7 @@ const ServicesSection = () => {
                 }`}>
                   <div className="mb-4 flex justify-between items-start">
                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                      <span className="text-2xl">{service.icon}</span>
+                      {service.icon}
                     </div>
                     <ChevronRight 
                       className={`transform transition-transform duration-300 text-primary ${
