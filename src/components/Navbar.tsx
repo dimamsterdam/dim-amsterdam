@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
@@ -43,6 +42,7 @@ const Navbar = () => {
     { label: "Minimalist", href: "/variant-minimalist" },
     { label: "Modern", href: "/variant-modern" },
     { label: "Creative", href: "/variant-creative" },
+    { label: "Dark", href: "/variant-dark" },
   ];
 
   return (
