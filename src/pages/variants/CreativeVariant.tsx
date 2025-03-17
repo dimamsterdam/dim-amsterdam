@@ -258,7 +258,6 @@ const CreativeVariant = () => {
                   delay={index * 0.2}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br opacity-90 transition-all duration-500 group-hover:opacity-100"
-                       style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }}
                        className={`${service.color}`}>
                   </div>
                   
@@ -405,3 +404,4 @@ const CreativeVariant = () => {
 };
 
 export default CreativeVariant;
+
