@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import MinimalistVariant from "./pages/variants/MinimalistVariant";
+import ModernVariant from "./pages/variants/ModernVariant";
+import CreativeVariant from "./pages/variants/CreativeVariant";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/variant-minimalist" element={<MinimalistVariant />} />
+          <Route path="/variant-modern" element={<ModernVariant />} />
+          <Route path="/variant-creative" element={<CreativeVariant />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
