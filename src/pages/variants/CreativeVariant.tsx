@@ -31,11 +31,14 @@ const CreativeVariant = () => {
     };
 
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      // Throttle scroll updates to improve performance
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
     };
 
     document.addEventListener('click', handleLinkClick);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       document.removeEventListener('click', handleLinkClick);
@@ -48,14 +51,14 @@ const CreativeVariant = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Random floating circles for creative elements
-  const floatingElements = Array(8).fill(0).map((_, i) => ({
-    size: 20 + Math.random() * 100,
+  // Improved floating elements for creative background
+  const floatingElements = Array(6).fill(0).map((_, i) => ({
+    size: 20 + Math.random() * 80, // Reduced max size
     left: Math.random() * 100,
-    top: Math.random() * 200,
-    animationDuration: 10 + Math.random() * 20,
+    top: 100 + Math.random() * 400, // Spread out vertically more
+    animationDuration: 15 + Math.random() * 20, // Slower animation
     animationDelay: Math.random() * 5,
-    opacity: 0.1 + Math.random() * 0.2
+    opacity: 0.05 + Math.random() * 0.1 // Much more subtle opacity
   }));
 
   return (
@@ -63,7 +66,7 @@ const CreativeVariant = () => {
       <Navbar />
       
       <main className="flex-grow relative">
-        {/* Creative floating elements in the background */}
+        {/* Creative floating elements in the background - improved version */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
           {floatingElements.map((el, index) => (
             <div 
@@ -73,11 +76,12 @@ const CreativeVariant = () => {
                 width: `${el.size}px`,
                 height: `${el.size}px`,
                 left: `${el.left}%`,
-                top: `${el.top}vh`,
+                top: `${el.top}px`,
                 opacity: el.opacity,
                 animation: `float ${el.animationDuration}s ease-in-out infinite`,
                 animationDelay: `${el.animationDelay}s`,
-                transform: `translateY(${Math.sin(scrollY / 200 + index) * 20}px)`
+                // Very subtle movement based on scroll position with damping
+                transform: `translateY(${Math.sin(scrollY / 1000 + index) * 5}px)`
               }}
             ></div>
           ))}
@@ -257,9 +261,9 @@ const CreativeVariant = () => {
                   animation="slide-from-right"
                   delay={index * 0.2}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br opacity-90 transition-all duration-500 group-hover:opacity-100"
-                       className={`${service.color}`}>
-                  </div>
+                  <div 
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-90 transition-all duration-500 group-hover:opacity-100`}
+                  ></div>
                   
                   <div className="relative p-8 md:p-10 text-white h-full flex flex-col">
                     <div className="text-5xl mb-6">{service.icon}</div>
@@ -404,4 +408,3 @@ const CreativeVariant = () => {
 };
 
 export default CreativeVariant;
-
