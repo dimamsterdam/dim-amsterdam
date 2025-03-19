@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -105,19 +106,20 @@ const MinimalistVariant = () => {
             </AnimatedSection>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[{
-              title: "Organisatie-ontwikkeling",
-              description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat."
-            }, {
-              title: "Leiderschaps- & Teamontwikkeling",
-              description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren."
-            }, {
-              title: "Executive coaching",
-              description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren."
-            }].map((service, index) => <AnimatedSection key={index} className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={index * 0.1}>
-                  <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </AnimatedSection>)}
+              <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.1}>
+                <h3 className="text-xl font-display font-semibold mb-3">Organisatie-ontwikkeling</h3>
+                <p className="text-gray-600">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
+              </AnimatedSection>
+              
+              <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.2}>
+                <h3 className="text-xl font-display font-semibold mb-3">Leiderschaps- & Teamontwikkeling</h3>
+                <p className="text-gray-600">Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.</p>
+              </AnimatedSection>
+              
+              <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.3}>
+                <h3 className="text-xl font-display font-semibold mb-3">Executive coaching</h3>
+                <p className="text-gray-600">Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.</p>
+              </AnimatedSection>
             </div>
           </div>
         </section>
