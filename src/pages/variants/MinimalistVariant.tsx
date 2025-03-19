@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, CircleCheck } from "lucide-react";
+import { ArrowRight, CircleCheck, Heart, Zap, Smile } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
@@ -136,7 +136,7 @@ const MinimalistVariant = () => {
               <div className="flex flex-col md:flex-row md:items-stretch gap-6">
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0}>
                   <div className="flex">
-                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <Smile className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
                     <div>
                       <h4 className="font-medium text-gray-800 mb-2">Positief</h4>
                       <p className="text-gray-700">Veranderen en ontwikkelen begint bij weten en waarderen wat goed gaat. Vanuit zelfvertrouwen ontstaat ruimte om ook kritisch te kijken naar wat beter kan en wat beter moet.</p>
@@ -146,15 +146,21 @@ const MinimalistVariant = () => {
 
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0.1}>
                   <div className="flex">
-                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <p className="text-gray-700">Leren en ontwikkelen vraagt ander gedrag en het doorbreken van bestaande patronen. Met ruim 25 jaar ervaring weten wij spanningen snel te herkennen en effectief bespreekbaar te maken.</p>
+                    <Zap className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <div>
+                      <h4 className="font-medium text-gray-800 mb-2">Scherp</h4>
+                      <p className="text-gray-700">Leren en ontwikkelen vraagt ander gedrag en het doorbreken van bestaande patronen. Met ruim 25 jaar ervaring weten wij spanningen snel te herkennen en effectief bespreekbaar te maken.</p>
+                    </div>
                   </div>
                 </AnimatedSection>
 
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0.2}>
                   <div className="flex">
-                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <p className="text-gray-700">Betrokken: We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.</p>
+                    <Heart className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <div>
+                      <h4 className="font-medium text-gray-800 mb-2">Betrokken</h4>
+                      <p className="text-gray-700">We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.</p>
+                    </div>
                   </div>
                 </AnimatedSection>
               </div>
