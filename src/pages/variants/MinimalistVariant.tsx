@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +7,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
+import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
 
 const MinimalistVariant = () => {
   useEffect(() => {
@@ -91,23 +93,11 @@ const MinimalistVariant = () => {
           </div>
         </section>
         
-        <section className="py-16 bg-[#e3eff6]">
-          <div className="container mx-auto px-4 md:px-6">
-            <AnimatedSection animation="fade-in" className="max-w-4xl mx-auto text-center">
-              <p className="text-xl md:text-2xl font-display text-gray-700 italic mb-8">
-                "DIM's cultural transformation program has been a game-changer for our organization. 
-                Our employee engagement scores have increased by 32% and we've seen tangible improvements 
-                in collaboration across departments."
-              </p>
-              <div className="flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mr-3">
-                  S
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Sarah Johnson</p>
-                  <p className="text-sm text-gray-600">Chief People Officer, TechVision Inc.</p>
-                </div>
-              </div>
+        <section className="py-16 bg-gradient-to-br from-[#e3eff6] to-[#f0f7fc] relative overflow-hidden">
+          <div className="absolute inset-0 bg-pattern opacity-5"></div>
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
+            <AnimatedSection animation="fade-in" className="max-w-5xl mx-auto">
+              <EnhancedTestimonialsGallery />
             </AnimatedSection>
           </div>
         </section>
