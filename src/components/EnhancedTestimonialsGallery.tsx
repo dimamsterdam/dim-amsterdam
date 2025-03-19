@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
@@ -90,21 +91,21 @@ const EnhancedTestimonialsGallery = () => {
           duration: 0.5
         }} className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 relative z-10">
             <div className="absolute top-6 left-6">
-              <Quote className="h-12 w-12 text-[#F97316]" />
+              <Quote className="h-10 w-10 text-[#F97316]" />
             </div>
             
             <div className="text-center pt-6">
-              <blockquote className="text-xl md:text-2xl font-display text-gray-700 italic mb-8 max-w-3xl mx-auto">
+              <blockquote className="text-lg md:text-xl font-display text-gray-700 italic mb-8 max-w-3xl mx-auto">
                 "{testimonials[activeIndex].quote}"
               </blockquote>
               
               <div className="flex items-center justify-center">
-                <div className={`w-12 h-12 rounded-full ${testimonials[activeIndex].color} flex items-center justify-center text-primary font-bold text-sm mr-3 shadow-sm`}>
+                <div className={`w-10 h-10 rounded-full ${testimonials[activeIndex].color} flex items-center justify-center text-primary font-bold text-xs mr-3 shadow-sm`}>
                   {testimonials[activeIndex].initials}
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">{testimonials[activeIndex].author}</p>
-                  <p className="text-sm text-gray-600">{testimonials[activeIndex].role}, {testimonials[activeIndex].company}</p>
+                  <p className="font-semibold text-gray-800 text-sm">{testimonials[activeIndex].author}</p>
+                  <p className="text-xs text-gray-600">{testimonials[activeIndex].role}, {testimonials[activeIndex].company}</p>
                 </div>
               </div>
             </div>
