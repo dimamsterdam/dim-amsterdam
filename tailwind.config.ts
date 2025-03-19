@@ -63,8 +63,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				highlight: {
-					DEFAULT: '#ff4715',
-					hover: '#e13f10'
+					DEFAULT: '#5DA3AB',
+					hover: '#4A8A91'
+				},
+				teal: {
+					DEFAULT: '#5DA3AB',
+					hover: '#4A8A91',
+					light: '#E0F0F2',
+					dark: '#3D767C'
 				}
 			},
 			borderRadius: {
