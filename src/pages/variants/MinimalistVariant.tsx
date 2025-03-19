@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+
 const MinimalistVariant = () => {
-  // Smooth scroll behavior for the entire site
   useEffect(() => {
-    // Function to handle smooth scrolling for anchor links
     const handleLinkClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
@@ -29,15 +28,14 @@ const MinimalistVariant = () => {
     };
   }, []);
 
-  // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero Section - Minimalist */}
         <section className="min-h-screen pt-32 pb-20 flex items-center">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -51,7 +49,7 @@ const MinimalistVariant = () => {
               duration: 0.5
             }} className="space-y-8">
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
-                  Samen creëren we meer maatschappelijke <span className="text-orange-600">impact &amp; meer werkplezier</span>
+                  Samen creëren we meer maatschappelijke <span className="text-gray-700">impact &amp; meer werkplezier</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 max-w-lg">
@@ -85,7 +83,6 @@ const MinimalistVariant = () => {
           </div>
         </section>
         
-        {/* Testimonials - Clean and Simple */}
         <section className="py-16 bg-[#e3eff6]">
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection animation="fade-in" className="max-w-4xl mx-auto text-center">
@@ -107,7 +104,6 @@ const MinimalistVariant = () => {
           </div>
         </section>
         
-        {/* Services - Minimalist */}
         <section className="py-20">
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection className="text-center mb-16" animation="fade-in">
@@ -136,7 +132,6 @@ const MinimalistVariant = () => {
           </div>
         </section>
         
-        {/* Values - Minimalist */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" animation="fade-in">
@@ -157,7 +152,6 @@ const MinimalistVariant = () => {
           </div>
         </section>
         
-        {/* CTA - Minimalist */}
         <section className="py-16">
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection className="max-w-xl mx-auto text-center" animation="fade-in">
@@ -176,4 +170,5 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
+
 export default MinimalistVariant;
