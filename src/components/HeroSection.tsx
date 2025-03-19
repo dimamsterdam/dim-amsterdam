@@ -46,14 +46,14 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center pt-12 md:pt-12 overflow-hidden">
       {/* Static gradients affected by scroll */}
       <div 
-        className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" 
+        className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/40 to-accent/30 blur-3xl" 
         style={{
           transform: `translate(${scrolled * 50}px, ${scrolled * -30}px)`,
           opacity: 1 - scrolled * 0.5
         }}
       />
       <div 
-        className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-accent/20 to-primary/30 blur-3xl" 
+        className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-accent/30 to-primary/40 blur-3xl" 
         style={{
           transform: `translate(${scrolled * -50}px, ${scrolled * 30}px)`,
           opacity: 1 - scrolled * 0.5
@@ -62,7 +62,7 @@ const HeroSection = () => {
 
       {/* Animated gradient blobs */}
       <motion.div 
-        className="absolute top-20 right-20 w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#F97316]/10 to-primary/20 blur-3xl"
+        className="absolute top-20 right-20 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#F97316]/30 to-primary/30 blur-3xl"
         animate={{
           x: [0, 40, 0],
           y: [0, -30, 0],
@@ -79,7 +79,7 @@ const HeroSection = () => {
         }}
       />
       <motion.div 
-        className="absolute bottom-10 left-10 w-[350px] h-[350px] rounded-full bg-gradient-to-tr from-primary/15 to-[#F97316]/10 blur-3xl"
+        className="absolute bottom-10 left-10 w-[450px] h-[450px] rounded-full bg-gradient-to-tr from-primary/30 to-[#F97316]/30 blur-3xl"
         animate={{
           x: [0, -30, 0],
           y: [0, 40, 0],
@@ -97,7 +97,7 @@ const HeroSection = () => {
         }}
       />
       <motion.div 
-        className="absolute top-60 left-1/3 w-[300px] h-[300px] rounded-full bg-gradient-to-bl from-accent/15 to-primary/10 blur-3xl"
+        className="absolute top-60 left-1/3 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-accent/30 to-primary/30 blur-3xl"
         animate={{
           x: [0, 30, 0],
           y: [0, 30, 0],
@@ -109,6 +109,24 @@ const HeroSection = () => {
           repeatType: "reverse",
           ease: "easeInOut",
           delay: 1.5,
+        }}
+        style={{
+          opacity: 1 - scrolled * 0.7
+        }}
+      />
+      <motion.div 
+        className="absolute top-1/4 right-1/3 w-[350px] h-[350px] rounded-full bg-gradient-to-tl from-blue-400/30 to-purple-500/30 blur-3xl"
+        animate={{
+          x: [0, 25, 0],
+          y: [0, -35, 0],
+          scale: [1, 1.12, 1],
+        }}
+        transition={{
+          duration: 24,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+          delay: 2,
         }}
         style={{
           opacity: 1 - scrolled * 0.7

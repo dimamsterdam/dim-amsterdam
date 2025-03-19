@@ -8,9 +8,9 @@ const MinimalistHeroSection = () => {
   return (
     <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px] relative overflow-hidden">
       {/* Animated gradient blobs */}
-      <div className="absolute inset-0 w-full h-full opacity-30 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <motion.div 
-          className="absolute -top-40 -right-60 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/20 to-accent/10 blur-3xl"
+          className="absolute -top-40 -right-60 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/40 to-accent/30 blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
@@ -24,7 +24,7 @@ const MinimalistHeroSection = () => {
           }}
         />
         <motion.div 
-          className="absolute -bottom-80 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#F97316]/10 to-primary/20 blur-3xl"
+          className="absolute -bottom-80 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#F97316]/30 to-primary/40 blur-3xl"
           animate={{
             x: [0, -40, 0],
             y: [0, 30, 0],
@@ -39,7 +39,7 @@ const MinimalistHeroSection = () => {
           }}
         />
         <motion.div 
-          className="absolute top-60 left-80 w-[300px] h-[300px] rounded-full bg-gradient-to-bl from-accent/20 to-[#F97316]/10 blur-3xl"
+          className="absolute top-60 left-80 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-accent/30 to-[#F97316]/30 blur-3xl"
           animate={{
             x: [0, 50, 0],
             y: [0, 20, 0],
@@ -51,6 +51,21 @@ const MinimalistHeroSection = () => {
             repeatType: "reverse",
             ease: "easeInOut",
             delay: 1,
+          }}
+        />
+        <motion.div 
+          className="absolute top-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-gradient-to-tl from-blue-400/20 to-purple-500/20 blur-3xl"
+          animate={{
+            x: [0, -30, 0],
+            y: [0, 40, 0],
+            scale: [1, 1.12, 1],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+            delay: 3,
           }}
         />
       </div>
