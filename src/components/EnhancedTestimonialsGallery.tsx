@@ -109,7 +109,7 @@ const EnhancedTestimonialsGallery = () => {
       <div className="max-w-4xl mx-auto">
         {/* Increased min-height to prevent content from being cut off */}
         <div className="relative min-h-[400px] md:min-h-[350px]">
-          <AnimatePresence mode="wait" custom={direction}>
+          <AnimatePresence initial={false} mode="sync" custom={direction}>
             <motion.div 
               key={activeIndex} 
               custom={direction}
