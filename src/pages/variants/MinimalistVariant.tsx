@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -47,7 +47,7 @@ const MinimalistVariant = () => {
               duration: 0.5
             }} className="space-y-8">
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
-                  Samen creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
+                  Samen met vooruitstrevende opdrachtgevers creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 max-w-lg">
@@ -168,4 +168,5 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
+
 export default MinimalistVariant;
