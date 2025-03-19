@@ -35,7 +35,7 @@ const HeroSection = () => {
     })
   };
 
-  // Map tags to their corresponding routes
+  // Correctly map tags to their service page routes
   const tagRoutes = {
     "Organisatieverandering": "/diensten/organisatieverandering",
     "Leiderschaps- & Teamontwikkeling": "/diensten/leiderschapsontwikkeling",
