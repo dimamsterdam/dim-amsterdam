@@ -15,6 +15,7 @@ interface Testimonial {
 
 const EnhancedTestimonialsGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const testimonials: Testimonial[] = [
     {
       quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
@@ -77,6 +78,7 @@ const EnhancedTestimonialsGallery = () => {
   // Auto rotate testimonials every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
+      setDirection(1); // Set direction to right-to-left
       setActiveIndex(current => (current + 1) % testimonials.length);
     }, 10000);
     return () => clearInterval(interval);
@@ -84,31 +86,39 @@ const EnhancedTestimonialsGallery = () => {
 
   // Handle manual navigation
   const goToTestimonial = (index: number) => {
+    setDirection(index > activeIndex ? 1 : -1);
     setActiveIndex(index);
+  };
+  
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0
+    }),
+    center: {
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 300 : -300,
+      opacity: 0
+    })
   };
   
   return <div className="relative overflow-hidden py-8">
       <div className="max-w-4xl mx-auto">
         {/* Increased min-height to prevent content from being cut off */}
         <div className="relative min-h-[400px] md:min-h-[350px]">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" custom={direction}>
             <motion.div 
               key={activeIndex} 
-              initial={{ 
-                opacity: 0,
-                y: 20,
-              }} 
-              animate={{ 
-                opacity: 1,
-                y: 0,
-              }} 
-              exit={{ 
-                opacity: 0,
-                y: -20,
-                transition: { duration: 0.2 }
-              }} 
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
               transition={{
-                duration: 0.4,
+                duration: 0.5,
                 ease: "easeInOut"
               }}
               className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 absolute inset-0"
