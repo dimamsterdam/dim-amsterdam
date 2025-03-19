@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
@@ -86,41 +87,31 @@ const EnhancedTestimonialsGallery = () => {
     setActiveIndex(index);
   };
   
-  return <div className="relative overflow-hidden">
+  return <div className="relative overflow-hidden py-8">
       <div className="max-w-4xl mx-auto">
-        <div className="relative min-h-[300px] md:min-h-[250px]">
-          <AnimatePresence mode="sync">
+        {/* Increased min-height to prevent content from being cut off */}
+        <div className="relative min-h-[400px] md:min-h-[350px]">
+          <AnimatePresence mode="wait">
             <motion.div 
               key={activeIndex} 
               initial={{ 
                 opacity: 0,
                 y: 20,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0
               }} 
               animate={{ 
                 opacity: 1,
                 y: 0,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0
               }} 
               exit={{ 
                 opacity: 0,
                 y: -20,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0
+                transition: { duration: 0.2 }
               }} 
               transition={{
                 duration: 0.4,
                 ease: "easeInOut"
               }}
-              className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 relative z-10"
+              className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 absolute inset-0"
             >
               <div className="text-center pt-6">
                 <div className="flex justify-center mb-6">
@@ -149,8 +140,16 @@ const EnhancedTestimonialsGallery = () => {
           </AnimatePresence>
         </div>
         
-        <div className="flex justify-center mt-8 space-x-2">
-          {testimonials.map((_, index) => <button key={index} onClick={() => goToTestimonial(index)} className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary w-6" : "bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
+        {/* Added more margin to make pagination controls more visible and moved outside the content area */}
+        <div className="flex justify-center mt-12 space-x-2">
+          {testimonials.map((_, index) => (
+            <button 
+              key={index} 
+              onClick={() => goToTestimonial(index)} 
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary w-6" : "bg-gray-300 hover:bg-gray-400"}`} 
+              aria-label={`Go to testimonial ${index + 1}`} 
+            />
+          ))}
         </div>
       </div>
       
