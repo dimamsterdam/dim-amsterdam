@@ -45,7 +45,7 @@ const OrganisatieveranderingPage = () => {
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 className="text-xl font-semibold mb-3">1. Analyse & Plan van Aanpak: "Take a step back"</h3>
-                <p>We starten met een grondige analyse van uw organisatie, cultuur en veranderopgave. Door interviews, workshops en data-analyse krijgen we een helder beeld van de huidige situatie, uitdagingen en kansen.</p>
+                <p>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
