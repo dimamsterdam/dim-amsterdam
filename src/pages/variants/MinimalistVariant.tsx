@@ -115,7 +115,7 @@ const MinimalistVariant = () => {
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.3}>
                 <h3 className="text-xl font-display font-semibold mb-3">Executive coaching</h3>
-                <p className="text-gray-600">Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.</p>
+                <p className="text-gray-600">Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling.</p>
               </AnimatedSection>
             </div>
           </div>
