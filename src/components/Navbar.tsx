@@ -1,11 +1,11 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [variantsOpen, setVariantsOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -26,23 +26,11 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleVariantsToggle = () => {
-    setVariantsOpen(!variantsOpen);
-  };
-
   const menuItems = [
     { label: "Diensten", href: "/diensten" },
     { label: "Werkwijze", href: "/werkwijze" },
     { label: "Klant cases", href: "/klant-cases" },
     { label: "Over ons", href: "/over-ons" },
-  ];
-
-  const variantItems = [
-    { label: "Default", href: "/" },
-    { label: "Minimalist", href: "/variant-minimalist" },
-    { label: "Modern", href: "/variant-modern" },
-    { label: "Creative", href: "/variant-creative" },
-    { label: "Dark", href: "/variant-dark" },
   ];
 
   return (
@@ -65,36 +53,6 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            {/* Variants Dropdown */}
-            <div className="relative">
-              <button
-                onClick={handleVariantsToggle}
-                className="relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary flex items-center"
-              >
-                Variants
-                {variantsOpen ? (
-                  <ChevronUp className="ml-1 h-4 w-4" />
-                ) : (
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                )}
-              </button>
-              
-              {variantsOpen && (
-                <div className="absolute top-full mt-1 py-2 w-48 bg-white rounded-md shadow-lg border border-border z-50">
-                  {variantItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.href}
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                      onClick={() => setVariantsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {menuItems.map((item, index) => (
               <Link
                 key={index}
@@ -131,36 +89,6 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[60px] bg-background z-40 animate-fade-in">
           <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
-            {/* Mobile Variants Menu */}
-            <div className="py-2 px-4 font-medium">
-              <button 
-                onClick={handleVariantsToggle}
-                className="flex items-center justify-between w-full text-lg py-2 animate-slide-from-right"
-              >
-                <span>Variants</span>
-                {variantsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-              </button>
-              
-              {variantsOpen && (
-                <div className="pl-4 mt-2 border-l-2 border-accent">
-                  {variantItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.href}
-                      className="block py-2 hover:text-primary transition-colors animate-slide-from-right"
-                      style={{ animationDelay: `${0.05 + index * 0.05}s` }}
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setVariantsOpen(false);
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {menuItems.map((item, index) => (
               <Link
                 key={index}
