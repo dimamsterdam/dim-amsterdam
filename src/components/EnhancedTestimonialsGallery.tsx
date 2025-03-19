@@ -94,10 +94,7 @@ const EnhancedTestimonialsGallery = () => {
         }} transition={{
           duration: 0.5
         }} className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 relative z-10">
-            <div className="absolute top-6 left-6">
-              <Quote className="h-8 w-8 text-[#F97316]" />
-            </div>
-            
+            {/* Remove the absolute positioning for better connection with the content */}
             <div className="text-center pt-6">
               {/* Avatar positioned at the top center */}
               <div className="flex justify-center mb-6">
@@ -106,6 +103,11 @@ const EnhancedTestimonialsGallery = () => {
                     {testimonials[activeIndex].initials}
                   </AvatarFallback>
                 </Avatar>
+              </div>
+              
+              <div className="relative mb-2">
+                {/* Centered quote icon that visually connects to the blockquote */}
+                <Quote className="h-8 w-8 text-[#F97316] mx-auto mb-2" />
               </div>
               
               <blockquote className="text-base md:text-lg font-display text-gray-700 italic mb-6 max-w-3xl mx-auto">
