@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +7,6 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
-
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -33,7 +31,6 @@ const MinimalistVariant = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -113,7 +110,7 @@ const MinimalistVariant = () => {
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.2}>
                 <h3 className="text-xl font-display font-semibold mb-3">Leiderschaps- & Teamontwikkeling</h3>
-                <p className="text-gray-600">Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.</p>
+                <p className="text-gray-600">Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma’s gericht op concreet resultaat, intervisies en teamontwikkeling.</p>
               </AnimatedSection>
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.3}>
@@ -162,5 +159,4 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
-
 export default MinimalistVariant;
