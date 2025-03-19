@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -50,9 +49,13 @@ const MinimalistVariant = () => {
             }} className="space-y-8">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {heroContent.tags.map((tag, index) => (
-                    <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm">
+                    <Link 
+                      key={index} 
+                      to={`/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]"
+                    >
                       {tag}
-                    </span>
+                    </Link>
                   ))}
                 </div>
 
