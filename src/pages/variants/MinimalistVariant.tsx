@@ -49,7 +49,7 @@ const MinimalistVariant = () => {
                   Samen creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
                 </h1>
                 
-                <p className="text-lg text-gray-600 max-w-lg">In de complexe dynamiek van het publieke domein ondersteunen wij (top-)leidinggevenden in  persoonlijke, team- en organisatieontwikkeling.</p>
+                <p className="text-lg text-gray-600 max-w-lg">Wij ondersteunen (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.</p>
                 
                 <div className="pt-4">
                   <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium py-1 transition-all hover:border-primary/70 hover:text-primary/70 group">
