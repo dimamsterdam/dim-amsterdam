@@ -105,7 +105,7 @@ const EnhancedTestimonialsGallery = () => {
               <div className="flex items-start justify-center mb-4">
                 <Quote className="h-8 w-8 text-[#F97316] mr-2 flex-shrink-0 mt-1" />
                 <blockquote className="text-base md:text-lg font-display text-gray-700 italic mb-6 text-left max-w-3xl">
-                  "{testimonials[activeIndex].quote}"
+                  {testimonials[activeIndex].quote}
                 </blockquote>
               </div>
               
