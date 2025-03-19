@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +7,6 @@ import { ArrowRight, CircleCheck, Heart, Zap, Smile } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
-
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -30,11 +28,9 @@ const MinimalistVariant = () => {
       document.removeEventListener('click', handleLinkClick);
     };
   }, []);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -159,7 +155,7 @@ const MinimalistVariant = () => {
                     <Heart className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
                     <div>
                       <h4 className="font-medium text-gray-800 mb-2">Betrokken</h4>
-                      <p className="text-gray-700">We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.</p>
+                      <p className="text-gray-700">Wij werken aan ontwikkelingen waar we in geloven, met vooruitstrevende collega’s en opdrachtgevers waar we een klik mee hebben. Dit geeft de energie om ook weerbarstige processen te doorbreken.</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -186,5 +182,4 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
-
 export default MinimalistVariant;
