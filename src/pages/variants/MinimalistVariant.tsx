@@ -154,7 +154,7 @@ const MinimalistVariant = () => {
                   <div className="flex">
                     <Heart className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800 mb-2">Betrokken</h4>
+                      <h4 className="text-gray-800 mb-2 font-bold">Betrokken</h4>
                       <p className="text-gray-700">Wij werken aan ontwikkelingen waar we in geloven, met vooruitstrevende collega’s en opdrachtgevers waar we een klik mee hebben. Dit geeft de energie om ook weerbarstige processen te doorbreken.</p>
                     </div>
                   </div>
