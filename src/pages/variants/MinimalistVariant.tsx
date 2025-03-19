@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,6 +8,7 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
+
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -28,9 +30,11 @@ const MinimalistVariant = () => {
       document.removeEventListener('click', handleLinkClick);
     };
   }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -110,7 +114,7 @@ const MinimalistVariant = () => {
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.2}>
                 <h3 className="text-xl font-display font-semibold mb-3">Leiderschaps- & Teamontwikkeling</h3>
-                <p className="text-gray-600">Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma’s gericht op concreet resultaat, intervisies en teamontwikkeling.</p>
+                <p className="text-gray-600">Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's gericht op concreet resultaat, intervisies en teamontwikkeling.</p>
               </AnimatedSection>
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.3}>
@@ -130,12 +134,26 @@ const MinimalistVariant = () => {
             
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-col md:flex-row md:items-stretch gap-6">
-                {["Positief: We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.", "Scherp: We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.", "Betrokken: We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten."].map((value, index) => <AnimatedSection key={index} className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={index * 0.1}>
-                    <div className="flex">
-                      <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                      <p className="text-gray-700">{value}</p>
-                    </div>
-                  </AnimatedSection>)}
+                <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0}>
+                  <div className="flex">
+                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <p className="text-gray-700">Positief: We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.</p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0.1}>
+                  <div className="flex">
+                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <p className="text-gray-700">Scherp: We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.</p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0.2}>
+                  <div className="flex">
+                    <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
+                    <p className="text-gray-700">Betrokken: We bouwen authentieke relaties op door actief te luisteren en ons volledig in te zetten voor het succes van onze klanten.</p>
+                  </div>
+                </AnimatedSection>
               </div>
             </div>
           </div>
@@ -159,4 +177,5 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
+
 export default MinimalistVariant;
