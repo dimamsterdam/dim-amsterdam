@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
@@ -94,9 +93,7 @@ const EnhancedTestimonialsGallery = () => {
         }} transition={{
           duration: 0.5
         }} className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 relative z-10">
-            {/* Remove the absolute positioning for better connection with the content */}
             <div className="text-center pt-6">
-              {/* Avatar positioned at the top center */}
               <div className="flex justify-center mb-6">
                 <Avatar className="h-[62.5px] w-[62.5px]">
                   <AvatarFallback className={`text-md font-semibold ${testimonials[activeIndex].color} text-gray-700`}>
@@ -105,14 +102,12 @@ const EnhancedTestimonialsGallery = () => {
                 </Avatar>
               </div>
               
-              <div className="relative mb-2">
-                {/* Centered quote icon that visually connects to the blockquote */}
-                <Quote className="h-8 w-8 text-[#F97316] mx-auto mb-2" />
+              <div className="flex items-start justify-center mb-4">
+                <Quote className="h-8 w-8 text-[#F97316] mr-2 flex-shrink-0 mt-1" />
+                <blockquote className="text-base md:text-lg font-display text-gray-700 italic mb-6 text-left max-w-3xl">
+                  "{testimonials[activeIndex].quote}"
+                </blockquote>
               </div>
-              
-              <blockquote className="text-base md:text-lg font-display text-gray-700 italic mb-6 max-w-3xl mx-auto">
-                "{testimonials[activeIndex].quote}"
-              </blockquote>
               
               <div className="flex items-center justify-center">
                 <div>
@@ -124,13 +119,11 @@ const EnhancedTestimonialsGallery = () => {
           </motion.div>
         </AnimatePresence>
         
-        {/* Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {testimonials.map((_, index) => <button key={index} onClick={() => goToTestimonial(index)} className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary w-6" : "bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
         </div>
       </div>
       
-      {/* Decorative elements to make the design pop */}
       <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
       
     </div>;
