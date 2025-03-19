@@ -50,7 +50,7 @@ const MinimalistVariant = () => {
             }} className="space-y-8">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {heroContent.tags.map((tag, index) => (
-                    <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-medium shadow-sm">
+                    <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm">
                       {tag}
                     </span>
                   ))}
