@@ -107,7 +107,7 @@ const MinimalistVariant = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[{
               title: "Organisatie-ontwikkeling",
-              description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat. Voorbeelden van organisatie-ontwikkeltrajecten betreffen Cultuurverandering: zakelijkheid en samenwerking, samenwerking/conflicthantering, visie- & strategie-ontwikkeling."
+              description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat."
             }, {
               title: "Leiderschaps- & Teamontwikkeling",
               description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren."
