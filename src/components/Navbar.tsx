@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      label: "Diensten",
+      label: "Aanbod",
       dropdown: true,
       items: serviceItems,
     },
