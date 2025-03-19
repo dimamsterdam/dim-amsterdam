@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +7,6 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
-
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -50,15 +48,9 @@ const MinimalistVariant = () => {
               duration: 0.5
             }} className="space-y-8">
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {heroContent.tags.map((tag, index) => (
-                    <Link 
-                      key={index} 
-                      to={`/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]"
-                    >
+                  {heroContent.tags.map((tag, index) => <Link key={index} to={`/${tag.toLowerCase().replace(/\s+/g, '-')}`} className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]">
                       {tag}
-                    </Link>
-                  ))}
+                    </Link>)}
                 </div>
 
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
@@ -105,7 +97,7 @@ const MinimalistVariant = () => {
         <section className="py-20">
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection className="text-center mb-16" animation="fade-in">
-              <h2 className="text-3xl font-display font-bold mb-4">Dit is wat we doen</h2>
+              <h2 className="text-3xl font-display font-bold mb-4">Wat we doen</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Onze geïntegreerde aanpak richt zich op het volledige spectrum van uitdagingen 
                 op het gebied van cultuur en leiderschap in moderne organisaties.
