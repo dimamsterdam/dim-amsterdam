@@ -140,7 +140,7 @@ const MinimalistVariant = () => {
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0.1}>
                   <div className="flex">
                     <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <p className="text-gray-700">Scherp: We streven naar duidelijkheid en precisie, door complexe situaties te analyseren en tot de kern te komen.</p>
+                    <p className="text-gray-700">Leren en ontwikkelen vraagt ander gedrag en het doorbreken van bestaande patronen. Met ruim 25 jaar ervaring weten wij spanningen snel te herkennen en effectief bespreekbaar te maken.</p>
                   </div>
                 </AnimatedSection>
 
