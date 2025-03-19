@@ -100,7 +100,7 @@ const EnhancedTestimonialsGallery = () => {
             className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 relative z-10"
           >
             <div className="absolute top-6 left-6">
-              <Quote className="h-12 w-12 text-primary/30" />
+              <Quote className="h-12 w-12 text-[#F97316]/30" />
             </div>
             
             <div className="text-center pt-6">
