@@ -134,7 +134,7 @@ const MinimalistVariant = () => {
                   <div className="flex">
                     <Smile className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800 mb-2">Positief</h4>
+                      <h4 className="text-gray-800 mb-2 font-bold">Positief</h4>
                       <p className="text-gray-700">Veranderen en ontwikkelen begint bij weten en waarderen wat goed gaat. Vanuit zelfvertrouwen ontstaat ruimte om ook kritisch te kijken naar wat beter kan en wat beter moet.</p>
                     </div>
                   </div>
