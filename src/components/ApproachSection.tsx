@@ -1,3 +1,4 @@
+
 import { useState, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { Heart, Zap, Smile } from "lucide-react";
@@ -63,11 +64,11 @@ const ApproachSection = () => {
                 onClick={() => handleStepClick(index)} 
                 className={`timeline-step flex flex-col items-center flex-shrink-0 w-28 md:w-auto px-2 transition-all duration-300 ${selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'}`}
               >
-                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-gray-300 text-gray-600'}`}>
+                <div className={`relative z-10 w-14 h-14 flex items-center justify-center rounded-full mb-3 text-lg transition-all duration-300 ${selectedIndex === index ? 'bg-[#F97316] text-white shadow-lg shadow-[#F97316]/20' : 'bg-gray-300 text-gray-600'}`}>
                   {value.icon}
                 </div>
                 
-                <p className={`font-medium text-sm md:text-base transition-colors duration-300 ${selectedIndex === index ? 'text-primary' : 'text-gray-600'}`}>
+                <p className={`font-medium text-sm md:text-base transition-colors duration-300 ${selectedIndex === index ? 'text-[#F97316]' : 'text-gray-600'}`}>
                   {value.title}
                 </p>
                 
@@ -75,7 +76,7 @@ const ApproachSection = () => {
                 {index < values.length - 1 && (
                   <div className="hidden md:block absolute h-[2px] bg-gray-200 top-6 left-[calc(50%+3rem)] right-[calc(50%+3rem)] -z-0">
                     <div 
-                      className="absolute h-full bg-primary transition-all duration-500 ease-out" 
+                      className="absolute h-full bg-[#F97316] transition-all duration-500 ease-out" 
                       style={{
                         width: selectedIndex > index ? '100%' : '0%',
                         left: 0
@@ -91,7 +92,7 @@ const ApproachSection = () => {
         {/* Selected value details */}
         <AnimatedSection key={selectedIndex} className="max-w-3xl mx-auto bg-accent/30 rounded-xl p-8 md:p-10 border border-accent" animation="scale-in">
           <div className="flex flex-col md:flex-row md:items-start gap-6">
-            <div className="w-16 h-16 flex-shrink-0 rounded-full bg-primary flex items-center justify-center text-white text-2xl">
+            <div className="w-16 h-16 flex-shrink-0 rounded-full bg-[#F97316] flex items-center justify-center text-white text-2xl">
               {values[selectedIndex].icon}
             </div>
             <div>
