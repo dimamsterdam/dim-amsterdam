@@ -52,9 +52,19 @@ const MinimalistVariant = () => {
               duration: 0.5
             }} className="space-y-8">
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {heroContent.tags.map((tag, index) => <Link key={index} to={`/${tag.toLowerCase().replace(/\s+/g, '-')}`} className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]">
+                  {heroContent.tags.map((tag, index) => (
+                    <Link 
+                      key={index} 
+                      to={tag === "Organisatieverandering" 
+                        ? "/diensten/organisatieverandering" 
+                        : tag === "Leiderschaps- & Teamontwikkeling" 
+                          ? "/diensten/leiderschapsontwikkeling" 
+                          : "/diensten/executive-coaching"}
+                      className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]"
+                    >
                       {tag}
-                    </Link>)}
+                    </Link>
+                  ))}
                 </div>
 
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
