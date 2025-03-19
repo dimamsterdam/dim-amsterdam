@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MinimalistVariant from "./pages/variants/MinimalistVariant";
 import NotFound from "./pages/NotFound";
+import OrganisatieveranderingPage from "./pages/services/OrganisatieveranderingPage";
+import LeiderschapsontwikkelingPage from "./pages/services/LeiderschapsontwikkelingPage";
+import ExecutiveCoachingPage from "./pages/services/ExecutiveCoachingPage";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +21,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<MinimalistVariant />} />
           <Route path="/variant-minimalist" element={<Navigate to="/" replace />} />
+          <Route path="/diensten/organisatieverandering" element={<OrganisatieveranderingPage />} />
+          <Route path="/diensten/leiderschapsontwikkeling" element={<LeiderschapsontwikkelingPage />} />
+          <Route path="/diensten/executive-coaching" element={<ExecutiveCoachingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
