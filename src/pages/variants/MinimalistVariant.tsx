@@ -133,7 +133,7 @@ const MinimalistVariant = () => {
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0}>
                   <div className="flex">
                     <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <p className="text-gray-700">Veranderen en ontwikkelen begint bij weten en waarderen wat goed gaat. Vanuit (zelf-)vertrouwen ontstaat ruimte om ook kritisch te kijken naar wat beter kan en wat beter moet.</p>
+                    <p className="text-gray-700">Veranderen en ontwikkelen begint bij weten en waarderen wat goed gaat. Vanuit zelfvertrouwen ontstaat ruimte om ook kritisch te kijken naar wat beter kan en wat beter moet.</p>
                   </div>
                 </AnimatedSection>
 
