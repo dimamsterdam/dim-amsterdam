@@ -49,7 +49,7 @@ const OrganisatieveranderingPage = () => {
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">2. Veranderstrategie</h3>
+                <h3 className="text-xl font-semibold mb-3">2. Uitvoering: resultaat & lerend vermogen</h3>
                 <p>Op basis van de diagnose ontwikkelen we een veranderstrategie op maat. We bepalen samen welke interventies nodig zijn, hoe we stakeholders betrekken en hoe we voortgang gaan meten.</p>
               </div>
               
