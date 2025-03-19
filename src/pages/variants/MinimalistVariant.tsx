@@ -7,7 +7,6 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
-
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -32,7 +31,6 @@ const MinimalistVariant = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -101,7 +99,7 @@ const MinimalistVariant = () => {
             <AnimatedSection className="text-center mb-16" animation="fade-in">
               <h2 className="text-3xl font-display font-bold mb-4">Wat we doen</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
-              <p className="text-gray-600 max-w-2xl mx-auto mt-4">Voorbeelden van organisatie-ontwikkeltrajecten betreffen Cultuurverandering: zakelijkheid en samenwerking, samenwerking/conflicthantering, visie- & strategie-ontwikkeling.</p>
+              
             </AnimatedSection>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,5 +158,4 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
-
 export default MinimalistVariant;
