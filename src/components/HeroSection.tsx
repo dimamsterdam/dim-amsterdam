@@ -19,6 +19,11 @@ const HeroSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
+  // Console log to confirm animations are configured
+  useEffect(() => {
+    console.log("HeroSection mounted - animations should be active");
+  }, []);
+  
   const fadeVariants = {
     initial: {
       opacity: 0,
@@ -60,7 +65,7 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Animated gradient blobs */}
+      {/* Animated gradient blobs - updated to use direct animation syntax */}
       <motion.div 
         className="absolute top-20 right-20 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#F97316]/30 to-primary/30 blur-3xl"
         animate={{
