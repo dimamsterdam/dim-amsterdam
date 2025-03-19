@@ -40,7 +40,7 @@ const OrganisatieveranderingPage = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Onze werkwijze</h2>
+            <h2 className="text-3xl font-display font-bold mb-6">Organisatieverandering: werkwijze</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
