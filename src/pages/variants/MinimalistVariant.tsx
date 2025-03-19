@@ -51,7 +51,7 @@ const MinimalistVariant = () => {
               duration: 0.5
             }} className="space-y-8">
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
-                  Samen creëren we meer maatschappelijke <span className="text-black">impact &amp; meer werkplezier</span>
+                  Samen creëren we meer maatschappelijke <span className="text-orange-600">impact &amp; meer werkplezier</span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 max-w-lg">
