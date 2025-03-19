@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
+
 interface Testimonial {
   quote: string;
   author: string;
@@ -10,56 +11,57 @@ interface Testimonial {
   initials: string;
   color: string;
 }
+
 const EnhancedTestimonialsGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials: Testimonial[] = [{
-    quote: "DIM's cultural transformation program has been a game-changer for our organization. Our employee engagement scores have increased by 32% and we've seen tangible improvements in collaboration across departments.",
-    author: "Sarah Johnson",
-    role: "Chief People Officer",
-    company: "TechVision Inc.",
-    initials: "SJ",
+    quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
+    author: "Annemiek van Bolhuis",
+    role: "Bestuursvoorzitter",
+    company: "Autoriteit Nucleaire Veiligheid en Stralingsbescherming (ANVS), Ministerie van Infrastructuur en Milieu",
+    initials: "AB",
     color: "bg-primary/20"
   }, {
-    quote: "Working with DIM has transformed how our leadership team operates. We're more aligned, more effective, and more purpose-driven than ever before. The impact on our business results has been remarkable.",
-    author: "Michael Chen",
-    role: "CEO",
-    company: "Ascend Group",
-    initials: "MC",
+    quote: "Met grote waardering beveel ik Alexli Gravemeijer van harte aan als coach en opleider. In haar begeleiding van het professionaliseringstraject bij de Wetenschappelijke Raad voor het Regeringsbeleid (WRR) heeft zij een cruciale rol gespeeld in het versterken van onze samenwerkingscultuur.",
+    author: "Prof. Dr. Frans Brom",
+    role: "Secretaris/directeur",
+    company: "Wetenschappelijke Raad voor het Regeringsbeleid (WRR), Ministerie van Algemene Zaken",
+    initials: "FB",
     color: "bg-emerald-500/20"
   }, {
-    quote: "The insights and frameworks DIM brought to our organization have fundamentally changed how we approach culture. They didn't just provide recommendations – they partnered with us every step of the way.",
-    author: "Emma Williams",
-    role: "VP of Organizational Development",
-    company: "Horizon Healthcare",
-    initials: "EW",
+    quote: "Alexli geeft richting en organiseert focus in de verandering. Met expertise, overtuigingskracht en creativiteit weet ze op een positieve manier te inspireren en beweging te realiseren.",
+    author: "Annet Bertram",
+    role: "Directeur Genreaal",
+    company: "Rijksvastgoedbedrijf (RVB), Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+    initials: "AB",
     color: "bg-indigo-500/20"
   }, {
-    quote: "The team at DIM helped us navigate a complex merger with empathy and precision. Their cultural integration roadmap became our north star, and we couldn't be happier with the results.",
-    author: "Thomas Rodriguez",
-    role: "Director of HR",
-    company: "Global Systems",
-    initials: "TR",
+    quote: "Alexli combineert strategisch inzicht, scherp analytisch vermogen, respectvol kunnen confronteren met een warme persoonlijkheid. Ze weet in korte tijd een veilig werkklimaat te creëren en zet haar jarenlange ervaring en kennis met wijsheid en humor in.",
+    author: "Corine van der Sande",
+    role: "Management Development",
+    company: "Erasmus Medisch Centrum",
+    initials: "CS",
     color: "bg-purple-500/20"
   }, {
-    quote: "We were facing a retention crisis before DIM stepped in. Their diagnostic approach helped us identify blind spots in our culture, and their actionable recommendations have transformed our workplace.",
-    author: "Aisha Patel",
-    role: "COO",
-    company: "Innovate Digital",
-    initials: "AP",
+    quote: "Als IG van de NVWA heb ik Alexli leren kennen als een enthousiasmerende begeleider in ons traject van leiderschapsontwikkeling. Zij verbindt, snapt waarom het gaat in de organisatie, heeft inzicht in veranderprocessen en treedt effectief op.",
+    author: "Rob van Lint",
+    role: "Inspecteur Generaal",
+    company: "Nederlandse Voedsel en Warenautoriteit (NVWA), Ministerie van Landbouw, Visserij, Voedselzekerheid en Natuur",
+    initials: "RL",
     color: "bg-amber-500/20"
   }, {
-    quote: "The leadership development program DIM designed for us has had profound effects. Our managers are now better equipped to handle complex challenges and inspire their teams.",
-    author: "David Andersson",
-    role: "Director of Leadership Development",
-    company: "Nordic Solutions",
-    initials: "DA",
+    quote: "Zowel toen ik DG Luchtvaart en Maritieme Zaken als toen ik DG Energie, Telecom en Mededinging was, heeft Alexli mij op bijzondere en intensieve wijze begeleid met mijn teamontwikkeling. Zij luistert scherp, weet alle teamleden altijd in hun waarde te laten en biedt vervolgens conceptuele en praktische handreikingen waarmee de samenwerking in teams met sprongen vooruit gaat.",
+    author: "Mark Dierix",
+    role: "Directeur Generaal",
+    company: "Energie, Telecom en Mededinging (ETM), Ministerie van Economische Zaken",
+    initials: "MD",
     color: "bg-blue-400/20"
   }, {
-    quote: "DIM's approach to culture transformation is unlike anything we've experienced before. They truly understand the human element of change and how to engage people at all levels of the organization.",
-    author: "Olivia Martinez",
-    role: "Head of People & Culture",
-    company: "Global Finance",
-    initials: "OM",
+    quote: "DG BEB wil impact gericht sturen vanuit visie. Alexli en Jont hebben ons directieteam en onze MT's begeleid in de concrete doorvertaling van visie naar strategie & concrete doelen voor de jaarplannen. Een zeer plezierige samenwerking, waarin Alexli op een positieve en constructieve manier mensen heeft weten mee te nemen in een complex en soms taai proces!",
+    author: "Guido Landheer",
+    role: "Directeur/plaatsvervangend DG",
+    company: "Buitenlandse Externe Betrekkingen, Ministerie van Buitenlandse Zaken",
+    initials: "GL",
     color: "bg-rose-400/20"
   }];
 
@@ -75,6 +77,7 @@ const EnhancedTestimonialsGallery = () => {
   const goToTestimonial = (index: number) => {
     setActiveIndex(index);
   };
+  
   return <div className="relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <AnimatePresence mode="wait">
@@ -123,4 +126,5 @@ const EnhancedTestimonialsGallery = () => {
       
     </div>;
 };
+
 export default EnhancedTestimonialsGallery;
