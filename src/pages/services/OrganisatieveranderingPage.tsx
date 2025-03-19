@@ -50,7 +50,9 @@ const OrganisatieveranderingPage = () => {
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 className="text-xl font-semibold mb-3">2. Uitvoering: resultaat & lerend vermogen</h3>
-                <p>Op basis van de diagnose ontwikkelen we een veranderstrategie op maat. We bepalen samen welke interventies nodig zijn, hoe we stakeholders betrekken en hoe we voortgang gaan meten.</p>
+                <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- &amp; leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
+
+We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet resultaat, waarbij actie en reflectie hand in hand gaan. Zo realiseren we niet alleen resultaat op de korte termijn, maar ook lerend vermogen voor de lange termijn. Onze bijeenkomsten zijn resultaatgericht, analytisch scherp, confronterend, positief en onderling verbindend.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
