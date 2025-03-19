@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -107,18 +108,24 @@ const MinimalistVariant = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.1}>
-                <h3 className="text-xl font-display font-semibold mb-3">Organisatie-ontwikkeling</h3>
-                <p className="text-gray-600">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
+                <Link to="/diensten/organisatieverandering" className="block h-full">
+                  <h3 className="text-xl font-display font-semibold mb-3">Organisatie-ontwikkeling</h3>
+                  <p className="text-gray-600">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
+                </Link>
               </AnimatedSection>
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.2}>
-                <h3 className="text-xl font-display font-semibold mb-3">Leiderschaps- & Teamontwikkeling</h3>
-                <p className="text-gray-600">Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's gericht op concreet resultaat, intervisies en teamontwikkeling.</p>
+                <Link to="/diensten/leiderschapsontwikkeling" className="block h-full">
+                  <h3 className="text-xl font-display font-semibold mb-3">Leiderschaps- & Teamontwikkeling</h3>
+                  <p className="text-gray-600">Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's gericht op concreet resultaat, intervisies en teamontwikkeling.</p>
+                </Link>
               </AnimatedSection>
               
               <AnimatedSection className="p-6 border border-gray-100 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-sm" animation="fade-in" delay={0.3}>
-                <h3 className="text-xl font-display font-semibold mb-3">Executive coaching</h3>
-                <p className="text-gray-600">Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling.</p>
+                <Link to="/diensten/executive-coaching" className="block h-full">
+                  <h3 className="text-xl font-display font-semibold mb-3">Executive coaching</h3>
+                  <p className="text-gray-600">Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling.</p>
+                </Link>
               </AnimatedSection>
             </div>
           </div>

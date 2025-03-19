@@ -34,6 +34,13 @@ const HeroSection = () => {
       }
     })
   };
+
+  // Map tags to their corresponding routes
+  const tagRoutes = {
+    "Organisatieverandering": "/diensten/organisatieverandering",
+    "Leiderschaps- & Teamontwikkeling": "/diensten/leiderschapsontwikkeling",
+    "Executive coaching": "/diensten/executive-coaching"
+  };
   
   return <section className="relative min-h-screen flex items-center pt-12 md:pt-12 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl" style={{
@@ -50,9 +57,18 @@ const HeroSection = () => {
           <div className="lg:col-span-7 space-y-8">
             <div>
               <motion.div className="flex flex-wrap gap-2 mb-6" variants={fadeVariants} custom={0} initial="initial" animate="animate">
-                {heroContent.tags.map((tag, index) => <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-medium shadow-sm">
-                    {tag}
-                  </span>)}
+                {heroContent.tags.map((tag, index) => {
+                  const route = tagRoutes[tag as keyof typeof tagRoutes] || "/";
+                  return (
+                    <Link 
+                      key={index} 
+                      to={route}
+                      className="inline-block text-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-medium shadow-sm hover:bg-primary/20 transition-colors"
+                    >
+                      {tag}
+                    </Link>
+                  );
+                })}
               </motion.div>
               
               <motion.h1 variants={fadeVariants} custom={1} initial="initial" animate="animate" className="text-4xl md:text-4xl font-display font-bold tracking-tight leading-tight mb-6 text-gray-700">

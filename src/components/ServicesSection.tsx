@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ChevronRight, BarChart2, Users, UserCog } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -14,12 +15,12 @@ const ServicesSection = () => {
     title: "Organisatie-ontwikkeling",
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
-    link: "/diensten/organisatie-ontwikkeling"
+    link: "/diensten/organisatieverandering"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
     icon: <Users className="w-6 h-6" />,
-    link: "/diensten/leiderschaps-teamontwikkeling"
+    link: "/diensten/leiderschapsontwikkeling"
   }, {
     title: "Executive coaching",
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
