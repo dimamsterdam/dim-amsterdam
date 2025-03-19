@@ -6,8 +6,56 @@ import { heroContent } from "@/content/heroContent";
 
 const MinimalistHeroSection = () => {
   return (
-    <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px]">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px] relative overflow-hidden">
+      {/* Animated gradient blobs */}
+      <div className="absolute inset-0 w-full h-full opacity-30 overflow-hidden">
+        <motion.div 
+          className="absolute -top-40 -right-60 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/20 to-accent/10 blur-3xl"
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div 
+          className="absolute -bottom-80 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#F97316]/10 to-primary/20 blur-3xl"
+          animate={{
+            x: [0, -40, 0],
+            y: [0, 30, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        />
+        <motion.div 
+          className="absolute top-60 left-80 w-[300px] h-[300px] rounded-full bg-gradient-to-bl from-accent/20 to-[#F97316]/10 blur-3xl"
+          animate={{
+            x: [0, 50, 0],
+            y: [0, 20, 0],
+            scale: [1, 1.08, 1],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{
