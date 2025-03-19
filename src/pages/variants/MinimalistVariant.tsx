@@ -55,7 +55,7 @@ const MinimalistVariant = () => {
                 </p>
                 
                 <div className="pt-4">
-                  <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium py-1 transition-all hover:border-primary/70 hover:text-primary/70 group">
+                  <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium transition-all hover:border-primary/70 hover:text-primary/70 group py-[2px]">
                     <span>Neem contact op</span>
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
