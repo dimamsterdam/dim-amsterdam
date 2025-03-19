@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -5,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -26,14 +28,16 @@ const MinimalistVariant = () => {
       document.removeEventListener('click', handleLinkClick);
     };
   }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
       <main className="flex-grow">
-        <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px]">
+        <section className="min-h-screen pt-32 pb-20 flex items-center">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div initial={{
@@ -55,7 +59,7 @@ const MinimalistVariant = () => {
                 </p>
                 
                 <div className="pt-4">
-                  <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium transition-all hover:border-primary/70 hover:text-primary/70 group py-[2px]">
+                  <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium py-1 transition-all hover:border-primary/70 hover:text-primary/70 group">
                     <span>Neem contact op</span>
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -167,4 +171,5 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
+
 export default MinimalistVariant;
