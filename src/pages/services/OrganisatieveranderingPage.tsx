@@ -58,7 +58,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 className="text-xl font-semibold mb-3">3. Afronding: verankering &amp; evaluatie</h3>
-                <p>We begeleiden de implementatie van de veranderstrategie met workshops, coaching en advies. We zorgen voor eigenaarschap in de organisatie en bouwen capaciteit voor duurzame verandering.</p>
+                <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
