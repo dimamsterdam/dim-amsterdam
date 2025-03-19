@@ -61,10 +61,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                 <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">4. Borging & Evaluatie</h3>
-                <p>We helpen de organisatie om de verandering te borgen in processen, gedrag en cultuur. Regelmatige evaluatie zorgt voor leren en bijsturen waar nodig.</p>
-              </div>
+              
             </div>
           </AnimatedSection>
         </div>
@@ -74,7 +71,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Succesvolle cases</h2>
+            <h2 className="text-3xl font-display font-bold mb-6">Klant cases</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
