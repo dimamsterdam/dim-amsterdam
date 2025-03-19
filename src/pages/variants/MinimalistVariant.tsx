@@ -144,7 +144,7 @@ const MinimalistVariant = () => {
                   <div className="flex">
                     <Zap className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
                     <div>
-                      <h4 className="font-medium text-gray-800 mb-2">Scherp</h4>
+                      <h4 className="text-gray-800 mb-2 font-bold">Scherp</h4>
                       <p className="text-gray-700">Leren en ontwikkelen vraagt ander gedrag en het doorbreken van bestaande patronen. Met ruim 25 jaar ervaring weten wij spanningen snel te herkennen en effectief bespreekbaar te maken.</p>
                     </div>
                   </div>
