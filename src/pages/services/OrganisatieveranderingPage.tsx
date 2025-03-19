@@ -57,7 +57,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">3. Implementatie & Begeleiding</h3>
+                <h3 className="text-xl font-semibold mb-3">3. Afronding: verankering &amp; evaluatie</h3>
                 <p>We begeleiden de implementatie van de veranderstrategie met workshops, coaching en advies. We zorgen voor eigenaarschap in de organisatie en bouwen capaciteit voor duurzame verandering.</p>
               </div>
               
