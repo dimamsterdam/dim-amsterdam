@@ -19,7 +19,7 @@ const MinimalistHeroSection = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: "mirror",
             ease: "easeInOut",
           }}
         />
@@ -33,7 +33,7 @@ const MinimalistHeroSection = () => {
           transition={{
             duration: 25,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: "mirror",
             ease: "easeInOut",
             delay: 2,
           }}
@@ -48,7 +48,7 @@ const MinimalistHeroSection = () => {
           transition={{
             duration: 18,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: "mirror",
             ease: "easeInOut",
             delay: 1,
           }}
@@ -63,7 +63,7 @@ const MinimalistHeroSection = () => {
           transition={{
             duration: 22,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: "mirror",
             ease: "easeInOut",
             delay: 3,
           }}

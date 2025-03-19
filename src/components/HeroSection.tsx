@@ -71,7 +71,7 @@ const HeroSection = () => {
         transition={{
           duration: 22,
           repeat: Infinity,
-          repeatType: "reverse",
+          repeatType: "mirror",
           ease: "easeInOut",
         }}
         style={{
@@ -88,7 +88,7 @@ const HeroSection = () => {
         transition={{
           duration: 26,
           repeat: Infinity,
-          repeatType: "reverse",
+          repeatType: "mirror",
           ease: "easeInOut",
           delay: 3,
         }}
@@ -106,7 +106,7 @@ const HeroSection = () => {
         transition={{
           duration: 18,
           repeat: Infinity,
-          repeatType: "reverse",
+          repeatType: "mirror",
           ease: "easeInOut",
           delay: 1.5,
         }}
@@ -124,7 +124,7 @@ const HeroSection = () => {
         transition={{
           duration: 24,
           repeat: Infinity,
-          repeatType: "reverse",
+          repeatType: "mirror",
           ease: "easeInOut",
           delay: 2,
         }}
