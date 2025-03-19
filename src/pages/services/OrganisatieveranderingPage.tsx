@@ -1,46 +1,36 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
-
 const OrganisatieveranderingPage = () => {
-  const testimonials = [
-    {
-      quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
-      author: "Thomas Rodriguez",
-      role: "HR Directeur",
-      company: "Global Systems",
-      initials: "TR",
-      color: "bg-purple-500/20"
-    },
-    {
-      quote: "Met grote waardering beveel ik DIM aan als partner bij organisatieverandering. In hun begeleiding van ons transformatieprogramma hebben zij een cruciale rol gespeeld in het versterken van onze samenwerkingscultuur.",
-      author: "Frans Brom",
-      role: "Directeur",
-      company: "Wetenschappelijke Raad voor het Regeringsbeleid",
-      initials: "FB",
-      color: "bg-emerald-500/20"
-    },
-    {
-      quote: "DIM geeft richting en organiseert focus in de verandering. Met expertise, overtuigingskracht en creativiteit weten ze op een positieve manier te inspireren en beweging te realiseren.",
-      author: "Annet Bertram",
-      role: "Directeur Generaal",
-      company: "Rijksvastgoedbedrijf",
-      initials: "AB",
-      color: "bg-indigo-500/20"
-    }
-  ];
-
-  return (
-    <PageLayout>
+  const testimonials = [{
+    quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
+    author: "Thomas Rodriguez",
+    role: "HR Directeur",
+    company: "Global Systems",
+    initials: "TR",
+    color: "bg-purple-500/20"
+  }, {
+    quote: "Met grote waardering beveel ik DIM aan als partner bij organisatieverandering. In hun begeleiding van ons transformatieprogramma hebben zij een cruciale rol gespeeld in het versterken van onze samenwerkingscultuur.",
+    author: "Frans Brom",
+    role: "Directeur",
+    company: "Wetenschappelijke Raad voor het Regeringsbeleid",
+    initials: "FB",
+    color: "bg-emerald-500/20"
+  }, {
+    quote: "DIM geeft richting en organiseert focus in de verandering. Met expertise, overtuigingskracht en creativiteit weten ze op een positieve manier te inspireren en beweging te realiseren.",
+    author: "Annet Bertram",
+    role: "Directeur Generaal",
+    company: "Rijksvastgoedbedrijf",
+    initials: "AB",
+    color: "bg-indigo-500/20"
+  }];
+  return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Organisatieverandering</h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Effectieve organisatieverandering begint met een heldere visie en eindigt met concrete resultaten. Bij DIM begeleiden we organisaties door complexe verandertrajecten met een pragmatische en mensgerichte aanpak.
-            </p>
+            <p className="text-xl text-muted-foreground mb-8">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
             <p className="text-lg text-muted-foreground">
               Of het nu gaat om cultuurverandering, fusies en overnames, reorganisaties of strategische heroriëntatie - onze aanpak zorgt voor gedragen verandering die beklijft en resultaat oplevert.
             </p>
@@ -115,8 +105,6 @@ const OrganisatieveranderingPage = () => {
           <TestimonialsBlock testimonials={testimonials} />
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default OrganisatieveranderingPage;
