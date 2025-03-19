@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -5,6 +6,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import { heroContent } from "@/content/heroContent";
+
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -45,6 +48,14 @@ const MinimalistVariant = () => {
             }} transition={{
               duration: 0.5
             }} className="space-y-8">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {heroContent.tags.map((tag, index) => (
+                    <span key={index} className="inline-block text-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-medium shadow-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
                   Samen creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
                 </h1>
