@@ -7,6 +7,7 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
+
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -31,6 +32,7 @@ const MinimalistVariant = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -105,7 +107,7 @@ const MinimalistVariant = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[{
               title: "Organisatie-ontwikkeling",
-              description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties."
+              description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat. Voorbeelden van organisatie-ontwikkeltrajecten betreffen Cultuurverandering: zakelijkheid en samenwerking, samenwerking/conflicthantering, visie- & strategie-ontwikkeling."
             }, {
               title: "Leiderschaps- & Teamontwikkeling",
               description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren."
@@ -158,4 +160,5 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
+
 export default MinimalistVariant;
