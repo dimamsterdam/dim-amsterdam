@@ -98,10 +98,7 @@ const MinimalistVariant = () => {
           <div className="container mx-auto px-4 md:px-6">
             <AnimatedSection className="text-center mb-16" animation="fade-in">
               <h2 className="text-3xl font-display font-bold mb-4">Wat we doen</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Onze geïntegreerde aanpak richt zich op het volledige spectrum van uitdagingen 
-                op het gebied van cultuur en leiderschap in moderne organisaties.
-              </p>
+              <p className="text-gray-600 max-w-2xl mx-auto">Met oog voor wat goed gaat, werken we samen aan wat beter kan.</p>
             </AnimatedSection>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
