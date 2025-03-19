@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +7,6 @@ import { ArrowRight, CircleCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { heroContent } from "@/content/heroContent";
 import EnhancedTestimonialsGallery from "@/components/EnhancedTestimonialsGallery";
-
 const MinimalistVariant = () => {
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -30,11 +28,9 @@ const MinimalistVariant = () => {
       document.removeEventListener('click', handleLinkClick);
     };
   }, []);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
@@ -137,7 +133,7 @@ const MinimalistVariant = () => {
                 <AnimatedSection className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" animation="fade-in" delay={0}>
                   <div className="flex">
                     <CircleCheck className="h-5 w-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <p className="text-gray-700">Positief: We geloven in het benadrukken van sterke punten en mogelijkheden, terwijl we constructief omgaan met uitdagingen.</p>
+                    <p className="text-gray-700">Veranderen en ontwikkelen begint bij weten en waarderen wat goed gaat. Vanuit (zelf-)vertrouwen ontstaat ruimte om ook kritisch te kijken naar wat beter kan en wat beter moet.</p>
                   </div>
                 </AnimatedSection>
 
@@ -177,5 +173,4 @@ const MinimalistVariant = () => {
       <Footer />
     </div>;
 };
-
 export default MinimalistVariant;
