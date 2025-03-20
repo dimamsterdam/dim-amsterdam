@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
 import { Avatar, AvatarFallback } from "./ui/avatar";
@@ -75,39 +75,49 @@ const EnhancedTestimonialsGallery = () => {
     }
   ];
 
-  // Auto rotate testimonials every 10 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDirection(1); // Set direction to right-to-left
-      setActiveIndex(current => (current + 1) % testimonials.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  // Handle manual navigation
-  const goToTestimonial = (index: number) => {
+  // Memoize the navigation function to prevent unnecessary re-renders
+  const goToTestimonial = useCallback((index: number) => {
     setDirection(index > activeIndex ? 1 : -1);
     setActiveIndex(index);
-  };
-  
+  }, [activeIndex]);
+
+  // Auto rotate testimonials with clean interval handling
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = (activeIndex + 1) % testimonials.length;
+      setDirection(1); // Set direction to right-to-left
+      setActiveIndex(nextIndex);
+    }, 10000);
+    
+    return () => clearInterval(interval);
+  }, [activeIndex, testimonials.length]);
+
+  // Optimized animation variants with improved easing
   const variants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 300 : -300,
-      opacity: 0
+      opacity: 0,
     }),
     center: {
       x: 0,
-      opacity: 1
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 }
+      }
     },
     exit: (direction: number) => ({
       x: direction < 0 ? 300 : -300,
-      opacity: 0
+      opacity: 0,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 }
+      }
     })
   };
   
   return <div className="relative overflow-hidden py-8">
       <div className="max-w-4xl mx-auto">
-        {/* Increased min-height to prevent content from being cut off */}
         <div className="relative min-h-[400px] md:min-h-[350px]">
           <AnimatePresence initial={false} mode="sync" custom={direction}>
             <motion.div 
@@ -117,10 +127,6 @@ const EnhancedTestimonialsGallery = () => {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut"
-              }}
               className="px-4 py-8 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 absolute inset-0"
             >
               <div className="text-center pt-6">
@@ -150,7 +156,6 @@ const EnhancedTestimonialsGallery = () => {
           </AnimatePresence>
         </div>
         
-        {/* Added more margin to make pagination controls more visible and moved outside the content area */}
         <div className="flex justify-center mt-12 space-x-2">
           {testimonials.map((_, index) => (
             <button 
