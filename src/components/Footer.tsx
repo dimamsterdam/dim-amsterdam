@@ -6,30 +6,19 @@ const Footer = () => {
   
   const footerLinks = [
     {
-      title: "Company",
+      title: "Aanbod",
       links: [
-        { label: "About", href: "/about" },
-        { label: "Team", href: "/team" },
-        { label: "Careers", href: "/careers" },
+        { label: "Organisatieverandering", href: "/diensten/organisatieverandering" },
+        { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
+        { label: "Executive Coaching", href: "/diensten/executive-coaching" },
+      ],
+    },
+    {
+      title: "Navigatie",
+      links: [
+        { label: "Klant cases", href: "/klant-cases" },
+        { label: "Over ons", href: "/over-ons" },
         { label: "Contact", href: "/contact" },
-      ],
-    },
-    {
-      title: "Services",
-      links: [
-        { label: "Cultural Change", href: "/services/cultural-change" },
-        { label: "Leadership Development", href: "/services/leadership" },
-        { label: "Team Performance", href: "/services/team-performance" },
-        { label: "Organizational Design", href: "/services/org-design" },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Insights", href: "/insights" },
-        { label: "Podcast", href: "/podcast" },
-        { label: "Events", href: "/events" },
       ],
     },
   ];
@@ -37,21 +26,21 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and description */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
               <span className="text-3xl font-display font-bold tracking-tighter text-white">DIM</span>
             </Link>
             <p className="text-sm text-gray-300 max-w-sm">
-              Empowering leaders to create purpose-driven cultures that drive sustainable performance and meaningful impact.
+              Wij ondersteunen (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.
             </p>
             <div className="mt-6">
               <Link 
                 to="/contact" 
                 className="btn-primary bg-white text-secondary hover:bg-white/90"
               >
-                Get in Touch
+                Contact
               </Link>
             </div>
           </div>
