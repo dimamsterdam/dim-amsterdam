@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
@@ -47,7 +48,15 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const serviceItems: ServiceMenuItem[] = [
+  // Simple list of service items without nested subitems
+  const serviceItems: SubMenuItem[] = [
+    { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
+    { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
+    { label: "Executive Coaching", href: "/diensten/executive-coaching" },
+  ];
+  
+  // Case items now contain the nested structure that was previously in serviceItems
+  const caseItems: ServiceMenuItem[] = [
     { 
       label: "Organisatieontwikkeling", 
       href: "/diensten/organisatieontwikkeling",
@@ -57,14 +66,7 @@ const Navbar = () => {
         { label: "Case: Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
       ]
     },
-    { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
-    { label: "Executive Coaching", href: "/diensten/executive-coaching" },
-  ];
-  
-  const caseItems: SubMenuItem[] = [
-    { label: "Cultuurverandering", href: "/cases/cultuurverandering" },
-    { label: "Samenwerking & Conflicthantering", href: "/cases/samenwerking-conflicthantering" },
-    { label: "Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
+    // Can add more cases for other services in the future
   ];
 
   const menuItems: MenuItem[] = [
