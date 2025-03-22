@@ -1,10 +1,28 @@
 
 import { Link } from "react-router-dom";
-import { footerContent } from "@/content/heroContent";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
+  const footerLinks = [
+    {
+      title: "Aanbod",
+      links: [
+        { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
+        { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
+        { label: "Executive Coaching", href: "/diensten/executive-coaching" },
+      ],
+    },
+    {
+      title: "Navigatie",
+      links: [
+        { label: "Klant cases", href: "/klant-cases" },
+        { label: "Over ons", href: "/over-ons" },
+        { label: "Contact", href: "/contact" },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -15,7 +33,7 @@ const Footer = () => {
               <span className="text-3xl font-display font-bold tracking-tighter text-white">DIM</span>
             </Link>
             <p className="text-sm text-gray-300 max-w-sm">
-              {footerContent.description}
+              Wij ondersteunen (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.
             </p>
             <div className="mt-6">
               <Link 
@@ -28,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          {footerContent.links.map((column, idx) => (
+          {footerLinks.map((column, idx) => (
             <div key={idx}>
               <h3 className="font-medium text-white mb-4">{column.title}</h3>
               <ul className="space-y-3">
@@ -53,11 +71,12 @@ const Footer = () => {
             © {currentYear} DIM Consultancy. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            {footerContent.legalLinks.map((link, index) => (
-              <Link key={index} to={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
-                {link.label}
-              </Link>
-            ))}
+            <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
