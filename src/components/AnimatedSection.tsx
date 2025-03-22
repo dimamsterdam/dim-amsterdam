@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, useState, ReactNode, CSSProperties } from "react";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -78,7 +78,7 @@ const AnimatedSection = ({
   };
 
   // Calculate transition styles
-  const getTransitionStyle = () => {
+  const getTransitionStyle = (): CSSProperties => {
     return {
       opacity: isVisible ? 1 : 0,
       transform: isVisible 
@@ -88,7 +88,7 @@ const AnimatedSection = ({
       transition: 'opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out',
       transitionDelay: `${delay}s`,
       willChange: 'opacity, transform, filter',
-      pointerEvents: (!isVisible && !preserveEvents) ? 'none' : 'auto'
+      pointerEvents: (!isVisible && !preserveEvents) ? 'none' as const : 'auto' as const
     };
   };
 
