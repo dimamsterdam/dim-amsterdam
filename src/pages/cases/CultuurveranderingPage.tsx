@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const CultuurveranderingPage = () => {
+  // Ensure page scrolls to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <PageLayout>
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">

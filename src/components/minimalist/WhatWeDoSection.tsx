@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -23,16 +22,18 @@ const WhatWeDoSection = () => {
             >
               {service.href.includes("cultuurverandering") ? (
                 // Special handling for Cultuurverandering link
-                <div 
-                  className="block h-full cursor-pointer" 
-                  onClick={() => {
-                    // Force scroll to top and reload the content
-                    window.scrollTo(0, 0);
-                    // Push a new history entry to force a refresh
+                <Link 
+                  to="/cases/cultuurverandering" 
+                  className="block h-full"
+                  onClick={(e) => {
+                    // If already on the cultuurverandering page
                     if (window.location.pathname === '/cases/cultuurverandering') {
+                      e.preventDefault(); // Prevent default link behavior
+                      // Force full page reload to reset scroll position
                       window.location.href = '/cases/cultuurverandering';
                     } else {
-                      window.location.href = '/cases/cultuurverandering';
+                      // Otherwise let React Router handle it normally
+                      window.scrollTo(0, 0);
                     }
                   }}
                 >
@@ -49,7 +50,7 @@ const WhatWeDoSection = () => {
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ) : (
                 // Regular link handling for other services
                 <Link 
