@@ -1,9 +1,11 @@
+
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const SamenwerkingConflicthanteringPage = () => {
   return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -24,20 +26,18 @@ const SamenwerkingConflicthanteringPage = () => {
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">De uitdaging</h2>
               
-              <p>Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, opdat de organisatie gezamenlijk weer effectief kon functioneren.
-
-            </p>
+              <p>
+                Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, opdat de organisatie gezamenlijk weer effectief kon functioneren.
+              </p>
               
               <p>
                 Op basis van enkele gesprekken met de bestuurder zijn de volgende doelstellingen afgesproken:
               </p>
               
-              <ul>
+              <ul className="list-disc pl-6 my-4 space-y-2">
                 <li>Meer inzicht in elkaars werk & versterken onderling begrip</li>
                 <li>Verheldering onderlinge rollen en verantwoordelijkheden</li>
-                <li>Oefenen met vastgestelde rollen & verantwoordelijkheden
-
-              </li>
+                <li>Oefenen met vastgestelde rollen & verantwoordelijkheden</li>
                 <li>Aanvulling en eventuele aanscherping van de realisatie van de beoogde organisatie-ontwikkeling</li>
               </ul>
               
@@ -102,4 +102,5 @@ const SamenwerkingConflicthanteringPage = () => {
       </section>
     </PageLayout>;
 };
+
 export default SamenwerkingConflicthanteringPage;
