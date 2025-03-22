@@ -1,10 +1,13 @@
 
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
-  const footerLinks = [
+  const [description, setDescription] = useState("Wij ondersteunen (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.");
+  
+  const [footerLinks, setFooterLinks] = useState([
     {
       title: "Aanbod",
       links: [
@@ -21,7 +24,23 @@ const Footer = () => {
         { label: "Contact", href: "/contact" },
       ],
     },
-  ];
+  ]);
+
+  const updateLinkTitle = (sectionIndex: number, newTitle: string) => {
+    const updatedLinks = [...footerLinks];
+    updatedLinks[sectionIndex] = { ...updatedLinks[sectionIndex], title: newTitle };
+    setFooterLinks(updatedLinks);
+  };
+
+  const updateLinkLabel = (sectionIndex: number, linkIndex: number, newLabel: string) => {
+    const updatedLinks = [...footerLinks];
+    const updatedSection = { ...updatedLinks[sectionIndex] };
+    const updatedSectionLinks = [...updatedSection.links];
+    updatedSectionLinks[linkIndex] = { ...updatedSectionLinks[linkIndex], label: newLabel };
+    updatedSection.links = updatedSectionLinks;
+    updatedLinks[sectionIndex] = updatedSection;
+    setFooterLinks(updatedLinks);
+  };
 
   return (
     <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
@@ -32,8 +51,13 @@ const Footer = () => {
             <Link to="/" className="inline-block mb-4">
               <span className="text-3xl font-display font-bold tracking-tighter text-white">DIM</span>
             </Link>
-            <p className="text-sm text-gray-300 max-w-sm">
-              Wij ondersteunen (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.
+            <p 
+              className="text-sm text-gray-300 max-w-sm"
+              contentEditable
+              suppressContentEditableWarning
+              onBlur={(e) => setDescription(e.currentTarget.textContent || "")}
+            >
+              {description}
             </p>
             <div className="mt-6">
               <Link 
@@ -48,7 +72,14 @@ const Footer = () => {
           {/* Footer Links */}
           {footerLinks.map((column, idx) => (
             <div key={idx}>
-              <h3 className="font-medium text-white mb-4">{column.title}</h3>
+              <h3 
+                className="font-medium text-white mb-4"
+                contentEditable
+                suppressContentEditableWarning
+                onBlur={(e) => updateLinkTitle(idx, e.currentTarget.textContent || "")}
+              >
+                {column.title}
+              </h3>
               <ul className="space-y-3">
                 {column.links.map((link, linkIdx) => (
                   <li key={linkIdx}>
@@ -56,7 +87,13 @@ const Footer = () => {
                       to={link.href}
                       className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
                     >
-                      {link.label}
+                      <span
+                        contentEditable
+                        suppressContentEditableWarning
+                        onBlur={(e) => updateLinkLabel(idx, linkIdx, e.currentTarget.textContent || "")}
+                      >
+                        {link.label}
+                      </span>
                     </Link>
                   </li>
                 ))}
