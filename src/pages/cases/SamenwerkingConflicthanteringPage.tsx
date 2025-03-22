@@ -1,14 +1,11 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const SamenwerkingConflicthanteringPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -19,11 +16,7 @@ const SamenwerkingConflicthanteringPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=2940&auto=format&fit=crop" 
-                    alt="Team collaborating and resolving conflicts" 
-                    className="object-cover w-full h-full"
-                  />
+                  <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=2940&auto=format&fit=crop" alt="Team collaborating and resolving conflicts" className="object-cover w-full h-full" />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -31,11 +24,9 @@ const SamenwerkingConflicthanteringPage = () => {
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">De uitdaging</h2>
               
-              <p>
-                Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en 
-                zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, 
-                opdat de organisatie gezamenlijk weer effectief kon functioneren.
-              </p>
+              <p>Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, opdat de organisatie gezamenlijk weer effectief kon functioneren.
+
+            </p>
               
               <p>
                 Op basis van enkele gesprekken met de bestuurder zijn de volgende doelstellingen afgesproken:
@@ -44,7 +35,9 @@ const SamenwerkingConflicthanteringPage = () => {
               <ul>
                 <li>Meer inzicht in elkaars werk & versterken onderling begrip</li>
                 <li>Verheldering onderlinge rollen en verantwoordelijkheden</li>
-                <li>Oefenen met vastgestelde rollen & verantwoordelijkheden</li>
+                <li>Oefenen met vastgestelde rollen & verantwoordelijkheden
+
+              </li>
                 <li>Aanvulling en eventuele aanscherping van de realisatie van de beoogde organisatie-ontwikkeling</li>
               </ul>
               
@@ -107,8 +100,6 @@ const SamenwerkingConflicthanteringPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default SamenwerkingConflicthanteringPage;
