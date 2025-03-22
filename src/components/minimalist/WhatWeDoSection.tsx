@@ -26,6 +26,16 @@ const WhatWeDoSection = () => {
                   ? "/cases/cultuurverandering" 
                   : service.href.replace("/aanbod/", "/diensten/")} 
                 className="block h-full"
+                onClick={(e) => {
+                  // Reset scroll position if we're navigating to the same page
+                  if (window.location.pathname === '/cases/cultuurverandering' && 
+                      service.href.includes("cultuurverandering")) {
+                    e.preventDefault();
+                    window.scrollTo(0, 0);
+                    // Force a re-render to ensure the page reloads
+                    window.history.pushState({}, "", "/cases/cultuurverandering");
+                  }
+                }}
               >
                 <div className="flex flex-col h-full">
                   <AspectRatio ratio={16 / 9} className="bg-muted">
