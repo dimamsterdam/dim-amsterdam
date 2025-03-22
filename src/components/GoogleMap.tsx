@@ -54,8 +54,8 @@ const GoogleMap: React.FC = () => {
   const renderMap = () => {
     if (!mapRef.current || !window.google) return;
     
-    // Utrecht coordinates
-    const position = { lat: 52.0907, lng: 5.1214 };
+    // Amsterdam Panamalaan coordinates
+    const position = { lat: 52.3726, lng: 4.9322 }; // Coordinates for Panamalaan 5f, Amsterdam
     
     const mapOptions = {
       center: position,
@@ -102,8 +102,8 @@ const GoogleMap: React.FC = () => {
       content: `
         <div style="padding: 8px; max-width: 200px;">
           <h3 style="margin: 0 0 8px; font-weight: bold;">DIM</h3>
-          <p style="margin: 0 0 4px;">Nieuwegracht 23</p>
-          <p style="margin: 0;">3512 LC Utrecht</p>
+          <p style="margin: 0 0 4px;">Panamalaan 5f</p>
+          <p style="margin: 0;">1019 AS Amsterdam</p>
         </div>
       `
     });
@@ -119,7 +119,7 @@ const GoogleMap: React.FC = () => {
   return (
     <div 
       ref={mapRef} 
-      className="w-full h-[450px] bg-gray-200"
+      className="w-full h-full min-h-[450px] bg-gray-200"
       aria-label="Google Maps showing DIM location"
     ></div>
   );
