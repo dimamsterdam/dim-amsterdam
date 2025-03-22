@@ -1,11 +1,9 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const SamenwerkingConflicthanteringPage = () => {
   return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -102,5 +100,4 @@ const SamenwerkingConflicthanteringPage = () => {
       </section>
     </PageLayout>;
 };
-
 export default SamenwerkingConflicthanteringPage;
