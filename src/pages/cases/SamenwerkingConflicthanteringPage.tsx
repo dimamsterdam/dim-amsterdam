@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 const SamenwerkingConflicthanteringPage = () => {
   return (
     <PageLayout>
-      <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
+      <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6 break-words">
+              <h1 className="text-3xl sm:text-3xl md:text-4xl font-display font-bold mb-6 break-words">
                 Samenwerking & Conflicthantering: samenbrengen afdelingen, versterken persoonlijke vaardigheden
               </h1>
               
@@ -30,11 +30,15 @@ const SamenwerkingConflicthanteringPage = () => {
             
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">De uitdaging</h2>
+              
               <p>
                 Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en 
                 zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, 
-                opdat de organisatie gezamenlijk weer effectief kon functioneren. Op basis van enkele gesprekken met de 
-                bestuurder zijn de volgende doelstellingen afgesproken:
+                opdat de organisatie gezamenlijk weer effectief kon functioneren.
+              </p>
+              
+              <p>
+                Op basis van enkele gesprekken met de bestuurder zijn de volgende doelstellingen afgesproken:
               </p>
               
               <ul>
@@ -52,6 +56,7 @@ const SamenwerkingConflicthanteringPage = () => {
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Onze aanpak</h2>
+              
               <p>
                 DIM ontwikkelde een beknopte aanpak van enkele bijeenkomsten. De opzet en begeleiding van de bijeenkomsten 
                 werden bewust en nadrukkelijk gekenmerkt door een afwisseling in interventie-niveaus: inhoud, reflectie 
@@ -60,20 +65,27 @@ const SamenwerkingConflicthanteringPage = () => {
               
               <p>
                 In het eerste deel werd aan de hand van een strakke methodiek een verdiepend en waarderend gesprek gevoerd 
-                in kleinere groepjes. Hiermee werd het onderling begrip versterkt en was er meer ruimte om naar elkaar te luisteren. 
+                in kleinere groepjes. Hiermee werd het onderling begrip versterkt en was er meer ruimte om naar elkaar te luisteren.
+              </p>
+              
+              <p>
                 Vervolgens zijn de knelpunten in een plenair gesprek verder onderzocht en 'afgepeld'. Op basis van meer inzicht 
                 in ieders overwegingen en intenties zijn excuses uitgesproken en gezamenlijke belangen en standpunten 'ontdekt'.
               </p>
               
               <p>
                 In een vervolgbijeenkomst is teruggegrepen op de start en is de tussenliggende periode geëvalueerd. 
-                Na de gezamenlijke intenties opnieuw te hebben erkend, zijn concrete inhoudelijke vervolgstappen geformuleerd. 
+                Na de gezamenlijke intenties opnieuw te hebben erkend, zijn concrete inhoudelijke vervolgstappen geformuleerd.
+              </p>
+              
+              <p>
                 Deze zijn geconcretiseerd met behulp van de bespreking van zogenaamde (voorbereide en spontane) 'critical cases'; 
                 concrete situaties waar in de conflicten in de praktijk ontstonden. De gezamenlijke afspraken zijn hiermee verder 
                 aangescherpt en verankerd.
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Wat klanten zeggen</h2>
+              
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
                 <p className="italic mb-0">"Er zijn pittige momenten tijdens de bijeenkomsten geweest, maar deze openheid maakt ons sterker voor de toekomst"</p>
               </div>
