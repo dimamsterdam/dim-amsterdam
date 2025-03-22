@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -129,7 +128,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
         </div>
       </section>
 
-      {/* Cases Section - Updated with case links */}
+      {/* Cases Section - Updated with case links to the top of each page */}
       <section className="py-16 md:py-20 bg-gray-50" id="cases">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
@@ -153,7 +152,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Link to="/cases/cultuurverandering">
+                    <Link to="/cases/cultuurverandering#top">
                       <Button variant="outline" size="sm">Lees meer</Button>
                     </Link>
                   </CardFooter>
@@ -177,7 +176,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Link to="/cases/samenwerking-conflicthantering">
+                    <Link to="/cases/samenwerking-conflicthantering#top">
                       <Button variant="outline" size="sm">Lees meer</Button>
                     </Link>
                   </CardFooter>
@@ -201,7 +200,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Link to="/cases/herijking-visie-strategie">
+                    <Link to="/cases/herijking-visie-strategie#top">
                       <Button variant="outline" size="sm">Lees meer</Button>
                     </Link>
                   </CardFooter>
