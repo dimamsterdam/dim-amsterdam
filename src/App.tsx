@@ -15,6 +15,7 @@ import HerijkingVisieStrategiePage from "./pages/cases/HerijkingVisieStrategiePa
 import LeiderschapsprogrammaPage from "./pages/cases/LeiderschapsprogrammaPage";
 import IntervisieStrategischLeiderschapPage from "./pages/cases/IntervisieStrategischLeiderschapPage";
 import TeamontwikkelingPage from "./pages/cases/TeamontwikkelingPage";
+import ContactPage from "./pages/ContactPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsprogrammaPage />} />
           <Route path="/cases/intervisie-strategisch-leiderschap" element={<IntervisieStrategischLeiderschapPage />} />
           <Route path="/cases/teamontwikkeling" element={<TeamontwikkelingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
