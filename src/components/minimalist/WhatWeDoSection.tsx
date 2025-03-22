@@ -21,36 +21,56 @@ const WhatWeDoSection = () => {
               animation="fade-in" 
               delay={index * 0.1 + 0.1}
             >
-              <Link 
-                to={service.href.includes("cultuurverandering") 
-                  ? "/cases/cultuurverandering" 
-                  : service.href.replace("/aanbod/", "/diensten/")} 
-                className="block h-full"
-                onClick={(e) => {
-                  // Reset scroll position if we're navigating to the same page
-                  if (window.location.pathname === '/cases/cultuurverandering' && 
-                      service.href.includes("cultuurverandering")) {
-                    e.preventDefault();
+              {service.href.includes("cultuurverandering") ? (
+                // Special handling for Cultuurverandering link
+                <div 
+                  className="block h-full cursor-pointer" 
+                  onClick={() => {
+                    // Force scroll to top and reload the content
                     window.scrollTo(0, 0);
-                    // Force a re-render to ensure the page reloads
-                    window.history.pushState({}, "", "/cases/cultuurverandering");
-                  }
-                }}
-              >
-                <div className="flex flex-col h-full">
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="object-cover w-full h-full"
-                    />
-                  </AspectRatio>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+                    // Push a new history entry to force a refresh
+                    if (window.location.pathname === '/cases/cultuurverandering') {
+                      window.location.href = '/cases/cultuurverandering';
+                    } else {
+                      window.location.href = '/cases/cultuurverandering';
+                    }
+                  }}
+                >
+                  <div className="flex flex-col h-full">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600">{service.description}</p>
+                    </div>
                   </div>
                 </div>
-              </Link>
+              ) : (
+                // Regular link handling for other services
+                <Link 
+                  to={service.href.replace("/aanbod/", "/diensten/")} 
+                  className="block h-full"
+                >
+                  <div className="flex flex-col h-full">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600">{service.description}</p>
+                    </div>
+                  </div>
+                </Link>
+              )}
             </AnimatedSection>
           ))}
         </div>
