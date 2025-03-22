@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { heroContent } from "@/content/heroContent";
+
 const MinimalistHeroSection = () => {
   return <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px]">
       <div className="container mx-auto px-4 md:px-6">
@@ -17,9 +18,26 @@ const MinimalistHeroSection = () => {
           duration: 0.5
         }} className="space-y-8">
             <div className="flex flex-wrap gap-2 mb-6">
-              {heroContent.tags.map((tag, index) => <Link key={index} to={tag === "Organisatieontwikkeling" ? "/aanbod/organisatieontwikkeling" : tag === "Leiderschaps- & Teamontwikkeling" ? "/aanbod/leiderschapsontwikkeling" : "/aanbod/executive-coaching"} className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]">
-                  {tag}
-                </Link>)}
+              {heroContent.tags.map((tag, index) => {
+                let tagUrl = "";
+                if (tag === "Organisatieontwikkeling") {
+                  tagUrl = "/diensten/organisatieontwikkeling";
+                } else if (tag === "Leiderschaps- & Teamontwikkeling") {
+                  tagUrl = "/diensten/leiderschapsontwikkeling";
+                } else if (tag === "Executive coaching") {
+                  tagUrl = "/diensten/executive-coaching";
+                }
+                
+                return (
+                  <Link 
+                    key={index} 
+                    to={tagUrl} 
+                    className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]"
+                  >
+                    {tag}
+                  </Link>
+                );
+              })}
             </div>
 
             <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
@@ -54,4 +72,5 @@ const MinimalistHeroSection = () => {
       </div>
     </section>;
 };
+
 export default MinimalistHeroSection;
