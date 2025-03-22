@@ -3,8 +3,40 @@ import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useEffect, useRef } from "react";
 
 const OrganisatieveranderingPage = () => {
+  // Debug references to analyze layout issues
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textContainerRef = useRef<HTMLDivElement>(null);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+  
+  // Log layout dimensions for debugging
+  useEffect(() => {
+    const logLayoutDimensions = () => {
+      if (containerRef.current && textContainerRef.current && imageContainerRef.current) {
+        console.log('Container dimensions:', {
+          width: containerRef.current.offsetWidth,
+          height: containerRef.current.offsetHeight
+        });
+        console.log('Text container dimensions:', {
+          width: textContainerRef.current.offsetWidth,
+          height: textContainerRef.current.offsetHeight
+        });
+        console.log('Image container dimensions:', {
+          width: imageContainerRef.current.offsetWidth,
+          height: imageContainerRef.current.offsetHeight
+        });
+      }
+    };
+    
+    // Log on mount and on resize
+    logLayoutDimensions();
+    window.addEventListener('resize', logLayoutDimensions);
+    
+    return () => window.removeEventListener('resize', logLayoutDimensions);
+  }, []);
+  
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -29,22 +61,45 @@ const OrganisatieveranderingPage = () => {
   }];
   
   return <PageLayout>
-      {/* Introductie Section - Fixed layout to prevent overlap */}
-      <section className="py-24 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row md:items-start gap-12">
-            <div className="md:w-1/2">
+      {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
+      <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
+        <div ref={containerRef} className="container mx-auto px-4 md:px-6">
+          {/* Issue #1: Stacking order and flow - Using block level rendering instead of flex/grid */}
+          <div className="block md:relative">
+            {/* Issue #2: Text container with fixed dimensions and adequate space */}
+            <div 
+              ref={textContainerRef}
+              className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]"
+            >
               <AnimatedSection>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Organisatieverandering</h1>
-                <p className="text-xl text-muted-foreground mb-8">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
-                <p className="text-lg text-muted-foreground">In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. Hieronder worden de globale elementen toegelicht. </p>
+                {/* Issue #3: Title text size and overflow handling */}
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words">
+                  Organisatieverandering
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground mb-6">
+                  Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. 
+                  Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground">
+                  In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. 
+                  Hieronder worden de globale elementen toegelicht.
+                </p>
               </AnimatedSection>
             </div>
             
-            <div className="md:w-1/2">
-              <AnimatedSection animation="fade-in" delay={0.2}>
-                <div className="rounded-xl shadow-lg overflow-hidden">
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
+            {/* Issue #4: Image container with absolute positioning on larger screens */}
+            <div 
+              ref={imageContainerRef}
+              className="md:absolute md:top-0 md:right-0 md:w-[50%] lg:w-[55%] md:h-full"
+            >
+              <AnimatedSection 
+                animation="fade-in" 
+                delay={0.2} 
+                className="h-full"
+              >
+                {/* Issue #5: Image containment and appropriate aspect ratio */}
+                <div className="rounded-xl shadow-lg overflow-hidden h-full flex items-center">
+                  <AspectRatio ratio={16 / 9} className="bg-muted w-full">
                     <img 
                       src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
                       alt="Organisatieverandering" 
