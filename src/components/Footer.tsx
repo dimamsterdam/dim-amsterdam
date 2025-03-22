@@ -8,7 +8,7 @@ const Footer = () => {
     {
       title: "Aanbod",
       links: [
-        { label: "Organisatieverandering", href: "/diensten/organisatieverandering" },
+        { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
         { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
         { label: "Executive Coaching", href: "/diensten/executive-coaching" },
       ],

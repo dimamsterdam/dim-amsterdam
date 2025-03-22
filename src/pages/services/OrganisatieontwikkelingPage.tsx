@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useRef } from "react";
 
-const OrganisatieveranderingPage = () => {
+const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
   const containerRef = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
@@ -45,7 +45,7 @@ const OrganisatieveranderingPage = () => {
     initials: "TR",
     color: "bg-purple-500/20"
   }, {
-    quote: "Met grote waardering beveel ik DIM aan als partner bij organisatieverandering. In hun begeleiding van ons transformatieprogramma hebben zij een cruciale rol gespeeld in het versterken van onze samenwerkingscultuur.",
+    quote: "Met grote waardering beveel ik DIM aan als partner bij organisatieontwikkeling. In hun begeleiding van ons transformatieprogramma hebben zij een cruciale rol gespeeld in het versterken van onze samenwerkingscultuur.",
     author: "Frans Brom",
     role: "Directeur",
     company: "Wetenschappelijke Raad voor het Regeringsbeleid",
@@ -74,7 +74,7 @@ const OrganisatieveranderingPage = () => {
               <AnimatedSection>
                 {/* Issue #3: Title text size and overflow handling */}
                 <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words">
-                  Organisatieverandering
+                  Organisatieontwikkeling
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-6">
                   Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. 
@@ -102,7 +102,7 @@ const OrganisatieveranderingPage = () => {
                   <AspectRatio ratio={16 / 9} className="bg-muted w-full">
                     <img 
                       src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                      alt="Organisatieverandering" 
+                      alt="Organisatieontwikkeling" 
                       className="object-cover w-full h-full"
                     />
                   </AspectRatio>
@@ -117,7 +117,7 @@ const OrganisatieveranderingPage = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Organisatieverandering: werkwijze</h2>
+            <h2 className="text-3xl font-display font-bold mb-6">Organisatieontwikkeling: werkwijze</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -181,4 +181,4 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
     </PageLayout>;
 };
 
-export default OrganisatieveranderingPage;
+export default OrganisatieontwikkelingPage;

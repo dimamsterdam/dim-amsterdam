@@ -8,7 +8,7 @@ const WhatWeDoSection = () => {
     {
       title: "Organisatie-ontwikkeling",
       description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.",
-      href: "/aanbod/organisatieverandering",
+      href: "/aanbod/organisatieontwikkeling",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
     },
     {

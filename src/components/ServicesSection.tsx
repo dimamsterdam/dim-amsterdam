@@ -20,7 +20,7 @@ const ServicesSection = () => {
     title: "Organisatie-ontwikkeling",
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
-    link: "/diensten/organisatieverandering",
+    link: "/diensten/organisatieontwikkeling",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",

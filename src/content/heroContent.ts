@@ -1,7 +1,7 @@
 
 export const heroContent = {
   tags: [
-    "Organisatieverandering",
+    "Organisatieontwikkeling",
     "Leiderschaps- & Teamontwikkeling",
     "Executive coaching"
   ],
