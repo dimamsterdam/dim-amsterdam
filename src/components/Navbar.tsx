@@ -37,6 +37,12 @@ const Navbar = () => {
     { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
     { label: "Executive Coaching", href: "/diensten/executive-coaching" },
   ];
+  
+  const caseItems = [
+    { label: "Cultuurverandering", href: "/cases/cultuurverandering" },
+    { label: "Samenwerking & Conflicthantering", href: "/cases/samenwerking-conflicthantering" },
+    { label: "Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
+  ];
 
   const menuItems = [
     {
@@ -44,7 +50,11 @@ const Navbar = () => {
       dropdown: true,
       items: serviceItems,
     },
-    { label: "Klant cases", href: "/klant-cases" },
+    { 
+      label: "Klant cases", 
+      dropdown: true,
+      items: caseItems
+    },
     { label: "Over ons", href: "/over-ons" },
   ];
 
