@@ -41,7 +41,7 @@ const ExecutiveCoachingPage = () => {
             <AnimatedSection className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Executive Coaching</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Als leider sta je voor unieke uitdagingen die vragen om persoonlijke begeleiding. Onze executive coaching biedt een vertrouwelijke ruimte om te reflecteren, groeien en excelleren in je leiderschapsrol.
+                Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling. Vanuit een stevige basis werken we parallel aan uitbreiding van het eigen handelingsrepertoire en praktisch resultaat.
               </p>
               <p className="text-lg text-muted-foreground">
                 DIM begeleidt leiders bij het versterken van hun persoonlijke effectiviteit, het navigeren van complexe veranderingen en het ontwikkelen van een authentieke leiderschapsstijl die past bij hun persoonlijkheid en context.
