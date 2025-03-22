@@ -19,7 +19,7 @@ export const servicesContent = {
   services: [
     {
       title: "Organisatieontwikkeling",
-      description: "Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.",
+      description: "Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.",
       href: "/diensten/organisatieontwikkeling",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
     },

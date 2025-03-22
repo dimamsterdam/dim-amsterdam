@@ -77,8 +77,7 @@ const OrganisatieontwikkelingPage = () => {
                   Organisatieontwikkeling
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                  Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. 
-                  Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
+                  Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground">
                   In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. 
