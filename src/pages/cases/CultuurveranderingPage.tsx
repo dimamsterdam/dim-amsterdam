@@ -1,14 +1,11 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const CultuurveranderingPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -19,11 +16,7 @@ const CultuurveranderingPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" 
-                    alt="Team meeting discussing culture change" 
-                    className="object-cover w-full h-full"
-                  />
+                  <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" alt="Team meeting discussing culture change" className="object-cover w-full h-full" />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -48,19 +41,10 @@ const CultuurveranderingPage = () => {
               </p>
               
               <p>
-                Het transitie-traject startte met het gezamenlijk formuleren van een inspirerende ambitie en strategie en de ontwikkeling 
-                en implementatie van een helder sturingsmodel. Hiermee werd zowel gewerkt aan een zakelijk instrumentarium en concrete 
-                prioriteiten (zogenaamde 'gamechangers'), als onderlinge verbinding en betekenisgeving t.a.v. de doelen van de organisatie.
-              </p>
+Het transitie-traject startte met het gezamenlijk formuleren van een inspirerende ambitie en strategie en de ontwikkeling en implementatie van een helder sturingsmodel. Hiermee werd zowel gewerkt aan een zakelijk instrumentarium en concrete prioriteiten (zogenaamde 'gamechangers'), als onderlinge verbinding en betekenisgeving t.a.v. de doelen van de organisatie.</p>
               
               <p>
-                De implementatie van de strategie is ondersteund met een leiderschapstraject voor de top 140. In zowel homogene groepen 
-                van de verschillende management-niveaus, als in gezamenlijke bijeenkomsten met alle niveaus is gewerkt aan het versterken 
-                van individuele en gezamenlijke leiderschapsvaardigheden, zoals omgaan met dilemma's, ontwikkelgericht sturen, situationeel 
-                leiderschap en werken vanuit heldere rollen en verantwoordelijkheden, omgaan met weerstand, overtuigen en inspireren. 
-                Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (sturing in) het dagelijks werk en 
-                aanvullende tussentijdse bredere (online) activiteiten interventies.
-              </p>
+De implementatie van de strategie is ondersteund met een leiderschapstraject voor de top 140. In zowel homogene groepen van de verschillende management-niveaus, als in gezamenlijke bijeenkomsten met alle niveaus is gewerkt aan het versterken van individuele en gezamenlijke leiderschapsvaardigheden, zoals omgaan met dilemma's, ontwikkelgericht sturen, situationeel leiderschap en werken vanuit heldere rollen en verantwoordelijkheden, omgaan met weerstand, overtuigen en inspireren. Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (sturing in) het dagelijks werk en aanvullende tussentijdse bredere (online) activiteiten interventies.</p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Wat klanten zeggen</h2>
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
@@ -84,8 +68,6 @@ const CultuurveranderingPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default CultuurveranderingPage;
