@@ -1,6 +1,23 @@
 
 import React, { useEffect, useRef } from 'react';
 
+// Define interface for the google maps window object
+declare global {
+  interface Window {
+    initMap?: () => void;
+    google: {
+      maps: {
+        Map: new (element: HTMLElement, options: any) => any;
+        Marker: new (options: any) => any;
+        InfoWindow: new (options: any) => any;
+        Animation: {
+          DROP: number;
+        };
+      };
+    };
+  }
+}
+
 const GoogleMap: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   
@@ -8,7 +25,8 @@ const GoogleMap: React.FC = () => {
     // Create a map once the component is mounted
     if (typeof window.google === 'undefined') {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=&callback=initMap`;
+      // You need to add a Google Maps API key here
+      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
       script.async = true;
       script.defer = true;
       
@@ -24,7 +42,9 @@ const GoogleMap: React.FC = () => {
       return () => {
         // Clean up the global callback
         window.initMap = undefined;
-        document.head.removeChild(script);
+        if (script.parentNode) {
+          document.head.removeChild(script);
+        }
       };
     } else if (mapRef.current) {
       renderMap();
@@ -32,6 +52,8 @@ const GoogleMap: React.FC = () => {
   }, []);
   
   const renderMap = () => {
+    if (!mapRef.current || !window.google) return;
+    
     // Utrecht coordinates
     const position = { lat: 52.0907, lng: 5.1214 };
     
@@ -65,18 +87,18 @@ const GoogleMap: React.FC = () => {
       ]
     };
     
-    const map = new google.maps.Map(mapRef.current, mapOptions);
+    const map = new window.google.maps.Map(mapRef.current, mapOptions);
     
     // Add a marker for DIM's location
-    const marker = new google.maps.Marker({
+    const marker = new window.google.maps.Marker({
       position,
       map,
-      animation: google.maps.Animation.DROP,
+      animation: window.google.maps.Animation.DROP,
       title: 'DIM'
     });
     
     // Add an info window
-    const infoWindow = new google.maps.InfoWindow({
+    const infoWindow = new window.google.maps.InfoWindow({
       content: `
         <div style="padding: 8px; max-width: 200px;">
           <h3 style="margin: 0 0 8px; font-weight: bold;">DIM</h3>
@@ -102,13 +124,5 @@ const GoogleMap: React.FC = () => {
     ></div>
   );
 };
-
-// Add global declaration for the Google Maps callback
-declare global {
-  interface Window {
-    initMap?: () => void;
-    google?: any;
-  }
-}
 
 export default GoogleMap;

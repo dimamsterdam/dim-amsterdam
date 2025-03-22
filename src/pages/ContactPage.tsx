@@ -1,4 +1,3 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import GoogleMap from "@/components/GoogleMap";
 
 const ContactPage = () => {
   return (
