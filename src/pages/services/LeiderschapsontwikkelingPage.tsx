@@ -3,7 +3,9 @@ import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const LeiderschapsontwikkelingPage = () => {
   const testimonials = [
@@ -109,6 +111,89 @@ const LeiderschapsontwikkelingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-10 text-center" contentEditable>Klant cases</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <AnimatedSection delay={0.1} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Leiderschapsprogramma case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3" contentEditable>Leiderschapsprogramma</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
+                      Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleidden wij een meerjarig leiderschapstraject
+                      gericht op het versterken van de professionele autonomie en effectievere sturing.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/leiderschapsprogramma#top">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Intervisie case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3" contentEditable>Intervisie strategisch leiderschap</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
+                      Voor topfunctionarissen faciliteren wij reguliere intervisie-bijeenkomsten die bijdragen aan verbinding
+                      en eenduidigheid in werkwijze tussen leidinggevenden.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/intervisie-strategisch-leiderschap#top">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.3} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Teamontwikkeling case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3" contentEditable>Teamontwikkeling</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
+                      Een Directoraat-generaal met meerdere nieuwe directeuren vroeg ons voor versnelde teamontwikkeling
+                      en het formuleren van een gezamenlijke ambitie.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/teamontwikkeling#top">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Full Case Studies Section - Using Cards instead of in-line content */}
+      <section className="py-16 md:py-20" id="case-details">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-display font-bold mb-10 text-center" contentEditable>Case Studies</h2>
             
             <div className="space-y-12">
               {/* Case 1 */}
