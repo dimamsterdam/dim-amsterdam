@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,13 +11,16 @@ const CultuurveranderingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <h1 className="text-3xl sm:text-4xl font-display font-bold mb-6 break-words md:text-4xl">
-                Cultuurverandering: zakelijk sturen op ondernemerschap, innovatie en klanttevredenheid
+              <h1 className="text-3xl sm:text-4xl font-display font-bold mb-2 break-words md:text-4xl" contentEditable>
+                Cultuurverandering
               </h1>
+              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" contentEditable>
+                Zakelijk sturen op ondernemerschap, innovatie en klanttevredenheid
+              </h2>
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" alt="Team meeting discussing culture change" className="object-cover w-full h-full" />
+                  <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" alt="Team meeting discussing culture change" className="object-cover w-full h-full" contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
