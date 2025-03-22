@@ -1,16 +1,14 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useRef } from "react";
-
 const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
   const containerRef = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  
+
   // Log layout dimensions for debugging
   useEffect(() => {
     const logLayoutDimensions = () => {
@@ -29,14 +27,12 @@ const OrganisatieontwikkelingPage = () => {
         });
       }
     };
-    
+
     // Log on mount and on resize
     logLayoutDimensions();
     window.addEventListener('resize', logLayoutDimensions);
-    
     return () => window.removeEventListener('resize', logLayoutDimensions);
   }, []);
-  
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -59,7 +55,6 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
-  
   return <PageLayout>
       {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
       <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
@@ -67,10 +62,7 @@ const OrganisatieontwikkelingPage = () => {
           {/* Issue #1: Stacking order and flow - Using block level rendering instead of flex/grid */}
           <div className="block md:relative">
             {/* Issue #2: Text container with fixed dimensions and adequate space */}
-            <div 
-              ref={textContainerRef}
-              className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]"
-            >
+            <div ref={textContainerRef} className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]">
               <AnimatedSection>
                 {/* Issue #3: Title text size and overflow handling */}
                 <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words">
@@ -87,23 +79,12 @@ const OrganisatieontwikkelingPage = () => {
             </div>
             
             {/* Issue #4: Image container with absolute positioning on larger screens */}
-            <div 
-              ref={imageContainerRef}
-              className="md:absolute md:top-0 md:right-0 md:w-[50%] lg:w-[55%] md:h-full"
-            >
-              <AnimatedSection 
-                animation="fade-in" 
-                delay={0.2} 
-                className="h-full"
-              >
+            <div ref={imageContainerRef} className="md:absolute md:top-0 md:right-0 md:w-[50%] lg:w-[55%] md:h-full">
+              <AnimatedSection animation="fade-in" delay={0.2} className="h-full">
                 {/* Issue #5: Image containment and appropriate aspect ratio */}
                 <div className="rounded-xl shadow-lg overflow-hidden h-full flex items-center">
                   <AspectRatio ratio={16 / 9} className="bg-muted w-full">
-                    <img 
-                      src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                      alt="Organisatieontwikkeling" 
-                      className="object-cover w-full h-full"
-                    />
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Organisatieontwikkeling" className="object-cover w-full h-full" />
                   </AspectRatio>
                 </div>
               </AnimatedSection>
@@ -120,7 +101,7 @@ const OrganisatieontwikkelingPage = () => {
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">1. Analyse & Plan van Aanpak: "Take a step back"</h3>
+                <h3 className="text-xl font-semibold mb-3">1. Analyse &amp; Plan van Aanpak</h3>
                 <p>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
               </div>
               
@@ -179,5 +160,4 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       </section>
     </PageLayout>;
 };
-
 export default OrganisatieontwikkelingPage;
