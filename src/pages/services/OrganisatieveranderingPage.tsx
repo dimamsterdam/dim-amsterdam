@@ -1,6 +1,9 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 const OrganisatieveranderingPage = () => {
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
@@ -28,11 +31,23 @@ const OrganisatieveranderingPage = () => {
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Organisatieverandering</h1>
-            <p className="text-xl text-muted-foreground mb-8">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
-            <p className="text-lg text-muted-foreground">In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. Hieronder worden de globale elementen toegelicht. </p>
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Organisatieverandering</h1>
+              <p className="text-xl text-muted-foreground mb-8">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
+              <p className="text-lg text-muted-foreground">In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. Hieronder worden de globale elementen toegelicht. </p>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-in" delay={0.2}>
+              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  alt="Organisatieverandering" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

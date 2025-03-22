@@ -2,6 +2,7 @@
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LeiderschapsontwikkelingPage = () => {
   const testimonials = [
@@ -36,15 +37,27 @@ const LeiderschapsontwikkelingPage = () => {
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Leiderschaps- & Teamontwikkeling</h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Effectief leiderschap en sterke teams vormen de basis van elke succesvolle organisatie. Bij DIM begeleiden we leiders en teams om hun volledige potentieel te bereiken.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Onze programma's voor leiderschaps- en teamontwikkeling zijn maatwerk en combineren persoonlijke groei met organisatieontwikkeling. We focussen op duurzame gedragsverandering die direct bijdraagt aan betere resultaten.
-            </p>
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Leiderschaps- & Teamontwikkeling</h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Effectief leiderschap en sterke teams vormen de basis van elke succesvolle organisatie. Bij DIM begeleiden we leiders en teams om hun volledige potentieel te bereiken.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Onze programma's voor leiderschaps- en teamontwikkeling zijn maatwerk en combineren persoonlijke groei met organisatieontwikkeling. We focussen op duurzame gedragsverandering die direct bijdraagt aan betere resultaten.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-in" delay={0.2}>
+              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  alt="Leiderschapsontwikkeling" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

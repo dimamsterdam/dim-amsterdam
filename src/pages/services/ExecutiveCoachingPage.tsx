@@ -2,6 +2,7 @@
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ExecutiveCoachingPage = () => {
   const testimonials = [
@@ -36,15 +37,27 @@ const ExecutiveCoachingPage = () => {
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Executive Coaching</h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Als leider sta je voor unieke uitdagingen die vragen om persoonlijke begeleiding. Onze executive coaching biedt een vertrouwelijke ruimte om te reflecteren, groeien en excelleren in je leiderschapsrol.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              DIM begeleidt leiders bij het versterken van hun persoonlijke effectiviteit, het navigeren van complexe veranderingen en het ontwikkelen van een authentieke leiderschapsstijl die past bij hun persoonlijkheid en context.
-            </p>
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Executive Coaching</h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Als leider sta je voor unieke uitdagingen die vragen om persoonlijke begeleiding. Onze executive coaching biedt een vertrouwelijke ruimte om te reflecteren, groeien en excelleren in je leiderschapsrol.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                DIM begeleidt leiders bij het versterken van hun persoonlijke effectiviteit, het navigeren van complexe veranderingen en het ontwikkelen van een authentieke leiderschapsstijl die past bij hun persoonlijkheid en context.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-in" delay={0.2}>
+              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  alt="Executive Coaching" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
