@@ -1,75 +1,13 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { heroContent } from "@/content/heroContent";
-import { useEffect, useState } from "react";
 
 const MinimalistHeroSection = () => {
   return (
-    <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px] relative overflow-hidden">
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <motion.div 
-          className="absolute -top-40 -right-60 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/40 to-accent/30 blur-3xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.05, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div 
-          className="absolute -bottom-80 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#F97316]/30 to-primary/40 blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-        <motion.div 
-          className="absolute top-60 left-80 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-accent/30 to-[#F97316]/30 blur-3xl"
-          animate={{
-            x: [0, 50, 0],
-            y: [0, 20, 0],
-            scale: [1, 1.08, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-        <motion.div 
-          className="absolute top-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-gradient-to-tl from-blue-400/20 to-purple-500/20 blur-3xl"
-          animate={{
-            x: [0, -30, 0],
-            y: [0, 40, 0],
-            scale: [1, 1.12, 1],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-            delay: 3,
-          }}
-        />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px]">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{
