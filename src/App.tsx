@@ -12,6 +12,9 @@ import ExecutiveCoachingPage from "./pages/services/ExecutiveCoachingPage";
 import CultuurveranderingPage from "./pages/cases/CultuurveranderingPage";
 import SamenwerkingConflicthanteringPage from "./pages/cases/SamenwerkingConflicthanteringPage";
 import HerijkingVisieStrategiePage from "./pages/cases/HerijkingVisieStrategiePage";
+import LeiderschapsprogrammaPage from "./pages/cases/LeiderschapsprogrammaPage";
+import IntervisieStrategischLeiderschapPage from "./pages/cases/IntervisieStrategischLeiderschapPage";
+import TeamontwikkelingPage from "./pages/cases/TeamontwikkelingPage";
 
 const queryClient = new QueryClient();
 
@@ -30,9 +33,9 @@ const App = () => (
           <Route path="/cases/cultuurverandering" element={<CultuurveranderingPage />} />
           <Route path="/cases/samenwerking-conflicthantering" element={<SamenwerkingConflicthanteringPage />} />
           <Route path="/cases/herijking-visie-strategie" element={<HerijkingVisieStrategiePage />} />
-          <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsontwikkelingPage />} />
-          <Route path="/cases/intervisie-strategisch-leiderschap" element={<LeiderschapsontwikkelingPage />} />
-          <Route path="/cases/teamontwikkeling" element={<LeiderschapsontwikkelingPage />} />
+          <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsprogrammaPage />} />
+          <Route path="/cases/intervisie-strategisch-leiderschap" element={<IntervisieStrategischLeiderschapPage />} />
+          <Route path="/cases/teamontwikkeling" element={<TeamontwikkelingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
