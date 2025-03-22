@@ -1,8 +1,13 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
 const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,6 +38,7 @@ const OrganisatieontwikkelingPage = () => {
     window.addEventListener('resize', logLayoutDimensions);
     return () => window.removeEventListener('resize', logLayoutDimensions);
   }, []);
+  
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -55,6 +61,7 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
+  
   return <PageLayout>
       {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
       <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
@@ -122,24 +129,84 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
         </div>
       </section>
 
-      {/* Cases Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      {/* Cases Section - Updated with case links */}
+      <section className="py-16 md:py-20 bg-gray-50" id="cases">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Klant cases</h2>
+            <h2 className="text-3xl font-display font-bold mb-10 text-center">Klant cases</h2>
             
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Cultuurverandering bij overheidsorganisatie</h3>
-                <p className="mb-4">Een grote overheidsorganisatie kampte met uitdagingen op het gebied van samenwerking tussen afdelingen en effectieve besluitvorming. DIM ontwikkelde een cultuurprogramma gericht op transparantie, samenwerking en resultaatgerichtheid.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> 30% hogere medewerkerstevredenheid, verbeterde interdepartementale samenwerking en snellere besluitvorming.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Fusie van kennisorganisaties</h3>
-                <p className="mb-4">Twee kennisintensieve organisaties moesten fuseren met behoud van expertise en innovatiekracht. DIM begeleidde het integratieproces met focus op cultuurintegratie, kennisdeling en organisatieontwikkeling.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> Succesvolle integratie binnen 12 maanden, behoud van 95% van sleutelmedewerkers en verbeterde innovatie-output.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <AnimatedSection delay={0.1} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Cultuurverandering case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3">Cultuurverandering</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Een grote uitvoeringsorganisatie met een flinke productie-opgave stond voor een complexe transitie-opgave. 
+                      DIM organiseerde een 2-jarig programma gericht op ondernemerschap, innovatie en klanttevredenheid.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/cultuurverandering">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Samenwerking & Conflicthantering case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3">Samenwerking & Conflicthantering</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Een ZBO kampte met achterstanden en een conflict tussen afdelingen. DIM ontwikkelde een aanpak 
+                      gericht op versterken van begrip, rollen en verantwoordelijkheden.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/samenwerking-conflicthantering">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.3} animation="fade-in">
+                <Card className="h-full flex flex-col">
+                  <AspectRatio ratio={16 / 9} className="bg-muted">
+                    <img 
+                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" 
+                      alt="Herijking visie & strategie case" 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <CardContent className="flex-grow pt-6">
+                    <h3 className="text-xl font-semibold mb-3">Herijking visie & strategie</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Een Directoraat-generaal constateerde dat directies weinig samenwerkten. DIM heeft een traject opgesteld 
+                      gericht op het versterken van samenwerking en werken vanuit impact.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to="/cases/herijking-visie-strategie">
+                      <Button variant="outline" size="sm">Lees meer</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
             </div>
           </AnimatedSection>
         </div>
@@ -160,4 +227,5 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       </section>
     </PageLayout>;
 };
+
 export default OrganisatieontwikkelingPage;
