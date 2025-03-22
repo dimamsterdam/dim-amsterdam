@@ -21,7 +21,12 @@ const WhatWeDoSection = () => {
               animation="fade-in" 
               delay={index * 0.1 + 0.1}
             >
-              <Link to={service.href.replace("/aanbod/", "/diensten/")} className="block h-full">
+              <Link 
+                to={service.href.includes("cultuurverandering") 
+                  ? "/cases/cultuurverandering" 
+                  : service.href.replace("/aanbod/", "/diensten/")} 
+                className="block h-full"
+              >
                 <div className="flex flex-col h-full">
                   <AspectRatio ratio={16 / 9} className="bg-muted">
                     <img 
