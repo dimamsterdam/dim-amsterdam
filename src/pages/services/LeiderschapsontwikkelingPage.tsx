@@ -41,7 +41,7 @@ const LeiderschapsontwikkelingPage = () => {
             <AnimatedSection className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Leiderschaps- & Teamontwikkeling</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in (inherent) spanningsvolle situaties.
+                Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.
               </p>
               <p className="text-lg text-muted-foreground">
                 Onze programma's voor leiderschaps- en teamontwikkeling zijn maatwerk en combineren persoonlijke groei met organisatieontwikkeling. We focussen op duurzame gedragsverandering die direct bijdraagt aan betere resultaten.
