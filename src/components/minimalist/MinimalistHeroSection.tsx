@@ -44,9 +44,8 @@ const MinimalistHeroSection = () => {
                     contentEditable
                     suppressContentEditableWarning
                     onBlur={(e) => updateTag(index, e.currentTarget.textContent || "")}
-                  >
-                    {tag}
-                  </span>
+                    dangerouslySetInnerHTML={{ __html: tag }}
+                  />
                 </Link>
               ))}
             </div>
@@ -56,18 +55,16 @@ const MinimalistHeroSection = () => {
               contentEditable
               suppressContentEditableWarning
               onBlur={(e) => setHeading(e.currentTarget.textContent || "")}
-            >
-              {heading}
-            </h1>
+              dangerouslySetInnerHTML={{ __html: heading }}
+            />
             
             <p 
               className="text-lg text-gray-600 max-w-lg"
               contentEditable
               suppressContentEditableWarning
               onBlur={(e) => setDescription(e.currentTarget.textContent || "")}
-            >
-              {description}
-            </p>
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
             
             <div className="pt-4">
               <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium py-1 transition-all hover:border-primary/70 hover:text-primary/70 group">
@@ -75,9 +72,8 @@ const MinimalistHeroSection = () => {
                   contentEditable
                   suppressContentEditableWarning
                   onBlur={(e) => setCtaText(e.currentTarget.textContent || "")}
-                >
-                  {ctaText}
-                </span>
+                  dangerouslySetInnerHTML={{ __html: ctaText }}
+                />
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

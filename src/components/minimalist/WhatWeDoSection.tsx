@@ -44,23 +44,21 @@ const WhatWeDoSection = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <AnimatedSection className="text-center mb-16" animation="fade-in">
+        <AnimatedSection className="text-center mb-16" animation="fade-in" preserveEvents={true}>
           <h2 
             className="text-3xl font-display font-bold mb-4"
             contentEditable
             suppressContentEditableWarning
             onBlur={(e) => setHeading(e.currentTarget.textContent || "")}
-          >
-            {heading}
-          </h2>
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           <p 
             className="text-gray-600 max-w-2xl mx-auto"
             contentEditable
             suppressContentEditableWarning
             onBlur={(e) => setSubheading(e.currentTarget.textContent || "")}
-          >
-            {subheading}
-          </p>
+            dangerouslySetInnerHTML={{ __html: subheading }}
+          />
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -70,6 +68,7 @@ const WhatWeDoSection = () => {
               className="overflow-hidden rounded-lg border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:shadow-sm" 
               animation="fade-in" 
               delay={index * 0.1 + 0.1}
+              preserveEvents={true}
             >
               <Link to={service.href} className="block h-full">
                 <div className="flex flex-col h-full">
@@ -86,17 +85,15 @@ const WhatWeDoSection = () => {
                       contentEditable
                       suppressContentEditableWarning
                       onBlur={(e) => updateServiceTitle(index, e.currentTarget.textContent || "")}
-                    >
-                      {service.title}
-                    </h3>
+                      dangerouslySetInnerHTML={{ __html: service.title }}
+                    />
                     <p 
                       className="text-gray-600"
                       contentEditable
                       suppressContentEditableWarning
                       onBlur={(e) => updateServiceDescription(index, e.currentTarget.textContent || "")}
-                    >
-                      {service.description}
-                    </p>
+                      dangerouslySetInnerHTML={{ __html: service.description }}
+                    />
                   </div>
                 </div>
               </Link>

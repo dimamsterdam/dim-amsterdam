@@ -40,23 +40,21 @@ const ValuesSection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" animation="fade-in">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" animation="fade-in" preserveEvents={true}>
           <h2 
             className="text-3xl font-display font-bold mb-4"
             contentEditable
             suppressContentEditableWarning
             onBlur={(e) => setHeading(e.currentTarget.textContent || "")}
-          >
-            {heading}
-          </h2>
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           <p 
             className="text-gray-600"
             contentEditable
             suppressContentEditableWarning
             onBlur={(e) => setDescription(e.currentTarget.textContent || "")}
-          >
-            {description}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </AnimatedSection>
         
         <div className="max-w-4xl mx-auto">
@@ -69,6 +67,7 @@ const ValuesSection = () => {
                   className="flex flex-1 bg-white p-6 rounded-lg border border-gray-100" 
                   animation="fade-in" 
                   delay={index * 0.1}
+                  preserveEvents={true}
                 >
                   <div className="flex">
                     <Icon className="h-5 w-5 text-[#F97316] flex-shrink-0 mr-3 mt-1" />
@@ -78,17 +77,15 @@ const ValuesSection = () => {
                         contentEditable
                         suppressContentEditableWarning
                         onBlur={(e) => updateValueTitle(index, e.currentTarget.textContent || "")}
-                      >
-                        {value.title}
-                      </h4>
+                        dangerouslySetInnerHTML={{ __html: value.title }}
+                      />
                       <p 
                         className="text-gray-700"
                         contentEditable
                         suppressContentEditableWarning
                         onBlur={(e) => updateValueDescription(index, e.currentTarget.textContent || "")}
-                      >
-                        {value.description}
-                      </p>
+                        dangerouslySetInnerHTML={{ __html: value.description }}
+                      />
                     </div>
                   </div>
                 </AnimatedSection>
