@@ -3,6 +3,10 @@ import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+
 const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,6 +37,7 @@ const OrganisatieontwikkelingPage = () => {
     window.addEventListener('resize', logLayoutDimensions);
     return () => window.removeEventListener('resize', logLayoutDimensions);
   }, []);
+  
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -55,6 +60,7 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
+
   return <PageLayout>
       {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
       <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
@@ -126,20 +132,50 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Klant cases</h2>
+            <h2 className="text-3xl font-display font-bold mb-8">Klant cases</h2>
             
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Cultuurverandering bij overheidsorganisatie</h3>
-                <p className="mb-4">Een grote overheidsorganisatie kampte met uitdagingen op het gebied van samenwerking tussen afdelingen en effectieve besluitvorming. DIM ontwikkelde een cultuurprogramma gericht op transparantie, samenwerking en resultaatgerichtheid.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> 30% hogere medewerkerstevredenheid, verbeterde interdepartementale samenwerking en snellere besluitvorming.</p>
-              </div>
+            <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
+              <Card className="bg-white overflow-hidden hover:shadow-md transition-shadow">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl">Cultuurverandering bij overheidsorganisatie</CardTitle>
+                </CardHeader>
+                <CardContent className="pb-4">
+                  <p className="text-muted-foreground">Een grote uitvoeringsorganisatie kampte met uitdagingen op het gebied van samenwerking en sturen. DIM ontwikkelde een 2-jarig programma gericht op leiderschap, strategie en het versterken van een zakelijke cultuur met ondernemerschap en innovatie.</p>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/cases/cultuurverandering">
+                    <Button variant="outline" className="mt-2">Lees meer</Button>
+                  </Link>
+                </CardFooter>
+              </Card>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Fusie van kennisorganisaties</h3>
-                <p className="mb-4">Twee kennisintensieve organisaties moesten fuseren met behoud van expertise en innovatiekracht. DIM begeleidde het integratieproces met focus op cultuurintegratie, kennisdeling en organisatieontwikkeling.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> Succesvolle integratie binnen 12 maanden, behoud van 95% van sleutelmedewerkers en verbeterde innovatie-output.</p>
-              </div>
+              <Card className="bg-white overflow-hidden hover:shadow-md transition-shadow">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl">Samenwerking & conflicthantering</CardTitle>
+                </CardHeader>
+                <CardContent className="pb-4">
+                  <p className="text-muted-foreground">Een ZBO kampte met productieachterstanden en een verdiepend conflict tussen afdelingen. DIM begeleidde het proces om rollen te verhelderen, begrip te versterken en samenwerking te verbeteren middels gerichte interventies.</p>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/cases/samenwerking-conflicthantering">
+                    <Button variant="outline" className="mt-2">Lees meer</Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+              
+              <Card className="bg-white overflow-hidden hover:shadow-md transition-shadow">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl">Herijking visie en strategie</CardTitle>
+                </CardHeader>
+                <CardContent className="pb-4">
+                  <p className="text-muted-foreground">Een DG zocht naar betere samenwerking tussen directies en een focus op publieke waarde boven procedures. DIM faciliteerde een visie- en strategietraject met medewerkers en management om gezamenlijke doelen te formuleren.</p>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/cases/herijking-visie-strategie">
+                    <Button variant="outline" className="mt-2">Lees meer</Button>
+                  </Link>
+                </CardFooter>
+              </Card>
             </div>
           </AnimatedSection>
         </div>

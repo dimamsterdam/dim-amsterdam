@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import OrganisatieontwikkelingPage from "./pages/services/OrganisatieontwikkelingPage";
 import LeiderschapsontwikkelingPage from "./pages/services/LeiderschapsontwikkelingPage";
 import ExecutiveCoachingPage from "./pages/services/ExecutiveCoachingPage";
+import CultuurveranderingPage from "./pages/cases/CultuurveranderingPage";
+import SamenwerkingConflicthanteringPage from "./pages/cases/SamenwerkingConflicthanteringPage";
+import HerijkingVisieStrategiePage from "./pages/cases/HerijkingVisieStrategiePage";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/diensten/organisatieontwikkeling" element={<OrganisatieontwikkelingPage />} />
           <Route path="/diensten/leiderschapsontwikkeling" element={<LeiderschapsontwikkelingPage />} />
           <Route path="/diensten/executive-coaching" element={<ExecutiveCoachingPage />} />
+          <Route path="/cases/cultuurverandering" element={<CultuurveranderingPage />} />
+          <Route path="/cases/samenwerking-conflicthantering" element={<SamenwerkingConflicthanteringPage />} />
+          <Route path="/cases/herijking-visie-strategie" element={<HerijkingVisieStrategiePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
