@@ -23,12 +23,17 @@ const AnimatedSection = ({
 }: AnimatedSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          // Add a small delay before setting visible to ensure DOM is ready
+          setTimeout(() => {
+            setIsVisible(true);
+            setHasAnimated(true);
+          }, 50);
           observer.unobserve(entry.target);
         }
       },
@@ -51,13 +56,42 @@ const AnimatedSection = ({
     };
   }, [threshold]);
 
+  // Define initial and animated styles based on animation type
+  const getAnimationStyles = () => {
+    if (!isVisible && !hasAnimated) {
+      switch (animation) {
+        case "fade-in":
+          return "opacity-0";
+        case "slide-from-left":
+          return "opacity-0 translate-x-[-30px]";
+        case "slide-from-right":
+          return "opacity-0 translate-x-[30px]";
+        case "scale-in":
+          return "opacity-0 scale-95";
+        case "blur-in":
+          return "opacity-0 blur-[10px]";
+        default:
+          return "opacity-0";
+      }
+    }
+    
+    return "";
+  };
+
   const animationClass = `animate-${animation}`;
 
   return (
     <div 
       ref={sectionRef} 
-      className={`${className} transition-opacity ${isVisible ? animationClass : "opacity-0"}`}
-      style={{ animationDelay: `${delay}s` }}
+      className={`
+        ${className} 
+        transition-all duration-700 ease-out
+        ${isVisible ? animationClass : getAnimationStyles()}
+      `}
+      style={{ 
+        animationDelay: isVisible ? `${delay}s` : "0s",
+        willChange: "opacity, transform"
+      }}
     >
       {children}
     </div>
