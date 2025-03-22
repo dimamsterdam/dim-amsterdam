@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -27,25 +26,28 @@ const OrganisatieveranderingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
+  
   return <PageLayout>
-      {/* Introductie Section */}
+      {/* Introductie Section - Updated to fix image-title overlap */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection className="max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <AnimatedSection className="max-w-3xl pt-0 md:pt-8">
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Organisatieverandering</h1>
               <p className="text-xl text-muted-foreground mb-8">Een integrale aanpak en meervoudig perspectief zijn kenmerkend voor onze werkwijze. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.</p>
               <p className="text-lg text-muted-foreground">In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. Hieronder worden de globale elementen toegelicht. </p>
             </AnimatedSection>
             
-            <AnimatedSection animation="fade-in" delay={0.2}>
-              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                  alt="Organisatieverandering" 
-                  className="object-cover w-full h-full"
-                />
-              </AspectRatio>
+            <AnimatedSection animation="fade-in" delay={0.2} className="md:mt-12">
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                    alt="Organisatieverandering" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
             </AnimatedSection>
           </div>
         </div>
@@ -65,7 +67,7 @@ const OrganisatieveranderingPage = () => {
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 className="text-xl font-semibold mb-3">2. Uitvoering: resultaat & lerend vermogen</h3>
-                <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
+                <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
 
 We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet resultaat, waarbij actie en reflectie hand in hand gaan. Zo realiseren we niet alleen resultaat op de korte termijn, maar ook lerend vermogen voor de lange termijn. Onze bijeenkomsten zijn resultaatgericht, analytisch scherp, confronterend, positief en onderling verbindend.
               </p>
@@ -75,8 +77,6 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                 <h3 className="text-xl font-semibold mb-3">3. Afronding: verankering &amp; evaluatie</h3>
                 <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </div>
-              
-              
             </div>
           </AnimatedSection>
         </div>
@@ -120,4 +120,5 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       </section>
     </PageLayout>;
 };
+
 export default OrganisatieveranderingPage;
