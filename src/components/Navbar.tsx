@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
@@ -10,11 +9,26 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
+interface SubMenuItem {
+  label: string;
+  href: string;
+}
+
+interface ServiceMenuItem extends SubMenuItem {
+  subItems?: SubMenuItem[];
+}
+
+interface MenuItem {
+  label: string;
+  href?: string;
+  dropdown?: boolean;
+  items?: (ServiceMenuItem | SubMenuItem)[];
+}
+
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -33,7 +47,7 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const serviceItems = [
+  const serviceItems: ServiceMenuItem[] = [
     { 
       label: "Organisatieontwikkeling", 
       href: "/diensten/organisatieontwikkeling",
@@ -47,13 +61,13 @@ const Navbar = () => {
     { label: "Executive Coaching", href: "/diensten/executive-coaching" },
   ];
   
-  const caseItems = [
+  const caseItems: SubMenuItem[] = [
     { label: "Cultuurverandering", href: "/cases/cultuurverandering" },
     { label: "Samenwerking & Conflicthantering", href: "/cases/samenwerking-conflicthantering" },
     { label: "Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
   ];
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     {
       label: "Aanbod",
       dropdown: true,
@@ -77,7 +91,6 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link
             to="/"
             className="text-2xl font-display font-bold tracking-tighter"
@@ -85,7 +98,6 @@ const Navbar = () => {
             <span className="text-gradient">DIM</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
               item.dropdown ? (
@@ -96,7 +108,7 @@ const Navbar = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="center" className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
                     {item.items?.map((subItem, subIndex) => (
-                      subItem.subItems ? (
+                      'subItems' in subItem ? (
                         <div key={subIndex} className="relative group">
                           <Link 
                             to={subItem.href} 
@@ -147,7 +159,6 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={handleMobileMenuToggle}
             className="md:hidden flex items-center text-foreground"
@@ -162,7 +173,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[60px] bg-background z-40 animate-fade-in">
           <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
@@ -172,7 +182,7 @@ const Navbar = () => {
                   <p className="text-lg font-medium py-2 px-4">{item.label}</p>
                   <div className="pl-6 space-y-2">
                     {item.items?.map((subItem, subIndex) => (
-                      subItem.subItems ? (
+                      'subItems' in subItem ? (
                         <div key={subIndex} className="space-y-1">
                           <Link
                             to={subItem.href}
