@@ -30,6 +30,9 @@ const App = () => (
           <Route path="/cases/cultuurverandering" element={<CultuurveranderingPage />} />
           <Route path="/cases/samenwerking-conflicthantering" element={<SamenwerkingConflicthanteringPage />} />
           <Route path="/cases/herijking-visie-strategie" element={<HerijkingVisieStrategiePage />} />
+          <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsontwikkelingPage />} />
+          <Route path="/cases/intervisie-strategisch-leiderschap" element={<LeiderschapsontwikkelingPage />} />
+          <Route path="/cases/teamontwikkeling" element={<LeiderschapsontwikkelingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

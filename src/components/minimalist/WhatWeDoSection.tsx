@@ -51,6 +51,37 @@ const WhatWeDoSection = () => {
                     </div>
                   </div>
                 </Link>
+              ) : service.href.includes("leiderschapsontwikkeling") ? (
+                // Special handling for Leiderschapsontwikkeling link
+                <Link 
+                  to="/diensten/leiderschapsontwikkeling" 
+                  className="block h-full"
+                  onClick={(e) => {
+                    // If already on the leiderschapsontwikkeling page
+                    if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
+                      e.preventDefault(); // Prevent default link behavior
+                      // Force full page reload to reset scroll position
+                      window.location.href = '/diensten/leiderschapsontwikkeling';
+                    } else {
+                      // Otherwise let React Router handle it normally
+                      window.scrollTo(0, 0);
+                    }
+                  }}
+                >
+                  <div className="flex flex-col h-full">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600">{service.description}</p>
+                    </div>
+                  </div>
+                </Link>
               ) : (
                 // Regular link handling for other services
                 <Link 
