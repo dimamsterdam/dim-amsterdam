@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
@@ -33,7 +34,15 @@ const Navbar = () => {
   };
 
   const serviceItems = [
-    { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
+    { 
+      label: "Organisatieontwikkeling", 
+      href: "/diensten/organisatieontwikkeling",
+      subItems: [
+        { label: "Case: Cultuurverandering", href: "/cases/cultuurverandering" },
+        { label: "Case: Samenwerking & Conflicthantering", href: "/cases/samenwerking-conflicthantering" },
+        { label: "Case: Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
+      ]
+    },
     { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
     { label: "Executive Coaching", href: "/diensten/executive-coaching" },
   ];
@@ -87,11 +96,36 @@ const Navbar = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="center" className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
                     {item.items?.map((subItem, subIndex) => (
-                      <DropdownMenuItem key={subIndex} asChild>
-                        <Link to={subItem.href} className="cursor-pointer">
-                          {subItem.label}
-                        </Link>
-                      </DropdownMenuItem>
+                      subItem.subItems ? (
+                        <div key={subIndex} className="relative group">
+                          <Link 
+                            to={subItem.href} 
+                            className="flex items-center justify-between cursor-pointer w-full px-3 py-2 text-sm hover:bg-accent rounded-md"
+                          >
+                            <span>{subItem.label}</span>
+                            <ChevronRight size={14} className="ml-2" />
+                          </Link>
+                          <div className="pl-3 space-y-1 my-1">
+                            {subItem.subItems.map((caseItem, caseIndex) => (
+                              <DropdownMenuItem key={caseIndex} asChild>
+                                <Link 
+                                  to={caseItem.href} 
+                                  className="cursor-pointer text-xs font-light hover:bg-accent rounded-md pl-2"
+                                >
+                                  {caseItem.label}
+                                </Link>
+                              </DropdownMenuItem>
+                            ))}
+                          </div>
+                          {subIndex < item.items.length - 1 && <DropdownMenuSeparator />}
+                        </div>
+                      ) : (
+                        <DropdownMenuItem key={subIndex} asChild>
+                          <Link to={subItem.href} className="cursor-pointer">
+                            {subItem.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      )
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -138,15 +172,41 @@ const Navbar = () => {
                   <p className="text-lg font-medium py-2 px-4">{item.label}</p>
                   <div className="pl-6 space-y-2">
                     {item.items?.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        to={subItem.href}
-                        className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                        style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem.label}
-                      </Link>
+                      subItem.subItems ? (
+                        <div key={subIndex} className="space-y-1">
+                          <Link
+                            to={subItem.href}
+                            className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right font-medium"
+                            style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                          <div className="pl-4 space-y-1">
+                            {subItem.subItems.map((caseItem, caseIndex) => (
+                              <Link
+                                key={caseIndex}
+                                to={caseItem.href}
+                                className="text-sm block py-1 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
+                                style={{ animationDelay: `${(index + subIndex + caseIndex + 0.1) * 0.05}s` }}
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {caseItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={subIndex}
+                          to={subItem.href}
+                          className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
+                          style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subItem.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
