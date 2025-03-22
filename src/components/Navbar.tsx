@@ -1,14 +1,11 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 interface SubMenuItem {
   label: string;
@@ -48,14 +45,12 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // Simple list of service items without nested subitems
   const serviceItems: SubMenuItem[] = [
     { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
     { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
     { label: "Executive Coaching", href: "/diensten/executive-coaching" },
   ];
-  
-  // Case items now contain the nested structure that was previously in serviceItems
+
   const caseItems: ServiceMenuItem[] = [
     { 
       label: "Organisatieontwikkeling", 
@@ -75,7 +70,6 @@ const Navbar = () => {
         { label: "Case: Teamontwikkeling", href: "/cases/teamontwikkeling" },
       ]
     },
-    // Can add more cases for other services in the future
   ];
 
   const menuItems: MenuItem[] = [
@@ -112,46 +106,50 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
               item.dropdown ? (
-                <DropdownMenu key={index}>
-                  <DropdownMenuTrigger className="group relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary flex items-center">
-                    {item.label}
-                    <ChevronDown size={16} className="ml-1 group-data-[state=open]:rotate-180 transition-transform duration-200" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center" className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
-                    {item.items?.map((subItem, subIndex) => (
-                      'subItems' in subItem ? (
-                        <div key={subIndex} className="relative group">
-                          <Link 
-                            to={subItem.href} 
-                            className="flex items-center justify-between cursor-pointer w-full px-3 py-2 text-sm hover:bg-accent rounded-md"
-                          >
-                            <span>{subItem.label}</span>
-                            <ChevronRight size={14} className="ml-2" />
-                          </Link>
-                          <div className="pl-3 space-y-1 my-1">
-                            {subItem.subItems.map((caseItem, caseIndex) => (
-                              <DropdownMenuItem key={caseIndex} asChild>
+                <HoverCard key={index} openDelay={0} closeDelay={100}>
+                  <HoverCardTrigger asChild>
+                    <div className="group relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary flex items-center cursor-pointer">
+                      {item.label}
+                      <ChevronDown size={16} className="ml-1 group-hover:rotate-180 transition-transform duration-200" />
+                    </div>
+                  </HoverCardTrigger>
+                  <HoverCardContent align="center" className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg p-0 w-auto">
+                    <div className="py-2">
+                      {item.items?.map((subItem, subIndex) => (
+                        'subItems' in subItem ? (
+                          <div key={subIndex} className="relative group">
+                            <Link 
+                              to={subItem.href} 
+                              className="flex items-center justify-between cursor-pointer w-full px-4 py-2 text-sm hover:bg-accent rounded-md"
+                            >
+                              <span>{subItem.label}</span>
+                              <ChevronRight size={14} className="ml-2" />
+                            </Link>
+                            <div className="pl-4 space-y-1 my-1">
+                              {subItem.subItems?.map((caseItem, caseIndex) => (
                                 <Link 
+                                  key={caseIndex}
                                   to={caseItem.href} 
-                                  className="cursor-pointer text-xs font-light hover:bg-accent rounded-md pl-2"
+                                  className="block px-4 py-1.5 text-xs font-light hover:bg-accent rounded-md"
                                 >
                                   {caseItem.label}
                                 </Link>
-                              </DropdownMenuItem>
-                            ))}
+                              ))}
+                            </div>
                           </div>
-                          {subIndex < item.items.length - 1 && <DropdownMenuSeparator />}
-                        </div>
-                      ) : (
-                        <DropdownMenuItem key={subIndex} asChild>
-                          <Link to={subItem.href} className="cursor-pointer">
+                        ) : (
+                          <Link 
+                            key={subIndex} 
+                            to={subItem.href} 
+                            className="block px-4 py-2 text-sm hover:bg-accent rounded-md"
+                          >
                             {subItem.label}
                           </Link>
-                        </DropdownMenuItem>
-                      )
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                        )
+                      ))}
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               ) : (
                 <Link
                   key={index}
