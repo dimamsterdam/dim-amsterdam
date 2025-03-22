@@ -23,17 +23,15 @@ const AnimatedSection = ({
 }: AnimatedSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Add a small delay before setting visible to ensure DOM is ready
+          // Set a small timeout to ensure smooth transition
           setTimeout(() => {
             setIsVisible(true);
-            setHasAnimated(true);
-          }, 50);
+          }, 100);
           observer.unobserve(entry.target);
         }
       },
@@ -56,41 +54,53 @@ const AnimatedSection = ({
     };
   }, [threshold]);
 
-  // Define initial and animated styles based on animation type
-  const getAnimationStyles = () => {
-    if (!isVisible && !hasAnimated) {
-      switch (animation) {
-        case "fade-in":
-          return "opacity-0";
-        case "slide-from-left":
-          return "opacity-0 translate-x-[-30px]";
-        case "slide-from-right":
-          return "opacity-0 translate-x-[30px]";
-        case "scale-in":
-          return "opacity-0 scale-95";
-        case "blur-in":
-          return "opacity-0 blur-[10px]";
-        default:
-          return "opacity-0";
-      }
+  // Define the initial styles based on animation type
+  const getInitialStyles = () => {
+    switch (animation) {
+      case "fade-in":
+        return { opacity: isVisible ? 1 : 0 };
+      case "slide-from-left":
+        return { 
+          opacity: isVisible ? 1 : 0, 
+          transform: isVisible ? 'translateX(0)' : 'translateX(-20px)' 
+        };
+      case "slide-from-right":
+        return { 
+          opacity: isVisible ? 1 : 0, 
+          transform: isVisible ? 'translateX(0)' : 'translateX(20px)' 
+        };
+      case "scale-in":
+        return { 
+          opacity: isVisible ? 1 : 0, 
+          transform: isVisible ? 'scale(1)' : 'scale(0.98)' 
+        };
+      case "blur-in":
+        return { 
+          opacity: isVisible ? 1 : 0, 
+          filter: isVisible ? 'blur(0)' : 'blur(5px)' 
+        };
+      default:
+        return { opacity: isVisible ? 1 : 0 };
     }
-    
-    return "";
   };
 
-  const animationClass = `animate-${animation}`;
+  // Calculate transition delay based on the delay prop
+  const getTransitionStyle = () => {
+    const baseTransition = 'opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out';
+    return {
+      transition: baseTransition,
+      transitionDelay: `${delay}s`,
+      willChange: 'opacity, transform, filter'
+    };
+  };
 
   return (
     <div 
       ref={sectionRef} 
-      className={`
-        ${className} 
-        transition-all duration-700 ease-out
-        ${isVisible ? animationClass : getAnimationStyles()}
-      `}
+      className={className}
       style={{ 
-        animationDelay: isVisible ? `${delay}s` : "0s",
-        willChange: "opacity, transform"
+        ...getInitialStyles(),
+        ...getTransitionStyle()
       }}
     >
       {children}
