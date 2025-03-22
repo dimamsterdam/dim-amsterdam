@@ -41,7 +41,7 @@ export const servicesContent = {
 
 export const valuesContent = {
   heading: "Positief. Scherp. Betrokken.",
-  description: ""Een traject is geslaagd als gezamenlijke doelen helder zijn en spanningen op een positieve manier bespreekbaar worden gemaakt."",
+  description: "Een traject is geslaagd als gezamenlijke doelen helder zijn en spanningen op een positieve manier bespreekbaar worden gemaakt.",
   values: [
     {
       title: "Positief",
