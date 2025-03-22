@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -39,11 +38,11 @@ const LeiderschapsontwikkelingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Leiderschaps- & Teamontwikkeling</h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6" contentEditable>Leiderschaps- & Teamontwikkeling</h1>
+              <p className="text-xl text-muted-foreground mb-8" contentEditable>
                 Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground" contentEditable>
                 Onze programma's voor leiderschaps- en teamontwikkeling zijn maatwerk en combineren persoonlijke groei met organisatieontwikkeling. We focussen op duurzame gedragsverandering die direct bijdraagt aan betere resultaten.
               </p>
             </AnimatedSection>
@@ -65,27 +64,38 @@ const LeiderschapsontwikkelingPage = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Onze werkwijze</h2>
+            <h2 className="text-3xl font-display font-bold mb-6" contentEditable>Onze werkwijze</h2>
             
+            <div className="mb-8">
+              <p className="text-lg mb-6" contentEditable>
+                Onze werkwijze is gericht op concrete resultaten dankzij meervoudig kijken ("perspectivistische lenigheid") en het uitbreiden van het eigen en gezamenlijke handelingsrepetoire. Praktisch komt dit tot uiting in bijeenkomsten waarin de verbinding wordt gelegd tussen:
+              </p>
+            </div>
+
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">1. Assessment & Inzicht</h3>
-                <p>We starten met een grondige assessment van leiderschapskwaliteiten en teamdynamiek. Door 360-graden feedback, psychologische assessments en teamdiagnoses krijgen we inzicht in sterktes, ontwikkelpunten en het ontwikkelpotentieel.</p>
+                <h3 className="text-xl font-semibold mb-3" contentEditable>De concrete situatie</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li contentEditable>Wat doet zich hier (daadwerkelijk) voor?</li>
+                  <li contentEditable>Wat is het gewenste resultaat?</li>
+                </ul>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">2. Ontwikkelplan</h3>
-                <p>Op basis van de assessment maken we een persoonlijk ontwikkelplan voor de leider en/of een collectief ontwikkelplan voor het team. Hierin staan concrete leerdoelen, ontwikkelactiviteiten en verwachte resultaten.</p>
+                <h3 className="text-xl font-semibold mb-3" contentEditable>Theorie en reflectie</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li contentEditable>Theoretische benadering is hier behulpzaam?</li>
+                  <li contentEditable>Hoe kunnen we hier (anders) naar kijken?</li>
+                  <li contentEditable>Wat is de (gedeelde) norm?</li>
+                </ul>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">3. Leerinterventies</h3>
-                <p>We implementeren een mix van leerinterventies zoals workshops, coaching, intervisie, learning-on-the-job en reflectiemomenten. De nadruk ligt op praktische toepasbaarheid en het creëren van nieuwe inzichten en gedrag.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">4. Verankering & Follow-up</h3>
-                <p>Leren en ontwikkelen is een continu proces. We zorgen voor verankering in de dagelijkse praktijk en bieden follow-up sessies om de ontwikkeling duurzaam te maken en nieuwe uitdagingen aan te gaan.</p>
+                <h3 className="text-xl font-semibold mb-3" contentEditable>Ontwikkeling en actie</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li contentEditable>Wat vraagt dit van de ontwikkeling van (de houding en vaardigheden) van de deelnemers?</li>
+                  <li contentEditable>Wat zijn de concrete vervolgacties?</li>
+                </ul>
               </div>
             </div>
           </AnimatedSection>
@@ -96,19 +106,19 @@ const LeiderschapsontwikkelingPage = () => {
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Succesvolle cases</h2>
+            <h2 className="text-3xl font-display font-bold mb-6" contentEditable>Succesvolle cases</h2>
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Leiderschapsontwikkeling bij medisch centrum</h3>
-                <p className="mb-4">Een academisch medisch centrum wilde de leiderschapskwaliteiten van afdelingshoofden versterken. DIM ontwikkelde een maatwerkprogramma gericht op persoonlijk leiderschap, verandermanagement en strategische communicatie.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> Hogere medewerkerstevredenheid, verbeterde interdisciplinaire samenwerking en effectievere implementatie van veranderingen.</p>
+                <h3 className="text-xl font-semibold mb-3" contentEditable>Leiderschapsontwikkeling bij medisch centrum</h3>
+                <p className="mb-4" contentEditable>Een academisch medisch centrum wilde de leiderschapskwaliteiten van afdelingshoofden versterken. DIM ontwikkelde een maatwerkprogramma gericht op persoonlijk leiderschap, verandermanagement en strategische communicatie.</p>
+                <p className="text-sm text-muted-foreground" contentEditable><strong>Resultaat:</strong> Hogere medewerkerstevredenheid, verbeterde interdisciplinaire samenwerking en effectievere implementatie van veranderingen.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">Teamontwikkeling bij ministerie</h3>
-                <p className="mb-4">Een directieteam binnen een ministerie kampte met uitdagingen op het gebied van samenwerking en besluitvorming. DIM begeleidde een intensief teamontwikkelingstraject gericht op openheid, vertrouwen en effectieve samenwerking.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> Merkbare verbetering in teamdynamiek, snellere besluitvorming en gedragen implementatie van strategische plannen.</p>
+                <h3 className="text-xl font-semibold mb-3" contentEditable>Teamontwikkeling bij ministerie</h3>
+                <p className="mb-4" contentEditable>Een directieteam binnen een ministerie kampte met uitdagingen op het gebied van samenwerking en besluitvorming. DIM begeleidde een intensief teamontwikkelingstraject gericht op openheid, vertrouwen en effectieve samenwerking.</p>
+                <p className="text-sm text-muted-foreground" contentEditable><strong>Resultaat:</strong> Merkbare verbetering in teamdynamiek, snellere besluitvorming en gedragen implementatie van strategische plannen.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -119,8 +129,8 @@ const LeiderschapsontwikkelingPage = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4">Wat klanten zeggen</h2>
-            <p className="text-lg text-muted-foreground">
+            <h2 className="text-3xl font-display font-bold mb-4" contentEditable>Wat klanten zeggen</h2>
+            <p className="text-lg text-muted-foreground" contentEditable>
               We hebben verschillende leiders en teams begeleid in hun ontwikkeling. Hier zijn enkele ervaringen van onze klanten.
             </p>
           </AnimatedSection>
