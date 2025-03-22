@@ -66,6 +66,15 @@ const Navbar = () => {
         { label: "Case: Herijking visie & strategie", href: "/cases/herijking-visie-strategie" },
       ]
     },
+    { 
+      label: "Leiderschaps- & Teamontwikkeling", 
+      href: "/diensten/leiderschapsontwikkeling",
+      subItems: [
+        { label: "Case: Leiderschapsprogramma", href: "/cases/leiderschapsprogramma" },
+        { label: "Case: Intervisie & Strategisch Leiderschap", href: "/cases/intervisie-strategisch-leiderschap" },
+        { label: "Case: Teamontwikkeling", href: "/cases/teamontwikkeling" },
+      ]
+    },
     // Can add more cases for other services in the future
   ];
 
