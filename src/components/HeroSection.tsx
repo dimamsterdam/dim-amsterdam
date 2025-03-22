@@ -37,7 +37,7 @@ const HeroSection = () => {
 
   // Correctly map tags to their service page routes
   const tagRoutes = {
-    "Organisatieverandering": "/diensten/organisatieverandering",
+    "Organisatieontwikkeling": "/diensten/organisatieontwikkeling",
     "Leiderschaps- & Teamontwikkeling": "/diensten/leiderschapsontwikkeling",
     "Executive coaching": "/diensten/executive-coaching"
   };

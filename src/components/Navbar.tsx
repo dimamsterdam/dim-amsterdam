@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -32,7 +33,7 @@ const Navbar = () => {
   };
 
   const serviceItems = [
-    { label: "Organisatieverandering", href: "/diensten/organisatieverandering" },
+    { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
     { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
     { label: "Executive Coaching", href: "/diensten/executive-coaching" },
   ];
