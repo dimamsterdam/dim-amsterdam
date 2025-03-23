@@ -14,9 +14,18 @@ const Footer = () => {
       ],
     },
     {
+      title: "Cases",
+      links: [
+        { label: "Cultuurverandering", href: "/cases/cultuurverandering" },
+        { label: "Leiderschapsprogramma", href: "/cases/leiderschapsprogramma" },
+        { label: "Teamontwikkeling", href: "/cases/teamontwikkeling" },
+        { label: "Samenwerking & Conflicthantering", href: "/cases/samenwerking-conflicthantering" },
+        { label: "Herijking Visie & Strategie", href: "/cases/herijking-visie-strategie" },
+      ],
+    },
+    {
       title: "Navigatie",
       links: [
-        { label: "Klant cases", href: "/klant-cases" },
         { label: "Over ons", href: "/over-ons" },
         { label: "Contact", href: "/contact" },
       ],
@@ -28,7 +37,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and description */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="text-3xl font-display font-bold tracking-tighter text-white">DIM</span>
             </Link>
