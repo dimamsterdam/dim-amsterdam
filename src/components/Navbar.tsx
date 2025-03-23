@@ -197,7 +197,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[60px] bg-background z-40 animate-fade-in overflow-y-auto">
+        <div className="md:hidden fixed inset-0 top-0 bg-background z-40 animate-fade-in overflow-y-auto pt-[60px]">
           <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
             {menuItems.map((item, index) => (
               item.dropdown ? (
