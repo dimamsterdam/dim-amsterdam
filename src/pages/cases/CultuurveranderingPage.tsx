@@ -37,19 +37,19 @@ const CultuurveranderingPage = () => {
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Onze aanpak</h2>
-              <p>
-                DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, 
-                top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. Allereerst is in 
-                samenwerking met vertegenwoordigers uit de organisatie een analyse van de uitgangssituatie gemaakt. 
-                Hieruit kwam o.a. naar voren dat de eerdere fusie nog steeds nadrukkelijk zichtbaar was in de organisatie. 
-                Onderdelen werkten niet of beperkt samen en stuurden naar 'eigen inzicht'.
-              </p>
+              <p>DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. 
+
+Allereerst is in samenwerking met vertegenwoordigers uit de organisatie een analyse van de uitgangssituatie gemaakt. Hieruit kwam o.a. naar voren dat de eerdere fusie nog steeds nadrukkelijk zichtbaar was in de organisatie. Onderdelen werkten niet of beperkt samen en stuurden naar 'eigen inzicht'.
+            </p>
               
               <p>
 Het transitie-traject startte met het gezamenlijk formuleren van een inspirerende ambitie en strategie en de ontwikkeling en implementatie van een helder sturingsmodel. Hiermee werd zowel gewerkt aan een zakelijk instrumentarium en concrete prioriteiten (zogenaamde 'gamechangers'), als onderlinge verbinding en betekenisgeving t.a.v. de doelen van de organisatie.</p>
               
               <p>
-De implementatie van de strategie is ondersteund met een leiderschapstraject voor de top 140. In zowel homogene groepen van de verschillende management-niveaus, als in gezamenlijke bijeenkomsten met alle niveaus is gewerkt aan het versterken van individuele en gezamenlijke leiderschapsvaardigheden, zoals omgaan met dilemma's, ontwikkelgericht sturen, situationeel leiderschap en werken vanuit heldere rollen en verantwoordelijkheden, omgaan met weerstand, overtuigen en inspireren. Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (sturing in) het dagelijks werk en aanvullende tussentijdse bredere (online) activiteiten interventies.</p>
+De implementatie van de strategie is ondersteund met een leiderschapstraject voor de top 140. In zowel homogene groepen van de verschillende management-niveaus, als in gezamenlijke bijeenkomsten met alle niveaus is gewerkt aan het versterken van individuele en gezamenlijke leiderschapsvaardigheden, zoals omgaan met dilemma's, ontwikkelgericht sturen, situationeel leiderschap en werken vanuit heldere rollen en verantwoordelijkheden, omgaan met weerstand, overtuigen en inspireren.
+
+Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (sturing in) het dagelijks werk en aanvullende tussentijdse bredere (online) activiteiten interventies.
+            </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Wat klanten zeggen</h2>
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
