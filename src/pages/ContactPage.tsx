@@ -55,7 +55,16 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-medium" contentEditable>E-mail</h3>
                       <p className="text-muted-foreground" contentEditable>
-                        <a href="mailto:info@dim.amsterdam" className="hover:text-primary">info@dim.amsterdam</a>
+                        <a 
+                          href="mailto:info@dim.amsterdam" 
+                          className="hover:text-primary"
+                          onClick={(e) => {
+                            window.location.href = "mailto:info@dim.amsterdam";
+                            e.preventDefault();
+                          }}
+                        >
+                          info@dim.amsterdam
+                        </a>
                       </p>
                     </div>
                   </div>
