@@ -38,10 +38,9 @@ const SamenwerkingConflicthanteringPage = () => {
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>Onze aanpak</h2>
               
-              <p contentEditable>
-                DIM ontwikkelde een (tijdelijke) rolverdeling voor de aansturing en toezicht van de verschillende afdelingen. 
-                In nauwe samenwerking met de opdrachtgever werd de aanpak op maat ontwikkeld gericht op 5 pijlers.
-              </p>
+              <p contentEditable>DIM ontwikkelde een (tijdelijke) rolverdeling voor de aansturing en toezicht van de verschillende afdelingen. In nauwe samenwerking met de opdrachtgever werd de aanpak op maat ontwikkeld gericht op 5 pijlers.
+
+            </p>
               
               <ol>
                 <li contentEditable>
