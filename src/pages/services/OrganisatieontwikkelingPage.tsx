@@ -107,12 +107,12 @@ const OrganisatieontwikkelingPage = () => {
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">1. Analyse &amp; Plan van Aanpak</h3>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>1. Analyse &amp; Plan van Aanpak</h3>
                 <p>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">2. Uitvoering: resultaat & lerend vermogen</h3>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>2. Uitvoering: resultaat & lerend vermogen</h3>
                 <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
 
 We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet resultaat, waarbij actie en reflectie hand in hand gaan. Zo realiseren we niet alleen resultaat op de korte termijn, maar ook lerend vermogen voor de lange termijn. Onze bijeenkomsten zijn resultaatgericht, analytisch scherp, confronterend, positief en onderling verbindend.
@@ -120,7 +120,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3">3. Afronding: verankering &amp; evaluatie</h3>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>3. Afronding: verankering &amp; evaluatie</h3>
                 <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </div>
             </div>
@@ -145,8 +145,8 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
-                    <h3 className="text-xl font-semibold mb-3">Cultuurverandering</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Cultuurverandering</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
                       Een grote uitvoeringsorganisatie met een flinke productie-opgave stond voor een complexe transitie-opgave. 
                       DIM organiseerde een 2-jarig programma gericht op ondernemerschap, innovatie en klanttevredenheid.
                     </p>
@@ -169,8 +169,8 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
-                    <h3 className="text-xl font-semibold mb-3">Samenwerking & Conflicthantering</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Samenwerking & Conflicthantering</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
                       Een ZBO kampte met achterstanden en een conflict tussen afdelingen. DIM ontwikkelde een aanpak 
                       gericht op versterken van begrip, rollen en verantwoordelijkheden.
                     </p>
@@ -193,8 +193,8 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
                     />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
-                    <h3 className="text-xl font-semibold mb-3">Herijking visie & strategie</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Herijking visie & strategie</h3>
+                    <p className="text-sm text-muted-foreground mb-4" contentEditable>
                       Een Directoraat-generaal constateerde dat directies weinig samenwerkten. DIM heeft een traject opgesteld 
                       gericht op het versterken van samenwerking en werken vanuit impact.
                     </p>
