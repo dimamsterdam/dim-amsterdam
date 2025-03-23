@@ -1,22 +1,15 @@
-
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
 const ExecutiveCoachingPage = () => {
-  const testimonials = [
-    {
-      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
-    }, 
-    {
-      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
-    }, 
-    {
-      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
-    }
-  ];
-  
+  const testimonials = [{
+    quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
+  }, {
+    quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
+  }, {
+    quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
+  }];
   return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -103,9 +96,7 @@ const ExecutiveCoachingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-display font-bold mb-4">Ervaringen</h2>
-            <p className="text-lg text-muted-foreground">
-              Hier zijn enkele ervaringen van onze coachees.
-            </p>
+            
           </AnimatedSection>
           
           <SimpleTestimonialBlock testimonials={testimonials} />
@@ -113,5 +104,4 @@ const ExecutiveCoachingPage = () => {
       </section>
     </PageLayout>;
 };
-
 export default ExecutiveCoachingPage;
