@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -6,7 +5,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
-
 const HerijkingVisieStrategiePage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
@@ -63,23 +61,17 @@ const HerijkingVisieStrategiePage = () => {
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>Onze aanpak</h2>
               
-              <p contentEditable>
-                Na een Kick-off met het MT is in samenwerking met vertegenwoordigers van de verschillende directies een 
-                analyse gemaakt van de kansen en uitdagingen voor het DG. Met deze analyse als basis zijn circa 5 gemixte 
-                bijeenkomsten georganiseerd met medewerkers en management van de verschillende onderdelen.
-              </p>
+              <p contentEditable>Na een Kick-off met het MT is in samenwerking met vertegenwoordigers van de verschillende directies een analyse gemaakt van de kansen en uitdagingen voor het DG. Met deze analyse als basis zijn circa 5 gemixte bijeenkomsten georganiseerd met medewerkers en management van de verschillende onderdelen.
+
+            </p>
               
-              <p contentEditable>
-                In deze werksessies is gewerkt aan de herformulering van de visie (bestaansrecht en ambitie) van het DG. 
-                Met dezelfde groep mensen die ook betrokken waren bij de analyse zijn de opbrengsten van deze bijeenkomsten 
-                uitgewerkt tot concept versie en een aantal beslispunten.
-              </p>
+              <p contentEditable>In deze werksessies is gewerkt aan de herformulering van de visie (bestaansrecht en ambitie) van het DG. Met dezelfde groep mensen die ook betrokken waren bij de analyse zijn de opbrengsten van deze bijeenkomsten uitgewerkt tot concept versie en een aantal beslispunten.
+
+            </p>
               
-              <p contentEditable>
-                De uitkomsten van de werksessies fungeerden als basis voor een inspirerende bijeenkomst met alle medewerkers 
-                van het DG. Hierin zijn de beslispunten op interactieve wijze verdiept en uiteindelijk geslecht. De herijkte 
-                visie is gevierd en vormde de basis voor een beknopt strategie-traject.
-              </p>
+              <p contentEditable>De uitkomsten van de werksessies fungeerden als basis voor een inspirerende bijeenkomst met alle medewerkers van het DG. Hierin zijn de beslispunten op interactieve wijze verdiept en uiteindelijk geslecht. De herijkte visie is gevierd en vormde de basis voor een beknopt strategie-traject.
+
+            </p>
               
               <p contentEditable>
                 Wederom in nauwe samenwerking met de opdrachtgever zijn de strategische uitgangspunten en concrete doelen 
