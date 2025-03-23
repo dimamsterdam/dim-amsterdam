@@ -1,13 +1,12 @@
 
-import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 interface SubMenuItem {
   label: string;
@@ -28,21 +27,12 @@ interface MenuItem {
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-  const isMobile = useIsMobile();
-  const location = useLocation();
-
-  // Debug current route
-  useEffect(() => {
-    console.log("Current route:", location.pathname);
-  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
-        console.log("Scroll state changed:", isScrolled, "Window Y:", window.scrollY);
       }
     };
 
@@ -60,15 +50,12 @@ const Navbar = () => {
       document.body.style.overflow = "";
     }
 
-    console.log("Mobile menu state:", mobileMenuOpen, "isMobile:", !!isMobile);
-
     return () => {
       document.body.style.overflow = "";
     };
-  }, [mobileMenuOpen, isMobile]);
+  }, [mobileMenuOpen]);
 
   const handleMobileMenuToggle = () => {
-    console.log("Toggle mobile menu. Current state:", mobileMenuOpen, "New state:", !mobileMenuOpen);
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
@@ -115,8 +102,7 @@ const Navbar = () => {
 
   return (
     <header
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/80 backdrop-blur-md shadow-sm py-4"
           : "bg-transparent py-6"
@@ -198,9 +184,8 @@ const Navbar = () => {
 
           <button
             onClick={handleMobileMenuToggle}
-            className="md:hidden flex items-center text-foreground z-[150]"
+            className="md:hidden flex items-center text-foreground z-[60]"
             aria-label="Toggle menu"
-            contentEditable="false"
           >
             {mobileMenuOpen ? (
               <X size={24} />
@@ -211,83 +196,76 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu with portal-like behavior */}
-      <div
-        className={`md:hidden fixed inset-0 bg-background z-[120] overflow-y-auto transition-opacity duration-300 ${
-          mobileMenuOpen 
-            ? "opacity-100 pointer-events-auto" 
-            : "opacity-0 pointer-events-none"
-        }`}
-        style={{ paddingTop: "5rem" }}
-        contentEditable="false"
-      >
-        <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
-          {menuItems.map((item, index) => (
-            item.dropdown ? (
-              <div key={index} className="space-y-2">
-                <p className="text-lg font-medium py-2 px-4">{item.label}</p>
-                <div className="pl-6 space-y-2">
-                  {item.items?.map((subItem, subIndex) => (
-                    'subItems' in subItem ? (
-                      <div key={subIndex} className="space-y-1">
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 top-0 bg-background z-[55] animate-fade-in overflow-y-auto pt-[60px]">
+          <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
+            {menuItems.map((item, index) => (
+              item.dropdown ? (
+                <div key={index} className="space-y-2">
+                  <p className="text-lg font-medium py-2 px-4">{item.label}</p>
+                  <div className="pl-6 space-y-2">
+                    {item.items?.map((subItem, subIndex) => (
+                      'subItems' in subItem ? (
+                        <div key={subIndex} className="space-y-1">
+                          <Link
+                            to={subItem.href}
+                            className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right font-medium"
+                            style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                          <div className="pl-4 space-y-1">
+                            {subItem.subItems?.map((caseItem, caseIndex) => (
+                              <Link
+                                key={caseIndex}
+                                to={caseItem.href}
+                                className="text-sm block py-1 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
+                                style={{ animationDelay: `${(index + subIndex + caseIndex + 0.1) * 0.05}s` }}
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {caseItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
                         <Link
+                          key={subIndex}
                           to={subItem.href}
-                          className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right font-medium"
+                          className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
                           style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {subItem.label}
                         </Link>
-                        <div className="pl-4 space-y-1">
-                          {subItem.subItems?.map((caseItem, caseIndex) => (
-                            <Link
-                              key={caseIndex}
-                              to={caseItem.href}
-                              className="text-sm block py-1 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                              style={{ animationDelay: `${(index + subIndex + caseIndex + 0.1) * 0.05}s` }}
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {caseItem.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <Link
-                        key={subIndex}
-                        to={subItem.href}
-                        className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                        style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem.label}
-                      </Link>
-                    )
-                  ))}
+                      )
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <Link
-                key={index}
-                to={item.href}
-                className="text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                style={{ animationDelay: `${index * 0.05}s` }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            )
-          ))}
-          <Link
-            to="/contact"
-            className="btn-primary mt-4 animate-slide-from-right"
-            style={{ animationDelay: "0.25s" }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Contact
-          </Link>
-        </nav>
-      </div>
+              ) : (
+                <Link
+                  key={index}
+                  to={item.href}
+                  className="text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
+            ))}
+            <Link
+              to="/contact"
+              className="btn-primary mt-4 animate-slide-from-right"
+              style={{ animationDelay: "0.25s" }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
