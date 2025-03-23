@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -124,7 +123,7 @@ const LeiderschapsontwikkelingPage = () => {
                       />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3" contentEditable>Leiderschapsprogramma</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleidden wij een meerjarig leiderschapstraject
                         gericht op het versterken van de professionele autonomie en effectievere sturing.
@@ -148,7 +147,7 @@ const LeiderschapsontwikkelingPage = () => {
                       />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3" contentEditable>Intervisie strategisch leiderschap</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Voor topfunctionarissen faciliteren wij reguliere intervisie-bijeenkomsten die bijdragen aan verbinding
                         en eenduidigheid in werkwijze tussen leidinggevenden.
@@ -172,7 +171,7 @@ const LeiderschapsontwikkelingPage = () => {
                       />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3" contentEditable>Teamontwikkeling</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Teamontwikkeling</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Een Directoraat-generaal met meerdere nieuwe directeuren vroeg ons voor versnelde teamontwikkeling
                         en het formuleren van een gezamenlijke ambitie.
