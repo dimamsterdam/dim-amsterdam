@@ -7,7 +7,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const ExecutiveCoachingPage = () => {
   const testimonials = [
     {
-      quote: "De coaching van DIM heeft mij geholpen om mijn leiderschapsstijl te verdiepen en authentiek te blijven in uitdagende situaties. De combinatie van persoonlijke reflectie en praktische handvatten maakte dit traject bijzonder waardevol.",
+      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak.",
       author: "Corine van der Sande",
       role: "Management Development",
       company: "Erasmus Medisch Centrum",
@@ -15,7 +15,7 @@ const ExecutiveCoachingPage = () => {
       color: "bg-purple-500/20"
     }, 
     {
-      quote: "DIM combineert strategisch inzicht, scherp analytisch vermogen en respectvolle confrontatie met een warme persoonlijkheid. Ze weet in korte tijd een veilig werkklimaat te creëren en zet haar jarenlange ervaring en kennis met wijsheid en humor in.",
+      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden.",
       author: "Annemiek van Bolhuis",
       role: "Bestuursvoorzitter",
       company: "ANVS",
@@ -23,7 +23,7 @@ const ExecutiveCoachingPage = () => {
       color: "bg-primary/20"
     }, 
     {
-      quote: "De executive coaching heeft me niet alleen geholpen als leider, maar ook als persoon. De inzichten en technieken die ik heb geleerd gebruik ik dagelijks en hebben een blijvende impact op mijn effectiviteit en werkplezier.",
+      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor.",
       author: "Guido Landheer",
       role: "Directeur/plaatsvervangend DG",
       company: "Ministerie van Buitenlandse Zaken",
@@ -77,49 +77,36 @@ const ExecutiveCoachingPage = () => {
                 Op basis van de wens van de coachee wordt ingezoomd op hoe persoonlijke effectiviteit en energie kan worden vergroot.
               </p>
             </div>
-            
-            <div className="space-y-8 mt-12">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">1. Intake & Verkenning</h3>
-                <p>We starten met een grondige intake om jouw coachvraag, context en persoonlijke doelen te verkennen. Eventueel vullen we dit aan met assessments of 360-graden feedback om een compleet beeld te krijgen.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">2. Coachplan</h3>
-                <p>Op basis van de intake stellen we samen een persoonlijk coachplan op met concrete doelen, thema's en aanpak. We bepalen de frequentie en duur van de sessies, en hoe we voortgang en resultaat gaan meten.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">3. Coaching Sessies</h3>
-                <p>Tijdens individuele coaching sessies werken we aan je persoonlijke ontwikkeldoelen. We combineren reflectie, feedback, theoretische kaders en praktische oefeningen om nieuwe inzichten en gedrag te ontwikkelen.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">4. Praktijkintegratie & Evaluatie</h3>
-                <p>Tussen de sessies pas je nieuwe inzichten en gedrag toe in de praktijk. We evalueren regelmatig de voortgang en stellen waar nodig bij. Aan het einde evalueren we het gehele traject en borgen we de resultaten.</p>
-              </div>
-            </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Cases Section */}
+      {/* Voorbeeld Traject Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Coaching Cases</h2>
+            <h2 className="text-3xl font-display font-bold mb-6">Voorbeeld traject</h2>
+            <p className="text-muted-foreground mb-8">Gemiddeld behelst een coachingstraject een intake en een vijftal (online) gesprekken van circa 1,5 uur. Afhankelijk van de wensen en de concrete situatie kan worden besloten tot een verlenging. Globaal kent het traject de volgende drie stappen:</p>
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">Transitie naar strategisch leiderschap</h3>
-                <p className="mb-4">Een directeur met een sterke inhoudelijke achtergrond wilde groeien in strategisch leiderschap. In een coachtraject van 8 maanden werkten we aan visievorming, strategische communicatie en het delegeren van operationele taken.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> De directeur positioneerde zich sterker als strategisch leider, ontwikkelde een inspirerende toekomstvisie en creëerde meer ruimte voor strategische prioriteiten.</p>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">1. Klikgesprek</h3>
+                <p>Naast kennis en ervaring is de effectiviteit van coaching in belangrijke mate afhankelijk van vertrouwen en een persoonlijke klik. Onze trajecten starten dan ook altijd met een (online) vrijblijvende kennismaking.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">Persoonlijke effectiviteit onder druk</h3>
-                <p className="mb-4">Een bestuurder ervaarde toenemende druk en stress in zijn rol. In een intensief coachtraject werkten we aan persoonlijk leiderschap, grenzen stellen, prioriteren en energiemanagement.</p>
-                <p className="text-sm text-muted-foreground"><strong>Resultaat:</strong> De bestuurder hervond zijn balans, maakte bewustere keuzes in zijn agenda en leiderschapsstijl, en ervaarde meer werkplezier en impact.</p>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">Intake: formulering doel traject</h3>
+                <p>Ontwikkeling, zelfreflectie en experimenteren met nieuwe perspectieven en gedrag vergen energie. Een effectieve investering in persoonlijke ontwikkeling start dan ook met een helder doel vanuit de coachee. Onze begeleiding is gericht op de formulering van een doel dat concreet, haalbaar en positief is. Ons uitgangspunt is dat ontwikkeling ontstaat vanuit kracht en een stevige basis. De focus in onze benadering ligt dan ook op bijleren en ontwikkelen en niet zozeer op 'afleren'.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">2. Coachingstraject; vergroten handelingsrepertoire</h3>
+                <p>Aan de hand van gerichte verkenning van de persoonlijke biografie van de coachee en het herkennen van patronen, worden concrete praktijksituaties nader onderzocht. Wat speelt hier, welke patronen spelen hier mogelijk mee, welke (andere) mogelijkheden zijn er om deze situatie te zien en te benaderen? In deze gesprekken worden kennis en ervaring met uitdagingen op bestuurs- en directieniveau gecombineerd met kennis van persoonlijke en leiderschapsontwikkeling. Afhankelijk van de concrete situaties worden de gesprekken ondersteund met beknopte theoretische duiding en achtergrond artikelen.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">3. Evaluatie en doorkijk vervolg</h3>
+                <p>In een afsluitend gesprek wordt de ontwikkeling gedurende het traject besproken en wordt gekeken hoe opgedane inzichten en vaardigheden kunnen worden geborgd. In het verlengde hiervan wordt ook de waarde van het traject geëvalueerd.</p>
               </div>
             </div>
           </AnimatedSection>
@@ -130,9 +117,9 @@ const ExecutiveCoachingPage = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4">Wat coachees zeggen</h2>
+            <h2 className="text-3xl font-display font-bold mb-4">Ervaringen</h2>
             <p className="text-lg text-muted-foreground">
-              We hebben verschillende executives begeleid in hun persoonlijke ontwikkeling. Hier zijn enkele ervaringen van onze coachees.
+              Hier zijn enkele ervaringen van onze coachees.
             </p>
           </AnimatedSection>
           
@@ -143,3 +130,4 @@ const ExecutiveCoachingPage = () => {
 };
 
 export default ExecutiveCoachingPage;
+
