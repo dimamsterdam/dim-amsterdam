@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail } from "lucide-react";
 import GoogleMap from "@/components/GoogleMap";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import {
   Form,
@@ -33,14 +32,19 @@ const formSchema = z.object({
 // Type for our form values
 type FormValues = z.infer<typeof formSchema>;
 
-// EmailJS credentials - replace with your own
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // You'll need to replace this
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // You'll need to replace this
-const EMAILJS_USER_ID = "YOUR_USER_ID"; // You'll need to replace this
+// EmailJS credentials - you need to replace these with your actual credentials from EmailJS dashboard
+const EMAILJS_SERVICE_ID = "service_example"; // Replace with your Service ID
+const EMAILJS_TEMPLATE_ID = "template_example"; // Replace with your Template ID
+const EMAILJS_PUBLIC_KEY = "your_public_key"; // Replace with your Public Key (User ID)
 
 const ContactPage = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize EmailJS when component mounts
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
   
   // Initialize the form
   const form = useForm<FormValues>({
@@ -67,12 +71,12 @@ const ContactPage = () => {
         message: data.message
       };
       
-      // Send the email using EmailJS
+      // Send the email using EmailJS (using v3 method)
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams,
-        EMAILJS_USER_ID
+        EMAILJS_PUBLIC_KEY
       );
       
       // Show success toast
