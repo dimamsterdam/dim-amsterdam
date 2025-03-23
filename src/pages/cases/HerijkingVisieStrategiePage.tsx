@@ -1,9 +1,12 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { CheckCircle2 } from "lucide-react";
+
 const HerijkingVisieStrategiePage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
@@ -39,11 +42,23 @@ const HerijkingVisieStrategiePage = () => {
               
               <p contentEditable>Samengevat diende het traject de volgende resultaten te boeken:</p>
               
-              <ul>
-                <li contentEditable>Gedeelde visie en werkwijze</li>
-                <li contentEditable>Helderheid over de samenhang het DG en de meerwaarde van (meer) onderlinge samenwerking</li>
-                <li contentEditable>Concrete doelen en handvatten voor implementatie</li>
-                <li contentEditable>Hernieuwde energie en inspiratie voor medewerkers</li>
+              <ul className="space-y-3 bg-gray-50 p-6 rounded-lg border border-gray-100 shadow-sm">
+                <li className="flex items-center space-x-3" contentEditable>
+                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <span className="text-gray-800">Gedeelde visie en werkwijze</span>
+                </li>
+                <li className="flex items-center space-x-3" contentEditable>
+                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <span className="text-gray-800">Helderheid over de samenhang het DG en de meerwaarde van (meer) onderlinge samenwerking</span>
+                </li>
+                <li className="flex items-center space-x-3" contentEditable>
+                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <span className="text-gray-800">Concrete doelen en handvatten voor implementatie</span>
+                </li>
+                <li className="flex items-center space-x-3" contentEditable>
+                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <span className="text-gray-800">Hernieuwde energie en inspiratie voor medewerkers</span>
+                </li>
               </ul>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>Onze aanpak</h2>
