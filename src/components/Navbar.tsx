@@ -1,12 +1,19 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { ChevronDown, ChevronRight, Menu } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 
 interface SubMenuItem {
   label: string;
@@ -25,8 +32,10 @@ interface MenuItem {
 }
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const isMobile = useIsMobile();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,22 +51,10 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
-  // Effect to prevent body scrolling when mobile menu is open
+  // Close drawer when route changes
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileMenuOpen]);
-
-  const handleMobileMenuToggle = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+    setDrawerOpen(false);
+  }, [location]);
 
   const serviceItems: SubMenuItem[] = [
     { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
@@ -117,6 +114,7 @@ const Navbar = () => {
             <span className="text-gradient">DIM</span>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
               item.dropdown ? (
@@ -182,90 +180,91 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          <button
-            onClick={handleMobileMenuToggle}
-            className="md:hidden flex items-center text-foreground z-[60]"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X size={24} />
-            ) : (
-              <Menu size={24} />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-0 bg-background z-[55] animate-fade-in overflow-y-auto pt-[60px]">
-          <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
-            {menuItems.map((item, index) => (
-              item.dropdown ? (
-                <div key={index} className="space-y-2">
-                  <p className="text-lg font-medium py-2 px-4">{item.label}</p>
-                  <div className="pl-6 space-y-2">
-                    {item.items?.map((subItem, subIndex) => (
-                      'subItems' in subItem ? (
-                        <div key={subIndex} className="space-y-1">
-                          <Link
-                            to={subItem.href}
-                            className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right font-medium"
-                            style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {subItem.label}
-                          </Link>
-                          <div className="pl-4 space-y-1">
-                            {subItem.subItems?.map((caseItem, caseIndex) => (
-                              <Link
-                                key={caseIndex}
-                                to={caseItem.href}
-                                className="text-sm block py-1 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                                style={{ animationDelay: `${(index + subIndex + caseIndex + 0.1) * 0.05}s` }}
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {caseItem.label}
-                              </Link>
+          {/* Mobile Navigation Trigger */}
+          {isMobile && (
+            <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
+              <DrawerTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="md:hidden"
+                  aria-label="Open menu"
+                >
+                  <Menu size={24} />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent className="max-h-[85vh]">
+                <div className="px-4 py-6 flex flex-col space-y-6 overflow-y-auto">
+                  <h3 className="text-lg font-medium text-center">Menu</h3>
+                  
+                  <nav className="flex flex-col gap-4">
+                    {menuItems.map((item, index) => (
+                      item.dropdown ? (
+                        <div key={index} className="space-y-4">
+                          <h4 className="font-medium text-primary">{item.label}</h4>
+                          <div className="ml-4 space-y-3 border-l-2 border-muted pl-3">
+                            {item.items?.map((subItem, subIndex) => (
+                              'subItems' in subItem ? (
+                                <div key={subIndex} className="space-y-2">
+                                  <Link
+                                    to={subItem.href}
+                                    className="font-medium block hover:text-primary transition-colors"
+                                    onClick={() => setDrawerOpen(false)}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                  <div className="ml-3 space-y-2 border-l border-muted pl-2">
+                                    {subItem.subItems?.map((caseItem, caseIndex) => (
+                                      <Link
+                                        key={caseIndex}
+                                        to={caseItem.href}
+                                        className="text-sm block hover:text-primary transition-colors"
+                                        onClick={() => setDrawerOpen(false)}
+                                      >
+                                        {caseItem.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ) : (
+                                <Link
+                                  key={subIndex}
+                                  to={subItem.href}
+                                  className="block hover:text-primary transition-colors"
+                                  onClick={() => setDrawerOpen(false)}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              )
                             ))}
                           </div>
                         </div>
                       ) : (
                         <Link
-                          key={subIndex}
-                          to={subItem.href}
-                          className="text-base block py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                          style={{ animationDelay: `${(index + subIndex) * 0.05}s` }}
-                          onClick={() => setMobileMenuOpen(false)}
+                          key={index}
+                          to={item.href}
+                          className="font-medium hover:text-primary transition-colors"
+                          onClick={() => setDrawerOpen(false)}
                         >
-                          {subItem.label}
+                          {item.label}
                         </Link>
                       )
                     ))}
-                  </div>
+                  </nav>
+                  
+                  <Link
+                    to="/contact"
+                    className="btn-primary text-center"
+                    onClick={() => setDrawerOpen(false)}
+                  >
+                    Contact
+                  </Link>
                 </div>
-              ) : (
-                <Link
-                  key={index}
-                  to={item.href}
-                  className="text-lg font-medium py-2 px-4 hover:bg-accent rounded-md transition-colors duration-200 animate-slide-from-right"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )
-            ))}
-            <Link
-              to="/contact"
-              className="btn-primary mt-4 animate-slide-from-right"
-              style={{ animationDelay: "0.25s" }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </nav>
+              </DrawerContent>
+            </Drawer>
+          )}
         </div>
-      )}
+      </div>
     </header>
   );
 };
