@@ -32,7 +32,8 @@ const MinimalistHeroSection = () => {
                   <Link 
                     key={index} 
                     to={tagUrl} 
-                    className="inline-block text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#F97316]"
+                    className="inline-block text-sm px-3 py-1 rounded-full bg-white text-gray-600 font-medium shadow-md transition-colors hover:bg-gray-50 hover:text-[#F97316] border border-gray-100"
+                    style={{ textShadow: "0px 1px 0px rgba(255,255,255,0.8)" }}
                   >
                     {tag}
                   </Link>
