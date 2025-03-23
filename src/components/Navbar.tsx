@@ -184,20 +184,20 @@ const Navbar = () => {
 
           <button
             onClick={handleMobileMenuToggle}
-            className="md:hidden flex items-center text-foreground"
+            className="md:hidden flex items-center text-foreground z-50"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X size={24} className="animate-fade-in" />
+              <X size={24} />
             ) : (
-              <Menu size={24} className="animate-fade-in" />
+              <Menu size={24} />
             )}
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[60px] bg-background z-40 animate-fade-in overflow-y-auto">
+        <div className="md:hidden fixed inset-0 top-0 bg-background z-40 animate-fade-in overflow-y-auto pt-[60px]">
           <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
             {menuItems.map((item, index) => (
               item.dropdown ? (
@@ -216,7 +216,7 @@ const Navbar = () => {
                             {subItem.label}
                           </Link>
                           <div className="pl-4 space-y-1">
-                            {subItem.subItems.map((caseItem, caseIndex) => (
+                            {subItem.subItems?.map((caseItem, caseIndex) => (
                               <Link
                                 key={caseIndex}
                                 to={caseItem.href}
