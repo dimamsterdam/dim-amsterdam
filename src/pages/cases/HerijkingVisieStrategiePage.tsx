@@ -29,16 +29,13 @@ const HerijkingVisieStrategiePage = () => {
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>De uitdaging</h2>
               
-              <p contentEditable>
-                Een Directoraat-generaal (DG) constateerde dat de verschillende directies in de praktijk weinig samenwerkten 
-                en regels en procedures de overhand leken te hebben boven de beoogde publieke waarde.
-              </p>
+              <p contentEditable>Een Directoraat-generaal (DG) constateerde dat de verschillende directies in de praktijk weinig samenwerkten en regels en procedures de overhand leken te hebben boven de beoogde publieke waarde.
+
+            </p>
               
-              <p contentEditable>
-                DIM heeft een traject opgesteld gericht op het versterken van de onderlinge samenwerking en werken vanuit 
-                impact en de 'bedoeling'. Het DG was ontstaan vanuit een fusie van directies van verschillende ministeries. 
-                Doel van het traject was met waardering van de eerdere achtergrond een hernieuwde start te maken met het nieuwe DG.
-              </p>
+              <p contentEditable>DIM heeft een traject opgesteld gericht op het versterken van de onderlinge samenwerking en werken vanuit impact en de 'bedoeling'. Het DG was ontstaan vanuit een fusie van directies van verschillende ministeries. Doel van het traject was met waardering van de eerdere achtergrond een hernieuwde start te maken met het nieuwe DG.
+
+            </p>
               
               <p contentEditable>Samengevat diende het traject de volgende resultaten te boeken:</p>
               
