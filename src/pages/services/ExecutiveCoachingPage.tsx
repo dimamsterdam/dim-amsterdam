@@ -3,14 +3,21 @@ import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import StepCard from "@/components/StepCard";
+
 const ExecutiveCoachingPage = () => {
-  const testimonials = [{
-    quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
-  }, {
-    quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
-  }, {
-    quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
-  }];
+  const testimonials = [
+    {
+      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
+    }, 
+    {
+      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
+    }, 
+    {
+      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
+    }
+  ];
+  
   return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -67,23 +74,20 @@ const ExecutiveCoachingPage = () => {
             <h2 className="text-3xl font-display font-bold mb-6">Voorbeeld traject</h2>
             <p className="text-muted-foreground mb-8">Gemiddeld behelst een coachingstraject een intake en een vijftal (online) gesprekken van circa 1,5 uur. Afhankelijk van de wensen en de concrete situatie kan worden besloten tot een verlenging. Globaal kent het traject de volgende drie stappen:</p>
             
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">1. Klikgesprek & Intake</h3>
+            <div className="space-y-8 relative before:content-[''] before:absolute before:top-[3.5rem] before:bottom-[3.5rem] before:left-7 before:w-[2px] before:bg-gray-200 md:before:hidden">
+              <StepCard number={1} title="Klikgesprek & Intake">
                 <p className="mb-4">Naast kennis en ervaring is de effectiviteit van coaching in belangrijke mate afhankelijk van vertrouwen en een persoonlijke klik. Onze trajecten starten dan ook altijd met een (online) vrijblijvende kennismaking.</p>
                 
                 <p>Ontwikkeling, zelfreflectie en experimenteren met nieuwe perspectieven en gedrag vergen energie. Een effectieve investering in persoonlijke ontwikkeling start dan ook met een helder doel vanuit de coachee. Onze begeleiding is gericht op de formulering van een doel dat concreet, haalbaar en positief is. Ons uitgangspunt is dat ontwikkeling ontstaat vanuit kracht en een stevige basis. De focus in onze benadering ligt dan ook op bijleren en ontwikkelen en niet zozeer op 'afleren'.</p>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">2. Coachingstraject; vergroten handelingsrepertoire</h3>
+              <StepCard number={2} title="Coachingstraject; vergroten handelingsrepertoire">
                 <p>Aan de hand van gerichte verkenning van de persoonlijke biografie van de coachee en het herkennen van patronen, worden concrete praktijksituaties nader onderzocht. Wat speelt hier, welke patronen spelen hier mogelijk mee, welke (andere) mogelijkheden zijn er om deze situatie te zien en te benaderen? In deze gesprekken worden kennis en ervaring met uitdagingen op bestuurs- en directieniveau gecombineerd met kennis van persoonlijke en leiderschapsontwikkeling. Afhankelijk van de concrete situaties worden de gesprekken ondersteund met beknopte theoretische duiding en achtergrond artikelen.</p>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">3. Evaluatie en doorkijk vervolg</h3>
+              <StepCard number={3} title="Evaluatie en doorkijk vervolg">
                 <p>In een afsluitend gesprek wordt de ontwikkeling gedurende het traject besproken en wordt gekeken hoe opgedane inzichten en vaardigheden kunnen worden geborgd. In het verlengde hiervan wordt ook de waarde van het traject geëvalueerd.</p>
-              </div>
+              </StepCard>
             </div>
           </AnimatedSection>
         </div>

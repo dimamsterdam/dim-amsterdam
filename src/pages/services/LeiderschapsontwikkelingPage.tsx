@@ -5,6 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import StepCard from "@/components/StepCard";
 
 const LeiderschapsontwikkelingPage = () => {
   const testimonials = [
@@ -75,31 +76,28 @@ const LeiderschapsontwikkelingPage = () => {
               </p>
             </div>
 
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3" contentEditable>De concrete situatie</h3>
+            <div className="space-y-8 relative before:content-[''] before:absolute before:top-[3.5rem] before:bottom-[3.5rem] before:left-7 before:w-[2px] before:bg-gray-200 md:before:hidden">
+              <StepCard number={1} title="De concrete situatie">
                 <ul className="list-disc pl-5 space-y-2">
                   <li contentEditable>Wat doet zich hier (daadwerkelijk) voor?</li>
                   <li contentEditable>Wat is het gewenste resultaat?</li>
                 </ul>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3" contentEditable>Theorie en reflectie</h3>
+              <StepCard number={2} title="Theorie en reflectie">
                 <ul className="list-disc pl-5 space-y-2">
                   <li contentEditable>Theoretische benadering is hier behulpzaam?</li>
                   <li contentEditable>Hoe kunnen we hier (anders) naar kijken?</li>
                   <li contentEditable>Wat is de (gedeelde) norm?</li>
                 </ul>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3" contentEditable>Ontwikkeling en actie</h3>
+              <StepCard number={3} title="Ontwikkeling en actie">
                 <ul className="list-disc pl-5 space-y-2">
                   <li contentEditable>Wat vraagt dit van de ontwikkeling van (de houding en vaardigheden) van de deelnemers?</li>
                   <li contentEditable>Wat zijn de concrete vervolgacties?</li>
                 </ul>
-              </div>
+              </StepCard>
             </div>
           </AnimatedSection>
         </div>
@@ -125,7 +123,7 @@ const LeiderschapsontwikkelingPage = () => {
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
-                        Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleidden wij een meerjarig leiderschapstraject
+                        Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleiden wij een meerjarig leiderschapstraject
                         gericht op het versterken van de professionele autonomie en effectievere sturing.
                       </p>
                     </CardContent>
@@ -203,7 +201,7 @@ const LeiderschapsontwikkelingPage = () => {
                     
                     <div className="prose max-w-none">
                       <p contentEditable>
-                        Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleidden DIM een meerjarig leiderschapstraject 
+                        Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleiden DIM een meerjarig leiderschapstraject 
                         gericht op het versterken van de professionele autonomie, effectievere sturing en samenwerking met de omgeving. 
                         In een combinatie aanpak van leiderschapsontwikkeling en ondersteuning op strategische sturing zijn de volgende doelstellingen gerealiseerd:
                       </p>

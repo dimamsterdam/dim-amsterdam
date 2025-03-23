@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import StepCard from "@/components/StepCard";
 
 const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
@@ -105,24 +106,21 @@ const OrganisatieontwikkelingPage = () => {
           <AnimatedSection className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6">Organisatieontwikkeling: werkwijze</h2>
             
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>1. Analyse &amp; Plan van Aanpak</h3>
+            <div className="space-y-8 relative before:content-[''] before:absolute before:top-[3.5rem] before:bottom-[3.5rem] before:left-7 before:w-[2px] before:bg-gray-200 md:before:hidden">
+              <StepCard number={1} title="Analyse & Plan van Aanpak" variant="highlight">
                 <p>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>2. Uitvoering: resultaat & lerend vermogen</h3>
+              <StepCard number={2} title="Uitvoering: resultaat & lerend vermogen" variant="highlight">
                 <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
 
 We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet resultaat, waarbij actie en reflectie hand in hand gaan. Zo realiseren we niet alleen resultaat op de korte termijn, maar ook lerend vermogen voor de lange termijn. Onze bijeenkomsten zijn resultaatgericht, analytisch scherp, confronterend, positief en onderling verbindend.
               </p>
-              </div>
+              </StepCard>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>3. Afronding: verankering &amp; evaluatie</h3>
+              <StepCard number={3} title="Afronding: verankering & evaluatie" variant="highlight">
                 <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
-              </div>
+              </StepCard>
             </div>
           </AnimatedSection>
         </div>
@@ -228,3 +226,4 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
 };
 
 export default OrganisatieontwikkelingPage;
+
