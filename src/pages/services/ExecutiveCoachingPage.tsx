@@ -1,34 +1,19 @@
 
 import PageLayout from "@/components/PageLayout";
-import TestimonialsBlock from "@/components/TestimonialsBlock";
+import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ExecutiveCoachingPage = () => {
   const testimonials = [
     {
-      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak.",
-      author: "Corine van der Sande",
-      role: "Management Development",
-      company: "Erasmus Medisch Centrum",
-      initials: "CS",
-      color: "bg-purple-500/20"
+      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
     }, 
     {
-      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden.",
-      author: "Annemiek van Bolhuis",
-      role: "Bestuursvoorzitter",
-      company: "ANVS",
-      initials: "AB",
-      color: "bg-primary/20"
+      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
     }, 
     {
-      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor.",
-      author: "Guido Landheer",
-      role: "Directeur/plaatsvervangend DG",
-      company: "Ministerie van Buitenlandse Zaken",
-      initials: "GL",
-      color: "bg-rose-400/20"
+      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
     }
   ];
   
@@ -113,7 +98,7 @@ const ExecutiveCoachingPage = () => {
         </div>
       </section>
 
-      {/* Referenties Section */}
+      {/* Ervaringen Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
@@ -123,11 +108,10 @@ const ExecutiveCoachingPage = () => {
             </p>
           </AnimatedSection>
           
-          <TestimonialsBlock testimonials={testimonials} />
+          <SimpleTestimonialBlock testimonials={testimonials} />
         </div>
       </section>
     </PageLayout>;
 };
 
 export default ExecutiveCoachingPage;
-
