@@ -2,7 +2,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface StepCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface StepCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   number: number;
   title: React.ReactNode;
   children: React.ReactNode;
