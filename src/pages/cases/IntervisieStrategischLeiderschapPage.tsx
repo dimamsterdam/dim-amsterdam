@@ -1,15 +1,19 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const IntervisieStrategischLeiderschapPage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <PageLayout>
+
+  return (
+    <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -53,16 +57,25 @@ const IntervisieStrategischLeiderschapPage = () => {
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>Ervaringen</h2>
               
-              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
-                <p className="italic mb-0" contentEditable>"Ik zie uit naar deze bijeenkomsten. Het dwingt me tot reflectie en de reflectie en adviezen van anderen zijn echt helpend"</p>
+              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100 relative">
+                <blockquote className="text-lg md:text-xl font-medium italic text-gray-700 relative" contentEditable>
+                  <span className="relative z-10">"Ik zie uit naar deze bijeenkomsten. Het dwingt me tot reflectie en de reflectie en adviezen van anderen zijn echt helpend"</span>
+                  <div className="absolute -left-4 -top-4 w-10 h-10 bg-primary/10 rounded-full opacity-30 -z-10"></div>
+                </blockquote>
               </div>
               
-              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
-                <p className="italic mb-0" contentEditable>"Leidinggeven is ook best eenzaam. Het is enorm waardevol om een plek te hebben waar ik open kan spreken"</p>
+              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100 relative">
+                <blockquote className="text-lg md:text-xl font-medium italic text-gray-700 relative" contentEditable>
+                  <span className="relative z-10">"Leidinggeven is ook best eenzaam. Het is enorm waardevol om een plek te hebben waar ik open kan spreken"</span>
+                  <div className="absolute -left-4 -top-4 w-10 h-10 bg-primary/10 rounded-full opacity-30 -z-10"></div>
+                </blockquote>
               </div>
               
-              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
-                <p className="italic mb-0" contentEditable>"De artikelen geven een mooie verdieping. Dit soort dingen kom ik anders niet tegen en vind ik erg leerzaam"</p>
+              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100 relative">
+                <blockquote className="text-lg md:text-xl font-medium italic text-gray-700 relative" contentEditable>
+                  <span className="relative z-10">"De artikelen geven een mooie verdieping. Dit soort dingen kom ik anders niet tegen en vind ik erg leerzaam"</span>
+                  <div className="absolute -left-4 -top-4 w-10 h-10 bg-primary/10 rounded-full opacity-30 -z-10"></div>
+                </blockquote>
               </div>
               
               <div className="mt-12 flex justify-center">
@@ -74,6 +87,8 @@ const IntervisieStrategischLeiderschapPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>;
+    </PageLayout>
+  );
 };
+
 export default IntervisieStrategischLeiderschapPage;

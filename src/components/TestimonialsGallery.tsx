@@ -69,12 +69,13 @@ const TestimonialsGallery = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 md:p-8 shadow-lg h-full flex flex-col"
+        className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 md:p-8 shadow-lg h-full flex flex-col relative"
       >
-        <Quote className="h-8 w-8 text-primary/60 mb-4" />
+        <Quote className="h-10 w-10 text-primary/60 mb-4" />
         
-        <blockquote className="text-lg font-medium text-zinc-200 flex-grow mb-6">
-          "{testimonial.quote}"
+        <blockquote className="text-lg md:text-xl font-medium text-zinc-200 flex-grow mb-6 leading-relaxed relative" contentEditable>
+          <span className="relative z-10">"{testimonial.quote}"</span>
+          <div className="absolute -left-6 -top-6 w-12 h-12 bg-primary/10 rounded-full opacity-30 -z-10"></div>
         </blockquote>
         
         <div className="flex items-center mt-auto">
