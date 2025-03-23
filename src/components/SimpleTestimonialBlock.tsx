@@ -41,9 +41,13 @@ const SimpleTestimonialBlock: React.FC<SimpleTestimonialBlockProps> = ({ testimo
           >
             <div className="text-center py-6">
               <div className="flex items-start justify-center mb-4">
-                <Quote className="h-8 w-8 text-[#F97316] mr-2 flex-shrink-0 mt-1" />
-                <blockquote className="text-base md:text-lg font-display text-gray-700 italic mb-6 text-left max-w-3xl">
-                  {testimonials[activeIndex].quote}
+                <Quote className="h-10 w-10 text-[#F97316] mr-3 flex-shrink-0 mt-1 opacity-80" />
+                <blockquote 
+                  className="text-lg md:text-xl lg:text-2xl font-display text-gray-700 italic mb-6 text-left max-w-3xl leading-relaxed relative" 
+                  contentEditable
+                >
+                  <span className="relative z-10">{testimonials[activeIndex].quote}</span>
+                  <div className="absolute -left-6 -top-6 w-12 h-12 bg-teal-light rounded-full opacity-40 -z-10"></div>
                 </blockquote>
               </div>
             </div>
@@ -63,6 +67,7 @@ const SimpleTestimonialBlock: React.FC<SimpleTestimonialBlockProps> = ({ testimo
       </div>
       
       <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-12 -left-16 w-32 h-32 bg-teal-light/20 rounded-full blur-2xl"></div>
     </div>
   );
 };
