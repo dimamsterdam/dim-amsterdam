@@ -8,10 +8,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail } from "lucide-react";
 import GoogleMap from "@/components/GoogleMap";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 import {
   Form,
   FormControl,
@@ -32,8 +33,14 @@ const formSchema = z.object({
 // Type for our form values
 type FormValues = z.infer<typeof formSchema>;
 
+// EmailJS credentials - replace with your own
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // You'll need to replace this
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // You'll need to replace this
+const EMAILJS_USER_ID = "YOUR_USER_ID"; // You'll need to replace this
+
 const ContactPage = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Initialize the form
   const form = useForm<FormValues>({
@@ -48,17 +55,25 @@ const ContactPage = () => {
 
   // Form submission handler
   const onSubmit = async (data: FormValues) => {
-    // In a real application, you would send this data to your backend
+    setIsSubmitting(true);
     console.log("Form submitted:", data);
     
-    // Simulate API call
     try {
-      // This is where you would make an actual API call
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      // Prepare the template parameters to send to EmailJS
+      const templateParams = {
+        from_name: data.name,
+        reply_to: data.email,
+        subject: data.subject,
+        message: data.message
+      };
+      
+      // Send the email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
       
       // Show success toast
       toast({
@@ -69,12 +84,16 @@ const ContactPage = () => {
       // Reset the form after successful submission
       form.reset();
     } catch (error) {
+      console.error("Error sending email:", error);
+      
       // Show error toast if submission fails
       toast({
         title: "Er is een fout opgetreden",
         description: "Uw bericht kon niet worden verzonden. Probeer het later opnieuw.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -208,9 +227,9 @@ const ContactPage = () => {
                     <Button 
                       type="submit" 
                       className="w-full md:w-auto"
-                      disabled={form.formState.isSubmitting}
+                      disabled={isSubmitting}
                     >
-                      {form.formState.isSubmitting ? "Bezig met verzenden..." : "Verstuur bericht"}
+                      {isSubmitting ? "Bezig met verzenden..." : "Verstuur bericht"}
                     </Button>
                   </form>
                 </Form>
