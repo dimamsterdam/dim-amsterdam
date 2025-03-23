@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
@@ -41,6 +42,7 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
+  // Effect to prevent body scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -182,20 +184,20 @@ const Navbar = () => {
 
           <button
             onClick={handleMobileMenuToggle}
-            className="md:hidden flex items-center text-foreground z-50"
+            className="md:hidden flex items-center text-foreground"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X size={24} />
+              <X size={24} className="animate-fade-in" />
             ) : (
-              <Menu size={24} />
+              <Menu size={24} className="animate-fade-in" />
             )}
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-0 bg-background z-40 overflow-y-auto pt-[60px]">
+        <div className="md:hidden fixed inset-0 top-[60px] bg-background z-40 animate-fade-in overflow-y-auto">
           <nav className="container mx-auto px-4 py-8 flex flex-col space-y-4">
             {menuItems.map((item, index) => (
               item.dropdown ? (
