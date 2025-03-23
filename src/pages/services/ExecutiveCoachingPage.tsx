@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -68,12 +69,9 @@ const ExecutiveCoachingPage = () => {
             
             <div className="space-y-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">1. Klikgesprek</h3>
-                <p>Naast kennis en ervaring is de effectiviteit van coaching in belangrijke mate afhankelijk van vertrouwen en een persoonlijke klik. Onze trajecten starten dan ook altijd met een (online) vrijblijvende kennismaking.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">Intake: formulering doel traject</h3>
+                <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis">1. Klikgesprek & Intake</h3>
+                <p className="mb-4">Naast kennis en ervaring is de effectiviteit van coaching in belangrijke mate afhankelijk van vertrouwen en een persoonlijke klik. Onze trajecten starten dan ook altijd met een (online) vrijblijvende kennismaking.</p>
+                
                 <p>Ontwikkeling, zelfreflectie en experimenteren met nieuwe perspectieven en gedrag vergen energie. Een effectieve investering in persoonlijke ontwikkeling start dan ook met een helder doel vanuit de coachee. Onze begeleiding is gericht op de formulering van een doel dat concreet, haalbaar en positief is. Ons uitgangspunt is dat ontwikkeling ontstaat vanuit kracht en een stevige basis. De focus in onze benadering ligt dan ook op bijleren en ontwikkelen en niet zozeer op 'afleren'.</p>
               </div>
               
