@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronRight, BarChart2, Users, UserCog } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ const ServicesSection = () => {
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
     icon: <UserCog className="w-6 h-6" />,
     link: "/diensten/executive-coaching",
-    image: "/lovable-uploads/2c41a176-8a36-4b67-9ee3-5ba8f802c6c7.png"
+    image: "/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png"
   }];
 
   return <section className="section-padding bg-accent/30">
