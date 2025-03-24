@@ -42,7 +42,7 @@ const WhatWeDoSection = () => {
                       <img 
                         src={service.image} 
                         alt={service.title} 
-                        className={`object-cover w-full h-full ${service.title === "Executive coaching" ? "object-top" : ""}`}
+                        className="object-cover w-full h-full"
                       />
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
@@ -93,7 +93,7 @@ const WhatWeDoSection = () => {
                       <img 
                         src={service.image} 
                         alt={service.title} 
-                        className={`object-cover w-full h-full ${service.title === "Executive coaching" ? "object-top" : ""}`}
+                        className="object-cover w-full h-full"
                       />
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
