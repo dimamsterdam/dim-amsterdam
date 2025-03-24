@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -36,7 +35,7 @@ const ExecutiveCoachingPage = () => {
                 <img 
                   src="/lovable-uploads/c220390a-cb8f-48a0-b5bd-af1192854f06.png" 
                   alt="Executive coaching silhouettes showing communication and mentorship" 
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full object-top"
                 />
               </AspectRatio>
             </AnimatedSection>
