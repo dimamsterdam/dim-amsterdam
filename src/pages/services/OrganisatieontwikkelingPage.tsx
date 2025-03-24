@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -91,7 +92,7 @@ const OrganisatieontwikkelingPage = () => {
                 {/* Issue #5: Image containment and appropriate aspect ratio */}
                 <div className="rounded-xl shadow-lg overflow-hidden h-full flex items-center">
                   <AspectRatio ratio={16 / 9} className="bg-muted w-full">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Organisatieontwikkeling" className="object-cover w-full h-full" />
+                    <img src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" alt="Organisatieontwikkeling" className="object-cover w-full h-full" />
                   </AspectRatio>
                 </div>
               </AnimatedSection>
@@ -226,4 +227,3 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
 };
 
 export default OrganisatieontwikkelingPage;
-
