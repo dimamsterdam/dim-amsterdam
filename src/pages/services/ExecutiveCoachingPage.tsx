@@ -1,30 +1,23 @@
-
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import StepCard from "@/components/StepCard";
-
 const ExecutiveCoachingPage = () => {
-  const testimonials = [
-    {
-      quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
-    }, 
-    {
-      quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
-    }, 
-    {
-      quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
-    }
-  ];
-  
+  const testimonials = [{
+    quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
+  }, {
+    quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
+  }, {
+    quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
+  }];
   return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Executive Coaching</h1>
+              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl">Executive Coaching</h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling. Vanuit een stevige basis werken we parallel aan uitbreiding van het eigen handelingsrepertoire en praktisch resultaat.
               </p>
