@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import StepCard from "@/components/StepCard";
-
 const OrganisatieontwikkelingPage = () => {
   // Debug references to analyze layout issues
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,7 +37,6 @@ const OrganisatieontwikkelingPage = () => {
     window.addEventListener('resize', logLayoutDimensions);
     return () => window.removeEventListener('resize', logLayoutDimensions);
   }, []);
-  
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -61,7 +59,6 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
-  
   return <PageLayout>
       {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
       <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
@@ -72,7 +69,7 @@ const OrganisatieontwikkelingPage = () => {
             <div ref={textContainerRef} className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]">
               <AnimatedSection>
                 {/* Updated heading with new classes for handling the long word */}
-                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 whitespace-nowrap md:whitespace-normal hyphens-auto">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 whitespace-nowrap md:whitespace-normal hyphens-auto md:text-3xl">
                   Organisatie&shy;ontwikkeling
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-6">
@@ -136,11 +133,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               <AnimatedSection delay={0.1} animation="fade-in">
                 <Card className="h-full flex flex-col">
                   <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <img 
-                      src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" 
-                      alt="Cultuurverandering case" 
-                      className="object-cover w-full h-full"
-                    />
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" alt="Cultuurverandering case" className="object-cover w-full h-full" />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
                     <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Cultuurverandering</h3>
@@ -160,11 +153,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               <AnimatedSection delay={0.2} animation="fade-in">
                 <Card className="h-full flex flex-col">
                   <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <img 
-                      src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=2940&auto=format&fit=crop" 
-                      alt="Samenwerking & Conflicthantering case" 
-                      className="object-cover w-full h-full"
-                    />
+                    <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=2940&auto=format&fit=crop" alt="Samenwerking & Conflicthantering case" className="object-cover w-full h-full" />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
                     <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Samenwerking & Conflicthantering</h3>
@@ -184,11 +173,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               <AnimatedSection delay={0.3} animation="fade-in">
                 <Card className="h-full flex flex-col">
                   <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <img 
-                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" 
-                      alt="Herijking visie & strategie case" 
-                      className="object-cover w-full h-full"
-                    />
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Herijking visie & strategie case" className="object-cover w-full h-full" />
                   </AspectRatio>
                   <CardContent className="flex-grow pt-6">
                     <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Herijking visie & strategie</h3>
@@ -224,5 +209,4 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
       </section>
     </PageLayout>;
 };
-
 export default OrganisatieontwikkelingPage;
