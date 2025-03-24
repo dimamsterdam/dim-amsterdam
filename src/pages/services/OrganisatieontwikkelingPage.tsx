@@ -71,9 +71,9 @@ const OrganisatieontwikkelingPage = () => {
             {/* Issue #2: Text container with fixed dimensions and adequate space */}
             <div ref={textContainerRef} className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]">
               <AnimatedSection>
-                {/* Issue #3: Title text size and overflow handling */}
-                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words">
-                  Organisatieontwikkeling
+                {/* Updated heading with new classes for handling the long word */}
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 whitespace-nowrap md:whitespace-normal hyphens-auto">
+                  Organisatie&shy;ontwikkeling
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-6">
                   Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
@@ -226,4 +226,3 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
 };
 
 export default OrganisatieontwikkelingPage;
-

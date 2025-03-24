@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -209,6 +210,11 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Manrope', 'sans-serif']
+			},
+			hyphens: {
+				'auto': 'auto',
+				'manual': 'manual',
+				'none': 'none'
 			}
 		}
 	},
