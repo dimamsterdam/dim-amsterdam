@@ -21,7 +21,7 @@ export const servicesContent = {
       title: "Organisatieontwikkeling",
       description: "Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.",
       href: "/diensten/organisatieontwikkeling",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+      image: "/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png"
     },
     {
       title: "Leiderschaps- & Teamontwikkeling",

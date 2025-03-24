@@ -21,7 +21,7 @@ const ServicesSection = () => {
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
     link: "/diensten/organisatieontwikkeling",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+    image: "/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
