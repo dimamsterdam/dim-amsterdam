@@ -35,7 +35,7 @@ const LeiderschapsontwikkelingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="max-w-3xl">
-              <h1 contentEditable className="text-4xl font-display font-bold mb-6 md:text-4xl">Leiderschaps- & Teamontwikkeling</h1>
+              <h1 contentEditable className="text-4xl font-display font-bold mb-6 px-0 md:text-3xl">Leiderschaps &amp; Teamontwikkeling</h1>
               <p className="text-xl text-muted-foreground mb-8" contentEditable>
                 Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.
               </p>
