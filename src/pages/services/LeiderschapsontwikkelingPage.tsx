@@ -6,43 +6,36 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import StepCard from "@/components/StepCard";
-
 const LeiderschapsontwikkelingPage = () => {
-  const testimonials = [
-    {
-      quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
-      author: "Michael Chen",
-      role: "CEO",
-      company: "Ascend Group",
-      initials: "MC",
-      color: "bg-emerald-500/20"
-    },
-    {
-      quote: "Als IG van de NVWA heb ik DIM leren kennen als een enthousiasmerende begeleider in ons traject van leiderschapsontwikkeling. Zij verbindt, snapt waarom het gaat in de organisatie, heeft inzicht in veranderprocessen en treedt effectief op.",
-      author: "Rob van Lint",
-      role: "Inspecteur Generaal",
-      company: "NVWA",
-      initials: "RL",
-      color: "bg-amber-500/20"
-    },
-    {
-      quote: "DIM heeft zowel mij als mijn team begeleid tijdens een intensief ontwikkelingstraject. De combinatie van persoonlijke coaching en teamontwikkeling heeft geleid tot een sterkere samenwerking en betere resultaten.",
-      author: "Mark Dierix",
-      role: "Directeur Generaal",
-      company: "Ministerie van Economische Zaken",
-      initials: "MD",
-      color: "bg-blue-400/20"
-    }
-  ];
-
-  return (
-    <PageLayout>
+  const testimonials = [{
+    quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
+    author: "Michael Chen",
+    role: "CEO",
+    company: "Ascend Group",
+    initials: "MC",
+    color: "bg-emerald-500/20"
+  }, {
+    quote: "Als IG van de NVWA heb ik DIM leren kennen als een enthousiasmerende begeleider in ons traject van leiderschapsontwikkeling. Zij verbindt, snapt waarom het gaat in de organisatie, heeft inzicht in veranderprocessen en treedt effectief op.",
+    author: "Rob van Lint",
+    role: "Inspecteur Generaal",
+    company: "NVWA",
+    initials: "RL",
+    color: "bg-amber-500/20"
+  }, {
+    quote: "DIM heeft zowel mij als mijn team begeleid tijdens een intensief ontwikkelingstraject. De combinatie van persoonlijke coaching en teamontwikkeling heeft geleid tot een sterkere samenwerking en betere resultaten.",
+    author: "Mark Dierix",
+    role: "Directeur Generaal",
+    company: "Ministerie van Economische Zaken",
+    initials: "MD",
+    color: "bg-blue-400/20"
+  }];
+  return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6" contentEditable>Leiderschaps- & Teamontwikkeling</h1>
+              <h1 contentEditable className="text-4xl font-display font-bold mb-6 md:text-4xl">Leiderschaps- & Teamontwikkeling</h1>
               <p className="text-xl text-muted-foreground mb-8" contentEditable>
                 Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.
               </p>
@@ -53,11 +46,7 @@ const LeiderschapsontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                  alt="Leiderschapsontwikkeling" 
-                  className="object-cover w-full h-full"
-                />
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -114,11 +103,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/leiderschapsprogramma" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Leiderschapsprogramma case" 
-                        className="object-cover w-full h-full"
-                      />
+                      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
@@ -138,11 +123,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Intervisie case" 
-                        className="object-cover w-full h-full"
-                      />
+                      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2940&auto=format&fit=crop" alt="Intervisie case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
@@ -162,11 +143,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/teamontwikkeling" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Teamontwikkeling case" 
-                        className="object-cover w-full h-full"
-                      />
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" alt="Teamontwikkeling case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Teamontwikkeling</h3>
@@ -199,8 +176,6 @@ const LeiderschapsontwikkelingPage = () => {
           <TestimonialsBlock testimonials={testimonials} />
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default LeiderschapsontwikkelingPage;
