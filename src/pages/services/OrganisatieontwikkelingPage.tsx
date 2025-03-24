@@ -72,13 +72,13 @@ const OrganisatieontwikkelingPage = () => {
             <div ref={textContainerRef} className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]">
               <AnimatedSection>
                 {/* Issue #3: Title text size and overflow handling */}
-                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words">
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-display font-bold mb-6 break-words" contentEditable>
                   Organisatieontwikkeling
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-6">
+                <p className="text-lg md:text-xl text-muted-foreground mb-6" contentEditable>
                   Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
                 </p>
-                <p className="text-base md:text-lg text-muted-foreground">
+                <p className="text-base md:text-lg text-muted-foreground" contentEditable>
                   In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. 
                   Hieronder worden de globale elementen toegelicht.
                 </p>
@@ -91,7 +91,12 @@ const OrganisatieontwikkelingPage = () => {
                 {/* Issue #5: Image containment and appropriate aspect ratio */}
                 <div className="rounded-xl shadow-lg overflow-hidden h-full flex items-center">
                   <AspectRatio ratio={16 / 9} className="bg-muted w-full">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Organisatieontwikkeling" className="object-cover w-full h-full" />
+                    <img 
+                      src="/lovable-uploads/30376e86-1404-4ad8-a4a9-552ff7b4e495.png" 
+                      alt="Organisatieontwikkeling - Afraid of change? Leave it here." 
+                      className="object-cover w-full h-full" 
+                      contentEditable
+                    />
                   </AspectRatio>
                 </div>
               </AnimatedSection>
@@ -104,22 +109,22 @@ const OrganisatieontwikkelingPage = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-6">Organisatieontwikkeling: werkwijze</h2>
+            <h2 className="text-3xl font-display font-bold mb-6" contentEditable>Organisatieontwikkeling: werkwijze</h2>
             
             <div className="space-y-8 relative before:content-[''] before:absolute before:top-[3.5rem] before:bottom-[3.5rem] before:left-7 before:w-[2px] before:bg-gray-200 md:before:hidden">
               <StepCard number={1} title="Analyse & Plan van Aanpak" variant="highlight">
-                <p>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
+                <p contentEditable>Kortdurende pragmatische inventarisatie van de verschillende factoren die van invloed zijn op de (on-)gewenste situatie. In gesprek met de belangrijkste stakeholders wordt vervolgens een plan van aanpak (nader) uitgewerkt.</p>
               </StepCard>
               
               <StepCard number={2} title="Uitvoering: resultaat & lerend vermogen" variant="highlight">
-                <p>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
+                <p contentEditable>DIM ontwikkelt en begeleidt een programma wat de betrokkenen in beweging zet. We kennen de (semi-)publieke context en zetten onze expertise en eerdere ervaring op het gebied van organisatie- & leiderschapsontwikkeling in om tot nieuwe inzichten en gefundeerde keuzes te komen. 
 
 We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet resultaat, waarbij actie en reflectie hand in hand gaan. Zo realiseren we niet alleen resultaat op de korte termijn, maar ook lerend vermogen voor de lange termijn. Onze bijeenkomsten zijn resultaatgericht, analytisch scherp, confronterend, positief en onderling verbindend.
               </p>
               </StepCard>
               
               <StepCard number={3} title="Afronding: verankering & evaluatie" variant="highlight">
-                <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
+                <p contentEditable>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </StepCard>
             </div>
           </AnimatedSection>
@@ -226,4 +231,3 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
 };
 
 export default OrganisatieontwikkelingPage;
-
