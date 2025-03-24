@@ -1,43 +1,13 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import StepCard from "@/components/StepCard";
+
 const OrganisatieontwikkelingPage = () => {
-  // Debug references to analyze layout issues
-  const containerRef = useRef<HTMLDivElement>(null);
-  const textContainerRef = useRef<HTMLDivElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
-
-  // Log layout dimensions for debugging
-  useEffect(() => {
-    const logLayoutDimensions = () => {
-      if (containerRef.current && textContainerRef.current && imageContainerRef.current) {
-        console.log('Container dimensions:', {
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight
-        });
-        console.log('Text container dimensions:', {
-          width: textContainerRef.current.offsetWidth,
-          height: textContainerRef.current.offsetHeight
-        });
-        console.log('Image container dimensions:', {
-          width: imageContainerRef.current.offsetWidth,
-          height: imageContainerRef.current.offsetHeight
-        });
-      }
-    };
-
-    // Log on mount and on resize
-    logLayoutDimensions();
-    window.addEventListener('resize', logLayoutDimensions);
-    return () => window.removeEventListener('resize', logLayoutDimensions);
-  }, []);
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -61,39 +31,28 @@ const OrganisatieontwikkelingPage = () => {
     color: "bg-indigo-500/20"
   }];
   return <PageLayout>
-      {/* Introductie Section - Complete rework with fixed positioning and absolute measurements */}
-      <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-blue-50">
-        <div ref={containerRef} className="container mx-auto px-4 md:px-6">
-          {/* Issue #1: Stacking order and flow - Using block level rendering instead of flex/grid */}
-          <div className="block md:relative">
-            {/* Issue #2: Text container with fixed dimensions and adequate space */}
-            <div ref={textContainerRef} className="pb-12 md:pb-0 md:max-w-[45%] lg:max-w-[40%]">
-              <AnimatedSection>
-                {/* Updated heading with new classes for handling the long word */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 whitespace-nowrap md:whitespace-normal hyphens-auto md:text-3xl">
-                  Organisatie&shy;ontwikkeling
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                  Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
-                </p>
-                <p className="text-base md:text-lg text-muted-foreground">
-                  In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. 
-                  Hieronder worden de globale elementen toegelicht.
-                </p>
-              </AnimatedSection>
-            </div>
+      {/* Introductie Section - Updated to use grid layout consistent with other service pages */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection className="max-w-3xl">
+              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl">
+                Organisatieontwikkeling
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                In nauw overleg met de opdrachtgever komen wij tot een passende aanpak en invulling. 
+                Hieronder worden de globale elementen toegelicht.
+              </p>
+            </AnimatedSection>
             
-            {/* Issue #4: Image container with absolute positioning on larger screens */}
-            <div ref={imageContainerRef} className="md:absolute md:top-0 md:right-0 md:w-[50%] lg:w-[55%] md:h-full">
-              <AnimatedSection animation="fade-in" delay={0.2} className="h-full">
-                {/* Issue #5: Image containment and appropriate aspect ratio */}
-                <div className="rounded-xl shadow-lg overflow-hidden h-full flex items-center">
-                  <AspectRatio ratio={16 / 9} className="bg-muted w-full">
-                    <img src="/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png" alt="Organisatieontwikkeling - Afraid of change? Leave it here" className="object-cover w-full h-full" />
-                  </AspectRatio>
-                </div>
-              </AnimatedSection>
-            </div>
+            <AnimatedSection animation="fade-in" delay={0.2}>
+              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
+                <img src="/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png" alt="Organisatieontwikkeling - Afraid of change? Leave it here" className="object-cover w-full h-full" />
+              </AspectRatio>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -124,7 +83,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
         </div>
       </section>
 
-      {/* Cases Section - Updated with case links to the top of each page */}
+      {/* Cases Section */}
       <section className="py-16 md:py-20 bg-gray-50" id="cases">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
