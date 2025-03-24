@@ -21,18 +21,14 @@ const WhatWeDoSection = () => {
               delay={index * 0.1 + 0.1}
             >
               {service.href.includes("cultuurverandering") ? (
-                // Special handling for Cultuurverandering link
                 <Link 
                   to="/cases/cultuurverandering" 
                   className="block h-full"
                   onClick={(e) => {
-                    // If already on the cultuurverandering page
                     if (window.location.pathname === '/cases/cultuurverandering') {
-                      e.preventDefault(); // Prevent default link behavior
-                      // Force full page reload to reset scroll position
+                      e.preventDefault();
                       window.location.href = '/cases/cultuurverandering';
                     } else {
-                      // Otherwise let React Router handle it normally
                       window.scrollTo(0, 0);
                     }
                   }}
@@ -52,18 +48,14 @@ const WhatWeDoSection = () => {
                   </div>
                 </Link>
               ) : service.href.includes("leiderschapsontwikkeling") ? (
-                // Special handling for Leiderschapsontwikkeling link
                 <Link 
                   to="/diensten/leiderschapsontwikkeling" 
                   className="block h-full"
                   onClick={(e) => {
-                    // If already on the leiderschapsontwikkeling page
                     if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
-                      e.preventDefault(); // Prevent default link behavior
-                      // Force full page reload to reset scroll position
+                      e.preventDefault();
                       window.location.href = '/diensten/leiderschapsontwikkeling';
                     } else {
-                      // Otherwise let React Router handle it normally
                       window.scrollTo(0, 0);
                     }
                   }}
@@ -83,7 +75,6 @@ const WhatWeDoSection = () => {
                   </div>
                 </Link>
               ) : (
-                // Regular link handling for other services
                 <Link 
                   to={service.href.replace("/aanbod/", "/diensten/")} 
                   className="block h-full"

@@ -1,4 +1,3 @@
-
 export const heroContent = {
   tags: [
     "Organisatieontwikkeling",
