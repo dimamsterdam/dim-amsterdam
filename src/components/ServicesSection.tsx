@@ -21,19 +21,19 @@ const ServicesSection = () => {
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
     link: "/diensten/organisatieontwikkeling",
-    image: "/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png"
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
     icon: <Users className="w-6 h-6" />,
     link: "/diensten/leiderschapsontwikkeling",
-    image: "/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png"
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     title: "Executive coaching",
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
     icon: <UserCog className="w-6 h-6" />,
     link: "/diensten/executive-coaching",
-    image: "/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png"
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }];
 
   return <section className="section-padding bg-accent/30">

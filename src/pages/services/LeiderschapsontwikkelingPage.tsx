@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -55,7 +54,7 @@ const LeiderschapsontwikkelingPage = () => {
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png" 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
                   alt="Leiderschapsontwikkeling" 
                   className="object-cover w-full h-full"
                 />

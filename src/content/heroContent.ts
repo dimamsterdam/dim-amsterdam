@@ -21,19 +21,19 @@ export const servicesContent = {
       title: "Organisatieontwikkeling",
       description: "Organisatie-ontwikkeling ontstaat vanuit een samenspel van verschillende factoren. Daarom werkt DIM vanuit een integrale aanpak. Dankzij interventies vanuit verschillende invalshoeken realiseren we wendbaarheid en langdurig resultaat.",
       href: "/diensten/organisatieontwikkeling",
-      image: "/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png"
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
     },
     {
       title: "Leiderschaps- & Teamontwikkeling",
       description: "Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.",
       href: "/diensten/leiderschapsontwikkeling",
-      image: "/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png"
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
     },
     {
       title: "Executive coaching",
       description: "Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling. Vanuit een stevige basis werken we parallel aan uitbreiding van het eigen handelingsrepertoire en praktisch resultaat.",
       href: "/diensten/executive-coaching",
-      image: "/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png"
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
     }
   ]
 };
