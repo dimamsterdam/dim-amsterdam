@@ -1,14 +1,17 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const LeiderschapsprogrammaPage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -21,7 +24,7 @@ const LeiderschapsprogrammaPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
+                  <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -83,4 +86,5 @@ const LeiderschapsprogrammaPage = () => {
       </section>
     </PageLayout>;
 };
+
 export default LeiderschapsprogrammaPage;

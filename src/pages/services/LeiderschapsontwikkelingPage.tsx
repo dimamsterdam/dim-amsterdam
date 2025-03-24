@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -6,6 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import StepCard from "@/components/StepCard";
+
 const LeiderschapsontwikkelingPage = () => {
   const testimonials = [{
     quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
@@ -29,6 +31,7 @@ const LeiderschapsontwikkelingPage = () => {
     initials: "MD",
     color: "bg-blue-400/20"
   }];
+  
   return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -46,7 +49,7 @@ const LeiderschapsontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -178,4 +181,5 @@ const LeiderschapsontwikkelingPage = () => {
       </section>
     </PageLayout>;
 };
+
 export default LeiderschapsontwikkelingPage;
