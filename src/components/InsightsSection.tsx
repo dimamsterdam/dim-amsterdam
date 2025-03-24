@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -11,32 +10,30 @@ interface InsightCard {
   slug: string;
   date: string;
 }
-
 const InsightsSection = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const insights: InsightCard[] = [{
     title: "How purpose-driven cultures drive innovation and market growth",
     excerpt: "Discover how organizations with strong purpose-driven cultures outperform their competitors in innovation and market share.",
     category: "Klant case",
-    image: "/lovable-uploads/086e0667-427c-4066-91f1-2f1123a98a4c.png",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
     slug: "/insights/purpose-driven-cultures",
     date: "May 12, 2023"
   }, {
     title: "The leadership behaviors that transform organizational culture",
     excerpt: "Explore the key leadership behaviors that have the greatest impact on shaping culture and driving performance.",
     category: "Klant case",
-    image: "/lovable-uploads/318cce0f-939a-4543-a8f8-fdd2c9be826d.png",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
     slug: "/insights/leadership-behaviors",
     date: "July 23, 2023"
   }, {
     title: "Measuring cultural transformation: Key metrics and frameworks",
     excerpt: "Learn how to effectively measure and track cultural change using proven metrics and comprehensive frameworks.",
     category: "Klant case",
-    image: "/lovable-uploads/01d0bdb5-7e46-4437-a03c-ebd7eee34947.png",
+    image: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3",
     slug: "/insights/measuring-cultural-transformation",
     date: "September 5, 2023"
   }];
-  
   return <section className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
@@ -93,5 +90,4 @@ const InsightsSection = () => {
       </div>
     </section>;
 };
-
 export default InsightsSection;

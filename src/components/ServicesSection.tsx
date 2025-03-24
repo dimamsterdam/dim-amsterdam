@@ -21,13 +21,13 @@ const ServicesSection = () => {
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
     link: "/diensten/organisatieontwikkeling",
-    image: "/lovable-uploads/01d0bdb5-7e46-4437-a03c-ebd7eee34947.png"
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
     icon: <Users className="w-6 h-6" />,
     link: "/diensten/leiderschapsontwikkeling",
-    image: "/lovable-uploads/318cce0f-939a-4543-a8f8-fdd2c9be826d.png"
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     title: "Executive coaching",
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
