@@ -39,11 +39,19 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
+                      {index === 1 ? (
+                        <img 
+                          src="/lovable-uploads/80d701aa-8a46-42f8-acd2-11e385be3f03.png" 
+                          alt="Afraid of change? Leave it here." 
+                          className="object-cover w-full h-full"
+                        />
+                      ) : (
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      )}
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
                       <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
@@ -70,11 +78,19 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
+                      {index === 1 ? (
+                        <img 
+                          src="/lovable-uploads/80d701aa-8a46-42f8-acd2-11e385be3f03.png" 
+                          alt="Afraid of change? Leave it here." 
+                          className="object-cover w-full h-full"
+                        />
+                      ) : (
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      )}
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
                       <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
@@ -90,11 +106,19 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
+                      {index === 1 ? (
+                        <img 
+                          src="/lovable-uploads/80d701aa-8a46-42f8-acd2-11e385be3f03.png" 
+                          alt="Afraid of change? Leave it here." 
+                          className="object-cover w-full h-full"
+                        />
+                      ) : (
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      )}
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
                       <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
