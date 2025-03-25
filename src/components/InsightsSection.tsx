@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -55,7 +56,12 @@ const InsightsSection = () => {
               <Link to={insight.slug} className="block h-full" onMouseEnter={() => setHoverIndex(index)} onMouseLeave={() => setHoverIndex(null)}>
                 <div className={`h-full rounded-xl overflow-hidden border transition-all duration-300 ${hoverIndex === index ? 'border-primary shadow-lg' : 'border-border'}`}>
                   <div className="aspect-video overflow-hidden">
-                    <img src={insight.image} alt={insight.title} className={`w-full h-full object-cover transition-transform duration-700 ${hoverIndex === index ? 'scale-110' : 'scale-100'}`} />
+                    <img 
+                      src={insight.image} 
+                      alt={insight.title} 
+                      className={`w-full h-full object-cover transition-transform duration-700 ${hoverIndex === index ? 'scale-110' : 'scale-100'}`}
+                      contentEditable
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex justify-between items-center mb-3">
