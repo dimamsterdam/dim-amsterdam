@@ -1,23 +1,11 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
-
 const AboutPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-teal-50 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" contentEditable>Over ons</h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8" contentEditable>
-              Bij DIM geloven we dat organisaties die écht impact maken tegelijkertijd een plek zijn waar mensen met plezier werken.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Main Content */}
       <section className="container mx-auto px-4 py-12 md:py-16">
@@ -58,11 +46,7 @@ const AboutPage = () => {
           <AnimatedSection animation="slide-from-right" className="space-y-8">
             {/* Office Image */}
             <div className="rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" 
-                alt="DIM kantoor in Amsterdam" 
-                className="w-full h-auto object-cover"
-              />
+              <img src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" alt="DIM kantoor in Amsterdam" className="w-full h-auto object-cover" />
               <div className="bg-white p-4">
                 <p className="text-sm text-muted-foreground italic" contentEditable>
                   Ons kantoor is gevestigd aan de Panamalaan 5f in Amsterdam.
@@ -71,48 +55,10 @@ const AboutPage = () => {
             </div>
 
             {/* Team Card */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4" contentEditable>Ons team</h3>
-                <p className="text-muted-foreground mb-4" contentEditable>
-                  DIM bestaat uit een team van zeer ervaren adviseurs met jarenlange ervaring in het publieke domein. 
-                  Elk van ons brengt specifieke expertise en ervaring mee.
-                </p>
-                <p className="text-muted-foreground" contentEditable>
-                  We zijn een hecht team van betrokken specialisten. We werken samen, versterken elkaar en dragen allemaal 
-                  bij aan onze missie: meer maatschappelijke impact en werkplezier.
-                </p>
-              </CardContent>
-            </Card>
+            
 
             {/* Values Card */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4" contentEditable>Onze kernwaarden</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Moedig - we durven te zeggen wat gezegd moet worden</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Betrokken - we staan naast je en werken samen</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Deskundig - we brengen kennis en ervaring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Creatief - we denken in nieuwe mogelijkheden</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Effectief - we werken samen aan resultaat</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            
           </AnimatedSection>
         </div>
       </section>
@@ -126,18 +72,12 @@ const AboutPage = () => {
             Neem vrijblijvend contact met ons op voor een kennismaking.
           </p>
           <div>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-teal-600 text-white px-8 py-3 hover:bg-teal-700 transition-colors"
-              contentEditable
-            >
+            <a href="/contact" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-teal-600 text-white px-8 py-3 hover:bg-teal-700 transition-colors" contentEditable>
               Neem contact op
             </a>
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default AboutPage;
