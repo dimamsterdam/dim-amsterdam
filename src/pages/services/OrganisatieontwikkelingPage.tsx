@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -50,7 +51,7 @@ const OrganisatieontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png" alt="Organisatieontwikkeling - Afraid of change? Leave it here" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/7ae9f98f-28a8-46f1-a47e-e62bde4747fb.png" alt="Organisatieontwikkeling - Colorful abstract shapes" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
