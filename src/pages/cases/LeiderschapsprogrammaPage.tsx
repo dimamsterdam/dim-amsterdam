@@ -32,8 +32,8 @@ const LeiderschapsprogrammaPage = () => {
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/73bc28e2-169b-48b9-a314-9b7b05798e88.png" 
-                  alt="Abstract blue geometric shapes representing leadership development" 
+                  src="/lovable-uploads/a837d9ad-ee7a-4443-983f-68f96453c15c.png" 
+                  alt="Overlapping blue circular shapes representing leadership development and collaboration" 
                   className="object-cover w-full h-full" 
                   contentEditable
                 />
