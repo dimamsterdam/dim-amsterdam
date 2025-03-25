@@ -1,15 +1,19 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const TeamontwikkelingPage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <PageLayout>
+
+  return (
+    <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -21,7 +25,7 @@ const TeamontwikkelingPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" alt="Team development" className="object-cover w-full h-full" contentEditable />
+                  <img src="/lovable-uploads/fe09139f-a6f4-4bf1-872e-7ef5bb1d3021.png" alt="Colorful geometric star pattern representing team development" className="object-cover w-full h-full" contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -88,6 +92,8 @@ const TeamontwikkelingPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>;
+    </PageLayout>
+  );
 };
+
 export default TeamontwikkelingPage;
