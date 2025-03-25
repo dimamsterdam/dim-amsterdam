@@ -33,7 +33,7 @@ const ServicesSection = () => {
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
     icon: <UserCog className="w-6 h-6" />,
     link: "/diensten/executive-coaching",
-    image: "/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png"
+    image: "/lovable-uploads/47ef1068-438a-4ebd-9c0f-40bdbf1fbef8.png"
   }];
 
   return <section className="section-padding bg-accent/30">

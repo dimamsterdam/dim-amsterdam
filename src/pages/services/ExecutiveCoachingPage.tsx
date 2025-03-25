@@ -28,7 +28,7 @@ const ExecutiveCoachingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png" alt="Executive Coaching" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/47ef1068-438a-4ebd-9c0f-40bdbf1fbef8.png" alt="Executive Coaching" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>

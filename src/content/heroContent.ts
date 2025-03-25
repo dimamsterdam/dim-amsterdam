@@ -33,7 +33,7 @@ export const servicesContent = {
       title: "Executive coaching",
       description: "Effectiever werken met meer plezier en vanuit meer ontspanning? Samen onderzoeken we welke patronen helpend zijn en waar ruimte ligt voor ontwikkeling. Vanuit een stevige basis werken we parallel aan uitbreiding van het eigen handelingsrepertoire en praktisch resultaat.",
       href: "/diensten/executive-coaching",
-      image: "/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png"
+      image: "/lovable-uploads/47ef1068-438a-4ebd-9c0f-40bdbf1fbef8.png"
     }
   ]
 };
