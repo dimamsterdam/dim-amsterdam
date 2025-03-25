@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -5,6 +6,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
+
 const HerijkingVisieStrategiePage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
@@ -22,7 +24,12 @@ const HerijkingVisieStrategiePage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Strategic vision planning session" className="object-cover w-full h-full" contentEditable />
+                  <img 
+                    src="/lovable-uploads/14fa39b5-bc11-44a3-bfc6-bb520bf158ce.png" 
+                    alt="Strategic vision and strategy geometric design" 
+                    className="object-cover w-full h-full" 
+                    contentEditable 
+                  />
                 </AspectRatio>
               </div>
             </AnimatedSection>
