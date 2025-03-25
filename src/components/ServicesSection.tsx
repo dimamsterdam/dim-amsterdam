@@ -27,7 +27,7 @@ const ServicesSection = () => {
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
     icon: <Users className="w-6 h-6" />,
     link: "/diensten/leiderschapsontwikkeling",
-    image: "/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png"
+    image: "/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png"
   }, {
     title: "Executive coaching",
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",

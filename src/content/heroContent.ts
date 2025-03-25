@@ -27,7 +27,7 @@ export const servicesContent = {
       title: "Leiderschaps- & Teamontwikkeling",
       description: "Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.",
       href: "/diensten/leiderschapsontwikkeling",
-      image: "/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png"
+      image: "/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png"
     },
     {
       title: "Executive coaching",

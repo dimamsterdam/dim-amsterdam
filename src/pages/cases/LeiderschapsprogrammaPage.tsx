@@ -24,7 +24,7 @@ const LeiderschapsprogrammaPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
+                  <img src="/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>

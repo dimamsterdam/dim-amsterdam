@@ -49,7 +49,7 @@ const LeiderschapsontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
