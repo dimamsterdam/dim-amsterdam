@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronRight, BarChart2, Users, UserCog } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -21,19 +20,19 @@ const ServicesSection = () => {
     description: "Creëer een doelgerichte bedrijfscultuur die aansluit bij uw strategie en waarden voor duurzame prestaties.",
     icon: <BarChart2 className="w-6 h-6" />,
     link: "/diensten/organisatieontwikkeling",
-    image: "/lovable-uploads/7ae9f98f-28a8-46f1-a47e-e62bde4747fb.png"
+    image: "/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png"
   }, {
     title: "Leiderschaps- & Teamontwikkeling",
     description: "Rust uw leiders en teams uit met de mindsets, vaardigheden en gedragingen die nodig zijn om positieve verandering te stimuleren.",
     icon: <Users className="w-6 h-6" />,
     link: "/diensten/leiderschapsontwikkeling",
-    image: "/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png"
+    image: "/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png"
   }, {
     title: "Executive coaching",
     description: "Persoonlijke begeleiding voor leidinggevenden om effectiever te opereren en organisatiedoelen te realiseren.",
     icon: <UserCog className="w-6 h-6" />,
     link: "/diensten/executive-coaching",
-    image: "/lovable-uploads/47ef1068-438a-4ebd-9c0f-40bdbf1fbef8.png"
+    image: "/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png"
   }];
 
   return <section className="section-padding bg-accent/30">

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,40 +12,21 @@ const IntervisieStrategischLeiderschapPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <PageLayout>
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl" contentEditable>
-                Case: Intervisie strategisch & verbindend leiderschap
-              </h1>
-              <h2 className="text-xl font-display text-muted-foreground mb-8" contentEditable>
-                Gelegenheid voor top-leidinggevenden om op niveau te sparren over casuïstiek
-              </h2>
-              <p className="text-lg text-muted-foreground" contentEditable>
-                Leiderschap op top-niveau kent veel complexe en veelal ethische uitdagingen met relatief weinig gelegenheid om hierover te sparren met anderen.
-              </p>
-            </AnimatedSection>
-            
-            <AnimatedSection animation="fade-in" delay={0.2}>
-              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/a3827aae-161f-4691-9861-342c6281309d.png" alt="Pink organizational matrix with diagonal striped panels representing strategic leadership" className="object-cover w-full h-full" contentEditable />
-              </AspectRatio>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      <section id="top" className="relative py-8 md:py-12 bg-gradient-to-b from-white to-blue-50">
+  return (
+    <PageLayout>
+      <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              
-              
+              <h1 className="text-3xl sm:text-3xl md:text-4xl font-display font-bold mb-2 break-words" contentEditable>Case: Intervisie strategisch & verbindend leiderschap</h1>
+              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" contentEditable>
+                Gelegenheid voor top-leidinggevenden om op niveau te sparren over casuïstiek
+              </h2>
               
               <div className="mt-10 mb-12">
-                
+                <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
+                  <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Strategic leadership intervision" className="object-cover w-full h-full" contentEditable />
+                </AspectRatio>
               </div>
             </AnimatedSection>
             
@@ -105,7 +87,8 @@ const IntervisieStrategischLeiderschapPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>;
+    </PageLayout>
+  );
 };
 
 export default IntervisieStrategischLeiderschapPage;

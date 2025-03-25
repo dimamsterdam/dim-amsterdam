@@ -1,41 +1,15 @@
-import React from 'react';
-import PageLayout from '@/components/PageLayout';
-import AnimatedSection from '@/components/AnimatedSection';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-
+import React, { useEffect } from "react";
+import PageLayout from "@/components/PageLayout";
+import AnimatedSection from "@/components/AnimatedSection";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 const SamenwerkingConflicthanteringPage = () => {
-  return (
-    <PageLayout>
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl">
-                Samenwerking & Conflicthantering
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Effectieve samenwerking en constructieve conflicthantering zijn essentieel voor een gezonde en productieve organisatiecultuur. Wij helpen teams om samen te werken, communicatie te verbeteren en conflicten op te lossen.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Onze aanpak is gericht op het versterken van teamdynamiek, het ontwikkelen van communicatievaardigheden en het creëren van een omgeving van wederzijds respect en begrip.
-              </p>
-            </AnimatedSection>
-            
-            <AnimatedSection animation="fade-in" delay={0.2}>
-              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/297a6c3a-669d-49ed-993e-dd398903523a.png" 
-                  alt="Samenwerking & Conflicthantering" 
-                  className="object-cover w-full h-full" 
-                />
-              </AspectRatio>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
+  // Scroll to top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -120,8 +94,6 @@ const SamenwerkingConflicthanteringPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default SamenwerkingConflicthanteringPage;

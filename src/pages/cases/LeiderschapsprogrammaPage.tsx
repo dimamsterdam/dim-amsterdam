@@ -12,37 +12,7 @@ const LeiderschapsprogrammaPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <PageLayout>
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection className="max-w-3xl">
-              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl" contentEditable>
-                Case: Leiderschapsprogramma
-              </h1>
-              <h2 className="text-xl font-display text-muted-foreground mb-8" contentEditable>
-                Sturen op professionele autonomie & impact
-              </h2>
-              <p className="text-lg text-muted-foreground" contentEditable>
-                Een meerjarig traject bij een uitvoeringsorganisatie gericht op effectieve sturing en versterking van professionele autonomie.
-              </p>
-            </AnimatedSection>
-            
-            <AnimatedSection animation="fade-in" delay={0.2}>
-              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/a837d9ad-ee7a-4443-983f-68f96453c15c.png" 
-                  alt="Overlapping blue circular shapes representing leadership development and collaboration" 
-                  className="object-cover w-full h-full" 
-                  contentEditable
-                />
-              </AspectRatio>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
+  return <PageLayout>
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
@@ -54,7 +24,7 @@ const LeiderschapsprogrammaPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
+                  <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leadership program" className="object-cover w-full h-full" contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -114,8 +84,7 @@ const LeiderschapsprogrammaPage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
 
 export default LeiderschapsprogrammaPage;

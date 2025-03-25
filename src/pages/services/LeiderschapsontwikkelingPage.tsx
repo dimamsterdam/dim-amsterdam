@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -49,7 +49,7 @@ const LeiderschapsontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/14b1ab7d-0250-4963-a739-cf5821f6e330.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -106,7 +106,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/leiderschapsprogramma" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img src="/lovable-uploads/73bc28e2-169b-48b9-a314-9b7b05798e88.png" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
+                      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
@@ -126,11 +126,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src="/lovable-uploads/a3827aae-161f-4691-9861-342c6281309d.png" 
-                        alt="Intervisie strategisch leiderschap" 
-                        className="object-cover w-full h-full" 
-                      />
+                      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2940&auto=format&fit=crop" alt="Intervisie case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
@@ -150,7 +146,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/teamontwikkeling" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img src="/lovable-uploads/fe09139f-a6f4-4bf1-872e-7ef5bb1d3021.png" alt="Teamontwikkeling case" className="object-cover w-full h-full" />
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" alt="Teamontwikkeling case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Teamontwikkeling</h3>
