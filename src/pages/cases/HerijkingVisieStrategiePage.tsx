@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -6,15 +5,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
-
 const HerijkingVisieStrategiePage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  return (
-    <PageLayout>
+  return <PageLayout>
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -32,12 +28,7 @@ const HerijkingVisieStrategiePage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/14fa39b5-bc11-44a3-bfc6-bb520bf158ce.png" 
-                  alt="Strategic vision and strategy geometric design" 
-                  className="object-cover w-full h-full" 
-                  contentEditable
-                />
+                <img src="/lovable-uploads/14fa39b5-bc11-44a3-bfc6-bb520bf158ce.png" alt="Strategic vision and strategy geometric design" className="object-cover w-full h-full" contentEditable />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -50,9 +41,13 @@ const HerijkingVisieStrategiePage = () => {
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>De uitdaging</h2>
               
-              <p contentEditable>Een Directoraat-generaal (DG) constateerde dat de verschillende directies in de praktijk weinig samenwerkten en regels en procedures de overhand leken te hebben boven de beoogde publieke waarde.</p>
+              <p contentEditable>Een Directoraat-generaal (DG) constateerde dat de verschillende directies in de praktijk weinig samenwerkten en regels en procedures de overhand leken te hebben boven de beoogde publieke waarde.
+
+            </p>
               
-              <p contentEditable>DIM heeft een traject opgesteld gericht op het versterken van de onderlinge samenwerking en werken vanuit impact en de 'bedoeling'. Het DG was ontstaan vanuit een fusie van directies van verschillende ministeries. Doel van het traject was met waardering van de eerdere achtergrond een hernieuwde start te maken met het nieuwe DG.</p>
+              <p contentEditable>DIM heeft een traject opgesteld gericht op het versterken van de onderlinge samenwerking en werken vanuit impact en de 'bedoeling'. Het DG was ontstaan vanuit een fusie van directies van verschillende ministeries. Doel van het traject was met waardering van de eerdere achtergrond een hernieuwde start te maken met het nieuwe DG.
+
+            </p>
               
               <p contentEditable>Samengevat diende het traject de volgende resultaten te boeken:</p>
               
@@ -107,8 +102,6 @@ const HerijkingVisieStrategiePage = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default HerijkingVisieStrategiePage;
