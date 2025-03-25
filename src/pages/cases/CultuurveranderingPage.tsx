@@ -6,7 +6,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const CultuurveranderingPage = () => {
   return (
     <PageLayout>
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
+      <section className="py-8 md:py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="max-w-3xl">
@@ -39,7 +39,7 @@ const CultuurveranderingPage = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6">
@@ -59,7 +59,7 @@ const CultuurveranderingPage = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6">

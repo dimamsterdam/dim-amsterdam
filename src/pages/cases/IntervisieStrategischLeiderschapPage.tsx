@@ -4,11 +4,13 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const IntervisieStrategischLeiderschapPage = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <PageLayout>
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -34,7 +36,7 @@ const IntervisieStrategischLeiderschapPage = () => {
         </div>
       </section>
 
-      <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
+      <section id="top" className="relative py-8 md:py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
@@ -105,4 +107,5 @@ const IntervisieStrategischLeiderschapPage = () => {
       </section>
     </PageLayout>;
 };
+
 export default IntervisieStrategischLeiderschapPage;
