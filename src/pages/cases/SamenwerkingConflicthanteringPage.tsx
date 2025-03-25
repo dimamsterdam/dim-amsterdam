@@ -2,6 +2,8 @@ import React from 'react';
 import PageLayout from '@/components/PageLayout';
 import AnimatedSection from '@/components/AnimatedSection';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const SamenwerkingConflicthanteringPage = () => {
   return (
