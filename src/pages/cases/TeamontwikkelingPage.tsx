@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,25 +10,39 @@ const TeamontwikkelingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  
   return (
     <PageLayout>
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection className="max-w-3xl">
+              <h1 className="text-4xl font-display font-bold mb-6 md:text-4xl" contentEditable>Case: Teamontwikkeling</h1>
+              <h2 className="text-xl font-display text-muted-foreground mb-8" contentEditable>
+                Benutten complementariteit, strategische sturing en eenduidig leiderschap
+              </h2>
+              <p className="text-lg text-muted-foreground" contentEditable>
+                Een traject gericht op het versterken van onderlinge samenwerking, werken vanuit impact en de 'bedoeling'.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-in" delay={0.2}>
+              <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/fe09139f-a6f4-4bf1-872e-7ef5bb1d3021.png" 
+                  alt="Colorful geometric star pattern representing team development" 
+                  className="object-cover w-full h-full" 
+                  contentEditable
+                />
+              </AspectRatio>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <AnimatedSection>
-              <h1 className="text-3xl sm:text-3xl md:text-4xl font-display font-bold mb-2 break-words" contentEditable>Case: Teamontwikkeling</h1>
-              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" contentEditable>
-                Benutten complementariteit, strategische sturing en eenduidig leiderschap
-              </h2>
-              
-              <div className="mt-10 mb-12">
-                <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="/lovable-uploads/fe09139f-a6f4-4bf1-872e-7ef5bb1d3021.png" alt="Colorful geometric star pattern representing team development" className="object-cover w-full h-full" contentEditable />
-                </AspectRatio>
-              </div>
-            </AnimatedSection>
-            
             <AnimatedSection delay={0.1} className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-display font-bold mt-8 mb-4" contentEditable>De uitdaging</h2>
               
