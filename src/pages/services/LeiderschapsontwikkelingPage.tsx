@@ -1,3 +1,4 @@
+import React from 'react';
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -125,7 +126,11 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" alt="Intervisie case" className="object-cover w-full h-full" />
+                      <img 
+                        src="/lovable-uploads/a3827aae-161f-4691-9861-342c6281309d.png" 
+                        alt="Intervisie strategisch leiderschap" 
+                        className="object-cover w-full h-full" 
+                      />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
