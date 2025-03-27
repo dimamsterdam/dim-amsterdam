@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -21,50 +20,15 @@ const WhatWeDoSection = () => {
               animation="fade-in" 
               delay={index * 0.1 + 0.1}
             >
-              {service.href.includes("cultuurverandering") ? (
+              {service.href.includes("executive-coaching") ? (
                 <Link 
-                  to="/cases/cultuurverandering" 
+                  to="/diensten/executive-coaching" 
                   className="block h-full"
-                  onClick={(e) => {
-                    if (window.location.pathname === '/cases/cultuurverandering') {
-                      e.preventDefault();
-                      window.location.href = '/cases/cultuurverandering';
-                    } else {
-                      window.scrollTo(0, 0);
-                    }
-                  }}
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    </AspectRatio>
-                    <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
-                    </div>
-                  </div>
-                </Link>
-              ) : service.href.includes("leiderschapsontwikkeling") ? (
-                <Link 
-                  to="/diensten/leiderschapsontwikkeling" 
-                  className="block h-full"
-                  onClick={(e) => {
-                    if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
-                      e.preventDefault();
-                      window.location.href = '/diensten/leiderschapsontwikkeling';
-                    } else {
-                      window.scrollTo(0, 0);
-                    }
-                  }}
-                >
-                  <div className="flex flex-col h-full">
-                    <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src={service.image} 
+                        src="/lovable-uploads/d23be254-f5ff-4807-92f9-289ac54c0028.png" 
                         alt={service.title} 
                         className="object-cover w-full h-full"
                       />
@@ -76,24 +40,80 @@ const WhatWeDoSection = () => {
                   </div>
                 </Link>
               ) : (
-                <Link 
-                  to={service.href.replace("/aanbod/", "/diensten/")} 
-                  className="block h-full"
-                >
-                  <div className="flex flex-col h-full">
-                    <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    </AspectRatio>
-                    <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
+                service.href.includes("cultuurverandering") ? (
+                  <Link 
+                    to="/cases/cultuurverandering" 
+                    className="block h-full"
+                    onClick={(e) => {
+                      if (window.location.pathname === '/cases/cultuurverandering') {
+                        e.preventDefault();
+                        window.location.href = '/cases/cultuurverandering';
+                      } else {
+                        window.scrollTo(0, 0);
+                      }
+                    }}
+                  >
+                    <div className="flex flex-col h-full">
+                      <AspectRatio ratio={16 / 9} className="bg-muted">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </AspectRatio>
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                        <p className="text-gray-600">{service.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                ) : service.href.includes("leiderschapsontwikkeling") ? (
+                  <Link 
+                    to="/diensten/leiderschapsontwikkeling" 
+                    className="block h-full"
+                    onClick={(e) => {
+                      if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
+                        e.preventDefault();
+                        window.location.href = '/diensten/leiderschapsontwikkeling';
+                      } else {
+                        window.scrollTo(0, 0);
+                      }
+                    }}
+                  >
+                    <div className="flex flex-col h-full">
+                      <AspectRatio ratio={16 / 9} className="bg-muted">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </AspectRatio>
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                        <p className="text-gray-600">{service.description}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <Link 
+                    to={service.href.replace("/aanbod/", "/diensten/")} 
+                    className="block h-full"
+                  >
+                    <div className="flex flex-col h-full">
+                      <AspectRatio ratio={16 / 9} className="bg-muted">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </AspectRatio>
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                        <p className="text-gray-600">{service.description}</p>
+                      </div>
+                    </div>
+                  </Link>
+                )
               )}
             </AnimatedSection>
           ))}
