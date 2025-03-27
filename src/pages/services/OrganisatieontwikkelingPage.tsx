@@ -30,7 +30,6 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
-  
   return <PageLayout>
       {/* Introductie Section - Updated to use grid layout consistent with other service pages */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -51,7 +50,7 @@ const OrganisatieontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/dc55b024-9a36-4212-88ae-a14b9fecdf11.png" alt="Organisatieontwikkeling" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png" alt="Organisatieontwikkeling - Afraid of change? Leave it here" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>

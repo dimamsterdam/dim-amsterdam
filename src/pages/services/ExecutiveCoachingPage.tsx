@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -27,7 +28,7 @@ const ExecutiveCoachingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png" alt="Executive Coaching" className="object-cover w-full h-full" />
+                <img src="/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png" alt="Executive Coaching" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -72,7 +73,7 @@ const ExecutiveCoachingPage = () => {
               <StepCard number={1} title="Klikgesprek & Intake">
                 <p className="mb-4">Naast kennis en ervaring is de effectiviteit van coaching in belangrijke mate afhankelijk van vertrouwen en een persoonlijke klik. Onze trajecten starten dan ook altijd met een (online) vrijblijvende kennismaking.</p>
                 
-                <p>Ontwikkeling, zelfreflectie en experimenteren met nieuwe perspectieven en gedrag vergen energie. Een effectieve investering in persoonlijke ontwikkeling start dan ook met een helder doel vanuit de coachee. Ons uitgangspunt is dat ontwikkeling ontstaat vanuit kracht en een stevige basis. De focus in onze benadering ligt dan ook op bijleren en ontwikkelen en niet zozeer op 'afleren'.</p>
+                <p>Ontwikkeling, zelfreflectie en experimenteren met nieuwe perspectieven en gedrag vergen energie. Een effectieve investering in persoonlijke ontwikkeling start dan ook met een helder doel vanuit de coachee. Onze begeleiding is gericht op de formulering van een doel dat concreet, haalbaar en positief is. Ons uitgangspunt is dat ontwikkeling ontstaat vanuit kracht en een stevige basis. De focus in onze benadering ligt dan ook op bijleren en ontwikkelen en niet zozeer op 'afleren'.</p>
               </StepCard>
               
               <StepCard number={2} title="Coachingstraject; vergroten handelingsrepertoire">
