@@ -1,3 +1,4 @@
+
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -27,11 +28,7 @@ const ExecutiveCoachingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/d23be254-f5ff-4807-92f9-289ac54c0028.png" 
-                  alt="Executive Coaching" 
-                  className="object-cover w-full h-full" 
-                />
+                <img src="/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png" alt="Executive Coaching" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
