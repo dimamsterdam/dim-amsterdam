@@ -51,7 +51,7 @@ De implementatie van de strategie is ondersteund met een leiderschapstraject voo
 Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (sturing in) het dagelijks werk en aanvullende tussentijdse bredere (online) activiteiten interventies.
             </p>
               
-              <h2 className="text-2xl font-display font-bold mt-8 mb-4">Wat klanten zeggen</h2>
+              <h2 className="text-2xl font-display font-bold mt-8 mb-4">Ervaringen</h2>
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
                 <p className="italic mb-0">"Sterke combinatie van analytisch inzicht en pragmatisch en doelgericht aanpakken".</p>
               </div>
