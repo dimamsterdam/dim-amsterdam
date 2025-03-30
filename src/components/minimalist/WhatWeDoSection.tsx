@@ -37,14 +37,13 @@ const WhatWeDoSection = () => {
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <div 
-                        contentEditable
-                        suppressContentEditableWarning
-                        className="w-full h-full"
+                        className="w-full h-full relative"
                       >
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
+                          contentEditable="true"
                         />
                       </div>
                     </AspectRatio>
@@ -70,14 +69,13 @@ const WhatWeDoSection = () => {
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <div 
-                        contentEditable
-                        suppressContentEditableWarning
-                        className="w-full h-full"
+                        className="w-full h-full relative"
                       >
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
+                          contentEditable="true"
                         />
                       </div>
                     </AspectRatio>
@@ -95,14 +93,13 @@ const WhatWeDoSection = () => {
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <div 
-                        contentEditable
-                        suppressContentEditableWarning
-                        className="w-full h-full"
+                        className="w-full h-full relative"
                       >
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
+                          contentEditable="true"
                         />
                       </div>
                     </AspectRatio>
