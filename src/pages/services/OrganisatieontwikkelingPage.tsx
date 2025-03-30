@@ -152,18 +152,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4">Wat klanten zeggen</h2>
-            <p className="text-lg text-muted-foreground">
-              We hebben verschillende organisaties geholpen bij hun verandertraject. Hier zijn enkele ervaringen van onze klanten.
-            </p>
-          </AnimatedSection>
-          
-          <TestimonialsBlock testimonials={testimonials} />
-        </div>
-      </section>
+      
     </PageLayout>;
 };
 export default OrganisatieontwikkelingPage;
