@@ -108,6 +108,10 @@
   a, button, [role="button"], input, select, textarea {
     @apply cursor-pointer;
   }
+
+  p, span, div, article, section {
+    @apply cursor-auto;
+  }
 }
 
 @layer components {
