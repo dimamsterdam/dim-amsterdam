@@ -6,6 +6,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { servicesContent } from "@/content/heroContent";
+import { CheckCircle } from "lucide-react";
 
 const HerijkingVisieStrategiePage = () => {
   // Find the executive coaching content from the services array
@@ -56,19 +57,19 @@ const HerijkingVisieStrategiePage = () => {
               
               <ul className="space-y-3 bg-gray-50 p-6 rounded-lg border border-gray-100 shadow-sm">
                 <li className="flex items-center space-x-3" contentEditable>
-                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <CheckCircle className="text-teal-500 w-6 h-6 flex-shrink-0" />
                   <span className="text-gray-800">Gedeelde visie en werkwijze</span>
                 </li>
                 <li className="flex items-center space-x-3" contentEditable>
-                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <CheckCircle className="text-teal-500 w-6 h-6 flex-shrink-0" />
                   <span className="text-gray-800">Helderheid over de samenhang het DG en de meerwaarde van (meer) onderlinge samenwerking</span>
                 </li>
                 <li className="flex items-center space-x-3" contentEditable>
-                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <CheckCircle className="text-teal-500 w-6 h-6 flex-shrink-0" />
                   <span className="text-gray-800">Concrete doelen en handvatten voor implementatie</span>
                 </li>
                 <li className="flex items-center space-x-3" contentEditable>
-                  <CheckCircle2 className="text-teal-500 w-6 h-6 flex-shrink-0" />
+                  <CheckCircle className="text-teal-500 w-6 h-6 flex-shrink-0" />
                   <span className="text-gray-800">Hernieuwde energie en inspiratie voor medewerkers</span>
                 </li>
               </ul>
