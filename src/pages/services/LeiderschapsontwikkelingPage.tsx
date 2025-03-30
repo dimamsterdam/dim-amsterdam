@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,7 +9,6 @@ import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
 
 const LeiderschapsontwikkelingPage = () => {
-  // Find the leiderschapsontwikkeling content from the services array
   const leiderschapContent = servicesContent.services.find(
     (service) => service.title === "Leiderschaps- & Teamontwikkeling"
   );
@@ -39,7 +37,6 @@ const LeiderschapsontwikkelingPage = () => {
   }];
   
   return <PageLayout>
-      {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -67,7 +64,6 @@ const LeiderschapsontwikkelingPage = () => {
         </div>
       </section>
 
-      {/* Werkwijze Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
@@ -106,7 +102,6 @@ const LeiderschapsontwikkelingPage = () => {
         </div>
       </section>
 
-      {/* Cases Section */}
       <section className="py-16 md:py-20 bg-gray-50" id="cases">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-4xl mx-auto">
@@ -117,7 +112,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/leiderschapsprogramma" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
+                      <img src="/lovable-uploads/fb1c2d6e-5d3d-41ff-a91e-5679347148b2.png" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
@@ -137,7 +132,7 @@ const LeiderschapsontwikkelingPage = () => {
                 <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
                   <Card className="h-full flex flex-col">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <img src="/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png" alt="Intervisie case" className="object-cover w-full h-full" />
+                      <img src="/lovable-uploads/3040aebd-ffef-412b-8fd2-20b42b111b58.png" alt="Intervisie case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
@@ -177,7 +172,6 @@ const LeiderschapsontwikkelingPage = () => {
         </div>
       </section>
 
-      {/* Referenties Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
