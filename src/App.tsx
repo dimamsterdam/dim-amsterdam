@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,6 +18,7 @@ import TeamontwikkelingPage from "./pages/cases/TeamontwikkelingPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import ReferencesPage from "./pages/ReferencesPage";
+import ZBOSamenwerkingPage from "./pages/cases/ZBOSamenwerkingPage";
 
 // ScrollToTop component to handle scrolling to top on route changes
 function ScrollToTop() {
@@ -55,6 +55,7 @@ const App = () => (
           <Route path="/referenties" element={<ReferencesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/over-ons" element={<AboutPage />} />
+          <Route path="/cases/zbo-samenwerking" element={<ZBOSamenwerkingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
