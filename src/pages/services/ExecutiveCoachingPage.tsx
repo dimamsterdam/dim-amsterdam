@@ -68,7 +68,7 @@ const ExecutiveCoachingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6">Voorbeeld traject</h2>
-            <p className="text-muted-foreground mb-8">Gemiddeld behelst een coachingstraject een intake en een vijftal (online) gesprekken van circa 1,5 uur. Afhankelijk van de wensen en de concrete situatie kan worden besloten tot een verlenging. Globaal kent het traject de volgende drie stappen:</p>
+            <p className="text-muted-foreground mb-8">Gemiddeld behelst een coachingstraject een intake en een vijftal (eventueel online) gesprekken van circa 1,5 uur. Afhankelijk van de wensen en de concrete situatie kan worden besloten tot een verlenging. Globaal kent het traject de volgende drie stappen:</p>
             
             <div className="space-y-8 relative before:content-[''] before:absolute before:top-[3.5rem] before:bottom-[3.5rem] before:left-7 before:w-[2px] before:bg-gray-200 md:before:hidden">
               <StepCard number={1} title="Klikgesprek & Intake">
