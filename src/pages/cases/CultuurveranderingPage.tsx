@@ -1,14 +1,17 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const CultuurveranderingPage = () => {
   // Ensure page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <PageLayout>
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -21,7 +24,7 @@ const CultuurveranderingPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop" alt="Team meeting discussing culture change" className="object-cover w-full h-full" suppressContentEditableWarning contentEditable />
+                  <img src="/lovable-uploads/d957702a-9006-4252-ae8f-d91e3145b226.png" alt="Abstract geometric art representing organizational culture change" className="object-cover w-full h-full" suppressContentEditableWarning contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -75,4 +78,5 @@ Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (stu
       </section>
     </PageLayout>;
 };
+
 export default CultuurveranderingPage;
