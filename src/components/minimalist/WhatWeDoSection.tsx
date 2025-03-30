@@ -3,8 +3,22 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { servicesContent } from "@/content/heroContent";
+import { useState } from "react";
 
 const WhatWeDoSection = () => {
+  // Add state to track the service images
+  const [services, setServices] = useState(servicesContent.services);
+
+  // Function to handle image change
+  const handleImageChange = (index: number, newImage: string) => {
+    const updatedServices = [...services];
+    updatedServices[index] = {
+      ...updatedServices[index],
+      image: newImage
+    };
+    setServices(updatedServices);
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -14,7 +28,7 @@ const WhatWeDoSection = () => {
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {servicesContent.services.map((service, index) => (
+          {services.map((service, index) => (
             <AnimatedSection 
               key={index}
               className="overflow-hidden rounded-lg border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:shadow-sm" 
@@ -36,14 +50,18 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <div 
-                        className="w-full h-full relative"
-                      >
+                      <div className="w-full h-full relative">
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
                           contentEditable="true"
+                          onInput={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            if (target.src !== service.image) {
+                              handleImageChange(index, target.src);
+                            }
+                          }}
                         />
                       </div>
                     </AspectRatio>
@@ -68,14 +86,18 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <div 
-                        className="w-full h-full relative"
-                      >
+                      <div className="w-full h-full relative">
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
                           contentEditable="true"
+                          onInput={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            if (target.src !== service.image) {
+                              handleImageChange(index, target.src);
+                            }
+                          }}
                         />
                       </div>
                     </AspectRatio>
@@ -92,14 +114,18 @@ const WhatWeDoSection = () => {
                 >
                   <div className="flex flex-col h-full">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
-                      <div 
-                        className="w-full h-full relative"
-                      >
+                      <div className="w-full h-full relative">
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="object-cover w-full h-full"
                           contentEditable="true"
+                          onInput={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            if (target.src !== service.image) {
+                              handleImageChange(index, target.src);
+                            }
+                          }}
                         />
                       </div>
                     </AspectRatio>
