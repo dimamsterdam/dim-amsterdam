@@ -31,16 +31,33 @@ const ValuesSection = () => {
       title.textContent = "";
       
       // Create spans for each word
+      const wordSpans: HTMLSpanElement[] = [];
       words.forEach((word, index) => {
         const wordSpan = document.createElement("span");
         wordSpan.textContent = word + (index < words.length - 1 ? ". " : "");
         wordSpan.className = "transition-colors duration-500 inline-block";
         wordSpan.style.opacity = "1";
         title.appendChild(wordSpan);
-        
-        // Trigger the highlight with delay based on word position
+        wordSpans.push(wordSpan);
+      });
+      
+      // Highlight each word one at a time
+      wordSpans.forEach((span, index) => {
         setTimeout(() => {
-          wordSpan.style.color = "#F97316";
+          // Reset previous word color
+          if (index > 0) {
+            wordSpans[index - 1].style.color = "";
+          }
+          
+          // Highlight current word
+          span.style.color = "#F97316";
+          
+          // Reset last word after all words have been highlighted
+          if (index === wordSpans.length - 1) {
+            setTimeout(() => {
+              span.style.color = "";
+            }, 800);
+          }
         }, 500 + index * 800);
       });
     };
