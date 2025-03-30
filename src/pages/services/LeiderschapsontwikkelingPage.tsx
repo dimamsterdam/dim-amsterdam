@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -118,8 +117,8 @@ const LeiderschapsontwikkelingPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <AnimatedSection delay={0.1} animation="fade-in">
-                <Link to="/cases/leiderschapsprogramma" className="group block h-full">
-                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
+                <Link to="/cases/leiderschapsprogramma" className="block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/fb1c2d6e-5d3d-41ff-a91e-5679347148b2.png" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
                     </AspectRatio>
@@ -138,8 +137,8 @@ const LeiderschapsontwikkelingPage = () => {
               </AnimatedSection>
 
               <AnimatedSection delay={0.2} animation="fade-in">
-                <Link to="/cases/intervisie-strategisch-leiderschap" className="group block h-full">
-                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
+                <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/3040aebd-ffef-412b-8fd2-20b42b111b58.png" alt="Intervisie case" className="object-cover w-full h-full" />
                     </AspectRatio>
@@ -158,8 +157,8 @@ const LeiderschapsontwikkelingPage = () => {
               </AnimatedSection>
 
               <AnimatedSection delay={0.3} animation="fade-in">
-                <Link to="/cases/teamontwikkeling" className="group block h-full">
-                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
+                <Link to="/cases/teamontwikkeling" className="block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/07966c74-c507-4ef4-9e92-c29042aae202.png" alt="Teamontwikkeling case" className="object-cover w-full h-full" />
                     </AspectRatio>
