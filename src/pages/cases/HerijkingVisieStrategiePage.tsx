@@ -1,28 +1,42 @@
+
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { servicesContent } from "@/content/heroContent";
+
 const HerijkingVisieStrategiePage = () => {
-  // Scroll to top when the component mounts
+  // Find the executive coaching content from the services array
+  const executiveCoachingContent = servicesContent.services.find(
+    (service) => service.title === "Executive coaching"
+  );
+
+  // Ensure page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return <PageLayout>
-      <section id="top" className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
+      <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <h1 className="text-3xl sm:text-3xl md:text-4xl font-display font-bold mb-2 break-words" contentEditable>Case: Herijking visie en strategie</h1>
-              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" contentEditable>
-                Verbinding creëren tussen directies en medewerkers
+              <h1 className="text-3xl sm:text-4xl font-display font-bold mb-2 break-words md:text-4xl" suppressContentEditableWarning contentEditable>Case: Herijking Visie & Strategie</h1>
+              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" suppressContentEditableWarning contentEditable>
+                Van strategie naar executiekracht
               </h2>
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" alt="Strategic vision planning session" className="object-cover w-full h-full" contentEditable />
+                  <img 
+                    src={executiveCoachingContent?.image || "/lovable-uploads/355d5a12-85ba-4603-971b-b034da5ca65f.png"} 
+                    alt="Abstract colorful design representing vision and strategy" 
+                    className="object-cover w-full h-full" 
+                    suppressContentEditableWarning 
+                    contentEditable 
+                  />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -99,4 +113,5 @@ const HerijkingVisieStrategiePage = () => {
       </section>
     </PageLayout>;
 };
+
 export default HerijkingVisieStrategiePage;
