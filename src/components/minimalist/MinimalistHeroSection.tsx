@@ -38,21 +38,21 @@ const MinimalistHeroSection = () => {
                       boxShadow: "0px 2px 3px rgba(0,0,0,0.1), inset 0px 1px 0px rgba(255,255,255,1)"
                     }}
                   >
-                    {tag}
+                    <span contentEditable>{tag}</span>
                   </Link>
                 );
               })}
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight" contentEditable>
               Samen creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
             </h1>
             
-            <p className="text-lg text-gray-600 max-w-lg">DIM ondersteunt (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.</p>
+            <p className="text-lg text-gray-600 max-w-lg" contentEditable>DIM ondersteunt (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.</p>
             
             <div className="pt-4">
               <Link to="/contact" className="inline-flex items-center border-b-2 border-primary text-primary font-medium py-1 transition-all hover:border-primary/70 hover:text-primary/70 group">
-                <span>Neem contact op</span>
+                <span contentEditable>Neem contact op</span>
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -69,7 +69,7 @@ const MinimalistHeroSection = () => {
           duration: 0.5
         }}>
             <div className="aspect-video rounded-lg overflow-hidden shadow-sm border border-gray-100">
-              <img src="/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png" alt="Professional collaboration" className="w-full h-full object-cover" />
+              <img src="/lovable-uploads/f7236ec5-17e7-46a7-b551-7cf4b4198147.png" alt="Professional collaboration" className="w-full h-full object-cover" contentEditable />
             </div>
           </motion.div>
         </div>
