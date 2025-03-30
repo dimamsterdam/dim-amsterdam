@@ -66,6 +66,7 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to="/cases/cultuurverandering" 
+                      className="cursor-pointer block"
                       onClick={(e) => {
                         if (window.location.pathname === '/cases/cultuurverandering') {
                           e.preventDefault();
@@ -110,6 +111,7 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to="/diensten/leiderschapsontwikkeling" 
+                      className="cursor-pointer block"
                       onClick={(e) => {
                         if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
                           e.preventDefault();
@@ -154,7 +156,7 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to={service.href.replace("/aanbod/", "/diensten/")} 
-                      className="block"
+                      className="cursor-pointer block"
                     >
                       <Button 
                         variant="outline" 
