@@ -5,7 +5,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { servicesContent } from "@/content/heroContent";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const WhatWeDoSection = () => {
@@ -67,7 +66,6 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to="/cases/cultuurverandering" 
-                      className="w-full block"
                       onClick={(e) => {
                         if (window.location.pathname === '/cases/cultuurverandering') {
                           e.preventDefault();
@@ -79,10 +77,10 @@ const WhatWeDoSection = () => {
                     >
                       <Button 
                         variant="outline" 
-                        className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
+                        size="sm"
+                        className="hover:bg-primary hover:text-primary-foreground"
                       >
                         <span contentEditable>Lees meer</span>
-                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
                     </Link>
                   </CardFooter>
@@ -112,7 +110,6 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to="/diensten/leiderschapsontwikkeling" 
-                      className="w-full block"
                       onClick={(e) => {
                         if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
                           e.preventDefault();
@@ -124,10 +121,10 @@ const WhatWeDoSection = () => {
                     >
                       <Button 
                         variant="outline" 
-                        className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
+                        size="sm"
+                        className="hover:bg-primary hover:text-primary-foreground"
                       >
                         <span contentEditable>Lees meer</span>
-                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
                     </Link>
                   </CardFooter>
@@ -157,14 +154,14 @@ const WhatWeDoSection = () => {
                   <CardFooter className="pt-0 pb-4 px-6">
                     <Link 
                       to={service.href.replace("/aanbod/", "/diensten/")} 
-                      className="w-full block"
+                      className="block"
                     >
                       <Button 
                         variant="outline" 
-                        className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
+                        size="sm"
+                        className="hover:bg-primary hover:text-primary-foreground"
                       >
                         <span contentEditable>Lees meer</span>
-                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
                     </Link>
                   </CardFooter>
