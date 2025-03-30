@@ -1,17 +1,26 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
+import { useEffect } from "react";
 
 const LeiderschapsontwikkelingPage = () => {
   const leiderschapContent = servicesContent.services.find(
     (service) => service.title === "Leiderschaps- & Teamontwikkeling"
   );
+
+  const location = useLocation();
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const testimonials = [{
     quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
@@ -109,60 +118,60 @@ const LeiderschapsontwikkelingPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <AnimatedSection delay={0.1} animation="fade-in">
-                <Link to="/cases/leiderschapsprogramma" className="block h-full">
-                  <Card className="h-full flex flex-col">
+                <Link to="/cases/leiderschapsprogramma" className="group block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/fb1c2d6e-5d3d-41ff-a91e-5679347148b2.png" alt="Leiderschapsprogramma case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Leiderschapsprogramma</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors" contentEditable>Leiderschapsprogramma</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleiden wij een meerjarig leiderschapstraject
                         gericht op het versterken van de professionele autonomie en effectievere sturing.
                       </p>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="outline" size="sm">Lees meer</Button>
+                      <span className="text-sm font-medium text-primary group-hover:underline transition-all">Lees meer</span>
                     </CardFooter>
                   </Card>
                 </Link>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2} animation="fade-in">
-                <Link to="/cases/intervisie-strategisch-leiderschap" className="block h-full">
-                  <Card className="h-full flex flex-col">
+                <Link to="/cases/intervisie-strategisch-leiderschap" className="group block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/3040aebd-ffef-412b-8fd2-20b42b111b58.png" alt="Intervisie case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Intervisie strategisch leiderschap</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors" contentEditable>Intervisie strategisch leiderschap</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Voor topfunctionarissen faciliteren wij reguliere intervisie-bijeenkomsten die bijdragen aan verbinding
                         en eenduidigheid in werkwijze tussen leidinggevenden.
                       </p>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="outline" size="sm">Lees meer</Button>
+                      <span className="text-sm font-medium text-primary group-hover:underline transition-all">Lees meer</span>
                     </CardFooter>
                   </Card>
                 </Link>
               </AnimatedSection>
 
               <AnimatedSection delay={0.3} animation="fade-in">
-                <Link to="/cases/teamontwikkeling" className="block h-full">
-                  <Card className="h-full flex flex-col">
+                <Link to="/cases/teamontwikkeling" className="group block h-full">
+                  <Card className="h-full flex flex-col transition-all duration-200 hover:shadow-md cursor-pointer">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/07966c74-c507-4ef4-9e92-c29042aae202.png" alt="Teamontwikkeling case" className="object-cover w-full h-full" />
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
-                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis" contentEditable>Teamontwikkeling</h3>
+                      <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors" contentEditable>Teamontwikkeling</h3>
                       <p className="text-sm text-muted-foreground mb-4" contentEditable>
                         Een Directoraat-generaal met meerdere nieuwe directeuren vroeg ons voor versnelde teamontwikkeling
                         en het formuleren van een gezamenlijke ambitie.
                       </p>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="outline" size="sm">Lees meer</Button>
+                      <span className="text-sm font-medium text-primary group-hover:underline transition-all">Lees meer</span>
                     </CardFooter>
                   </Card>
                 </Link>

@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import MinimalistVariant from "./pages/variants/MinimalistVariant";
 import NotFound from "./pages/NotFound";
 import OrganisatieontwikkelingPage from "./pages/services/OrganisatieontwikkelingPage";
@@ -18,6 +19,17 @@ import TeamontwikkelingPage from "./pages/cases/TeamontwikkelingPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 
+// ScrollToTop component to handle scrolling to top on route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -26,6 +38,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<MinimalistVariant />} />
           <Route path="/variant-minimalist" element={<Navigate to="/" replace />} />

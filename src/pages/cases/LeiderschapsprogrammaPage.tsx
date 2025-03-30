@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -81,7 +80,7 @@ const LeiderschapsprogrammaPage = () => {
               </div>
               
               <div className="mt-12 flex justify-center">
-                <Link to="/diensten/leiderschapsontwikkeling#cases">
+                <Link to="/diensten/leiderschapsontwikkeling">
                   <Button className="mx-2">Terug naar leiderschapsontwikkeling</Button>
                 </Link>
               </div>
