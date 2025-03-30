@@ -2,6 +2,7 @@ import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
+
 const AboutPage = () => {
   return <PageLayout>
       {/* Hero Section with Building Image */}
@@ -15,6 +16,15 @@ const AboutPage = () => {
 
 Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan diverse meerjarige complexe verandertrajecten, samenwerking en conflicthantering in teamontwikkeling en verdere ontwikkeling en meer ontspanning in de vorm van executive coaching. Voor meer impact en meer werkplezier.</p>
             </div>
+            
+            {/* Add Alexli Card above the image */}
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-semibold mb-4" contentEditable>Alexli Gravemeijer</h3>
+                <p className="text-muted-foreground mb-4" contentEditable>"Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
+Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
+              </CardContent>
+            </Card>
           </AnimatedSection>
 
           {/* Right Column - Building Image */}
@@ -49,18 +59,8 @@ Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan dive
             </div>
           </AnimatedSection>
 
-          {/* Right Column - Team Card and Values Card */}
+          {/* Right Column - Values Card (removed Alexli's card from here) */}
           <AnimatedSection animation="slide-from-right" className="space-y-8">
-            {/* Team Card */}
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4" contentEditable>Alexli Gravemeijer</h3>
-                <p className="text-muted-foreground mb-4" contentEditable>“Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
-Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt”.</p>
-                
-              </CardContent>
-            </Card>
-
             {/* Values Card */}
             <Card>
               
