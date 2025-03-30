@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, NavLink as RouterNavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -99,18 +98,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-24 md:h-28">
         <Link to="/" className="flex items-center">
-          <img 
-            src="/logo.svg" 
-            alt="DIM Logo" 
-            className="h-8 md:h-10"
-            onError={(e) => {
-              const imgElement = e.target as HTMLImageElement;
-              imgElement.src = '/placeholder.svg'; // Fallback to a placeholder if logo fails
-            }}
-          />
+          <img src="/logo.svg" alt="DIM Logo" className="h-8 md:h-10" />
         </Link>
 
-        {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           <NavMenu label="Diensten" items={services} />
           <NavMenu label="Cases" items={cases} />
@@ -121,7 +111,6 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Mobile navigation toggle */}
         <button
           onClick={toggleMobileMenu}
           className="md:hidden text-gray-700 focus:outline-none"
@@ -131,7 +120,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={cn(
           "md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300",
