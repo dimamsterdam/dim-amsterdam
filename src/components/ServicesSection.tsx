@@ -43,50 +43,52 @@ const ServicesSection = () => {
           <span className="inline-block text-sm px-3 py-1 rounded-full bg-primary/10 text-primary font-medium mb-4">
             Onze Diensten
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Dit is wat we doen</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" contentEditable>Dit is wat we doen</h2>
+          <p className="text-lg text-muted-foreground" contentEditable>
             Onze geïntegreerde aanpak richt zich op het volledige spectrum van uitdagingen op het gebied van cultuur en leiderschap in moderne organisaties.
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => 
+          {services.map((service, index) => (
             <AnimatedSection key={index} delay={index * 0.1} animation="slide-from-right" className="h-full">
-              <Link to={service.link} className="group block h-full" onMouseEnter={() => setHoverIndex(index)} onMouseLeave={() => setHoverIndex(null)}>
-                <div className={`h-full rounded-xl overflow-hidden transition-all duration-300 border ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}>
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="object-cover w-full h-full"
-                    />
-                  </AspectRatio>
-                  <div className="p-8">
-                    <div className="mb-4 flex justify-between items-start">
-                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                        {service.icon}
-                      </div>
-                      <ChevronRight className={`transform transition-transform duration-300 text-primary ${hoverIndex === index ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
+              <div className={`h-full rounded-xl overflow-hidden transition-all duration-300 border ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}
+                   onMouseEnter={() => setHoverIndex(index)} 
+                   onMouseLeave={() => setHoverIndex(null)}>
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <div className="p-8">
+                  <div className="mb-4 flex justify-between items-start">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                      {service.icon}
                     </div>
-                    <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground">{service.description}</p>
-                    
-                    <div className="mt-6">
+                    <ChevronRight className={`transform transition-transform duration-300 text-primary ${hoverIndex === index ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors" contentEditable>
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground" contentEditable>{service.description}</p>
+                  
+                  <div className="mt-6">
+                    <Link to={service.link}>
                       <Button 
                         variant="outline" 
                         size="sm"
-                        className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                        className="hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         Lees meer
                       </Button>
-                    </div>
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
             </AnimatedSection>
-          )}
+          ))}
         </div>
         
         <AnimatedSection className="text-center mt-12" delay={0.4}>
