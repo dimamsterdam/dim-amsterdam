@@ -18,6 +18,7 @@ import IntervisieStrategischLeiderschapPage from "./pages/cases/IntervisieStrate
 import TeamontwikkelingPage from "./pages/cases/TeamontwikkelingPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import ReferencesPage from "./pages/ReferencesPage";
 
 // ScrollToTop component to handle scrolling to top on route changes
 function ScrollToTop() {
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsprogrammaPage />} />
           <Route path="/cases/intervisie-strategisch-leiderschap" element={<IntervisieStrategischLeiderschapPage />} />
           <Route path="/cases/teamontwikkeling" element={<TeamontwikkelingPage />} />
+          <Route path="/referenties" element={<ReferencesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/over-ons" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />

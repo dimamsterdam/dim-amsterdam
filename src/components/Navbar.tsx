@@ -94,6 +94,7 @@ const Navbar = () => {
       dropdown: true,
       items: caseItems
     },
+    { label: "Referenties", href: "/referenties" },
     { label: "Over ons", href: "/over-ons" },
   ];
 
