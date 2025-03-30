@@ -7,20 +7,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 const AboutPage = () => {
   return (
     <PageLayout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-teal-50 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" contentEditable>Over ons</h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8" contentEditable>
-              Bij DIM geloven we dat organisaties die écht impact maken tegelijkertijd een plek zijn waar mensen met plezier werken.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16 pt-8 md:pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           {/* Left Column - Text Content */}
           <AnimatedSection className="space-y-8" animation="slide-from-left">
