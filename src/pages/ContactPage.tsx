@@ -7,7 +7,7 @@ const ContactPage = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Neem contact op</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Heeft u vragen of wilt u meer informatie? Neem contact met ons op.</p>
+          
         </div>
 
         <div className="max-w-3xl mx-auto">
