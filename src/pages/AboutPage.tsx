@@ -64,15 +64,10 @@ Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan dive
             {/* Team Card */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4" contentEditable>Ons team</h3>
-                <p className="text-muted-foreground mb-4" contentEditable>
-                  DIM bestaat uit een team van zeer ervaren adviseurs met jarenlange ervaring in het publieke domein. 
-                  Elk van ons brengt specifieke expertise en ervaring mee.
-                </p>
-                <p className="text-muted-foreground" contentEditable>
-                  We zijn een hecht team van betrokken specialisten. We werken samen, versterken elkaar en dragen allemaal 
-                  bij aan onze missie: meer maatschappelijke impact en werkplezier.
-                </p>
+                <h3 className="text-2xl font-semibold mb-4" contentEditable>Alexli Gravemeijer</h3>
+                <p className="text-muted-foreground mb-4" contentEditable>“Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
+Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt”.</p>
+                
               </CardContent>
             </Card>
 
