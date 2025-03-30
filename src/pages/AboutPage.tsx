@@ -1,7 +1,9 @@
+
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
+
 const AboutPage = () => {
   return <PageLayout>
       {/* Hero Section with Building Image */}
@@ -24,7 +26,7 @@ Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan dive
                     <h3 className="text-2xl font-semibold mb-4">Alexli Gravemeijer</h3>
                     <p className="text-muted-foreground mb-4">"Als er gelachen wordt zonder confrontaties uit de weg te gaan, kunnen mensen groeien & worden de mooiste resultaten geboekt".</p>
                   </div>
-                  <div className="w-full md:w-1/3 flex-shrink-0">
+                  <div className="w-full md:w-1/6 flex-shrink-0">
                     <img src="/lovable-uploads/7dc2c3ce-80a8-427c-a421-e01f09dae7ae.png" alt="Alexli Gravemeijer" className="rounded-lg w-full h-auto shadow-md" />
                   </div>
                 </div>
