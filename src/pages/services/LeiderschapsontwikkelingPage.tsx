@@ -8,19 +8,14 @@ import { Link, useLocation } from "react-router-dom";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
 import { useEffect } from "react";
-
 const LeiderschapsontwikkelingPage = () => {
-  const leiderschapContent = servicesContent.services.find(
-    (service) => service.title === "Leiderschaps- & Teamontwikkeling"
-  );
-
+  const leiderschapContent = servicesContent.services.find(service => service.title === "Leiderschaps- & Teamontwikkeling");
   const location = useLocation();
-  
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const testimonials = [{
     quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
     author: "Michael Chen",
@@ -43,7 +38,6 @@ const LeiderschapsontwikkelingPage = () => {
     initials: "MD",
     color: "bg-blue-400/20"
   }];
-  
   return <PageLayout>
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -53,19 +47,12 @@ const LeiderschapsontwikkelingPage = () => {
               <p className="text-xl text-muted-foreground mb-8" contentEditable>
                 Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.
               </p>
-              <p className="text-lg text-muted-foreground" contentEditable>
-                Onze programma's voor leiderschaps- en teamontwikkeling zijn maatwerk en combineren persoonlijke groei met organisatieontwikkeling. We focussen op duurzame gedragsverandering die direct bijdraagt aan betere resultaten.
-              </p>
+              
             </AnimatedSection>
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={leiderschapContent?.image || "/lovable-uploads/5029aa4e-8b69-4fb3-af70-7788f0be1f0e.png"} 
-                  alt="Leiderschapsontwikkeling" 
-                  className="object-cover w-full h-full" 
-                  contentEditable
-                />
+                <img src={leiderschapContent?.image || "/lovable-uploads/5029aa4e-8b69-4fb3-af70-7788f0be1f0e.png"} alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" contentEditable />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -194,5 +181,4 @@ const LeiderschapsontwikkelingPage = () => {
       </section>
     </PageLayout>;
 };
-
 export default LeiderschapsontwikkelingPage;
