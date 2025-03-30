@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -7,8 +6,14 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import StepCard from "@/components/StepCard";
+import { servicesContent } from "@/content/heroContent";
 
 const LeiderschapsontwikkelingPage = () => {
+  // Find the leiderschapsontwikkeling content from the services array
+  const leiderschapContent = servicesContent.services.find(
+    (service) => service.title === "Leiderschaps- & Teamontwikkeling"
+  );
+
   const testimonials = [{
     quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
     author: "Michael Chen",
@@ -49,7 +54,12 @@ const LeiderschapsontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Leiderschapsontwikkeling" className="object-cover w-full h-full" />
+                <img 
+                  src={leiderschapContent?.image || "/lovable-uploads/5029aa4e-8b69-4fb3-af70-7788f0be1f0e.png"} 
+                  alt="Leiderschapsontwikkeling" 
+                  className="object-cover w-full h-full" 
+                  contentEditable
+                />
               </AspectRatio>
             </AnimatedSection>
           </div>
