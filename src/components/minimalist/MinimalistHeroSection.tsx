@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Users, Lightbulb } from "lucide-react";
@@ -18,22 +19,15 @@ const MinimalistHeroSection = () => {
     const animateTags = () => {
       // Reset all tags
       tagElements.forEach(tag => {
-        tag.classList.remove("animate-pulse");
         tag.style.backgroundColor = "";
         tag.style.borderColor = "";
       });
 
-      // Highlight current tag with a single pulse
+      // Highlight current tag without pulse
       if (tagElements[currentIndex]) {
         const currentTag = tagElements[currentIndex];
-        currentTag.classList.add("animate-pulse");
         currentTag.style.backgroundColor = "rgba(249, 115, 22, 0.1)";
         currentTag.style.borderColor = "#F97316";
-
-        // Remove pulse after animation completes
-        setTimeout(() => {
-          currentTag.classList.remove("animate-pulse");
-        }, 1000); // Match the pulse animation duration
       }
 
       // Increment index and loop back to start if needed
