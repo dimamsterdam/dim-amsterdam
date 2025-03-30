@@ -32,8 +32,8 @@ const HerijkingVisieStrategiePage = () => {
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
                   <img 
-                    src="/lovable-uploads/6965c444-4daf-4645-8517-d1c538f302a7.png" 
-                    alt="Abstract geometric design representing organizational strategy and vision" 
+                    src="/lovable-uploads/a0c5f7f9-27a9-4116-9e3f-f9ff53e7f038.png" 
+                    alt="Abstract blue geometric design representing strategic vision and collaboration" 
                     className="object-cover w-full h-full" 
                     suppressContentEditableWarning 
                     contentEditable 
