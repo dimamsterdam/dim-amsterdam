@@ -31,9 +31,7 @@ Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" alt="DIM kantoor in Amsterdam" className="w-full h-auto object-cover" />
               <div className="bg-white p-4">
-                <p className="text-sm text-muted-foreground italic" contentEditable>
-                  Ons kantoor is gevestigd aan de Panamalaan 5f in Amsterdam.
-                </p>
+                <p className="text-sm text-muted-foreground italic" contentEditable>DIM is gevestigd aan de Panamalaan 5f in Amsterdam.</p>
               </div>
             </div>
           </AnimatedSection>
