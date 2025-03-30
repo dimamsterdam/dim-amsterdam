@@ -72,9 +72,7 @@ const ReferencesPage = () => {
         duration: 0.6
       }}>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Opdrachtgevers over DIM</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ontdek hoe we samenwerken met organisaties om échte verandering te bewerkstelligen
-          </p>
+          
           
           <div className="flex justify-center gap-3 mt-8">
             
