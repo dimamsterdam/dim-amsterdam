@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { MessageCircle, Quote, Award, Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
@@ -60,6 +61,14 @@ const ReferencesPage = () => {
     initials: "GL",
     color: "bg-rose-400/20",
     highlight: "Visie & Strategie"
+  }, {
+    quote: "Het was een genoegen deel te nemen aan de intervisiegroep van leidinggevenden in het Erasmus MC onder Alexli's begeleiding. Haar analyses zijn scherp en bieden onverwachte invalshoeken.",
+    author: "Clemens Dirven",
+    role: "Afdelingshoofd Neurochirurgie",
+    company: "Erasmus Medisch Centrum",
+    initials: "CD",
+    color: "bg-teal-500/20",
+    highlight: "Intervisie & Scherpe Analyses"
   }];
 
   return <PageLayout>
