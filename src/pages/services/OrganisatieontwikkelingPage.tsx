@@ -1,4 +1,3 @@
-
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -8,12 +7,8 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
-
 const OrganisatieontwikkelingPage = () => {
-  const organisatieContent = servicesContent.services.find(
-    (service) => service.title === "Organisatieontwikkeling"
-  );
-
+  const organisatieContent = servicesContent.services.find(service => service.title === "Organisatieontwikkeling");
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -36,7 +31,6 @@ const OrganisatieontwikkelingPage = () => {
     initials: "AB",
     color: "bg-indigo-500/20"
   }];
-
   return <PageLayout>
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -56,12 +50,7 @@ const OrganisatieontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={organisatieContent?.image || "/lovable-uploads/2a6b57e6-c4ef-4d88-b4b1-cb5423db9694.png"} 
-                  alt="Organisatieontwikkeling" 
-                  className="object-cover w-full h-full" 
-                  contentEditable
-                />
+                <img src={organisatieContent?.image || "/lovable-uploads/2a6b57e6-c4ef-4d88-b4b1-cb5423db9694.png"} alt="Organisatieontwikkeling" className="object-cover w-full h-full" contentEditable />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -86,7 +75,7 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
               </StepCard>
               
               <StepCard number={3} title="Afronding: verankering & evaluatie" variant="highlight">
-                <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoor-delijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
+                <p>Trajecten worden afgerond met praktische vervolgstappen, inclusief planning en verantwoordelijkheden. Deze doorkijk betreft zowel het verankeren het beoogde doel van het traject, als het borgen van verdere ontwikkeling. In een afrondend gesprek horen wij uiteraard eveneens graag hoe onze dienstverlening is ervaren en hoe we onze dienstverlening mogelijk kunnen versterken.</p>
               </StepCard>
             </div>
           </AnimatedSection>
