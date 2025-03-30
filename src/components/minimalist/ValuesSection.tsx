@@ -1,10 +1,61 @@
+
 import { Smile, Zap, Heart } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useEffect, useRef } from "react";
+
 const ValuesSection = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          startAnimation();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+    
+    const startAnimation = () => {
+      const title = titleRef.current;
+      if (!title) return;
+      
+      // Split the title into individual words
+      const words = title.textContent?.split(". ") || [];
+      
+      // Clear the original text content
+      title.textContent = "";
+      
+      // Create spans for each word
+      words.forEach((word, index) => {
+        const wordSpan = document.createElement("span");
+        wordSpan.textContent = word + (index < words.length - 1 ? ". " : "");
+        wordSpan.className = "transition-colors duration-500 inline-block";
+        wordSpan.style.opacity = "1";
+        title.appendChild(wordSpan);
+        
+        // Trigger the highlight with delay based on word position
+        setTimeout(() => {
+          wordSpan.style.color = "#F97316";
+        }, 500 + index * 800);
+      });
+    };
+    
+    return () => {
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+    };
+  }, []);
+  
   return <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" animation="fade-in">
-          <h2 className="text-3xl font-display font-bold mb-4">Positief. Scherp. Betrokken.</h2>
+          <h2 ref={titleRef} className="text-3xl font-display font-bold mb-4">Positief. Scherp. Betrokken.</h2>
           <p className="text-gray-600">Een traject is geslaagd als gezamenlijke doelen helder zijn en spanningen op een positieve manier bespreekbaar worden gemaakt.</p>
         </AnimatedSection>
         
@@ -44,4 +95,5 @@ const ValuesSection = () => {
       </div>
     </section>;
 };
+
 export default ValuesSection;
