@@ -1,10 +1,58 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Building2, Users, Lightbulb } from "lucide-react";
 import { heroContent } from "@/content/heroContent";
+import { useEffect, useRef } from "react";
 
 const MinimalistHeroSection = () => {
+  const tagsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  useEffect(() => {
+    if (tagsRef.current.length === 0) return;
+
+    const tagElements = tagsRef.current.filter(Boolean) as HTMLAnchorElement[];
+    
+    let currentIndex = 0;
+    const highlightDuration = 1000; // 1 second per tag
+
+    const animateTags = () => {
+      // Reset all tags
+      tagElements.forEach(tag => {
+        tag.classList.remove("animate-pulse");
+        tag.style.backgroundColor = "";
+        tag.style.borderColor = "";
+      });
+
+      // Highlight current tag
+      if (tagElements[currentIndex]) {
+        const currentTag = tagElements[currentIndex];
+        currentTag.classList.add("animate-pulse");
+        currentTag.style.backgroundColor = "rgba(249, 115, 22, 0.1)";
+        currentTag.style.borderColor = "#F97316";
+      }
+
+      // Increment index and loop back to start if needed
+      currentIndex = (currentIndex + 1) % tagElements.length;
+    };
+
+    // Start animation and repeat
+    animateTags();
+    const intervalId = setInterval(animateTags, highlightDuration);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  // Map tags to their corresponding icons
+  const getTagIcon = (tag: string) => {
+    if (tag === "Organisatieontwikkeling") return Building2;
+    if (tag === "Leiderschaps- & Teamontwikkeling") return Users;
+    if (tag === "Executive coaching") return Lightbulb;
+    return Building2; // Default icon
+  };
+
   return <section className="min-h-screen pt-32 pb-20 flex items-center py-[44px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -28,16 +76,20 @@ const MinimalistHeroSection = () => {
                   tagUrl = "/diensten/executive-coaching";
                 }
                 
+                const TagIcon = getTagIcon(tag);
+                
                 return (
                   <Link 
                     key={index} 
                     to={tagUrl} 
-                    className="inline-block text-sm px-3 py-1 rounded-full bg-gray-50 text-gray-600 font-medium shadow-md transition-colors hover:bg-gray-100 hover:text-[#F97316] border border-gray-100"
+                    ref={el => tagsRef.current[index] = el}
+                    className="inline-flex items-center text-sm px-3 py-1 rounded-full bg-gray-50 text-gray-600 font-medium shadow-md transition-all duration-300 hover:bg-gray-100 hover:text-[#F97316] border border-gray-100"
                     style={{ 
                       textShadow: "0px 2px 1px rgba(255,255,255,1)",
                       boxShadow: "0px 2px 3px rgba(0,0,0,0.1), inset 0px 1px 0px rgba(255,255,255,1)"
                     }}
                   >
+                    <TagIcon className="h-4 w-4 text-[#F97316] mr-1.5" />
                     <span contentEditable>{tag}</span>
                   </Link>
                 );
