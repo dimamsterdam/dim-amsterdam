@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, NavLink as RouterNavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -144,17 +145,39 @@ const Navbar = () => {
           </div>
           <nav className="flex flex-col space-y-4">
             {services.map((item) => (
-              <NavLink key={item.href} to={item.href} onClick={closeMobileMenu}>
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
                 {item.label}
-              </NavLink>
+              </Link>
             ))}
             {cases.map((item) => (
-              <NavLink key={item.href} to={item.href} onClick={closeMobileMenu}>
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
                 {item.label}
-              </NavLink>
+              </Link>
             ))}
-            <NavLink to="/referenties" onClick={closeMobileMenu}>Referenties</NavLink>
-            <NavLink to="/over-ons" onClick={closeMobileMenu}>Over ons</NavLink>
+            <Link 
+              to="/referenties" 
+              className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+              onClick={closeMobileMenu}
+            >
+              Referenties
+            </Link>
+            <Link 
+              to="/over-ons" 
+              className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+              onClick={closeMobileMenu}
+            >
+              Over ons
+            </Link>
             <Link to="/contact" onClick={closeMobileMenu}>
               <Button>{contactButtonText}</Button>
             </Link>
@@ -168,9 +191,10 @@ const Navbar = () => {
 interface NavLinkProps {
   to: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ to, children }) => (
+const NavLink: React.FC<NavLinkProps> = ({ to, children, onClick }) => (
   <RouterNavLink
     to={to}
     className={({ isActive }) =>
@@ -179,6 +203,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children }) => (
         isActive ? "text-primary" : ""
       )
     }
+    onClick={onClick}
   >
     {children}
   </RouterNavLink>
