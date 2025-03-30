@@ -1,3 +1,4 @@
+
 export const heroContent = {
   tags: [
     "Organisatieontwikkeling",
@@ -26,7 +27,7 @@ export const servicesContent = {
       title: "Leiderschaps- & Teamontwikkeling",
       description: "Op basis van beproefde leiderschapsconcepten en ruime kennis en ervaring in het publieke domein verzorgen wij maatwerk leiderschapsprogramma's, intervisie en teamontwikkeling. DIM is gespecialiseerd in leiderschapsuitdagingen in spanningsvolle situaties.",
       href: "/diensten/leiderschapsontwikkeling",
-      image: "/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png"
+      image: "/lovable-uploads/5029aa4e-8b69-4fb3-af70-7788f0be1f0e.png"
     },
     {
       title: "Executive coaching",
