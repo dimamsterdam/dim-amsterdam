@@ -37,59 +37,46 @@ const SamenwerkingConflicthanteringPage = () => {
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">De uitdaging</h2>
               
               <p>
-                Een ZBO kampte met forse achterstanden en een conflict tussen verschillende afdelingen. 
-                Betrokken directeuren raakten verstrikt in de dynamiek. DIM werd gevraagd te helpen bij het doorbreken 
-                van deze patstelling, ten behoeve van betere samenwerking tussen de afdelingen en de 
-                betrokken medewerkers en een kwaliteitsimpuls in het functioneren.
+                Een Zelfstandig Bestuursorgaan (ZBO) kampte met flinke achterstanden in de productie en een scherp en zich verdiepend conflict tussen twee organisatie-onderdelen. DIM werd gevraagd een aanpak te ontwerpen, opdat de organisatie gezamenlijk weer effectief kon functioneren. Op basis van enkele gesprekken met de bestuurder zijn de volgende doelstellingen afgesproken:
+              </p>
+              
+              <ul className="list-disc pl-6 my-4">
+                <li>Meer inzicht in elkaars werk & versterken onderling begrip</li>
+                <li>Verheldering onderlinge rollen en verantwoordelijkheden</li>
+                <li>Oefenen met vastgestelde rollen & verantwoordelijkheden</li>
+                <li>Aanvulling en eventuele aanscherping van de realisatie van de beoogde organisatie-ontwikkeling</li>
+              </ul>
+              
+              <p>
+                Kern van het eerste deel van het traject betrof het verhelderen en verbeteren van de onderlinge werkverhouding en taakverdeling tussen de organisatie-onderdelen. In het tweede deel van het traject lag de focus op de implementatie en borgen van de gemaakte afspraken en werkwijze conform het reeds eerder ingezet organisatie-ontwikkeltraject.
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Onze aanpak</h2>
               
-              <p>DIM ontwikkelde een (tijdelijke) rolverdeling voor de aansturing en toezicht van de verschillende afdelingen. In nauwe samenwerking met de opdrachtgever werd de aanpak op maat ontwikkeld gericht op 5 pijlers.
-
-            </p>
-              
-              <ol>
-                <li>
-                  <strong>Versterken van begrip.</strong> Gericht op inzicht in elkaars positie, 
-                  perspectieven en belangen. Niet om het eens te zijn met elkaar, wel om elkaar 
-                  te begrijpen en snappen waarom handelen zoals ze handelen.
-                </li>
-                <li>
-                  <strong>Opruimen van het verleden.</strong> Ruimte voor eerdere pijn en frustraties én 
-                  voor het markeren van een nieuw begin.
-                </li>
-                <li>
-                  <strong>Heldere rollen en verantwoordelijkheden.</strong> Welke besluiten liggen bij wie? 
-                  Op welke manier informeren we elkaar en hoe nemen we gezamenlijk besluiten? 
-                  Hoeveel ruimte voor eigen invulling en wie heeft wanneer doorzettingsmacht?
-                </li>
-                <li>
-                  <strong>Integraal proces ontwerp.</strong> Werk komt van A naar B naar C, met een heldere keten 
-                  waar elke met een klantgerichte bril naar elkaar kijkt.
-                </li>
-                <li>
-                  <strong>Ontwikkelen en implementeren interventiemix.</strong> Voor het oplossen van de belangrijkste 
-                  knelpunten specifieke interventies uitwerken.
-                </li>
-              </ol>
+              <p>
+                DIM ontwikkelde een beknopte aanpak van enkele bijeenkomsten. De opzet en begeleiding van de bijeenkomsten werden bewust en nadrukkelijk gekenmerkt door een afwisseling in interventie-niveaus: inhoud, reflectie op proces en doorvertaling naar eigen rol en vaardigheden.
+              </p>
               
               <p>
-                Vanuit een inhoudelijk startpunt, namelijk het bespreken welke knelpunten er in de inhoudelijke 
-                samenwerking zijn, werden de relaties tussen mensen verbeterd. De sterke focus op inhoud en processen 
-                zorgde dat het voor de betrokkenen ook veilig was om mee te doen. De resultaten hebben wij laten monitoren 
-                en de effecten waren meteen zichtbaar in de verbetering van prestatie-indicatoren en terugkoppeling van 
-                medewerkers en leidinggevenden.
+                In het eerste deel werd aan de hand van een strakke methodiek een verdiepend en waarderend gesprek gevoerd in kleinere groepjes. Hiermee werd het onderling begrip versterkt en was er meer ruimte om naar elkaar te luisteren. Vervolgens zijn de knelpunten in een plenair gesprek verder onderzocht en 'afgepeld'. Op basis van meer inzicht in ieders overwegingen en intenties zijn excuses uitgesproken en gezamenlijke belangen en standpunten 'ontdekt'.
+              </p>
+              
+              <p>
+                In een vervolgbijeenkomst is teruggegrepen op de start en is de tussenliggende periode geëvalueerd. Na de gezamenlijke intenties opnieuw te hebben erkend, zijn concrete inhoudelijke vervolgstappen geformuleerd. Deze zijn geconcretiseerd met behulp van de bespreking van zogenaamde (voorbereide en spontane) 'critical cases'; concrete situaties waar in de conflicten in de praktijk ontstonden. De gezamenlijke afspraken zijn hiermee verder aangescherpt en verankerd.
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Wat klanten zeggen</h2>
               
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
-                <p className="italic mb-0">"Helder proces, met zichtbare resultaten op korte én langere termijn. Fijn dat er ook een tussentijdse evaluatie en terugkoppeling was ingebouwd".</p>
+                <p className="italic mb-0">"Er zijn pittige momenten tijdens de bijeenkomsten geweest, maar deze openheid maakt ons sterker voor de toekomst"</p>
               </div>
               
               <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
-                <p className="italic mb-0">"Voelde en zag meteen dat de druk er af ging en er weer ruimte en energie kwam voor inhoudelijke gesprekken".</p>
+                <p className="italic mb-0">"Ik ben erg tevreden, we zijn echt aan het bouwen geweest"</p>
+              </div>
+              
+              <div className="bg-white p-6 my-6 rounded-xl shadow-sm border border-gray-100">
+                <p className="italic mb-0">"Ik denk dat het echte gesprek is gevoerd en ben daarom blij. Het is minder wij/zij en meer wij/wij"</p>
               </div>
               
               <div className="mt-12 flex justify-center">
