@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronRight, Menu } from "lucide-react";
@@ -51,7 +50,6 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
-  // Close drawer when route changes
   useEffect(() => {
     setDrawerOpen(false);
   }, [location]);
@@ -115,13 +113,12 @@ const Navbar = () => {
             <span className="text-gradient">DIM</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
               item.dropdown ? (
                 <HoverCard key={index} openDelay={0} closeDelay={100}>
                   <HoverCardTrigger asChild>
-                    <div className="group relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary flex items-center cursor-pointer">
+                    <div className="group relative px-3 py-2 text-sm font-semibold transition-colors duration-200 link-underline text-foreground hover:text-primary flex items-center cursor-pointer">
                       {item.label}
                       <ChevronDown size={16} className="ml-1 group-hover:rotate-180 transition-transform duration-200" />
                     </div>
@@ -167,7 +164,7 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={item.href}
-                  className="relative px-3 py-2 text-sm font-medium transition-colors duration-200 link-underline text-foreground hover:text-primary"
+                  className="relative px-3 py-2 text-sm font-semibold transition-colors duration-200 link-underline text-foreground hover:text-primary"
                 >
                   {item.label}
                 </Link>
@@ -181,7 +178,6 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Mobile Navigation Trigger */}
           {isMobile && (
             <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
               <DrawerTrigger asChild>
@@ -196,13 +192,13 @@ const Navbar = () => {
               </DrawerTrigger>
               <DrawerContent className="max-h-[85vh]">
                 <div className="px-4 py-6 flex flex-col space-y-6 overflow-y-auto">
-                  <h3 className="text-lg font-medium text-center">Menu</h3>
+                  <h3 className="text-lg font-semibold text-center">Menu</h3>
                   
                   <nav className="flex flex-col gap-4">
                     {menuItems.map((item, index) => (
                       item.dropdown ? (
                         <div key={index} className="space-y-4">
-                          <h4 className="font-medium text-primary">{item.label}</h4>
+                          <h4 className="font-semibold text-primary">{item.label}</h4>
                           <div className="ml-4 space-y-3 border-l-2 border-muted pl-3">
                             {item.items?.map((subItem, subIndex) => (
                               'subItems' in subItem ? (
@@ -244,7 +240,7 @@ const Navbar = () => {
                         <Link
                           key={index}
                           to={item.href}
-                          className="font-medium hover:text-primary transition-colors"
+                          className="font-semibold hover:text-primary transition-colors"
                           onClick={() => setDrawerOpen(false)}
                         >
                           {item.label}
