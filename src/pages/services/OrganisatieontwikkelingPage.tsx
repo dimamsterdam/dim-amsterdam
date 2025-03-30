@@ -1,10 +1,11 @@
+
 import PageLayout from "@/components/PageLayout";
 import TestimonialsBlock from "@/components/TestimonialsBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
 
@@ -99,61 +100,61 @@ We ontwerpen een gebalanceerd programma gericht op eigenaarschap en concreet res
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <AnimatedSection delay={0.1} animation="fade-in">
-                <Link to="/cases/cultuurverandering" className="block h-full">
+                <Link to="/cases/cultuurverandering" className="block h-full cursor-pointer">
                   <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-md hover:border-primary/50 hover:translate-y-[-4px]">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/3e6f5ca9-cc00-4df7-ac34-a2fd92123a8d.png" alt="Cultuurverandering case" className="object-cover w-full h-full" />
                     </AspectRatio>
-                    <CardContent className="flex-grow pt-6">
+                    <CardContent className="flex-grow p-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors">Cultuurverandering</h3>
                       <p className="text-sm text-muted-foreground mb-4">
                         Een grote uitvoeringsorganisatie met een flinke productie-opgave stond voor een complexe transitie-opgave. 
                         DIM organiseerde een 2-jarig programma gericht op ondernemerschap, innovatie en klanttevredenheid.
                       </p>
+                      <div className="mt-auto pt-2">
+                        <span className="text-sm font-medium text-primary">Lees meer</span>
+                      </div>
                     </CardContent>
-                    <CardFooter>
-                      <span className="text-sm font-medium text-primary">Lees meer</span>
-                    </CardFooter>
                   </Card>
                 </Link>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2} animation="fade-in">
-                <Link to="/cases/samenwerking-conflicthantering" className="block h-full">
+                <Link to="/cases/samenwerking-conflicthantering" className="block h-full cursor-pointer">
                   <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-md hover:border-primary/50 hover:translate-y-[-4px]">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/e7ae05c1-0045-4921-a819-7ba26c3bd89e.png" alt="Samenwerking & Conflicthantering case" className="object-cover w-full h-full" />
                     </AspectRatio>
-                    <CardContent className="flex-grow pt-6">
+                    <CardContent className="flex-grow p-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors">Samenwerking & Conflicthantering</h3>
                       <p className="text-sm text-muted-foreground mb-4">
                         Een ZBO kampte met achterstanden en een conflict tussen afdelingen. DIM ontwikkelde een aanpak 
                         gericht op versterken van begrip, rollen en verantwoordelijkheden.
                       </p>
+                      <div className="mt-auto pt-2">
+                        <span className="text-sm font-medium text-primary">Lees meer</span>
+                      </div>
                     </CardContent>
-                    <CardFooter>
-                      <span className="text-sm font-medium text-primary">Lees meer</span>
-                    </CardFooter>
                   </Card>
                 </Link>
               </AnimatedSection>
 
               <AnimatedSection delay={0.3} animation="fade-in">
-                <Link to="/cases/herijking-visie-strategie" className="block h-full">
+                <Link to="/cases/herijking-visie-strategie" className="block h-full cursor-pointer">
                   <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-md hover:border-primary/50 hover:translate-y-[-4px]">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                       <img src="/lovable-uploads/e8bcbca9-7f4c-4654-9bb6-0b2383ff1c8c.png" alt="Herijking visie & strategie case" className="object-cover w-full h-full" />
                     </AspectRatio>
-                    <CardContent className="flex-grow pt-6">
+                    <CardContent className="flex-grow p-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors">Herijking visie & strategie</h3>
                       <p className="text-sm text-muted-foreground mb-4">
                         Een Directoraat-generaal constateerde dat directies weinig samenwerkten. DIM heeft een traject opgesteld 
                         gericht op het versterken van samenwerking en werken vanuit impact.
                       </p>
+                      <div className="mt-auto pt-2">
+                        <span className="text-sm font-medium text-primary">Lees meer</span>
+                      </div>
                     </CardContent>
-                    <CardFooter>
-                      <span className="text-sm font-medium text-primary">Lees meer</span>
-                    </CardFooter>
                   </Card>
                 </Link>
               </AnimatedSection>

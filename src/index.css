@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -185,6 +186,14 @@
   }
   
   a:has(.card), a:has([class*="card-"]), .group:has(a) * {
+    @apply cursor-pointer;
+  }
+  
+  /* Make linked cards fully clickable with pointer cursor */
+  a .card, 
+  a [class*="card-"],
+  a:has(.card) *,
+  a:has([class*="card-"]) * {
     @apply cursor-pointer;
   }
 }

@@ -4,8 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { servicesContent } from "@/content/heroContent";
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const WhatWeDoSection = () => {
   // Add state to track the service images
@@ -37,116 +36,98 @@ const WhatWeDoSection = () => {
           {services.map((service, index) => (
             <AnimatedSection 
               key={index}
-              className="overflow-hidden rounded-lg border border-gray-100 hover:border-primary/20 transition-all duration-300 hover:shadow-sm" 
+              className="overflow-hidden" 
               animation="fade-in" 
               delay={index * 0.1 + 0.1}
             >
               {service.href.includes("cultuurverandering") ? (
-                <Card className="h-full flex flex-col">
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <div className="w-full h-full relative">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </AspectRatio>
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </CardContent>
-                  <CardFooter className="pt-0 pb-4 px-6">
-                    <Link 
-                      to="/cases/cultuurverandering" 
-                      className="cursor-pointer block"
-                      onClick={(e) => {
-                        if (window.location.pathname === '/cases/cultuurverandering') {
-                          e.preventDefault();
-                          window.location.href = '/cases/cultuurverandering';
-                        } else {
-                          window.scrollTo(0, 0);
-                        }
-                      }}
-                    >
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        className="hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <span>Lees meer</span>
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
+                <Link 
+                  to="/cases/cultuurverandering" 
+                  className="block h-full"
+                  onClick={(e) => {
+                    if (window.location.pathname === '/cases/cultuurverandering') {
+                      e.preventDefault();
+                      window.location.href = '/cases/cultuurverandering';
+                    } else {
+                      window.scrollTo(0, 0);
+                    }
+                  }}
+                >
+                  <Card className="h-full flex flex-col cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-sm hover:translate-y-[-4px]">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <div className="w-full h-full relative">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </AspectRatio>
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <div className="mt-auto">
+                        <span className="text-primary text-sm font-medium">Lees meer</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ) : service.href.includes("leiderschapsontwikkeling") ? (
-                <Card className="h-full flex flex-col">
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <div className="w-full h-full relative">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </AspectRatio>
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </CardContent>
-                  <CardFooter className="pt-0 pb-4 px-6">
-                    <Link 
-                      to="/diensten/leiderschapsontwikkeling" 
-                      className="cursor-pointer block"
-                      onClick={(e) => {
-                        if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
-                          e.preventDefault();
-                          window.location.href = '/diensten/leiderschapsontwikkeling';
-                        } else {
-                          window.scrollTo(0, 0);
-                        }
-                      }}
-                    >
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        className="hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <span>Lees meer</span>
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
+                <Link 
+                  to="/diensten/leiderschapsontwikkeling" 
+                  className="block h-full"
+                  onClick={(e) => {
+                    if (window.location.pathname === '/diensten/leiderschapsontwikkeling') {
+                      e.preventDefault();
+                      window.location.href = '/diensten/leiderschapsontwikkeling';
+                    } else {
+                      window.scrollTo(0, 0);
+                    }
+                  }}
+                >
+                  <Card className="h-full flex flex-col cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-sm hover:translate-y-[-4px]">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <div className="w-full h-full relative">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </AspectRatio>
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <div className="mt-auto">
+                        <span className="text-primary text-sm font-medium">Lees meer</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ) : (
-                <Card className="h-full flex flex-col">
-                  <AspectRatio ratio={16 / 9} className="bg-muted">
-                    <div className="w-full h-full relative">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </AspectRatio>
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </CardContent>
-                  <CardFooter className="pt-0 pb-4 px-6">
-                    <Link 
-                      to={service.href.replace("/aanbod/", "/diensten/")} 
-                      className="cursor-pointer block"
-                    >
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        className="hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <span>Lees meer</span>
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
+                <Link 
+                  to={service.href.replace("/aanbod/", "/diensten/")} 
+                  className="block h-full"
+                >
+                  <Card className="h-full flex flex-col cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-sm hover:translate-y-[-4px]">
+                    <AspectRatio ratio={16 / 9} className="bg-muted">
+                      <div className="w-full h-full relative">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </AspectRatio>
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-display font-semibold mb-3">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <div className="mt-auto">
+                        <span className="text-primary text-sm font-medium">Lees meer</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               )}
             </AnimatedSection>
           ))}
