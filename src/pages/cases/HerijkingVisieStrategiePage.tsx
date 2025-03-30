@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -7,35 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { servicesContent } from "@/content/heroContent";
 import { CheckCircle } from "lucide-react";
-
 const HerijkingVisieStrategiePage = () => {
   // Find the executive coaching content from the services array
-  const executiveCoachingContent = servicesContent.services.find(
-    (service) => service.title === "Executive coaching"
-  );
+  const executiveCoachingContent = servicesContent.services.find(service => service.title === "Executive coaching");
 
   // Ensure page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <PageLayout>
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
               <h1 className="text-3xl sm:text-4xl font-display font-bold mb-2 break-words md:text-4xl">Case: Herijking Visie & Strategie</h1>
-              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6">
-                Van strategie naar executiekracht
-              </h2>
+              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6">Verbeterde samenwerking vanuit de bedoeling</h2>
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src="/lovable-uploads/e8bcbca9-7f4c-4654-9bb6-0b2383ff1c8c.png" 
-                    alt="Geometric design with yellow background, blue and red clouds, pink semi-circles, and a dark green rectangle" 
-                    className="object-cover w-full h-full" 
-                  />
+                  <img src="/lovable-uploads/e8bcbca9-7f4c-4654-9bb6-0b2383ff1c8c.png" alt="Geometric design with yellow background, blue and red clouds, pink semi-circles, and a dark green rectangle" className="object-cover w-full h-full" />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -112,5 +101,4 @@ const HerijkingVisieStrategiePage = () => {
       </section>
     </PageLayout>;
 };
-
 export default HerijkingVisieStrategiePage;
