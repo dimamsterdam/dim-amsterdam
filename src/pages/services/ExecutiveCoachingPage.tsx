@@ -1,17 +1,12 @@
-
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
-
 const ExecutiveCoachingPage = () => {
   // Find the executive coaching content from the services array
-  const executiveCoachingContent = servicesContent.services.find(
-    (service) => service.title === "Executive coaching"
-  );
-
+  const executiveCoachingContent = servicesContent.services.find(service => service.title === "Executive coaching");
   const testimonials = [{
     quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
   }, {
@@ -34,11 +29,7 @@ const ExecutiveCoachingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={executiveCoachingContent?.image || "/lovable-uploads/355d5a12-85ba-4603-971b-b034da5ca65f.png"} 
-                  alt="Executive Coaching" 
-                  className="object-cover w-full h-full" 
-                />
+                <img src={executiveCoachingContent?.image || "/lovable-uploads/355d5a12-85ba-4603-971b-b034da5ca65f.png"} alt="Executive Coaching" className="object-cover w-full h-full" />
               </AspectRatio>
             </AnimatedSection>
           </div>
@@ -73,7 +64,7 @@ const ExecutiveCoachingPage = () => {
       </section>
 
       {/* Voorbeeld Traject Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50 md:py-0">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6">Voorbeeld traject</h2>
