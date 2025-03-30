@@ -41,6 +41,7 @@ const WhatWeDoSection = () => {
                         alt={service.title} 
                         className="object-cover w-full h-full"
                         contentEditable
+                        suppressContentEditableFocus
                       />
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
@@ -69,6 +70,7 @@ const WhatWeDoSection = () => {
                         alt={service.title} 
                         className="object-cover w-full h-full"
                         contentEditable
+                        suppressContentEditableFocus
                       />
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
@@ -89,6 +91,7 @@ const WhatWeDoSection = () => {
                         alt={service.title} 
                         className="object-cover w-full h-full"
                         contentEditable
+                        suppressContentEditableFocus
                       />
                     </AspectRatio>
                     <div className="p-6 flex flex-col flex-grow">
