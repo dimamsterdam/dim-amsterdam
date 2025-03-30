@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { MessageCircle, Quote, Award, Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-
 const ReferencesPage = () => {
   const testimonials = [{
     quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
@@ -61,7 +60,6 @@ const ReferencesPage = () => {
     color: "bg-rose-400/20",
     highlight: "Visie & Strategie"
   }];
-
   return <PageLayout>
       <div className="container mx-auto px-4 py-16 md:py-24">
         <motion.div className="text-center mb-16" initial={{
@@ -86,20 +84,18 @@ const ReferencesPage = () => {
         </motion.div>
 
         <div>
-          <h2 className="text-3xl font-display font-bold text-center mb-12" contentEditable>
-            Wat onze klanten zeggen
-          </h2>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {testimonials.map((testimonial, index) => <motion.div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" initial={{
-          opacity: 0,
-          y: 30
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5,
-          delay: index * 0.1
-        }}>
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: index * 0.1
+          }}>
               <div className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${testimonial.color} text-primary font-semibold`}>
@@ -146,5 +142,4 @@ const ReferencesPage = () => {
       </div>
     </PageLayout>;
 };
-
 export default ReferencesPage;
