@@ -1,9 +1,7 @@
-
 import { motion } from "framer-motion";
 import { MessageCircle, Quote, Award, Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
-
 const ReferencesPage = () => {
   const testimonials = [{
     quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
@@ -73,7 +71,7 @@ const ReferencesPage = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Wat onze klanten zeggen</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Opdrachtgevers over DIM</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ontdek hoe we samenwerken met organisaties om échte verandering te bewerkstelligen
           </p>
@@ -144,5 +142,4 @@ const ReferencesPage = () => {
       </div>
     </PageLayout>;
 };
-
 export default ReferencesPage;
