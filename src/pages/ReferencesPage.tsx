@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import { MessageCircle, Quote, Award, Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
+
 const ReferencesPage = () => {
   const testimonials = [{
     quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
@@ -71,8 +73,8 @@ const ReferencesPage = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4" contentEditable>Wat onze klanten zeggen</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" contentEditable>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Wat onze klanten zeggen</h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ontdek hoe we samenwerken met organisaties om échte verandering te bewerkstelligen
           </p>
           
@@ -102,15 +104,15 @@ const ReferencesPage = () => {
                     {testimonial.initials}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900" contentEditable>{testimonial.author}</h3>
-                    <p className="text-sm text-muted-foreground" contentEditable>{testimonial.role}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5" contentEditable>{testimonial.company}</p>
+                    <h3 className="text-lg font-semibold text-gray-900">{testimonial.author}</h3>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{testimonial.company}</p>
                   </div>
                 </div>
                 
                 <div className="relative">
                   <Quote className="absolute -top-2 -left-1 w-6 h-6 text-primary/20" />
-                  <blockquote className="pl-6 italic text-gray-700 relative" contentEditable>
+                  <blockquote className="pl-6 italic text-gray-700 relative">
                     "{testimonial.quote}"
                   </blockquote>
                 </div>
@@ -133,8 +135,8 @@ const ReferencesPage = () => {
         delay: 0.8,
         duration: 0.6
       }}>
-          <h2 className="text-2xl font-display font-semibold mb-6" contentEditable>Klaar om samen te werken?</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8" contentEditable>
+          <h2 className="text-2xl font-display font-semibold mb-6">Klaar om samen te werken?</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Ontdek hoe wij u kunnen helpen uw organisatiedoelen te bereiken met onze op maat gemaakte aanpak
           </p>
           <a href="/contact" className="btn-primary inline-block">Contact opnemen</a>
@@ -142,4 +144,5 @@ const ReferencesPage = () => {
       </div>
     </PageLayout>;
 };
+
 export default ReferencesPage;

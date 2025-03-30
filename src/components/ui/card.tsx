@@ -40,7 +40,6 @@ const CardTitle = React.forwardRef<
       "text-2xl font-semibold leading-none tracking-tight",
       className
     )}
-    contentEditable
     {...props}
   />
 ))
@@ -53,7 +52,6 @@ const CardDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
-    contentEditable
     {...props}
   />
 ))

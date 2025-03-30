@@ -17,8 +17,8 @@ const CultuurveranderingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <h1 className="text-3xl sm:text-4xl font-display font-bold mb-2 break-words md:text-4xl" suppressContentEditableWarning contentEditable>Case: Cultuurverandering</h1>
-              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6" suppressContentEditableWarning contentEditable>
+              <h1 className="text-3xl sm:text-4xl font-display font-bold mb-2 break-words md:text-4xl">Case: Cultuurverandering</h1>
+              <h2 className="text-xl sm:text-2xl font-display text-gray-700 mb-6">
                 Zakelijk sturen op ondernemerschap, innovatie en klanttevredenheid
               </h2>
               
@@ -28,7 +28,6 @@ const CultuurveranderingPage = () => {
                     src="/lovable-uploads/3e6f5ca9-cc00-4df7-ac34-a2fd92123a8d.png" 
                     alt="Abstract geometric design with blue, pink, yellow, orange, and black colors in a symmetrical pattern" 
                     className="object-cover w-full h-full" 
-                    contentEditable 
                   />
                 </AspectRatio>
               </div>
@@ -45,7 +44,7 @@ const CultuurveranderingPage = () => {
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Onze aanpak</h2>
-              <p>DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. 
+              <p>DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. 
 
 Allereerst is in samenwerking met vertegenwoordigers uit de organisatie een analyse van de uitgangssituatie gemaakt. Hieruit kwam o.a. naar voren dat de eerdere fusie nog steeds nadrukkelijk zichtbaar was in de organisatie. Onderdelen werkten niet of beperkt samen en stuurden naar 'eigen inzicht'.
             </p>
