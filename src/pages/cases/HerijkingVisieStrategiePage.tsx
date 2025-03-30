@@ -32,8 +32,8 @@ const HerijkingVisieStrategiePage = () => {
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
                   <img 
-                    src="/lovable-uploads/a0c5f7f9-27a9-4116-9e3f-f9ff53e7f038.png" 
-                    alt="Abstract blue geometric design representing strategic vision and collaboration" 
+                    src="/lovable-uploads/e8bcbca9-7f4c-4654-9bb6-0b2383ff1c8c.png" 
+                    alt="Geometric design with yellow background, blue and red clouds, pink semi-circles, and a dark green rectangle" 
                     className="object-cover w-full h-full" 
                     suppressContentEditableWarning 
                     contentEditable 
@@ -116,3 +116,4 @@ const HerijkingVisieStrategiePage = () => {
 };
 
 export default HerijkingVisieStrategiePage;
+
