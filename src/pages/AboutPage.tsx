@@ -63,31 +63,7 @@ Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt”.</p>
 
             {/* Values Card */}
             <Card>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4" contentEditable>Onze kernwaarden</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Moedig - we durven te zeggen wat gezegd moet worden</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Betrokken - we staan naast je en werken samen</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Deskundig - we brengen kennis en ervaring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Creatief - we denken in nieuwe mogelijkheden</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-600 font-bold">•</span>
-                    <span contentEditable>Effectief - we werken samen aan resultaat</span>
-                  </li>
-                </ul>
-              </CardContent>
+              
             </Card>
           </AnimatedSection>
         </div>
