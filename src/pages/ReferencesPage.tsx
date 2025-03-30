@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, Quote, Award, Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { Badge } from "@/components/ui/badge";
+
 const ReferencesPage = () => {
   const testimonials = [{
     quote: "DIM heeft veel kennis van de specifieke ontwikkelingsvragen van een kennisintensieve overheidsorganisatie en een goed aanpassingsvermogen daar waar nodig. Alexli weet goed te doseren, zonder weg te lopen van ingewikkelde kwesties. Echt een aanrader.",
@@ -34,7 +35,7 @@ const ReferencesPage = () => {
     company: "Erasmus Medisch Centrum",
     initials: "CS",
     color: "bg-purple-500/20",
-    highlight: "Strategie & Veilig Werkklimaat"
+    highlight: "Analytisch & warme persoonlijkheid"
   }, {
     quote: "Als IG van de NVWA heb ik Alexli leren kennen als een enthousiasmerende begeleider in ons traject van leiderschapsontwikkeling. Zij verbindt, snapt waarom het gaat in de organisatie, heeft inzicht in veranderprocessen en treedt effectief op.",
     author: "Rob van Lint",
@@ -60,6 +61,7 @@ const ReferencesPage = () => {
     color: "bg-rose-400/20",
     highlight: "Visie & Strategie"
   }];
+
   return <PageLayout>
       <div className="container mx-auto px-4 py-16 md:py-24">
         <motion.div className="text-center mb-16" initial={{
@@ -140,4 +142,5 @@ const ReferencesPage = () => {
       </div>
     </PageLayout>;
 };
+
 export default ReferencesPage;
