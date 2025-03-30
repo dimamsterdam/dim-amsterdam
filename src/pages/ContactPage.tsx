@@ -1,13 +1,18 @@
+
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
+
 const ContactPage = () => {
   return <PageLayout>
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Neem contact op</h1>
-          
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Heeft u interesse in onze diensten of wilt u meer informatie? 
+            Neem dan contact met ons op via onderstaande gegevens.
+          </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -56,4 +61,5 @@ const ContactPage = () => {
       </section>
     </PageLayout>;
 };
+
 export default ContactPage;

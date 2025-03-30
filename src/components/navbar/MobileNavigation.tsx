@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Home } from "lucide-react";
 import {
   Drawer,
   DrawerContent,
@@ -45,9 +45,10 @@ export const MobileNavigation = ({ menuItems }: MobileNavigationProps) => {
                 <Link
                   key={index}
                   to={item.href}
-                  className="font-semibold hover:text-primary transition-colors"
+                  className="font-semibold hover:text-primary transition-colors flex items-center gap-2"
                   onClick={() => setDrawerOpen(false)}
                 >
+                  {item.label === "Home" && <Home size={18} />}
                   {item.label}
                 </Link>
               )

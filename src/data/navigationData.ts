@@ -43,6 +43,7 @@ export const caseItems: ServiceMenuItem[] = [
 ];
 
 export const menuItems: MenuItem[] = [
+  { label: "Home", href: "/" },
   {
     label: "Aanbod",
     dropdown: true,
