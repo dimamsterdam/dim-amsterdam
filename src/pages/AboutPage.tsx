@@ -18,12 +18,23 @@ const AboutPage = () => {
 Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan diverse meerjarige complexe verandertrajecten, samenwerking en conflicthantering in teamontwikkeling en verdere ontwikkeling en meer ontspanning in de vorm van executive coaching. Voor meer impact en meer werkplezier.</p>
             </div>
             
-            {/* Add Alexli Card above the image */}
+            {/* Alexli Card with image */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-4">Alexli Gravemeijer</h3>
-                <p className="text-muted-foreground mb-4">"Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold mb-4">Alexli Gravemeijer</h3>
+                    <p className="text-muted-foreground mb-4">"Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
 Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
+                  </div>
+                  <div className="w-full md:w-1/3 flex-shrink-0">
+                    <img 
+                      src="/lovable-uploads/7dc2c3ce-80a8-427c-a421-e01f09dae7ae.png" 
+                      alt="Alexli Gravemeijer" 
+                      className="rounded-lg w-full h-auto shadow-md"
+                    />
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </AnimatedSection>
@@ -58,7 +69,7 @@ Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
             </div>
           </AnimatedSection>
 
-          {/* Right Column - Values Card (removed Alexli's card from here) */}
+          {/* Right Column - Values Card */}
           <AnimatedSection animation="slide-from-right" className="space-y-8">
             {/* Values Card */}
             <Card>
