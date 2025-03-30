@@ -101,6 +101,7 @@ const Navbar = () => {
           <img src="/logo.svg" alt="DIM Logo" className="h-8 md:h-10" />
         </Link>
 
+        {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           <NavMenu label="Diensten" items={services} />
           <NavMenu label="Cases" items={cases} />
@@ -111,6 +112,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
+        {/* Mobile navigation toggle */}
         <button
           onClick={toggleMobileMenu}
           className="md:hidden text-gray-700 focus:outline-none"
@@ -120,6 +122,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile menu */}
       <div
         className={cn(
           "md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300",
@@ -141,39 +144,17 @@ const Navbar = () => {
           </div>
           <nav className="flex flex-col space-y-4">
             {services.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-                onClick={closeMobileMenu}
-              >
+              <NavLink key={item.href} to={item.href} onClick={closeMobileMenu}>
                 {item.label}
-              </Link>
+              </NavLink>
             ))}
             {cases.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-                onClick={closeMobileMenu}
-              >
+              <NavLink key={item.href} to={item.href} onClick={closeMobileMenu}>
                 {item.label}
-              </Link>
+              </NavLink>
             ))}
-            <Link 
-              to="/referenties" 
-              className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-              onClick={closeMobileMenu}
-            >
-              Referenties
-            </Link>
-            <Link 
-              to="/over-ons" 
-              className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-              onClick={closeMobileMenu}
-            >
-              Over ons
-            </Link>
+            <NavLink to="/referenties" onClick={closeMobileMenu}>Referenties</NavLink>
+            <NavLink to="/over-ons" onClick={closeMobileMenu}>Over ons</NavLink>
             <Link to="/contact" onClick={closeMobileMenu}>
               <Button>{contactButtonText}</Button>
             </Link>
@@ -187,10 +168,9 @@ const Navbar = () => {
 interface NavLinkProps {
   to: string;
   children: React.ReactNode;
-  onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ to, children, onClick }) => (
+const NavLink: React.FC<NavLinkProps> = ({ to, children }) => (
   <RouterNavLink
     to={to}
     className={({ isActive }) =>
@@ -199,7 +179,6 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children, onClick }) => (
         isActive ? "text-primary" : ""
       )
     }
-    onClick={onClick}
   >
     {children}
   </RouterNavLink>
