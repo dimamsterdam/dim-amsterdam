@@ -111,10 +111,7 @@ const LeiderschapsontwikkelingPage = () => {
                     </AspectRatio>
                     <CardContent className="flex-grow pt-6">
                       <h3 className="text-xl font-semibold mb-3 whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors" contentEditable>Leiderschapsprogramma</h3>
-                      <p className="text-sm text-muted-foreground mb-4" contentEditable>
-                        Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleiden wij een meerjarig leiderschapstraject
-                        gericht op het versterken van de professionele autonomie en effectievere sturing.
-                      </p>
+                      <p className="text-sm text-muted-foreground mb-4" contentEditable>Voor een uitvoeringsorganisatie met hoogopgeleide professionals begeleidden wij een meerjarig leiderschapstraject gericht op het versterken van de professionele autonomie en effectievere sturing.</p>
                     </CardContent>
                     <CardFooter>
                       <span className="text-sm font-medium text-primary group-hover:underline transition-all">Lees meer</span>
