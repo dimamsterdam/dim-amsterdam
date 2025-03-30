@@ -53,7 +53,7 @@ const ServicesSection = () => {
           {services.map((service, index) => 
             <AnimatedSection key={index} delay={index * 0.1} animation="slide-from-right" className="h-full">
               <div 
-                className={`h-full rounded-xl overflow-hidden transition-all duration-300 border ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}
+                className={`h-full rounded-xl overflow-hidden transition-all duration-300 border flex flex-col ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}
                 onMouseEnter={() => setHoverIndex(index)}
                 onMouseLeave={() => setHoverIndex(null)}
               >
@@ -65,8 +65,8 @@ const ServicesSection = () => {
                     contentEditable
                   />
                 </AspectRatio>
-                <div className="p-8 flex flex-col justify-between h-[calc(100%-16/9*100%)]">
-                  <div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex-grow">
                     <div className="mb-4 flex justify-between items-start">
                       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
                         {service.icon}
@@ -79,7 +79,7 @@ const ServicesSection = () => {
                     <p className="text-muted-foreground mb-6" contentEditable>{service.description}</p>
                   </div>
                   
-                  <Link to={service.link}>
+                  <Link to={service.link} className="w-full mt-4">
                     <Button 
                       variant="outline" 
                       className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
