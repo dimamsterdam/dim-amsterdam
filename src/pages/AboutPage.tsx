@@ -2,7 +2,6 @@ import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
-
 const AboutPage = () => {
   return <PageLayout>
       {/* Hero Section with Building Image */}
@@ -72,11 +71,9 @@ Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
       {/* Call to Action */}
       <section className="bg-teal-50 py-16">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl font-semibold mb-6" contentEditable>Samen werken aan jouw organisatie?</h2>
-          <p className="text-lg mb-8" contentEditable>
-            Wil je meer weten over hoe DIM jouw organisatie kan helpen? 
-            Neem vrijblijvend contact met ons op voor een kennismaking.
-          </p>
+          <h2 className="text-3xl font-semibold mb-6" contentEditable>Contact</h2>
+          <p className="text-lg mb-8" contentEditable>Ook geïnteresseerd in meer impact &amp; meer werkplezier?
+        </p>
           <div>
             <a href="/contact" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-teal-600 text-white px-8 py-3 hover:bg-teal-700 transition-colors" contentEditable>
               Neem contact op
