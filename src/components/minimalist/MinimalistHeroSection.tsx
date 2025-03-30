@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Users, Lightbulb } from "lucide-react";
@@ -14,7 +13,7 @@ const MinimalistHeroSection = () => {
     const tagElements = tagsRef.current.filter(Boolean) as HTMLAnchorElement[];
     
     let currentIndex = 0;
-    const highlightDuration = 1000; // 1 second per tag
+    const highlightDuration = 5000; // 5 seconds per tag
 
     const animateTags = () => {
       // Reset all tags
@@ -24,12 +23,17 @@ const MinimalistHeroSection = () => {
         tag.style.borderColor = "";
       });
 
-      // Highlight current tag
+      // Highlight current tag with a single pulse
       if (tagElements[currentIndex]) {
         const currentTag = tagElements[currentIndex];
         currentTag.classList.add("animate-pulse");
         currentTag.style.backgroundColor = "rgba(249, 115, 22, 0.1)";
         currentTag.style.borderColor = "#F97316";
+
+        // Remove pulse after animation completes
+        setTimeout(() => {
+          currentTag.classList.remove("animate-pulse");
+        }, 1000); // Match the pulse animation duration
       }
 
       // Increment index and loop back to start if needed
@@ -45,7 +49,6 @@ const MinimalistHeroSection = () => {
     };
   }, []);
 
-  // Map tags to their corresponding icons
   const getTagIcon = (tag: string) => {
     if (tag === "Organisatieontwikkeling") return Building2;
     if (tag === "Leiderschaps- & Teamontwikkeling") return Users;
