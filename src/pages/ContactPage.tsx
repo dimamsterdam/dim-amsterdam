@@ -1,19 +1,13 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
-
 const ContactPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Neem contact op</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Heeft u vragen of wilt u meer informatie? Neem gerust contact met ons op. 
-            We helpen u graag verder.
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Heeft u vragen of wilt u meer informatie? Neem contact met ons op.</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -49,10 +43,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-medium">E-mail</h3>
                     <p className="text-muted-foreground">
-                      <a 
-                        href="mailto:info@dim.amsterdam" 
-                        className="hover:text-primary"
-                      >
+                      <a href="mailto:info@dim.amsterdam" className="hover:text-primary">
                         info@dim.amsterdam
                       </a>
                     </p>
@@ -63,8 +54,6 @@ const ContactPage = () => {
           </Card>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default ContactPage;
