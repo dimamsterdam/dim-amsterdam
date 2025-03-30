@@ -1,8 +1,10 @@
+
 import { useState } from "react";
 import { ChevronRight, BarChart2, Users, UserCog } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
 
 interface Service {
   title: string;
@@ -70,6 +72,16 @@ const ServicesSection = () => {
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground">{service.description}</p>
+                    
+                    <div className="mt-6">
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      >
+                        Lees meer
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </Link>
