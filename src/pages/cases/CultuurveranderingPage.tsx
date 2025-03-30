@@ -1,17 +1,14 @@
-
 import React, { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const CultuurveranderingPage = () => {
   // Ensure page scrolls to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return <PageLayout>
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -24,11 +21,7 @@ const CultuurveranderingPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src="/lovable-uploads/3e6f5ca9-cc00-4df7-ac34-a2fd92123a8d.png" 
-                    alt="Abstract geometric design with blue, pink, yellow, orange, and black colors in a symmetrical pattern" 
-                    className="object-cover w-full h-full" 
-                  />
+                  <img src="/lovable-uploads/3e6f5ca9-cc00-4df7-ac34-a2fd92123a8d.png" alt="Abstract geometric design with blue, pink, yellow, orange, and black colors in a symmetrical pattern" className="object-cover w-full h-full" />
                 </AspectRatio>
               </div>
             </AnimatedSection>
@@ -44,13 +37,13 @@ const CultuurveranderingPage = () => {
               </p>
               
               <h2 className="text-2xl font-display font-bold mt-8 mb-4">Onze aanpak</h2>
-              <p>DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. 
+              <p>DIM organiseerde en begeleidde een 2-jarig programma bestaande uit een leiderschapstraject voor directie, top 30 en top 120 in combinatie met coördinatie en ondersteuning voor de stafonderdelen. Allereerst is in samenwerking met vertegenwoordigers uit de organisatie een analyse van de uitgangssituatie gemaakt. Hieruit kwam o.a. naar voren dat de eerdere fusie nog steeds nadrukkelijk zichtbaar was in de organisatie. Onderdelen werkten niet of beperkt samen en stuurden naar 'eigen inzicht'.
 
-Allereerst is in samenwerking met vertegenwoordigers uit de organisatie een analyse van de uitgangssituatie gemaakt. Hieruit kwam o.a. naar voren dat de eerdere fusie nog steeds nadrukkelijk zichtbaar was in de organisatie. Onderdelen werkten niet of beperkt samen en stuurden naar 'eigen inzicht'.
             </p>
               
-              <p>
-Het transitie-traject startte met het gezamenlijk formuleren van een inspirerende ambitie en strategie en de ontwikkeling en implementatie van een helder sturingsmodel. Hiermee werd zowel gewerkt aan een zakelijk instrumentarium en concrete prioriteiten (zogenaamde 'gamechangers'), als onderlinge verbinding en betekenisgeving t.a.v. de doelen van de organisatie.</p>
+              <p>Het transitie-traject startte met het gezamenlijk formuleren van een inspirerende ambitie en strategie en de ontwikkeling en implementatie van een helder sturingsmodel. Hiermee werd zowel gewerkt aan een zakelijk instrumentarium en concrete prioriteiten (zogenaamde 'gamechangers'), als onderlinge verbinding en betekenisgeving t.a.v. de doelen van de organisatie.
+
+            </p>
               
               <p>
 De implementatie van de strategie is ondersteund met een leiderschapstraject voor de top 140. In zowel homogene groepen van de verschillende management-niveaus, als in gezamenlijke bijeenkomsten met alle niveaus is gewerkt aan het versterken van individuele en gezamenlijke leiderschapsvaardigheden, zoals omgaan met dilemma's, ontwikkelgericht sturen, situationeel leiderschap en werken vanuit heldere rollen en verantwoordelijkheden, omgaan met weerstand, overtuigen en inspireren.
@@ -82,5 +75,4 @@ Het leiderschapstraject werd bekrachtigd, dankzij de directe verbinding met (stu
       </section>
     </PageLayout>;
 };
-
 export default CultuurveranderingPage;
