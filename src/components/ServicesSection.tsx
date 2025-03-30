@@ -53,7 +53,7 @@ const ServicesSection = () => {
           {services.map((service, index) => 
             <AnimatedSection key={index} delay={index * 0.1} animation="slide-from-right" className="h-full">
               <div 
-                className={`h-full rounded-xl overflow-hidden transition-all duration-300 border flex flex-col ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}
+                className={`rounded-xl overflow-hidden transition-all duration-300 border flex flex-col h-full ${hoverIndex === index ? 'border-primary shadow-lg translate-y-[-4px]' : 'border-border hover:border-primary/50'}`}
                 onMouseEnter={() => setHoverIndex(index)}
                 onMouseLeave={() => setHoverIndex(null)}
               >
@@ -65,29 +65,29 @@ const ServicesSection = () => {
                     contentEditable
                   />
                 </AspectRatio>
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex-grow">
-                    <div className="mb-4 flex justify-between items-start">
-                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                        {service.icon}
-                      </div>
-                      <ChevronRight className={`transform transition-transform duration-300 text-primary ${hoverIndex === index ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="mb-4 flex justify-between items-start">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                      {service.icon}
                     </div>
-                    <h3 className="text-xl font-display font-semibold mb-3 hover:text-primary transition-colors" contentEditable>
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6" contentEditable>{service.description}</p>
+                    <ChevronRight className={`transform transition-transform duration-300 text-primary ${hoverIndex === index ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
                   </div>
+                  <h3 className="text-xl font-display font-semibold mb-3 hover:text-primary transition-colors" contentEditable>
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6" contentEditable>{service.description}</p>
                   
-                  <Link to={service.link} className="w-full mt-4">
-                    <Button 
-                      variant="outline" 
-                      className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
-                    >
-                      <span contentEditable>Lees meer</span>
-                      <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                  </Link>
+                  <div className="mt-auto pt-4">
+                    <Link to={service.link} className="block w-full">
+                      <Button 
+                        variant="outline" 
+                        className="w-full justify-between group hover:bg-primary hover:text-primary-foreground"
+                      >
+                        <span contentEditable>Lees meer</span>
+                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
