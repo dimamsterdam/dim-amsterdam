@@ -32,8 +32,8 @@ const HerijkingVisieStrategiePage = () => {
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
                   <img 
-                    src={executiveCoachingContent?.image || "/lovable-uploads/355d5a12-85ba-4603-971b-b034da5ca65f.png"} 
-                    alt="Abstract colorful design representing vision and strategy" 
+                    src="/lovable-uploads/6965c444-4daf-4645-8517-d1c538f302a7.png" 
+                    alt="Abstract geometric design representing organizational strategy and vision" 
                     className="object-cover w-full h-full" 
                     suppressContentEditableWarning 
                     contentEditable 
