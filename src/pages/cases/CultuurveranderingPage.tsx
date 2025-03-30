@@ -24,7 +24,7 @@ const CultuurveranderingPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="/lovable-uploads/d957702a-9006-4252-ae8f-d91e3145b226.png" alt="Abstract geometric art representing organizational culture change" className="object-cover w-full h-full" suppressContentEditableWarning contentEditable />
+                  <img src="/lovable-uploads/9a54680b-ca09-411e-9e0a-6059848cfb98.png" alt="Abstract geometric design representing organizational culture change" className="object-cover w-full h-full" suppressContentEditableWarning contentEditable />
                 </AspectRatio>
               </div>
             </AnimatedSection>
