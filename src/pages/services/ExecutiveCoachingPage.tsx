@@ -4,8 +4,14 @@ import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import StepCard from "@/components/StepCard";
+import { servicesContent } from "@/content/heroContent";
 
 const ExecutiveCoachingPage = () => {
+  // Find the executive coaching content from the services array
+  const executiveCoachingContent = servicesContent.services.find(
+    (service) => service.title === "Executive coaching"
+  );
+
   const testimonials = [{
     quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
   }, {
@@ -28,7 +34,11 @@ const ExecutiveCoachingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/fc84cb8c-6977-4be5-8895-a96f495b7790.png" alt="Executive Coaching" className="object-cover w-full h-full" />
+                <img 
+                  src={executiveCoachingContent?.image || "/lovable-uploads/355d5a12-85ba-4603-971b-b034da5ca65f.png"} 
+                  alt="Executive Coaching" 
+                  className="object-cover w-full h-full" 
+                />
               </AspectRatio>
             </AnimatedSection>
           </div>
