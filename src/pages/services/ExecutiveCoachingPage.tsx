@@ -1,19 +1,15 @@
+
 import PageLayout from "@/components/PageLayout";
 import SimpleTestimonialBlock from "@/components/SimpleTestimonialBlock";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import StepCard from "@/components/StepCard";
 import { servicesContent } from "@/content/heroContent";
+
 const ExecutiveCoachingPage = () => {
   // Find the executive coaching content from the services array
   const executiveCoachingContent = servicesContent.services.find(service => service.title === "Executive coaching");
-  const testimonials = [{
-    quote: "Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."
-  }, {
-    quote: "Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."
-  }, {
-    quote: "Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."
-  }];
+  
   return <PageLayout>
       {/* Introductie Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -92,14 +88,26 @@ const ExecutiveCoachingPage = () => {
       {/* Ervaringen Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
+          <AnimatedSection className="max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-display font-bold mb-4">Ervaringen</h2>
             
+            <div className="space-y-6 mt-8">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p className="italic mb-0">"Alexli is altijd onderzoekend en confronterend waar nodig. Ieder gesprek heeft mij gescherpt op zowel persoonlijk als professioneel vlak."</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p className="italic mb-0">"Als ik deze coaching niet had gedaan, had de afdeling er nu heel anders bijgezeten. Haar ervaring heeft op directie- en bestuursniveau vergemakkelijkt en versnelt het gesprek. Dit heeft mij echt geholpen een heel lastige situatie in onze organisatie in goede banen te leiden."</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p className="italic mb-0">"Sommige dingen heb je heus wel een keer geleerd, maar Alexli laat je ervaren wat je daadwerkelijk zelf dóet en hoe dat doorwerkt in je leiderschap. Soms pijnlijk, altijd leerzaam en gelukkig ook met humor."</p>
+              </div>
+            </div>
           </AnimatedSection>
-          
-          <SimpleTestimonialBlock testimonials={testimonials} />
         </div>
       </section>
     </PageLayout>;
 };
+
 export default ExecutiveCoachingPage;
