@@ -164,18 +164,7 @@ const LeiderschapsontwikkelingPage = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4" contentEditable>Wat klanten zeggen</h2>
-            <p className="text-lg text-muted-foreground" contentEditable>
-              We hebben verschillende leiders en teams begeleid in hun ontwikkeling. Hier zijn enkele ervaringen van onze klanten.
-            </p>
-          </AnimatedSection>
-          
-          <TestimonialsBlock testimonials={testimonials} />
-        </div>
-      </section>
+      
     </PageLayout>;
 };
 export default LeiderschapsontwikkelingPage;
