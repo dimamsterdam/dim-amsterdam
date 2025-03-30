@@ -6,8 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import StepCard from "@/components/StepCard";
+import { servicesContent } from "@/content/heroContent";
 
 const OrganisatieontwikkelingPage = () => {
+  const organisatieContent = servicesContent.services.find(
+    (service) => service.title === "Organisatieontwikkeling"
+  );
+
   const testimonials = [{
     quote: "DIM heeft ons geholpen een complex verandertraject te navigeren met empathie en precisie. Hun culturele integratieroadmap werd onze leidraad, en we zijn erg tevreden met de resultaten.",
     author: "Thomas Rodriguez",
@@ -50,7 +55,12 @@ const OrganisatieontwikkelingPage = () => {
             
             <AnimatedSection animation="fade-in" delay={0.2}>
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/448a28ea-2320-42a6-8b62-469baca49123.png" alt="Organisatieontwikkeling - Afraid of change? Leave it here" className="object-cover w-full h-full" />
+                <img 
+                  src={organisatieContent?.image || "/lovable-uploads/2a6b57e6-c4ef-4d88-b4b1-cb5423db9694.png"} 
+                  alt="Organisatieontwikkeling" 
+                  className="object-cover w-full h-full" 
+                  contentEditable
+                />
               </AspectRatio>
             </AnimatedSection>
           </div>
