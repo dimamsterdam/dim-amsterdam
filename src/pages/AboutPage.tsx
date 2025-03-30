@@ -1,9 +1,7 @@
-
 import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
-
 const AboutPage = () => {
   return <PageLayout>
       {/* Hero Section with Building Image */}
@@ -24,15 +22,10 @@ Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan dive
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-4">Alexli Gravemeijer</h3>
-                    <p className="text-muted-foreground mb-4">"Als er gelachen wordt zonder confrontaties uit de weg te gaan, 
-Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
+                    <p className="text-muted-foreground mb-4">"Als er gelachen wordt zonder confrontaties uit de weg te gaan, kunnen mensen groeien & worden de mooiste resultaten geboekt".</p>
                   </div>
                   <div className="w-full md:w-1/3 flex-shrink-0">
-                    <img 
-                      src="/lovable-uploads/7dc2c3ce-80a8-427c-a421-e01f09dae7ae.png" 
-                      alt="Alexli Gravemeijer" 
-                      className="rounded-lg w-full h-auto shadow-md"
-                    />
+                    <img src="/lovable-uploads/7dc2c3ce-80a8-427c-a421-e01f09dae7ae.png" alt="Alexli Gravemeijer" className="rounded-lg w-full h-auto shadow-md" />
                   </div>
                 </div>
               </CardContent>
@@ -94,5 +87,4 @@ Kunnen mensen groeien &amp; worden de mooiste resultaten geboekt".</p>
       </section>
     </PageLayout>;
 };
-
 export default AboutPage;
