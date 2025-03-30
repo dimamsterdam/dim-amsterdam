@@ -7,18 +7,42 @@ import AnimatedSection from "@/components/AnimatedSection";
 const AboutPage = () => {
   return (
     <PageLayout>
-      {/* Main Content */}
-      <section className="container mx-auto px-4 py-12 md:py-16 pt-8 md:pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-          {/* Left Column - Text Content */}
-          <AnimatedSection className="space-y-8" animation="slide-from-left">
+      {/* Hero Section with Building Image */}
+      <section className="container mx-auto px-4 pt-8 md:pt-12 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left Column - Wie we zijn */}
+          <AnimatedSection className="space-y-6" animation="slide-from-left">
             <div>
               <h2 className="text-3xl font-semibold mb-4" contentEditable>Wie we zijn</h2>
               <p className="text-muted-foreground" contentEditable>
                 DIM is een adviesbureau in organisatieontwikkeling, specifiek gericht op organisaties in het publieke domein. Als organisatie staan we midden in de maatschappij. We werken samen met mensen, teams en organisaties om beweging te creëren richting effectievere organisaties, meer werkplezier en meer maatschappelijke impact.
               </p>
             </div>
+          </AnimatedSection>
 
+          {/* Right Column - Building Image */}
+          <AnimatedSection animation="slide-from-right">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" 
+                alt="DIM kantoor in Amsterdam" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="bg-white p-4">
+                <p className="text-sm text-muted-foreground italic" contentEditable>
+                  Ons kantoor is gevestigd aan de Panamalaan 5f in Amsterdam.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          {/* Left Column - Text Content */}
+          <AnimatedSection className="space-y-8" animation="slide-from-left">
             <div>
               <h2 className="text-3xl font-semibold mb-4" contentEditable>Waar we voor staan</h2>
               <p className="text-muted-foreground mb-4" contentEditable>
@@ -42,22 +66,8 @@ const AboutPage = () => {
             </div>
           </AnimatedSection>
 
-          {/* Right Column - Image and Team Card */}
+          {/* Right Column - Team Card and Values Card */}
           <AnimatedSection animation="slide-from-right" className="space-y-8">
-            {/* Office Image */}
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="/lovable-uploads/a8c0bfb5-aad8-45d6-b171-1f0b84e6fba3.png" 
-                alt="DIM kantoor in Amsterdam" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="bg-white p-4">
-                <p className="text-sm text-muted-foreground italic" contentEditable>
-                  Ons kantoor is gevestigd aan de Panamalaan 5f in Amsterdam.
-                </p>
-              </div>
-            </div>
-
             {/* Team Card */}
             <Card>
               <CardContent className="p-6">
