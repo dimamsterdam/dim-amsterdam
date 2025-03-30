@@ -74,19 +74,11 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-8 border-t border-gray-700 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 md:mb-0">
+        {/* Bottom bar - Copyright only */}
+        <div className="pt-8 border-t border-gray-700 mt-8 flex justify-center">
+          <p className="text-sm text-gray-400">
             © {currentYear} DIM Consultancy. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
