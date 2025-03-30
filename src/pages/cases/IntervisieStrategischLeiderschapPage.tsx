@@ -25,7 +25,12 @@ const IntervisieStrategischLeiderschapPage = () => {
               
               <div className="mt-10 mb-12">
                 <AspectRatio ratio={21 / 9} className="bg-muted overflow-hidden rounded-lg shadow-md">
-                  <img src="/lovable-uploads/afd3cda5-e0a3-44fb-a14b-769eea990559.png" alt="Strategic leadership intervision" className="object-cover w-full h-full" contentEditable />
+                  <img 
+                    src="/lovable-uploads/3040aebd-ffef-412b-8fd2-20b42b111b58.png" 
+                    alt="Modern geometric design with pink and mint striped panels on blue background" 
+                    className="object-cover w-full h-full" 
+                    contentEditable 
+                  />
                 </AspectRatio>
               </div>
             </AnimatedSection>
