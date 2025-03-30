@@ -37,25 +37,15 @@ Samen met vooruitstrevende opdrachtgevers werkte DIM de afgelopen jaren aan dive
           {/* Left Column - Text Content */}
           <AnimatedSection className="space-y-8" animation="slide-from-left">
             <div>
-              <h2 className="text-3xl font-semibold mb-4" contentEditable>Waar we voor staan</h2>
-              <p className="text-muted-foreground mb-4" contentEditable>
-                Wij geloven dat organisaties die écht impact maken tegelijkertijd een plek zijn waar mensen met plezier werken. Daarom werken we vanuit de gedachte dat beweging richting effectievere organisaties, meer werkplezier en meer maatschappelijke impact, hand in hand gaan. 
-              </p>
-              <p className="text-muted-foreground" contentEditable>
-                Onze overtuiging is dat ieders streven naar een betere organisatie, echt bijdraagt. 
-                Een betere organisatie is niet alleen een organisatie waar effectiever gewerkt wordt, 
-                maar ook waar mensen met meer plezier werken.
-              </p>
+              
+              
+              
             </div>
 
             <div>
-              <h2 className="text-3xl font-semibold mb-4" contentEditable>Onze aanpak</h2>
-              <p className="text-muted-foreground mb-4" contentEditable>
-                Bij DIM hebben we ruime kennis en ervaring van organisatie- en veranderkundige vaardigheden. Onze werkwijze kenmerkt zich door een integrale aanpak, waarbij we gefaseerd naar duurzame oplossingen toewerken. We weten wat werkt. Dat combineren we met een flinke dosis creativiteit en lef. Zo werken we aan interventies die écht impact maken. 
-              </p>
-              <p className="text-muted-foreground" contentEditable>
-                DIM werkt via een integrale benadering aan complexe organisatieopgaven. Hoe meer componenten of perspectieven worden meegenomen, hoe beter de verandering kan landen in de organisatie. Maatwerk is essentieel, we onderzoeken zorgvuldig welke aanpak het beste past.
-              </p>
+              
+              
+              
             </div>
           </AnimatedSection>
 
