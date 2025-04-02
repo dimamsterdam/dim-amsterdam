@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import MinimalistVariant from "./pages/variants/MinimalistVariant";
 import NotFound from "./pages/NotFound";
@@ -38,7 +38,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<MinimalistVariant />} />
@@ -57,7 +57,7 @@ const App = () => (
           <Route path="/over-ons" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
