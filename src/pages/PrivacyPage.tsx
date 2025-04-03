@@ -1,10 +1,7 @@
-
 import PageLayout from "@/components/PageLayout";
 import { Separator } from "@/components/ui/separator";
-
 const PrivacyPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8">PRIVACY VERKLARING</h1>
         
@@ -58,13 +55,7 @@ const PrivacyPage = () => {
           </ul>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Geautomatiseerde besluitvorming</h2>
-          <p>
-            De Investeringsmaatschappij, DIM neemt verantwoordelijkheid op basis van geautomatiseerde verwerkingen besluiten over zaken 
-            die (aanzienlijke) gevolgen kunnen hebben voor personen. Het gaat hier om besluiten die worden genomen door computerprogramma's 
-            of -systemen, zonder dat daar een mens (bijvoorbeeld een medewerker van De Investeringsmaatschappij, DIM) tussen zit. 
-            De Investeringsmaatschappij, DIM gebruikt de volgende computerprogramma's of -systemen:
-            loveable.com
-          </p>
+          <p>De Investeringsmaatschappij, DIM neemt verantwoordelijkheid op basis van geautomatiseerde verwerkingen besluiten over zaken die (aanzienlijke) gevolgen kunnen hebben voor personen. Het gaat hier om besluiten die worden genomen door computerprogramma's of -systemen, zonder dat daar een mens (bijvoorbeeld een medewerker van De Investeringsmaatschappij, DIM) tussen zit. De Investeringsmaatschappij, DIM gebruikt op dit moment geen van dergelijke systemen. </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Hoe lang we persoonsgegevens bewaren</h2>
           <p>
@@ -116,8 +107,6 @@ const PrivacyPage = () => {
           </p>
         </div>
       </div>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default PrivacyPage;
