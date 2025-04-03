@@ -28,6 +28,7 @@ const Footer = () => {
       links: [
         { label: "Over ons", href: "/over-ons" },
         { label: "Contact", href: "/contact" },
+        { label: "Privacy verklaring", href: "/privacy" },
       ],
     },
   ];
@@ -74,11 +75,16 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom bar - Copyright only */}
-        <div className="pt-8 border-t border-gray-700 mt-8 flex justify-center">
-          <p className="text-sm text-gray-400">
+        {/* Bottom bar - Copyright and Privacy link */}
+        <div className="pt-8 border-t border-gray-700 mt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-400 mb-4 md:mb-0">
             © {currentYear} DIM Consultancy. All rights reserved.
           </p>
+          <div className="flex items-center space-x-4">
+            <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+              Privacy Verklaring
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
