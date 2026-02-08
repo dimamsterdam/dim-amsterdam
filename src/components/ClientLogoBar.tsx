@@ -21,7 +21,7 @@ const ClientLogoBar = () => {
     <section className="py-10 bg-muted/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-6">
         <p className="text-sm text-muted-foreground text-center tracking-wider uppercase">
-          Vertrouwd door vooraanstaande organisaties
+          Brede ervaring in publieke sector
         </p>
       </div>
       <div className="relative">
