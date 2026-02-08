@@ -1,105 +1,113 @@
 
 
-# DIM Website Improvement Plan
+# Improvement Plan: Logo Bar, Thematic Landing Pages, Social Proof, and About Page
 
-## Overview
-This plan addresses issues found across UX, loading speed, security, and SEO. Changes are grouped by priority.
+## 1. Client Logo Bar (Homepage)
 
----
+Add a scrolling logo bar below the hero section showing organizations DIM has worked with. Based on the testimonials data in `ReferencesPage.tsx`, the following organizations can be featured:
 
-## Phase 1: Quick Wins (High Impact, Low Effort)
+- Ministerie van Infrastructuur en Milieu (ANVS)
+- Ministerie van Algemene Zaken (WRR)
+- Ministerie van Binnenlandse Zaken (RVB)
+- Erasmus Medisch Centrum
+- Ministerie van Landbouw (NVWA)
+- Ministerie van Economische Zaken
+- Ministerie van Buitenlandse Zaken
+- Ministerie van Volksgezondheid
 
-### 1. Fix HTML lang attribute
-Change `lang="en"` to `lang="nl"` in `index.html` since the site is in Dutch.
-
-### 2. Remove contentEditable attributes
-Remove `contentEditable` from `MinimalistTestimonialsSection.tsx` and `EnhancedTestimonialsGallery.tsx` to prevent visitors from accidentally editing text.
-
-### 3. Remove debug console.log
-Remove `console.log("WhatWeDoSection is being rendered")` from `WhatWeDoSection.tsx`.
-
-### 4. Clean up App.css
-Remove the Vite template styles (`#root` max-width, padding, text-align) that could interfere with the layout.
-
-### 5. Remove empty elements on About page
-Clean up the empty `div` and `Card` elements in `AboutPage.tsx`.
+**Implementation:**
+- Create `src/components/ClientLogoBar.tsx` with a horizontally scrolling/marquee row of client logos
+- Use placeholder styled text badges for now (actual logos require permission/assets from clients)
+- Place it between `MinimalistHeroSection` and `MinimalistTestimonialsSection` in `MinimalistVariant.tsx`
+- Subtle animation using CSS keyframes for continuous scroll
 
 ---
 
-## Phase 2: SEO Improvements
+## 2. Thematic Landing Pages
 
-### 6. Add react-helmet-async for per-page meta tags
-Install `react-helmet-async` and add unique title, description, and OG tags to each page so search engines and social platforms see relevant metadata for every route.
+Create 2 new thematic pages targeting common search terms in the public sector organizational development space:
 
-### 7. Add robots.txt
-Create a `public/robots.txt` file allowing all crawlers and pointing to the sitemap.
+### Page A: "Verandermanagement in de publieke sector"
+Route: `/themas/verandermanagement-publieke-sector`
+- Intro on why change management is different in the public sector
+- How DIM approaches it (link to services)
+- Relevant case references (Cultuurverandering, Herijking visie & strategie)
+- CTA to contact
 
-### 8. Add sitemap.xml
-Create a `public/sitemap.xml` listing all public pages with appropriate priorities.
+### Page B: "Leiderschap in het publiek domein"
+Route: `/themas/leiderschap-publiek-domein`
+- Challenges of leadership in government/semi-public organizations
+- DIM's approach (link to services)
+- Relevant case references (Leiderschapsprogramma, Intervisie)
+- CTA to contact
 
-### 9. Add JSON-LD structured data
-Add Organization/LocalBusiness schema markup to the homepage for better search engine understanding.
-
-### 10. Add canonical URLs
-Include canonical link tags on each page to avoid duplicate content issues.
-
----
-
-## Phase 3: Performance Improvements
-
-### 11. Optimize font loading
-Switch from CSS `@import` to `<link rel="preload">` in `index.html` with `font-display: swap` to prevent render blocking.
-
-### 12. Add lazy loading to images
-Add `loading="lazy"` and explicit `width`/`height` attributes to all images to reduce initial load and prevent layout shift.
-
-### 13. Remove willChange from AnimatedSection
-Remove the broad `willChange` CSS property to reduce GPU memory usage.
+**Implementation:**
+- Create `src/pages/themas/VerandermanagementPage.tsx`
+- Create `src/pages/themas/LeiderschapPubliekDomeinPage.tsx`
+- Add routes in `App.tsx`
+- Add "Thema's" dropdown to navigation in `navigationData.ts`
+- Add SEO meta tags per page
 
 ---
 
-## Phase 4: Security
+## 3. Social Proof / Impact Numbers
 
-### 14. Remove Google Maps API key placeholder
-Either implement the Google Maps component properly with a restricted API key stored as an environment variable, or remove the component entirely if not in use.
+Add a statistics/impact section to the homepage showing key numbers:
 
-### 15. Add basic email obfuscation
-Use `mailto:` links but consider light obfuscation techniques to reduce bot scraping of email addresses.
+- "10+ jaar" ervaring
+- "50+ trajecten" begeleid
+- "8 ministeries" als opdrachtgever
+- "25+ jaar" gecombineerde ervaring
+
+**Implementation:**
+- Create `src/components/ImpactStats.tsx` with animated counters
+- Place between the logo bar and testimonials section on the homepage
+- Use framer-motion for number count-up animation on scroll
 
 ---
 
-## Phase 5: UX Enhancements
+## 4. Expanded About Page
 
-### 16. Simplify WhatWeDoSection
-Refactor the three near-identical card branches into a single reusable card component to improve maintainability.
+Significantly expand the current thin About page with:
 
-### 17. Add skip-to-content link
-Add a visually hidden skip link at the top of each page for keyboard and screen reader users.
+- **Missie & Visie** section: why DIM exists, what drives the team
+- **Werkwijze / Methodiek** section: DIM's approach explained (positive, sharp, involved -- reuse ValuesSection concepts)
+- **Het Netwerk** section: description of DIM as a network organization, mention areas of expertise of network partners
+- **Impact in cijfers**: reuse the ImpactStats component
+- **Alexli profile** (keep existing, but enlarge the image from `w-1/6` to a proper portrait size)
 
-### 18. Add a contact form
-Enhance the Contact page with a simple form (name, email, message) using the existing emailjs-com dependency.
+**Implementation:**
+- Rewrite `src/pages/AboutPage.tsx` with the expanded sections
+- Fix the tiny Alexli image (currently `md:w-1/6` -- far too small)
+- Add the ImpactStats component
+
+---
+
+## 5. Fix Remaining English Text (Bonus - Quick Win)
+
+While implementing the above, also fix:
+- `heroContent.ts`: change `description` and `cta` values to Dutch
+- `Footer.tsx` line 81: change "All rights reserved" to "Alle rechten voorbehouden"
 
 ---
 
 ## Technical Details
 
-### Files to modify:
-- `index.html` - lang, font preloading, structured data
-- `src/index.css` - remove font @import
-- `src/App.css` - remove Vite template styles
-- `src/components/minimalist/MinimalistTestimonialsSection.tsx` - remove contentEditable
-- `src/components/EnhancedTestimonialsGallery.tsx` - remove contentEditable
-- `src/components/minimalist/WhatWeDoSection.tsx` - remove console.log, refactor cards
-- `src/components/AnimatedSection.tsx` - remove willChange
-- `src/pages/AboutPage.tsx` - remove empty elements
-- `src/pages/ContactPage.tsx` - add contact form
-- `src/components/PageLayout.tsx` - add skip link
-- Multiple page files - add react-helmet-async meta tags
-
 ### New files:
-- `public/robots.txt`
-- `public/sitemap.xml`
+- `src/components/ClientLogoBar.tsx`
+- `src/components/ImpactStats.tsx`
+- `src/pages/themas/VerandermanagementPage.tsx`
+- `src/pages/themas/LeiderschapPubliekDomeinPage.tsx`
 
-### New dependency:
-- `react-helmet-async` - for per-page meta tag management
+### Modified files:
+- `src/pages/variants/MinimalistVariant.tsx` -- add ClientLogoBar and ImpactStats
+- `src/pages/AboutPage.tsx` -- full expansion
+- `src/App.tsx` -- add 2 new routes
+- `src/data/navigationData.ts` -- add Thema's menu item
+- `src/content/heroContent.ts` -- fix English text
+- `src/components/Footer.tsx` -- fix English copyright
+- `public/sitemap.xml` -- add new page URLs
+
+### No new dependencies needed
+Uses existing framer-motion for animations and Tailwind for styling.
 
