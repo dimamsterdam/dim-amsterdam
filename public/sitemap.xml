@@ -66,6 +66,16 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://dim.amsterdam/themas/verandermanagement-publieke-sector</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://dim.amsterdam/themas/leiderschap-publiek-domein</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://dim.amsterdam/privacy</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
