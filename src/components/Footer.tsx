@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom bar - Copyright and Privacy link */}
         <div className="pt-8 border-t border-gray-700 mt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            © {currentYear} DIM Consultancy. All rights reserved.
+            © {currentYear} DIM Consultancy. Alle rechten voorbehouden.
           </p>
           <div className="flex items-center space-x-4">
             <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">

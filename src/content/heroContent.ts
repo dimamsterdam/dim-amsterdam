@@ -5,10 +5,10 @@ export const heroContent = {
     "Executive coaching"
   ],
   heading: "Samen creëren we meer maatschappelijke impact & werkplezier",
-  description: "We partner with forward-thinking organizations to create thriving workplaces where people and performance flourish together.",
+  description: "Wij werken samen met vooruitstrevende organisaties aan bloeiende werkplekken waar mensen en prestaties samen floreren.",
   cta: {
-    primary: "Start Your Transformation",
-    secondary: "Explore Our Case Studies"
+    primary: "Start uw traject",
+    secondary: "Bekijk onze cases"
   }
 };
 

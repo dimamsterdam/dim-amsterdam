@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MinimalistHeroSection from "@/components/minimalist/MinimalistHeroSection";
+import ClientLogoBar from "@/components/ClientLogoBar";
+import ImpactStats from "@/components/ImpactStats";
 import MinimalistTestimonialsSection from "@/components/minimalist/MinimalistTestimonialsSection";
 import WhatWeDoSection from "@/components/minimalist/WhatWeDoSection";
 import ValuesSection from "@/components/minimalist/ValuesSection";
@@ -40,6 +42,8 @@ const MinimalistVariant = () => {
       
       <main className="flex-grow">
         <MinimalistHeroSection />
+        <ClientLogoBar />
+        <ImpactStats />
         <MinimalistTestimonialsSection />
         <WhatWeDoSection />
         <ValuesSection />
