@@ -54,14 +54,6 @@ export const menuItems: MenuItem[] = [
     dropdown: true,
     items: caseItems
   },
-  {
-    label: "Thema's",
-    dropdown: true,
-    items: [
-      { label: "Verandermanagement in de publieke sector", href: "/themas/verandermanagement-publieke-sector" },
-      { label: "Leiderschap in het publiek domein", href: "/themas/leiderschap-publiek-domein" },
-    ],
-  },
   { label: "Referenties", href: "/referenties" },
   { label: "Over ons", href: "/over-ons" },
 ];
