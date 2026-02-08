@@ -108,8 +108,7 @@ const EnhancedTestimonialsGallery = () => {
               <div className="flex items-start justify-center mb-4">
                 <Quote className="h-10 w-10 text-[#F97316] mr-3 flex-shrink-0 mt-1 opacity-80" />
                 <blockquote 
-                  className="text-base md:text-lg font-display text-gray-800 italic mb-6 text-left max-w-2xl leading-relaxed relative tracking-tight" 
-                  contentEditable
+                  className="text-base md:text-lg font-display text-gray-800 italic mb-6 text-left max-w-2xl leading-relaxed relative tracking-tight"
                 >
                   <span className="relative z-10">{testimonials[activeIndex].quote}</span>
                   <div className="absolute -left-6 -top-6 w-12 h-12 bg-teal-light rounded-full opacity-40 -z-10"></div>

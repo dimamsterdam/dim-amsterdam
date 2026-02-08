@@ -90,7 +90,7 @@ const AnimatedSection = ({
     return {
       transition: baseTransition,
       transitionDelay: `${delay}s`,
-      willChange: 'opacity, transform, filter'
+      
     };
   };
 
