@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { useEffect } from "react";
 import MinimalistVariant from "./pages/variants/MinimalistVariant";
 import NotFound from "./pages/NotFound";
@@ -37,35 +38,37 @@ function ScrollToTop() {
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<MinimalistVariant />} />
-          <Route path="/variant-minimalist" element={<Navigate to="/" replace />} />
-          <Route path="/diensten/organisatieontwikkeling" element={<OrganisatieontwikkelingPage />} />
-          <Route path="/diensten/leiderschapsontwikkeling" element={<LeiderschapsontwikkelingPage />} />
-          <Route path="/diensten/executive-coaching" element={<ExecutiveCoachingPage />} />
-          <Route path="/cases/cultuurverandering" element={<CultuurveranderingPage />} />
-          <Route path="/cases/samenwerking-conflicthantering" element={<SamenwerkingConflicthanteringPage />} />
-          <Route path="/cases/herijking-visie-strategie" element={<HerijkingVisieStrategiePage />} />
-          <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsprogrammaPage />} />
-          <Route path="/cases/intervisie-strategisch-leiderschap" element={<IntervisieStrategischLeiderschapPage />} />
-          <Route path="/cases/teamontwikkeling" element={<TeamontwikkelingPage />} />
-          <Route path="/referenties" element={<ReferencesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/over-ons" element={<AboutPage />} />
-          <Route path="/themas/verandermanagement-publieke-sector" element={<VerandermanagementPage />} />
-          <Route path="/themas/leiderschap-publiek-domein" element={<LeiderschapPubliekDomeinPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<MinimalistVariant />} />
+            <Route path="/variant-minimalist" element={<Navigate to="/" replace />} />
+            <Route path="/diensten/organisatieontwikkeling" element={<OrganisatieontwikkelingPage />} />
+            <Route path="/diensten/leiderschapsontwikkeling" element={<LeiderschapsontwikkelingPage />} />
+            <Route path="/diensten/executive-coaching" element={<ExecutiveCoachingPage />} />
+            <Route path="/cases/cultuurverandering" element={<CultuurveranderingPage />} />
+            <Route path="/cases/samenwerking-conflicthantering" element={<SamenwerkingConflicthanteringPage />} />
+            <Route path="/cases/herijking-visie-strategie" element={<HerijkingVisieStrategiePage />} />
+            <Route path="/cases/leiderschapsprogramma" element={<LeiderschapsprogrammaPage />} />
+            <Route path="/cases/intervisie-strategisch-leiderschap" element={<IntervisieStrategischLeiderschapPage />} />
+            <Route path="/cases/teamontwikkeling" element={<TeamontwikkelingPage />} />
+            <Route path="/referenties" element={<ReferencesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/over-ons" element={<AboutPage />} />
+            <Route path="/themas/verandermanagement-publieke-sector" element={<VerandermanagementPage />} />
+            <Route path="/themas/leiderschap-publiek-domein" element={<LeiderschapPubliekDomeinPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
