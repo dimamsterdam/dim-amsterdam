@@ -54,14 +54,13 @@ const AnimatedStat = ({ value, numericValue, suffix, label, delay }: StatProps) 
 const stats = [
   { value: "30+", numericValue: 30, suffix: "+", label: "Jaar ervaring", delay: 0 },
   { value: "100+", numericValue: 100, suffix: "+", label: "Trajecten begeleid", delay: 150 },
-  { value: "8", numericValue: 8, suffix: "", label: "Ministeries als opdrachtgever", delay: 300 },
 ];
 
 const ImpactStats = () => {
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
           {stats.map((stat) => (
             <AnimatedStat key={stat.label} {...stat} />
           ))}
