@@ -1,6 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 
+
 const row1 = [
   "Ministerie van Economische Zaken",
   "Ministerie van Infrastructuur en Milieu",
