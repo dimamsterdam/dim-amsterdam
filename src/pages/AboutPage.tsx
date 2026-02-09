@@ -3,7 +3,7 @@ import React from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
-import ImpactStats from "@/components/ImpactStats";
+
 import { Smile, Zap, Heart, Users, BookOpen, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -92,8 +92,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Impact in cijfers */}
-      <ImpactStats />
 
       {/* Het Netwerk */}
       <section className="py-16">
