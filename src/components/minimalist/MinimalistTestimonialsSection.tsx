@@ -8,7 +8,7 @@ const MinimalistTestimonialsSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex justify-center mb-8">
           <Link to="/referenties" className="group flex items-center gap-2 transition-colors hover:text-primary">
-            <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">Opdrachtgevers over DIM</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-center">Opdrachtgevers over DIM</h2>
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
