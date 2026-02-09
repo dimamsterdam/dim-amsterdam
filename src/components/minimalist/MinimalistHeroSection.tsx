@@ -93,8 +93,8 @@ const MinimalistHeroSection = () => {
               })}
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-700 leading-tight">
-              Samen creëren we meer maatschappelijke <span className="text-[#F97316]">impact</span> &amp; meer <span className="text-[#F97316]">werkplezier</span>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-foreground leading-tight">
+               Samen creëren we meer maatschappelijke <span className="text-[#F97316] italic">impact</span> &amp; meer <span className="text-[#F97316] italic">werkplezier</span>
             </h1>
             
             <p className="text-lg text-gray-600 max-w-lg">DIM ondersteunt (top-)leidinggevenden in persoonlijke, team- en organisatieontwikkeling binnen de complexe dynamiek van het publiek domein.</p>
