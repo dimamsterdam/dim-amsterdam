@@ -209,7 +209,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Manrope', 'sans-serif']
+				display: ['Manrope', 'sans-serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif']
 			},
 			hyphens: {
 				'auto': 'auto',

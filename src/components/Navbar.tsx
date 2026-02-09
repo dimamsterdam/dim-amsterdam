@@ -37,9 +37,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="text-2xl font-display font-bold tracking-tighter"
+            className="text-2xl font-display font-bold tracking-tighter text-foreground"
           >
-            <span className="text-gradient">DIM</span>
+            DIM
           </Link>
 
           <DesktopNavigation menuItems={menuItems} />
