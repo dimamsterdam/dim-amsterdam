@@ -10,7 +10,7 @@ const WhatWeDoSection = () => {
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center mb-16" animation="fade-in">
-          <h2 className="text-3xl font-display font-bold mb-4">{servicesContent.heading}</h2>
+          <h2 className="text-3xl font-bold mb-4">{servicesContent.heading}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{servicesContent.subheading}</p>
         </AnimatedSection>
         
