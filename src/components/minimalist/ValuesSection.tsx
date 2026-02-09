@@ -72,7 +72,7 @@ const ValuesSection = () => {
   return <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" animation="fade-in">
-          <h2 ref={titleRef} className="text-3xl font-display font-bold mb-4">Positief. Scherp. Betrokken.</h2>
+          <h2 ref={titleRef} className="text-3xl font-bold mb-4">Positief. Scherp. Betrokken.</h2>
           <p className="text-gray-600">Een traject is geslaagd als gezamenlijke doelen helder zijn en spanningen op een positieve manier bespreekbaar worden gemaakt.</p>
         </AnimatedSection>
         
