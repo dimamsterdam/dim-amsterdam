@@ -2,13 +2,12 @@
 import React, { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from "emailjs-com";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -23,37 +22,18 @@ const ContactPage = () => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    try {
-      // Using emailjs - configure your service/template IDs
-      await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        "YOUR_PUBLIC_KEY"
-      );
-
-      toast({
-        title: "Bericht verzonden",
-        description: "Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } catch {
-      toast({
-        title: "Er ging iets mis",
-        description: "Het bericht kon niet worden verzonden. Probeer het later opnieuw of neem direct contact op via e-mail.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Geen externe formulierdienst: het bericht wordt opgesteld in het eigen e-mailprogramma van de bezoeker.
+    const subject = `Bericht via dim.amsterdam van ${formData.name}`;
+    const body = `${formData.message}\n\nNaam: ${formData.name}\nE-mail: ${formData.email}`;
+    window.location.href = `mailto:info@dim.amsterdam?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast({
+      title: "Uw e-mailprogramma wordt geopend",
+      description: "Verstuur het bericht vanuit uw e-mailprogramma. Opent er niets? Mail dan direct naar info@dim.amsterdam. Wij reageren binnen 2 werkdagen.",
+    });
+    setIsSubmitting(false);
   };
 
   return (
@@ -62,8 +42,8 @@ const ContactPage = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Neem contact op</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Heeft u interesse in onze diensten of wilt u meer informatie? 
-            Neem dan contact met ons op via onderstaande gegevens.
+            Heeft u interesse in onze diensten of wilt u meer informatie?
+            Neem dan contact met ons op via onderstaande gegevens. Wij reageren binnen 2 werkdagen.
           </p>
         </div>
 
@@ -106,6 +86,20 @@ const ContactPage = () => {
                     </p>
                   </div>
                 </div>
+
+                <div className="flex items-start">
+                  <Clock className="h-5 w-5 text-primary mt-1 mr-3" />
+                  <div>
+                    <h3 className="font-medium">Reactietermijn</h3>
+                    <p className="text-muted-foreground">
+                      Wij beantwoorden uw vraag binnen 2 werkdagen.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2 text-sm text-muted-foreground">
+                  De Investeringsmaatschappij B.V. · KvK 73734381 · CRKBO-geregistreerd
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -113,7 +107,10 @@ const ContactPage = () => {
           {/* Contact Form */}
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-6">Stuur een bericht</h2>
+              <h2 className="text-2xl font-semibold mb-2">Stuur een bericht</h2>
+              <p className="text-sm text-muted-foreground mb-6">
+                Na het verzenden opent uw eigen e-mailprogramma met uw bericht. Wij bewaren via dit formulier geen gegevens op de website.
+              </p>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Naam</Label>
@@ -152,7 +149,7 @@ const ContactPage = () => {
                 </div>
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   <Send className="h-4 w-4 mr-2" />
-                  {isSubmitting ? "Verzenden..." : "Verstuur bericht"}
+                  {isSubmitting ? "Openen..." : "Verstuur bericht"}
                 </Button>
               </form>
             </CardContent>

@@ -8,7 +8,7 @@ const VerandermanagementPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>Verandermanagement in de publieke sector | DIM Consultancy</title>
+        <title>Verandermanagement in de publieke sector | De Investeringsmaatschappij (DIM)</title>
         <meta name="description" content="Effectief verandermanagement in de publieke sector. DIM begeleidt overheidsorganisaties bij complexe verandertrajecten met bewezen aanpak." />
       </Helmet>
 

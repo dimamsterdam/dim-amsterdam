@@ -11,6 +11,7 @@ const Footer = () => {
         { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
         { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
         { label: "Executive Coaching", href: "/diensten/executive-coaching" },
+        { label: "Opleidingen & maatwerk", href: "/opleidingen" },
       ],
     },
     {
@@ -28,7 +29,9 @@ const Footer = () => {
       links: [
         { label: "Over ons", href: "/over-ons" },
         { label: "Contact", href: "/contact" },
-        { label: "Privacy verklaring", href: "/privacy" },
+        { label: "Algemene voorwaarden", href: "/voorwaarden" },
+        { label: "Klachtenregeling", href: "/klachtenregeling" },
+        { label: "Privacyverklaring", href: "/privacy" },
       ],
     },
   ];
@@ -78,11 +81,17 @@ const Footer = () => {
         {/* Bottom bar - Copyright and Privacy link */}
         <div className="pt-8 border-t border-gray-700 mt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            © {currentYear} DIM Consultancy. Alle rechten voorbehouden.
+            © {currentYear} De Investeringsmaatschappij B.V. · KvK 73734381 · CRKBO-geregistreerd
           </p>
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-wrap items-center gap-4">
+            <Link to="/voorwaarden" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+              Algemene voorwaarden
+            </Link>
+            <Link to="/klachtenregeling" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+              Klachtenregeling
+            </Link>
             <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-              Privacy Verklaring
+              Privacyverklaring
             </Link>
           </div>
         </div>

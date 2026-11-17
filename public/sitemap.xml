@@ -66,14 +66,19 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://dim.amsterdam/themas/verandermanagement-publieke-sector</loc>
-    <priority>0.7</priority>
+    <loc>https://dim.amsterdam/opleidingen</loc>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://dim.amsterdam/themas/leiderschap-publiek-domein</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://dim.amsterdam/voorwaarden</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://dim.amsterdam/klachtenregeling</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://dim.amsterdam/privacy</loc>

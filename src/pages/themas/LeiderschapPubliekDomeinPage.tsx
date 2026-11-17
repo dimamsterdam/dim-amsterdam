@@ -8,7 +8,7 @@ const LeiderschapPubliekDomeinPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>Leiderschap in het publiek domein | DIM Consultancy</title>
+        <title>Leiderschap in het publiek domein | De Investeringsmaatschappij (DIM)</title>
         <meta name="description" content="Leiderschapsontwikkeling voor de publieke sector. DIM ondersteunt leidinggevenden bij de unieke uitdagingen van het publiek domein." />
       </Helmet>
 
