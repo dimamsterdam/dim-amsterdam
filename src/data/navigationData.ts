@@ -19,6 +19,7 @@ export const serviceItems: SubMenuItem[] = [
   { label: "Organisatieontwikkeling", href: "/diensten/organisatieontwikkeling" },
   { label: "Leiderschaps- & Teamontwikkeling", href: "/diensten/leiderschapsontwikkeling" },
   { label: "Executive Coaching", href: "/diensten/executive-coaching" },
+  { label: "Opleidingen & maatwerk", href: "/opleidingen" },
 ];
 
 export const caseItems: ServiceMenuItem[] = [

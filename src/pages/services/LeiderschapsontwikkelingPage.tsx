@@ -17,13 +17,6 @@ const LeiderschapsontwikkelingPage = () => {
     window.scrollTo(0, 0);
   }, []);
   const testimonials = [{
-    quote: "Werken met DIM heeft getransformeerd hoe ons leiderschapsteam opereert. We zijn meer afgestemd, effectiever en doelgerichter dan ooit tevoren. De impact op onze bedrijfsresultaten is opmerkelijk.",
-    author: "Michael Chen",
-    role: "CEO",
-    company: "Ascend Group",
-    initials: "MC",
-    color: "bg-emerald-500/20"
-  }, {
     quote: "Als IG van de NVWA heb ik DIM leren kennen als een enthousiasmerende begeleider in ons traject van leiderschapsontwikkeling. Zij verbindt, snapt waarom het gaat in de organisatie, heeft inzicht in veranderprocessen en treedt effectief op.",
     author: "Rob van Lint",
     role: "Inspecteur Generaal",
